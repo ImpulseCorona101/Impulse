@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2020 at 05:51 PM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.8
+-- Generation Time: Apr 14, 2020 at 02:26 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `agrocraft`
+-- Database: `impulse`
 --
 
 -- --------------------------------------------------------
@@ -51,7 +51,8 @@ INSERT INTO `buyerregistration` (`buyer_id`, `buyer_name`, `buyer_phone`, `buyer
 (16, 'Arpit', 7666610976, 'Bhat Mansion', 'Mafia Pvt Ltd', '99', 12345, '987', 'abcd@gmail.com', 'redhawk', 'm9HW6O8B'),
 (17, 'calista', 2589631472, '4/2,rose building .wadala', 'apple', 'w3566908', 8947, '2436467897', 'rose21@gmail.com', 'melissa', 'nM7d+e0b41E='),
 (18, 'Lokesh', 9029788504, 'SEC -13 , PALM BEACH ROAD', '', 'MAHARASHTRA', 0, '1234567890', 'abhi@hmil.com', 'lokesh', 'yw=='),
-(19, 'ansh', 9819104641, 'fam', 'Elysian.org', 'MAHARASHTRA', 2147483647, '1234567890', 'abhi@hmil.com', 'ansh', 'y5CB');
+(19, 'ansh', 9819104641, 'fam', 'Elysian.org', 'MAHARASHTRA', 2147483647, '1234567890', 'abhi@hmil.com', 'ansh', 'y5CB'),
+(20, 'bhabalomkar421', 8828071232, 'bj', 'c company', 'just **** off', 1, '1', 'xyz@domain.com', '501807', 'yw==');
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,7 @@ INSERT INTO `buyerregistration` (`buyer_id`, `buyer_name`, `buyer_phone`, `buyer
 CREATE TABLE `cart` (
   `product_id` int(255) NOT NULL,
   `phonenumber` bigint(10) NOT NULL,
-  `qty` int(10) NOT NULL DEFAULT 1,
+  `qty` int(10) NOT NULL DEFAULT '1',
   `subtotal` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -93,6 +94,58 @@ INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
 (1, 'Crops'),
 (2, 'Vegetables'),
 (3, 'Fruits');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `consumer`
+--
+
+CREATE TABLE `consumer` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `pincode` varchar(10) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `phone` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `consumer`
+--
+
+INSERT INTO `consumer` (`id`, `name`, `email`, `pincode`, `password`, `address`, `phone`) VALUES
+(5, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'm', '8828071232'),
+(6, 'hello world', 'hello@world.com', '421202', 'yw==', 'world', '9999999999');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctor`
+--
+
+CREATE TABLE `doctor` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `pincode` varchar(6) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  `clinicName` varchar(15) NOT NULL,
+  `clinicAddress` varchar(50) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `startTime` varchar(8) NOT NULL,
+  `endTime` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `doctor`
+--
+
+INSERT INTO `doctor` (`id`, `name`, `email`, `pincode`, `password`, `clinicName`, `clinicAddress`, `phone`, `startTime`, `endTime`) VALUES
+(4, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'xyz', 'xyz', '8828071232', '10:00', '12:00'),
+(5, 'int main', 'intmain1221@gmail.co', '421202', 'yw==', 'xyz', 'xyz', '8369619128', '10:00', '12:30'),
+(6, 'god', 'es@dd.com', '421205', 'yw==', '1', '1', '9223152967', '10:00', '01:00');
 
 -- --------------------------------------------------------
 
@@ -203,7 +256,8 @@ INSERT INTO `farmerregistration` (`farmer_id`, `farmer_name`, `farmer_phone`, `f
 (88, 'Suresh', 8169193184, 'Real Madrid', 'MEGHALAYA', 'West Garo Hills', '9001', 8017, 'yw=='),
 (89, 'Anish', 8169193185, 'Bournmouth', 'PUDUCHERRY', 'Yanam', '5543', 2999, 'yw=='),
 (90, 'Lahiru', 8169193186, 'Barcelona', 'GUJARAT', 'Kachchh', '3139', 8199, 'yw=='),
-(91, 'Jasmeet', 8169193187, 'Manchester city', '0', 'Kachchh', '7777', 6666, 'yw==');
+(91, 'Jasmeet', 8169193187, 'Manchester city', '0', 'Kachchh', '7777', 6666, 'yw=='),
+(92, 'bhabalomkar421', 8828071232, '1', 'MADHYA PRADESH', 'Sheopur *', '1', 1, 'yw==');
 
 -- --------------------------------------------------------
 
@@ -278,6 +332,34 @@ INSERT INTO `products` (`product_id`, `farmer_fk`, `product_title`, `product_cat
 (31, 1, 'Abhi Strawberry', '3', 'Strawberry', '', 'strawberry.jpg', 100, 25, 'Best Strawberrys all over India ', 'Strawberry,best strawberry', 'yes'),
 (32, 1, 'Abhi Orange', '3', 'Orange', '', 'orange.jpg', 1500, 10, 'Best Oranges grown with love in Nagpur', 'Orange,best Orange', 'yes');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `shopkeeper`
+--
+
+CREATE TABLE `shopkeeper` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `pincode` varchar(6) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  `shopName` varchar(20) NOT NULL,
+  `shopAddress` varchar(50) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `startTime` varchar(8) NOT NULL,
+  `endTime` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `shopkeeper`
+--
+
+INSERT INTO `shopkeeper` (`id`, `name`, `email`, `pincode`, `password`, `shopName`, `shopAddress`, `phone`, `startTime`, `endTime`) VALUES
+(1, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'xyz', 'xyz', '8828071232', '10:30', '12:30'),
+(3, 'int main 123', 'intmain1221@gmail.co', '421201', 'yw==', 'hopes', 'no hopes', '101', '10:30', '11:30'),
+(4, 'kerela', 'es@dd.com', '421200', 'yw==', '1', 'm', '8369674856', '10:00', '12:30');
+
 --
 -- Indexes for dumped tables
 --
@@ -295,6 +377,18 @@ ALTER TABLE `buyerregistration`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
+
+--
+-- Indexes for table `consumer`
+--
+ALTER TABLE `consumer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `doctor`
+--
+ALTER TABLE `doctor`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `farmerregistration`
@@ -318,6 +412,12 @@ ALTER TABLE `products`
   ADD KEY `farmer_fk` (`farmer_fk`);
 
 --
+-- Indexes for table `shopkeeper`
+--
+ALTER TABLE `shopkeeper`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -325,25 +425,43 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `buyerregistration`
 --
 ALTER TABLE `buyerregistration`
-  MODIFY `buyer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `buyer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `consumer`
+--
+ALTER TABLE `consumer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `doctor`
+--
+ALTER TABLE `doctor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `farmerregistration`
 --
 ALTER TABLE `farmerregistration`
-  MODIFY `farmer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `farmer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
   MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- AUTO_INCREMENT for table `shopkeeper`
+--
+ALTER TABLE `shopkeeper`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

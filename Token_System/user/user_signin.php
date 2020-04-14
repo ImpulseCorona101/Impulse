@@ -247,7 +247,7 @@
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
 
                     <div class="text1">Forgot password ? </div>
-                    <div class="text2"> New User ? </div>
+                    <div class="text2"> <a href="user_signup.php">New User ? </a></div>
 
                 </div>
 
