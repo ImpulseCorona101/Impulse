@@ -34,7 +34,7 @@
     }
     
     .mybarcode {
-        color: goldenrod;
+        color: black;
         margin-right: 21.5%;
         /* text-align: center; */
     }
@@ -48,6 +48,16 @@
         display: inline-block !important;
         background-color: black;
         color: gold;
+    }
+    
+    .mybtn {
+        background-color: black;
+        color: gold;
+    }
+    
+    .mybtn:hover {
+        background-color: gold;
+        color: black;
     }
     
     .edit {
@@ -71,14 +81,21 @@
     
     .item1 {
         padding-bottom: 8%;
+        width: 18rem;
+        height: 500px;
+        /* background-color: #ffc857; */
     }
     
     .item2 {
         padding-bottom: 8%;
+        width: 18rem;
+        height: 500px;
     }
     
     .item3 {
         padding-bottom: 8%;
+        width: 18rem;
+        height: 500px;
     }
     
     .block {
@@ -89,6 +106,16 @@
         color: black;
         font-weight: bold;
         letter-spacing: 1px;
+    }
+    
+    .shopname {
+        text-align: center;
+    }
+    
+    .card:hover {
+        /* background-color: #ffc857;00 */
+        box-shadow: 5px 10px 18px #888888;
+        transform: scale(1.1);
     }
     
     @media only screen and (min-device-width:320px) and (max-device-width:480px) {
@@ -124,12 +151,24 @@
         }
         .item1 {
             margin-top: 10%;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
         }
         .item2 {
             margin-top: 10%;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
         }
         .item3 {
             margin-top: 10%;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
         }
     }
 </style>
@@ -182,7 +221,7 @@
         <div class="text-center">
             <br>
 
-            <b><h1 class="guard"><span><b>EDIT YOUR PROFILE</b></span>
+            <b><h1 class="guard"><span><b><i class="fas fa-pencil-alt mr-3"></i>Edit Your Profile </b></span>
             </h1>
             </b>
         </div>
@@ -265,12 +304,38 @@
         <div class="text-center">
             <br>
 
-            <b><h1 class="guard"><span><b>Medical Terms</b></span>
+            <b><h1 class="guard"><span><b><i class="fas fa-hospital mr-3"></i>Pharmacy Shop Reservation</b></span>
             </h1>
             </b>
             <br>
         </div>
-        <div class="d-flex justify-content-around flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
+        <div class="d-flex justify-content-around flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row rounded mx-auto d-block">
+            <div class="card item1 border border-dark">
+                <img src="barcode.png" class="card-img-top rounded mx-auto d-block mybarcodeimage" alt="...">
+                <div class="card-body shopname">
+                    <h5 class="card-title shopname">Abhishek clinic</h5>
+                    <p class="card-text shopname">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iure ut saepe sequi necessitatibus </p>
+                    <a href="#" class="mybtn btn btn-primary">Get Directions</a>
+                </div>
+            </div>
+            <div class="card item2 border border-dark">
+                <img src="barcode.png" class="card-img-top rounded mx-auto d-block mybarcodeimage" alt="...">
+                <div class="card-body shopname">
+                    <h5 class="card-title shopname">Calista clinic</h5>
+                    <p class="card-text shopname">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iure ut saepe sequi necessitatibus</p>
+                    <a href="#" class="mybtn btn btn-primary">Get Directions</a>
+                </div>
+            </div>
+            <div class="card item3 border border-dark">
+                <img src="barcode.png" class="card-img-top rounded mx-auto d-block mybarcodeimage" alt="...">
+                <div class="card-body shopname">
+                    <h5 class="card-title shopname">Abdul clinic</h5>
+                    <p class="card-text shopname">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iure ut saepe sequi necessitatibus</p>
+                    <a href="#" class="mybtn btn btn-primary">Get Directions</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="d-flex justify-content-around flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
 
 
             <div class="item1 "> <img src="barcode.png" class="rounded mx-auto d-block mybarcodeimage" alt="..."></div>
@@ -279,22 +344,48 @@
             <div class="item3"> <img src="barcode.png" class="rounded mx-auto d-block mybarcodeimage" alt="...">
             </div>
         </div>
-    </div>
-    <br>
-    <div class="container block">
+    </div>-->
         <br>
-        <!-- <div class="text-center">
+        <div class="container block">
+            <br>
+            <!-- <div class="text-center">
             <h1> Shop codes </h1>
             <br>
         </div> -->
-        <div class="text-center">
-            <br>
+            <div class="text-center">
+                <br>
 
-            <b><h1 class="guard"><span><b>Shop codes </b></span>
-            </h1>
-            </b><br>
-        </div>
-        <div class="d-flex justify-content-around flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
+                <b><h1 class="guard"><span><b><i class="fas fa-store mr-3"></i>Grocery Store Reservation</b></span>
+                </h1>
+                </b><br>
+            </div>
+            <div class="d-flex justify-content-around flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row rounded mx-auto d-block">
+                <div class="card item1 border border-dark">
+                    <img src="barcode.png" class="card-img-top rounded mx-auto d-block mybarcodeimage" alt="...">
+                    <div class="card-body ">
+                        <h5 class="card-title shopname">Omkar Shop</h5>
+                        <p class="card-text shopname">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iure ut saepe sequi necessitatibus.</p>
+                        <a href="#" class="btn btn-primary mybtn mx-auto d-block">Get Directions</a>
+                    </div>
+                </div>
+                <div class="card item2 border border-dark">
+                    <img src="barcode.png" class="card-img-top rounded mx-auto d-block mybarcodeimage" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title shopname">Ansh Shop</h5>
+                        <p class="card-text shopname">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iure ut saepe sequi necessitatibus</p>
+                        <a href="#" class="btn btn-primary mybtn mx-auto d-block">Get Directions</a>
+                    </div>
+                </div>
+                <div class="card item3 border border-dark">
+                    <img src="barcode.png" class="card-img-top rounded mx-auto d-block mybarcodeimage" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title shopname">Gladina Shop</h5>
+                        <p class="card-text shopname">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iure ut saepe sequi necessitatibus</p>
+                        <a href="#" class="btn btn-primary mybtn mx-auto d-block">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="d-flex justify-content-around flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
 
 
             <div class="item1 "> <img src="barcode.png" class="rounded mx-auto d-block mybarcodeimage" alt="..."></div>
@@ -302,8 +393,8 @@
             </div>
             <div class="item3"> <img src="barcode.png" class="rounded mx-auto d-block mybarcodeimage" alt="...">
             </div>
+        </div> -->
         </div>
-    </div>
 </body>
 
 </html>
