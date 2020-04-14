@@ -22,7 +22,7 @@ and obtaining other information .
 so we have come up with an system in which he or she can help by providing some goods ( grains, etc) or 
 some volunteering work by connecting those in your area who are willing to help with those who need it.
 
-## Showcasing current statistics 
+## Showcasing Current Status
 * We also provide latest information about the number of Coronavirus cases in the world as well as in the 
 countries in the statistical and graphical form .  
 
