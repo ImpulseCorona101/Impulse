@@ -3,33 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>QR Codes</title>
+    <title>QR Code</title>
     <meta name="viewport" content="width=device-width">
-
-    <style>
-
-    </style>
     <script src="qrcode.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>QR Codes</h1>
+        <h1>Unique QR Code</h1>
     </header>
     <main>
 
         <div id="output"></div>
+        <br>
+        <br>
+        <h2 class="Uniqueid">Unique Number is </h2>
+
 
     </main>
     <script>
+        var number = Math.floor(Math.random() * 10000000000000000) + 1;
+        console.log(number);
         let qrcode = new QRCode("output", {
-            text: "http://fillmurray.com/",
+            text: number,
             width: 100,
             height: 100,
             colorDark: "#990000",
             colorLight: "#ffffff",
             correctLevel: QRCode.CorrectLevel.H
         });
+        const Uniqueid = document.querySelector(".Uniqueid");
+        Uniqueid.textContent = "Unique Number is : " + number;
     </script>
 </body>
 
