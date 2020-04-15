@@ -15,9 +15,9 @@
             font-family: sans-serif;
         }
         .search{
-            position: relative;
-            left: 700px;
-            bottom: 765px;
+            position: absolute;
+           top: 12%;
+           left:80%;
         }
 
         .form-actions {
@@ -40,7 +40,7 @@
         }
         body { 
             background-color:#f3f7f7;
- ;
+ 
         }
         .parent{
             font-family: sans-serif;
@@ -110,7 +110,7 @@
     <div class="parent position-relative bg-white">
     <div class="text-left ">
         <div class="container-sm p-4 border border-top shadow-sm ">
-            <a  href="book.html">
+            <a  href="booking.php">
             <h4 class="font-weight-bold">Shop Name</h4>
             </a>
             <h5>Address</h5>
@@ -158,6 +158,6 @@
           </form>
         </div>
     </body>
-</html>
+    </html>
     
     
