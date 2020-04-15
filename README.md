@@ -1,6 +1,6 @@
 # Impulse Web Application will help you in the fight against Coronavirus Pandemic,in the following ways
 
-## Coronavirus infected prediction
+## Coronavirus Infected Prediction
 * Detects whether an individual is suffering from the virus or not ,based on various symptoms .
 
 ## Token System
