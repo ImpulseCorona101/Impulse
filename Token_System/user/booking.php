@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Book Your Slot</title>
+    <title>Bootstrap Datepicker - Disabled Specific dates and Saturday,Sunday</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -390,21 +390,7 @@
    </div>
    
                  <script>
-                 function myFunction2() { 
-                    var x = 
-                        document.getElementById("date").value; 
-                    
-                    document.getElementById( 
-                    "demo").innerHTML = x; 
-                } 
-                
-                function myFunction3() { 
-                    var x = 
-                        document.getElementById("btn").value; 
-                    
-                    document.getElementById( 
-                    "demo1").innerHTML = x; 
-                } 
+                 
             </script>
             
             <div class="scam">
@@ -419,13 +405,13 @@
                           <div class="row">
                              <div class="col-md-10">
                                  
-                               <h4 class="font-weight-bold">Date: </h4><input class="d"  value="Register" disabled="disabled" id="demo" required>    
+                               <h4 class="font-weight-bold">Date: </h4><input class="d"   disabled="disabled" id="demo" required>    
                                                      
                                
-                                   <h4 class="font-weight-bold">Time:</h4> <input class="s"  value="Register" disabled="disabled" id="demo1">
+                                   <h4 class="font-weight-bold">Time:</h4> <input class="s"   disabled="disabled" id="demo1" required="required">
                                
                                <div class="sl">
-                               <button type="button" id ="myBtn" class="btn btn-primary">Confirm</button>
+                               <button  type="button" id ="myBt" class="btn btn-primary" onclick="userValid()"  > Confirm</button>
                                  
                                </div>
                                  </div>
@@ -444,11 +430,28 @@
                                              <br><br>
                                              
                                              </div>
+                                             <script>
+    function userValid() {
+    var Description;
+    Description = document.getElementById("demo1").value;
+
+    if (Description == "") {
+        alert("Please fill all the details");
+        return false;
+    }
+    return true;
+}
+    </script>
 
                                              <script>
                                               function fill(){
                                                 if(document.getElementById('date').value != 0){
                                                   document.getElementById('demo').value=document.getElementById('date').value;
+                                                }
+                                              }
+                                              function fill1(){
+                                                if(document.getElementById('btn').value != 0){
+                                                  document.getElementById('demo1').value=document.getElementById('btn').value;
                                                 }
                                               }
 
@@ -472,11 +475,7 @@
 
 
 
-                                              function fill1(){
-                                                if(document.getElementById('btn').value != 0){
-                                                  document.getElementById('demo1').value=document.getElementById('btn').value;
-                                                }
-                                              }
+                                              
                                              </script>
                                           <script>
                                             function generate(){
