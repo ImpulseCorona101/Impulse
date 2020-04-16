@@ -639,13 +639,14 @@
                text-align: center;
           }
           .myfooter{
-               background-color:#008000;
-               color: white;
+                  background-color: #292b2c;
+
+               color: goldenrod;
                margin-top:15px;
           }
 
           a{
-               color:#000000;
+               color:goldenrod;
           }
 
           .navbar-inverse {
@@ -795,7 +796,7 @@
                display: none;
                background-color: #ff5500;
            }
-
+           
            /* 
            .settings{
            margin-left:79%;
@@ -859,11 +860,6 @@
 				</ul>
 			</div>
 		</div>
-<<<<<<< HEAD
-	</nav>
-     <div class="container">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-=======
      </nav> -->
      <nav class="navbar navbar-expand-xl ">
         <!-- <a href="#" class="navbar-brand">Academind</a> -->
@@ -951,7 +947,6 @@
      <hr>
      <div class="container caros">
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
->>>>>>> 5edfd5c97440e23831fea13849a7ab128b9d5716
                <div class="carousel-inner">
                     <div class="carousel-item active">
                          <img class="d-block w-100" src="../Images/Website/farm1.jpeg" alt="First slide">
@@ -1006,18 +1001,14 @@
                </div>
           </div>
      </div>
-
+       
 	<section id="footer" class="myfooter">
 		<div class="container">
 			<div class="row text-center text-xs-center text-sm-left text-md-left">
 				<div class="col aligncenter">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQs</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Daily Prices</a></li>
-					</ul>
+					<p>Payment Option</p>
+                         <img src="../Images/Website/paytm1.jpg" alt="paytm">
+                         <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
 				</div>
 			</div>
 			<div class="row">
@@ -1033,7 +1024,7 @@
 				</hr>
 			</div>	
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
 					<p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
 					<p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
 				</div>
