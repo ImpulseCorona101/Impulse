@@ -1,7 +1,7 @@
  <?php
     session_start();
     $con = mysqli_connect("localhost", "root", "", "agrocraft");
-
+    include("../Includes/db.php");
     function getUsername()
     {
         if (isset($_SESSION['phonenumber'])) {
@@ -103,8 +103,6 @@
     }
 
 
-
-
     function getProducts()
     {
         global $con;
@@ -178,7 +176,7 @@
     //function  which is link with FarmerProductDetails
     function getFarmerProductDetails()
     {
-        include("../includes/db.php");
+        include("../Includes/db.php");
         global $con;
         if (isset($_GET['id'])) {
             $prod_id = $_GET['id'];
@@ -248,7 +246,7 @@
     //function which is link with FarmerHomePage
     function getFarmerProducts()
     {
-        include("../includes/db.php");
+        include("../Includes/db.php");
         global $con;
         $sess_phone_number = $_SESSION['phonenumber'];
         $query = "select * from products where farmer_fk in (select farmer_id from farmerregistration where farmer_phone=$sess_phone_number)";
@@ -279,7 +277,7 @@
     //function which is linked with BuyerProductDetails
     function getBuyerProductDetails()
     {
-        include("../includes/db.php");
+        include("../Includes/db.php");
         global $con;
         // $sess_phone_number = $_SESSION['phonenumber'];
         if (isset($_GET['id'])) {
