@@ -1,6 +1,6 @@
  <?php
     session_start();
-    $con = mysqli_connect("localhost", "root", "", "agrocraft");
+    $con = mysqli_connect("localhost", "root", "", "impulse");
     include("../Includes/db.php");
     function getUsername()
     {
@@ -359,7 +359,6 @@
     function bestSeller()
     {
         global $con;
-        
     }
     ?>
 
