@@ -605,12 +605,12 @@
           }
           .bg{
                background-color: #f5ca0a;
-width:220px;
-margin-left:650px;
-font-size: 20px;
-border-style: solid;
-border-radius: 10px;
-padding: 10px;
+               width:220px;
+               margin-left:730px;
+               font-size: 20px;
+               border-style: solid;
+               border-radius: 10px;
+               padding: 7px;
           }
           .sp{
                background-color: #f5ca0a;
@@ -680,7 +680,8 @@ margin-left:500px;
 
 
      <br>
-     <div class="content_item bg"><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>SMS</b></label></div>
+     <div class="content_item bg"><label style="font-size :30px; text-shadow: 1px 1px 1px gray;margin-left:0px;"><b>SMS</b></label></div>
+     <br>
      <div class="content_item " ><label style="font-size :24px; text-shadow: 1px 1px 1px gray;"><b>Insert Product</b></label></div>
      <hr>
      <div class=content_item ><label style="font-size :18px; text-shadow: 1px 1px 1px gray;">*#*,insert,password,product title,product category , product type , product stock ,MRP,Base Price, product keywords , product description ,product delivery</label></div>
