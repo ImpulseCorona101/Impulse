@@ -890,14 +890,12 @@
                 </div>
                 <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
             </div>
-            <div class="text-success  logins ">Login</div>
+            <div class="text-success  logins ">sLogin</div>
             <div class="list-group moblists">
                 <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
                     Profile
                 </a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Transactions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">subscriptions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Farmers</a>
+                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Orders</a>
                 <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
             </div>
         </div>
@@ -918,9 +916,7 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Transactions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Subscriptions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Farmers</a>
+                    <a class="dropdown-item " style="padding-right:-20px;" href="">Orders</a>
                     <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
                 </div>
             </div>
