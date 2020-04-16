@@ -720,38 +720,29 @@
 			</div>
 		</div>
 	</nav>
-     <div class="row" style="text-align:center;">
-          <div class="col-md-3 col-sm-12">
-               <a href="farmerHomepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
-          </div>
-          <div class="col-md-3 col-sm-12">
-               <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
-          </div>
-          <div class="col-md-3 col-sm-12">
-          <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
-          </div>
-          <div class="col-md-3 col-sm-12">
-          <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers/SMS</label></a>
-          </div>
-     </div>
-     <hr>
-     <div class="container caros">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+     <div class="container">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                <div class="carousel-inner">
                     <div class="carousel-item active">
                          <img class="d-block w-100" src="../Images/Website/farm1.jpeg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                         <img class="d-block w-100" src="../Images/Website/farm4.jpg" alt="Second slide">
+                         <img class="d-block w-100" src="../Images/Website/farm3.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                         <img class="d-block w-100" src="../Images/Website/farm5.jpg" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                         <img class="d-block w-100" src="../Images/Website/farm3.jpg" alt="Third slide">
+                         <img class="d-block w-100" src="../Images/Website/farm4.jpg" alt="Third slide">
                     </div>
                </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+          </a>
           </div>
+     </div>
           <div class="features">
                <h1 style="font-weight: bold;color:black; text-align:center">Features</h1>
                <div class="card-deck row text-center" style="display: flex; flex-wrap: wrap;">
@@ -784,11 +775,8 @@
                     </div>
                </div>
           </div>
-          <!-- <div class="img">
-               <img src="../Images/Website/whatsnew.jpg">
-          </div> -->
      </div>
-     
+
 	<section id="footer" class="myfooter">
 		<div class="container">
 			<div class="row text-center text-xs-center text-sm-left text-md-left">
