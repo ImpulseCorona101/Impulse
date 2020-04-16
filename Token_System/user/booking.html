@@ -390,21 +390,7 @@
    </div>
    
                  <script>
-                 function myFunction2() { 
-                    var x = 
-                        document.getElementById("date").value; 
-                    
-                    document.getElementById( 
-                    "demo").innerHTML = x; 
-                } 
-                
-                function myFunction3() { 
-                    var x = 
-                        document.getElementById("btn").value; 
-                    
-                    document.getElementById( 
-                    "demo1").innerHTML = x; 
-                } 
+                 
             </script>
             
             <div class="scam">
@@ -425,7 +411,7 @@
                                    <h4 class="font-weight-bold">Time:</h4> <input class="s"  value="Register" disabled="disabled" id="demo1">
                                
                                <div class="sl">
-                               <button type="button" id ="myBtn" class="btn btn-primary">Confirm</button>
+                               <button type="button" id ="myBtn" class="btn btn-primary" onclick="userValid()">Confirm</button>
                                  
                                </div>
                                  </div>
@@ -444,6 +430,18 @@
                                              <br><br>
                                              
                                              </div>
+                                             <script>
+    function userValid() {
+    var Description;
+    Description = document.getElementById("demo1").value;
+
+    if (Description == "") {
+        alert("Please Mention at Description");
+        return false;
+    }
+    return true;
+}
+    </script>
 
                                              <script>
                                               function fill(){
