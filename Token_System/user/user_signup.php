@@ -456,7 +456,7 @@
                         <span class="input-group-text  text pl-3 pr-3" id="inputGroup-sizing-default"><i
                                 class="fas fa-phone-alt mr-2"></i>Phone number </span>
                     </div>
-                    <input type="phonenumber" class="form-control inp mb-5 " name="phonenumber" aria-label="Sizing example input "
+                    <input type="phonenumber" class="form-control inp mb-5 " name="phonenumber1" aria-label="Sizing example input "
                         aria-describedby="inputGroup-sizing-default " placeholder="Phone number ">
 
                 </div>
@@ -478,14 +478,14 @@
                 <div class="input-group-prepend mb-5 ">
                     <span class="input-group-text  text pl-3 pr-3 align-middle p-3" id="inputGroup-sizing-default"><i class="fas fa-home mr-2"></i>Shop Address </span>
                 </div>
-                <textarea class="form-control inp area mb-5 " name="address" id="exampleFormControlTextarea1" rows="2" placeholder="Shop Address"></textarea>
+                <textarea class="form-control inp area mb-5 " name="homeAddress" id="exampleFormControlTextarea1" rows="2" placeholder="Shop Address"></textarea>
             </div>
             <div class="input-group mt-5  s">
                     <div class="input-group-prepend mb-5 ">
                         <span class="input-group-text  text pl-3 pr-3" id="inputGroup-sizing-default"><i
                                 class="fas fa-phone-alt mr-2"></i>Phone number </span>
                     </div>
-                    <input type="phonenumber" class="form-control inp mb-5 " name="phonenumber" aria-label="Sizing example input "
+                    <input type="phonenumber" class="form-control inp mb-5 " name="phonenumber2" aria-label="Sizing example input "
                         aria-describedby="inputGroup-sizing-default " placeholder="Phone number ">
 
             </div>`
@@ -495,7 +495,7 @@
 
 </html>
 <?php 
-include("../Includes/db.php");
+include("Impulse/Token_Systems/Includes/db.php");
 
 $ciphering = "AES-128-CTR";
 $iv_length = openssl_cipher_iv_length($ciphering);

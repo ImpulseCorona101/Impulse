@@ -103,9 +103,6 @@
     
     <div class="container-fluid p-4 border-top shadow-sm p-3 mb-5 bg-white  ">
         <h3 class="header font-weight-bold">Select Your Shop</h3>
-        
-
-        
     </div>
     <div class="parent position-relative bg-white">
     <div class="text-left ">
@@ -118,21 +115,43 @@
            
         </div>
     <div class="container-sm p-4 border border-top shadow-sm  ">
-        <h4 class="font-weight-bold">Shop Name</h4>
+        <a  href="booking.php">
+            <h4 class="font-weight-bold">Shop Name</h4>
+            </a>
         <h5>Address</h5>
         <h6>Phone Number</h6>
     </div>
     <div class="container-sm p-4 border border-top shadow-sm    ">
-        <h4 class="font-weight-bold">Shop Name</h4>
+        <a  href="booking.php">
+            <h4 class="font-weight-bold">Shop Name</h4>
+            </a>
         <h5>Address</h5>
         <h6>Phone Number</h6>
     </div>
     <div class="container-sm p-4 border border-top shadow-sm ">
-        <h4 class="font-weight-bold">Shop Name</h4>
+        <a  href="booking.php">
+            <h4 class="font-weight-bold">Shop Name</h4>
+            </a>
         <h5>Address</h5>
         <h6>Phone Number</h6>
     
     </div>
+    <div class="container-sm p-4 border border-top shadow-sm ">
+            <a  href="booking.php">
+            <h4 class="font-weight-bold">Shop Name</h4>
+            </a>
+            <h5>Address</h5>
+            <h6>Phone Number</h6>
+           
+        </div>
+        <div class="container-sm p-4 border border-top shadow-sm ">
+            <a  href="booking.php">
+            <h4 class="font-weight-bold">Shop Name</h4>
+            </a>
+            <h5>Address</h5>
+            <h6>Phone Number</h6>
+           
+        </div>
     
     </div>
     </div>

@@ -10,13 +10,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script type="text/javascript" src="qrcode.js"></script>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="qrcode.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        .modal {
+      .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -32,7 +32,7 @@
 }
 
 /* Modal Content */
-.modal-content {
+      .modal-content {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -96,7 +96,7 @@
     }
 
 
-        *{
+    *{
             font-family: sans-serif;
         }
         .form-actions {
@@ -253,19 +253,20 @@
                         <button type="button" class="btn btn-outline-secondary ml-5" onclick="myFunction1()">Evening</button>
                         
                         </div>
-                          </div>
-                          </div>
-                      </div>
-                      </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
                  
               
-           </div>
-        </div>
-     </div>
-    
+          
      
 
-    </script>
+    
     <script>
         function myFunction() {
           var x = document.getElementById("myDIV");
@@ -343,24 +344,17 @@
         <h2 class="font-weight-bold">Select Your Time Slot</h2>
      </div>
     <div class="row" >
-        
         <button type="button" onclick="myFunction3()" id="btn" value="9:00 am - 9:30 am" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2" >9:00am - 9:30am</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2">9:45am - 10:15am</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2">10:30am-11:00am</button>
-        
         <button type="button" class="btn btn-outline-success mt-5 ml-4 mr-4 p-2" >11:15am-11:45am</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-5 p-2">12:00pm-12:30pm</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-4 mr-5 p-2">12:45pm - 1:15pm</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-4 mr-4 p-2" >1:30pm - 2:00pm</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-4 p-2">2:15pm - 2:45pm</button>
-        
-        
-        
       </div>
-      
-
-</div>
-</div>
+    </div>
+ </div>
 <br>
 <div class="parent position-relative border shadow-sm bg-white"id="myDIV1" >
     <div class="container-sm " >
@@ -371,34 +365,23 @@
         <button type="button" id="btn" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2">3:00pm - 3:30 pm</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-5 p-2">3:45pm - 4:15pm</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-4 mr-5 p-2">4:30pm - 5:00pm</button>
-           <button type="button" class="btn btn-outline-success mt-5 ml-4 mr-4 p-2" >5:15pm - 5:45pm</button>
-           <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2">6:00pm - 6:30pm</button>
-           <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2">6:45pm - 7:15pm</button>
-           
-           <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-5 p-2" >7:30pm-8:00pm</button>
-           <button type="button" class="btn btn-outline-success mt-5 ml-5  p-2">8:15pm-8:45pm</button>
-           
-           
-           
-         </div>
-         
+        <button type="button" class="btn btn-outline-success mt-5 ml-4 mr-4 p-2" >5:15pm - 5:45pm</button>
+        <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2">6:00pm - 6:30pm</button>
+        <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2">6:45pm - 7:15pm</button>
+        <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-5 p-2" >7:30pm-8:00pm</button>
+        <button type="button" class="btn btn-outline-success mt-5 ml-5  p-2">8:15pm-8:45pm</button>
+      </div>
+    </div>
+  </div>
    
-   </div>
-   </div>
-   
-                 <script>
-                 function myFunction2() { 
-                    var x = 
-                        document.getElementById("date").value; 
-                    
-                    document.getElementById( 
-                    "demo").innerHTML = x; 
+    <script>
+      function myFunction2() { 
+        var x =document.getElementById("date").value; 
+            document.getElementById( 
+                "demo").innerHTML = x; 
                 } 
-                
-                function myFunction3() { 
-                    var x = 
-                        document.getElementById("btn").value; 
-                    
+        function myFunction3() { 
+            var x = document.getElementById("btn").value; 
                     document.getElementById( 
                     "demo1").innerHTML = x; 
                 } 
@@ -415,114 +398,70 @@
                        <form action="#">
                           <div class="row">
                              <div class="col-md-10">
-                                 
-                               <h4 class="font-weight-bold">Date: <h5 class="d" id="demo">Azim</h5> </h4>    
-                                                     
-                               
-                                   <h4 class="font-weight-bold">Time: <h5 class="s" id="demo1">Azim</h5></h4>
-                               
-                               <div class="sl">
-                               <button type="button" id="myBtn" class="btn btn-primary   float-left p-2" >Confirm</button>
-                                 
-                               </div>
-                                 </div>
-                                   </div>
-                                   </div>
-                                   
-                                  
-                                  
-                               </div>
-                               </div>
-                             </div>
-                             <br>
-                              
-                              
+                                 <h4 class="font-weight-bold">Date: <h5 class="d" id="demo">Azim</h5> </h4>    
+                                  <h4 class="font-weight-bold">Time: <h5 class="s" id="demo1">Azim</h5></h4>
+                                    <div class="sl">
+                                      <button type="button" id="myBtn" class="btn btn-primary   float-left p-2" >Confirm</button>
+                                    </div>
+                                  </div>
+                              </div>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                  <br><br><br>
+                </div>
                                              
-                                             <br><br>
-                                             
-                                             </div>
-                                             <main>
-
-                                              
-                                              
-                                      
-                                      
-                                          </main>
-                                          <script>
-                                            function generate(){
-                                              var number = Math.floor(Math.random() * 10000000000000000) + 1;
-                                              console.log(number);
-                                              let qrcode = new QRCode("qr", {
-                                                  text: number,
-                                                  width: 100,
-                                                  height: 100,
-                                                  colorDark: "#990000",
-                                                  colorLight: "#ffffff",
-                                                  
-                                              });
-                                              const Uniqueid = document.querySelector(".Uniqueid");
-                                              Uniqueid.textContent = "Unique Number is : " + number;
-                                              qrcode.makeCode(message.value);
-                                            }
-                                          </script>
-                                            <div class="col-md-5 offset-md-3 mr-3 mt-1">
-                                               
-
-<!-- Trigger/Open The Modal -->
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Almost Done</h2>
-    </div>
-    <div class="modal-body">
-      <br>
-        <button type="button" value="1" id="qr"  class="btn btn-outline-secondary    mr-2 p-2" >Tap To Generate Qr Code</button>
-        <div id="qrResult" style="height:100px;width: 100px">
+              <script>
+                  function generate(){
+                          var number = Math.floor(Math.random() * 10000000000000000) + 1;
+                            console.log(number);
+                               let qrcode = new QRCode("qr", {
+                                    text: number,
+                                    width: 100,
+                                    height: 100,
+                                    colorDark: "#990000",
+                                    colorLight: "#ffffff",
+                                    });
+                                    const Uniqueid = document.querySelector(".Uniqueid");
+                                    Uniqueid.textContent = "Unique Number is : " + number;
+                                    qrcode.makeCode(message.value);
+                                    }
+                </script>
+                <div class="col-md-5 offset-md-3 mr-3 mt-1">
+                                               <!-- The Modal -->
+                                 <div id="myModal" class="modal">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <span class="close">&times;</span>
+                                         <h2>Almost Done</h2>
+                </div>
+                  <div class="modal-body">
+                 <br>
+                <button type="button" value="1" id="qr"  class="btn btn-outline-secondary    mr-2 p-2" >Tap To Generate Qr Code</button>
+                  <div id="qrResult" style="height:100px;width: 100px">
 	
-</div>
-
-        
-    </div>
-    
-  </div>
-
-</div>
-
-                                            </div>
-                                            <script>
-                                                // Get the modal
-                                                var modal = document.getElementById("myModal");
-                                                
-                                                // Get the button that opens the modal
-                                                var btn = document.getElementById("myBtn");
-                                                
-                                                // Get the <span> element that closes the modal
-                                                var span = document.getElementsByClassName("close")[0];
-                                                
-                                                // When the user clicks the button, open the modal 
-                                                btn.onclick = function() {
-                                                  modal.style.display = "block";
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       <script>
+                                               
+          var modal = document.getElementById("myModal");
+          var btn = document.getElementById("myBtn");
+          var span = document.getElementsByClassName("close")[0];
+          btn.onclick = function() {
+                      modal.style.display = "block";
+                                    }
+          span.onclick = function() {
+                          modal.style.display = "none";
+                                    }
+          window.onclick = function(event) {
+                          if (event.target == modal) {
+                              modal.style.display = "none";
+                            }
                                                 }
-                                                
-                                                // When the user clicks on <span> (x), close the modal
-                                                span.onclick = function() {
-                                                  modal.style.display = "none";
-                                                }
-                                                
-                                                // When the user clicks anywhere outside of the modal, close it
-                                                window.onclick = function(event) {
-                                                  if (event.target == modal) {
-                                                    modal.style.display = "none";
-                                                  }
-                                                }
-                                                </script>
-
-                                                          
+        </script>
     </body>
-    </html>
+  </html>
