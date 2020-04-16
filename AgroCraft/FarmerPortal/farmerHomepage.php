@@ -16,7 +16,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
      <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
      <script src="../portal_files/jquery.min.js.download"></script>
@@ -632,134 +632,147 @@
                margin-left: 290px;
                text-align: center;
           }
+
           .image {
-               max-width:200px;     
+               max-width: 200px;
           }
-          .aligncenter{
+
+          .aligncenter {
                text-align: center;
           }
-          .myfooter{
-                  background-color: #292b2c;
+
+          .myfooter {
+               background-color: #292b2c;
 
                color: goldenrod;
-               margin-top:15px;
+               margin-top: 15px;
           }
 
-          a{
-               color:goldenrod;
+          a {
+               color: goldenrod;
           }
 
           .navbar-inverse {
-		     background: #00cc00;
-		     color: black;
-		}
-		.navbar-inverse .navbar-brand, .navbar-inverse a{
-		     color:black;
-		}
-		.navbar-inverse .navbar-nav>li>a {
-		     color: clack;
-          } 
-          .caros{
-               margin-top:15px;
+               background: #00cc00;
+               color: black;
           }
+
+          .navbar-inverse .navbar-brand,
+          .navbar-inverse a {
+               color: black;
+          }
+
+          .navbar-inverse .navbar-nav>li>a {
+               color: clack;
+          }
+
+          .caros {
+               margin-top: 15px;
+          }
+
           hr {
                border: 0;
-               height:0.5px;
-               clear:both;
+               height: 0.5px;
+               clear: both;
                display: block;
                width: 99%;
-               background-color:black;
-               margin-left: 0.5em; 
+               background-color: black;
+               margin-left: 0.5em;
           }
+
           img {
                max-width: 100%;
                display: inline-block;
           }
+
           * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
 
-        nav {
-            background-color: #292b2c;
-        }
+          nav {
+               background-color: #292b2c;
+          }
 
-        .navbar-custom {
-            background-color: #292b2c;
-        }
+          .navbar-custom {
+               background-color: #292b2c;
+          }
 
-        /* change the brand and text color */
-        .navbar-custom .navbar-brand,
-        .navbar-custom .navbar-text {
-            background-color: #292b2c;
-        }
+          /* change the brand and text color */
+          .navbar-custom .navbar-brand,
+          .navbar-custom .navbar-text {
+               background-color: #292b2c;
+          }
 
-        .navbar-custom .navbar-nav .nav-link {
-            background-color: #292b2c;
-        }
+          .navbar-custom .navbar-nav .nav-link {
+               background-color: #292b2c;
+          }
 
-        .navbar-custom .nav-item.active .nav-link,
-        .navbar-custom .nav-item:hover .nav-link {
-            background-color: #292b2c;
-        }
+          .navbar-custom .nav-item.active .nav-link,
+          .navbar-custom .nav-item:hover .nav-link {
+               background-color: #292b2c;
+          }
 
-        .firstimage {
-            height: 500px;
-            width: 100%;
-        }
+          .firstimage {
+               height: 500px;
+               width: 100%;
+          }
 
-        .mybtn {
-            border-color: green;
-            border-style: solid;
-        }
+          .mybtn {
+               border-color: green;
+               border-style: solid;
+          }
 
-        .card {
-            width: 100%;
-            height: 100%;
-            margin: 10px;
-        }
+          .card {
+               width: 100%;
+               height: 100%;
+               margin: 10px;
+          }
 
-        .right {
-            display: flex;
-        }
+          .right {
+               display: flex;
+          }
 
-        .left {
-            display: none;
-        }
+          .left {
+               display: none;
+          }
 
-        .cart {
-            /* margin-left:10px; */
-            margin-right: -9px;
-        }
+          .cart {
+               /* margin-left:10px; */
+               margin-right: -9px;
+          }
 
-        .profile {
-            margin-right: 2px;
+          .profile {
+               margin-right: 2px;
 
-        }
+          }
 
-        .login {
-            margin-right: -2px;
-            margin-top: 12px;
-            display: none;
-        }
+          .login {
+               margin-right: -2px;
+               margin-top: 12px;
+               display: none;
+          }
 
-        .searchbox {
-            width: 60%;
-        }
+          .searchbox {
+               width: 60%;
+          }
 
-        .lists {
-            display: inline-block;
-        }
+          .lists {
+               display: inline-block;
+          }
 
-        .moblists {
-            display: none;
-        }
-        .logins {
-                text-align: center;
+          .moblists {
+               display: none;
+          }
+
+          .logins {
+               /* text-align: center;
                 margin-right: -30%;
-                margin-left:35%;
-            }
+                margin-left:35%; */
+               display: none;
+          }
+
           /* For medium devices (e.g. tablets) */
           /* @media (min-width: 420px) {
                img {
@@ -774,71 +787,76 @@
           } */
           @media only screen and (min-device-width:320px) and (max-device-width:480px) {
                .image {
-               max-width: 48%;
+                    max-width: 48%;
                }
 
-           .firstimage {
-               height: auto;
-               width: 90%;
-           }
+               .firstimage {
+                    height: auto;
+                    width: 90%;
+               }
 
-           .card {
-               width: 80%;
-               margin-left: 10%;
-               margin-right: 10%;
-           
-           }
-           .col{
-               margin-top:20px;
-           }
+               .card {
+                    width: 80%;
+                    margin-left: 10%;
+                    margin-right: 10%;
 
-           .right {
-               display: none;
-               background-color: #ff5500;
-           }
-           
-           /* 
+               }
+
+               .col {
+                    margin-top: 20px;
+               }
+
+               .right {
+                    display: none;
+                    background-color: #ff5500;
+               }
+
+               /* 
            .settings{
            margin-left:79%;
        } */
-           .left {
-               display: flex;
-           }
+               .left {
+                    display: flex;
+               }
 
-           .moblogo {
-               display: none;
-           }
+               .moblogo {
+                    display: none;
+               }
 
-           .logins {
-               text-align: center;
-               margin-right: 35%;
-               padding:15px;
-           }
+               .logins {
+                    display: inline-block;
+                    width: 80%;
+                    text-align: center;
+                    margin-right: 10%;
+                    margin-left: 10%;
+                    padding: 15px;
+               }
 
-           .searchbox {
-               width: 95%;
-               margin-right: 5%;
-               margin-left:0%;
-           }
+               .searchbox {
+                    width: 95%;
+                    margin-right: 5%;
+                    margin-left: 0%;
+               }
 
-           .moblists {
-               display: inline-block;
-               text-align: center;
-               width: 100%;
-           }
-       }
+               .moblists {
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+               }
+          }
      </style>
 
 </head>
+
 <body>
-    <!-- Image and text -->
-    <!-- <nav class="navbar navbar-light bg-light ">
+     <!-- Image and text -->
+     <!-- <nav class="navbar navbar-light bg-light ">
         <a href="Homepage.php">
             <img id="logo" src="../portal_files/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
 
         </a>
     </nav> -->
-    <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+     <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
@@ -862,70 +880,67 @@
 		</div>
      </nav> -->
      <nav class="navbar navbar-expand-xl ">
-        <!-- <a href="#" class="navbar-brand">Academind</a> -->
-        <div class=" flex-row-reverse left ">
-
+          <!-- <a href="#" class="navbar-brand">Academind</a> -->
+          <div class=" flex-row-reverse left ">
+               <!-- 
             <div class="p-2">
                 <div class="icon2">
-                    <!-- <a href="CartPage.php"> <i class="fa" style=" color:green ;font-size:20px;margin-top:-20px;margin-bottom:20px;">&#61562;</i></a> -->
-                    <span id="icon" style="color:green"> 5 </span>
-                </div>
-            </div>
-            <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;'></i></div>
-            <a class="float-left" href="#">
-                <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
-            </a>
-        </div>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:20px;"></i></span>
-        </button>
-        <a class="float-left" href="#">
-            <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <a href="CartPage.php"> <i class="fa" style=" color:green ;font-size:20px;margin-top:-20px;margin-bottom:20px;">&#61562;</i></a> -->
+               <!-- <span id="icon" style="color:green"> 5 </span> -->
+               <!-- </div>
+            </div> -->
+               <div class="p-2 "><i class='far fa-user-circle' style='font-size:30px; color: green;margin-left:270%;'></i></div>
+               <a class="float-left" href="#">
+                    <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
+               </a>
+          </div>
+          <button class="navbar-toggler" style="margin-left:70px;" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:30px;"></i></span>
+          </button>
+          <a class="float-left" href="#">
+               <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <div class="input-group mb-1 ml-2 searchbox">
+               <!-- <div class="input-group mb-1 ml-2 searchbox">
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-search" style="font-size:20px;color:green; "></i></div>
                 </div>
                 <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
-            </div>
-            <div class="text-success  logins ">sLogin</div>
-            <div class="list-group moblists">
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
-                    Profile
-                </a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Orders</a>
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
-            </div>
-        </div>
+            </div> -->
+               <div class="text-white  logins ">Login</div>
+               <div class="list-group moblists">
+                    <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
+                         Profile
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Orders</a>
+                    <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
+               </div>
+          </div>
 
 
 
 
-        <div class=" flex-row-reverse right ">
-            <div class="p-2 cart">
-                <div class="icon2">
-                    <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green;margin-top:-20px;">&#61562;</i></a>
-                    <span id="icon" style="color:green"> 5 </span>
-                </div>
-            </div>
-            <div class="dropdown p-2 settings ">
-                <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Settings
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="">Orders</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
-                </div>
-            </div>
+          <div class=" flex-row-reverse right ">
+             
+               <div class="dropdown p-2 settings  " style="margin-left:220px">
+                    <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Settings
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                         <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
+                         <a class="dropdown-item " style="padding-right:-20px;" href="">Orders</a>
+                         <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
+                    </div>
+               </div>
+  <div class="p-2 cart">
+                    <div class="login_ mt-2 " style="color:green;margin-right:-170px;margin">Login</div>
+               </div>
+               <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
+               <!-- <div class="text-success  login">Login</div> -->
+          </div>
 
-            <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
-            <div class="text-success  login">Login</div>
-        </div>
-
-    </nav>
+     </nav>
      <div class="row" style="text-align:center;">
           <div class="col-md-3 col-sm-12">
                <a href="farmerHomepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
@@ -934,10 +949,10 @@
                <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
           </div>
           <div class="col-md-3 col-sm-12">
-          <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
+               <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
           </div>
           <div class="col-md-3 col-sm-12">
-          <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers/SMS</label></a>
+               <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers/SMS</label></a>
           </div>
      </div>
      <hr>
@@ -954,80 +969,81 @@
                          <img class="d-block w-100" src="../Images/Website/farm4.jpg" alt="Third slide">
                     </div>
                </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-          </a>
+               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+               </a>
           </div>
      </div>
-          <div class="features">
-               <h1 style="font-weight: bold;color:black; text-align:center">Features</h1>
-               <div class="card-deck row text-center" style="display: flex; flex-wrap: wrap;">
-                    <div class="card">
-                         <p class="aligncenter">
-                              <img class="card-img-top image"  src="../Images/Website/picha1.jpg" alt="Card image cap">
-                         </p>
-                         <div class="card-body">
-                              <h5 class="card-title">Fixed Price Selling</h5>
-                              <p class="card-text">Registered buyers can order organic products online by making online payment for the product which was set by the seller</p>
-                         </div>
-                    </div>
-                    <div class="card">
+     <div class="features">
+          <h1 style="font-weight: bold;color:black; text-align:center">Features</h1>
+          <div class="card-deck row text-center" style="display: flex; flex-wrap: wrap;">
+               <div class="card">
                     <p class="aligncenter">
-                              <img class="card-img-top image"  src="../Images/Website/picha3.jpg" alt="Card image cap">
-                         </p>
-                         <div class="card-body">
-                              <h5 class="card-title">Enquiry Based Buying</h5>
-                              <p class="card-text"> Registered buyers can place enquiry of a product and eligible sellers can place their quotes. The buyer can then buy from the qualified sellers</p>
-                         </div>
+                         <img class="card-img-top image" src="../Images/Website/picha1.jpg" alt="Card image cap">
+                    </p>
+                    <div class="card-body">
+                         <h5 class="card-title">Fixed Price Selling</h5>
+                         <p class="card-text">Registered buyers can order organic products online by making online payment for the product which was set by the seller</p>
                     </div>
-                    <div class="card">
+               </div>
+               <div class="card">
                     <p class="aligncenter">
-                              <img class="card-img-top image"  src="../Images/Website/picha4.jpg" alt="Card image cap">
-                         </p>
-                         <div class="card-body">
-                              <h5 class="card-title">Raising Future Demands</h5>
-                              <p class="card-text">Registered buyers can place their request for products which will be produced by the farmers in future</p>
-                         </div>
+                         <img class="card-img-top image" src="../Images/Website/picha3.jpg" alt="Card image cap">
+                    </p>
+                    <div class="card-body">
+                         <h5 class="card-title">Enquiry Based Buying</h5>
+                         <p class="card-text"> Registered buyers can place enquiry of a product and eligible sellers can place their quotes. The buyer can then buy from the qualified sellers</p>
+                    </div>
+               </div>
+               <div class="card">
+                    <p class="aligncenter">
+                         <img class="card-img-top image" src="../Images/Website/picha4.jpg" alt="Card image cap">
+                    </p>
+                    <div class="card-body">
+                         <h5 class="card-title">Raising Future Demands</h5>
+                         <p class="card-text">Registered buyers can place their request for products which will be produced by the farmers in future</p>
                     </div>
                </div>
           </div>
      </div>
-       
-	<section id="footer" class="myfooter">
-		<div class="container">
-			<div class="row text-center text-xs-center text-sm-left text-md-left">
-				<div class="col aligncenter">
-					<p>Payment Option</p>
+     </div>
+
+     <section id="footer" class="myfooter">
+          <div class="container">
+               <div class="row text-center text-xs-center text-sm-left text-md-left">
+                    <div class="col aligncenter">
+                         <p>Payment Option</p>
                          <img src="../Images/Website/paytm1.jpg" alt="paytm">
                          <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-				</div>
-				</hr>
-			</div>	
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-					<p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
-					<p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
-				</div>
-				</hr>
-			</div>	
-		</div>
-	</section>
-	<!-- ./Footer -->
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                         <ul class="list-unstyled list-inline social text-center">
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                         </ul>
+                    </div>
+                    </hr>
+               </div>
+               <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                         <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
+                         <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
+                    </div>
+                    </hr>
+               </div>
+          </div>
+     </section>
+     <!-- ./Footer -->
 </body>
+
 </html>
