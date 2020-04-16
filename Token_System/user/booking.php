@@ -413,6 +413,7 @@
         <button type="button" id="btn" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>3:00pm - 3:30 pm</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-5 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>3:45pm - 4:15pm</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-4 mr-5 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>4:30pm - 5:00pm</button>
+<<<<<<< HEAD
         <button type="button" class="btn btn-outline-success mt-5 ml-4 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>5:15pm - 5:45pm</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>6:00pm - 6:30pm</button>
         <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>6:45pm - 7:15pm</button>
@@ -470,6 +471,65 @@
 
   </div>
   <script>
+=======
+           <button type="button" class="btn btn-outline-success mt-5 ml-4 mr-4 p-2" ><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>5:15pm - 5:45pm</button>
+           <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>6:00pm - 6:30pm</button>
+           <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>6:45pm - 7:15pm</button>
+           
+           <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-5 p-2" ><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>7:30pm-8:00pm</button>
+           <button type="button" class="btn btn-outline-success mt-5 ml-5  p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>8:15pm-8:45pm</button>
+           
+           
+           
+         </div>
+         
+   
+   </div>
+   </div>
+   
+                 <script>
+                 
+            </script>
+            
+            <div class="scam">
+            <div class="confirm1 position-relative">
+                <div class="col-md-5 offset-md-3 mr-3 mt-3 ">
+                 <div class="card shadow-sm">
+                    <div class="card-header shadow-sm bg-light">
+                       <h5 class="font-weight-bold">Confirm Your Slot</h5>
+                    </div>
+                    <div class="card-body">
+                       <form action="#">
+                          <div class="row">
+                             <div class="col-md-10">
+                                 
+                               <h4 class="font-weight-bold">Date: </h4><input class="d"   disabled="disabled" id="demo" required>    
+                                                     
+                               
+                                   <h4 class="font-weight-bold">Time:</h4> <input class="s"   disabled="disabled" id="demo1" required="required">
+                               
+                               <div class="sl">
+                               <button  type="button" id ="myBtn" class="btn btn-primary" onclick="userValid()"> Confirm</button>
+                                 
+                               </div>
+                                 </div>
+                                   </div>
+                                   </div>
+                                   
+                                  
+                                  
+                               </div>
+                               </div>
+                             </div>
+                             <br>
+                              
+                              
+                                             
+                                             <br><br>
+                                             
+                                             </div>
+                                             <script>
+>>>>>>> 54c930fe0745ff4386dc9337bae292b7959b39f8
     function userValid() {
       var Description;
       Description = document.getElementById("demo1").value;
