@@ -8,7 +8,7 @@
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-    <title>Impulse - Slot</title>
+    <title>List Of Shops</title>
 
     <style>
         *{
@@ -103,11 +103,14 @@
     
     <div class="container-fluid p-4 border-top shadow-sm p-3 mb-5 bg-white  ">
         <h3 class="header font-weight-bold">Select Your Shop</h3>
+        
+
+        
     </div>
     <div class="parent position-relative bg-white">
     <div class="text-left ">
         <div class="container-sm p-4 border border-top shadow-sm ">
-            <a  href="booking.php">
+            <a  href="booking.html">
             <h4 class="font-weight-bold">Shop Name</h4>
             </a>
             <h5>Address</h5>
@@ -115,43 +118,21 @@
            
         </div>
     <div class="container-sm p-4 border border-top shadow-sm  ">
-        <a  href="booking.php">
-            <h4 class="font-weight-bold">Shop Name</h4>
-            </a>
+        <h4 class="font-weight-bold">Shop Name</h4>
         <h5>Address</h5>
         <h6>Phone Number</h6>
     </div>
     <div class="container-sm p-4 border border-top shadow-sm    ">
-        <a  href="booking.php">
-            <h4 class="font-weight-bold">Shop Name</h4>
-            </a>
+        <h4 class="font-weight-bold">Shop Name</h4>
         <h5>Address</h5>
         <h6>Phone Number</h6>
     </div>
     <div class="container-sm p-4 border border-top shadow-sm ">
-        <a  href="booking.php">
-            <h4 class="font-weight-bold">Shop Name</h4>
-            </a>
+        <h4 class="font-weight-bold">Shop Name</h4>
         <h5>Address</h5>
         <h6>Phone Number</h6>
     
     </div>
-    <div class="container-sm p-4 border border-top shadow-sm ">
-            <a  href="booking.php">
-            <h4 class="font-weight-bold">Shop Name</h4>
-            </a>
-            <h5>Address</h5>
-            <h6>Phone Number</h6>
-           
-        </div>
-        <div class="container-sm p-4 border border-top shadow-sm ">
-            <a  href="booking.php">
-            <h4 class="font-weight-bold">Shop Name</h4>
-            </a>
-            <h5>Address</h5>
-            <h6>Phone Number</h6>
-           
-        </div>
     
     </div>
     </div>
