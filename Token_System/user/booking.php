@@ -411,7 +411,7 @@
                                    <h4 class="font-weight-bold">Time:</h4> <input class="s"   disabled="disabled" id="demo1" required="required">
                                
                                <div class="sl">
-                               <button  type="button" id ="myBt" class="btn btn-primary" onclick="userValid()"  > Confirm</button>
+                               <button  type="button" id ="myBtn" class="btn btn-primary" onclick="userValid()"> Confirm</button>
                                  
                                </div>
                                  </div>
