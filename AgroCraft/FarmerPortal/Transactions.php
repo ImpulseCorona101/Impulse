@@ -10,12 +10,13 @@
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Farmer Homepage</title>
+     <title>Farmer - Transaction</title>
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
      <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
      <script src="../portal_files/jquery.min.js.download"></script>
@@ -70,12 +71,13 @@
                float: right;
                margin-right: 35px;
                margin-top: 20px;
+
           }
 
           .options {
                color: yellow;
                margin-left: 20px;
-               width: 25px;
+               /* width: 25px; */
                margin-right: 50px;
                display: inline;
           }
@@ -361,36 +363,6 @@
                border-radius: 25px;
           }
 
-          /* .box{
-            
-            color: rgb(6, 36, 7);
-            width: 1050px;
-             line-height: 40px; 
-             float:center;
-            margin: auto;
-            text-align: center;
-              margin-top: 120px;  
-             /* padding: 5px;  */
-          /* border-style: outset;  */
-          /* border-width: 5px;
-            border-radius: 16px; */
-          /* border-color:black;  */
-          /* font-size:20px; */
-          /* height: 900px;
-            border-radius: 30px;
-            
-        }
-        .please{
-             text-align:center;
-             float:right;
-             margin-right:500px;
-               margin: 0;
-               padding: 0;
-               font-family: sans-serif;
-               background-size: cover;
-               background-position: center;
-               box-sizing: border-box;
-          } */
 
           .wrapper {
                background-image: 100px;
@@ -490,7 +462,7 @@
                border-radius: 10px;
           }
 
-          /* .productbox:hover {
+          .productbox:hover {
                float: left;
                margin: 25px;
                margin-left: 30px;
@@ -500,11 +472,10 @@
                border-color: green;
                border-radius: 5px;
                font-weight: bolder;
-               height: 305px;
-               width: 220px;
-               transition: 0.5s;
+               height: 325px;
+               width: 240px;
 
-          } */
+          }
 
           .slideshow {
                margin-top: 10px;
@@ -528,11 +499,279 @@
                padding: 20px;
                color: green;
                text-decoration: underline;
-               margin: 20px;
-               font-size: 30px;
+               margin: 15px;
+               font-size: 25px;
                font-weight: bolder;
                padding-top: 10px;
           }
+
+          #navbar i {
+               padding-right: 1%;
+          }
+
+          .time {
+               background-color: red;
+               /* margin-left: 20px; */
+          }
+
+          .whats {
+               text-align: center;
+               margin-left: 30%;
+          }
+
+          .f1 {
+               float: left;
+               background-color: #fff;
+               border: 1px solid red;
+               height: 200px;
+               border-radius: 50%;
+               width: 200px;
+               padding-top: 20px;
+               border-style: solid;
+               background-image: url("../Images/Website/f2.jpg");
+               background-size: 200px 200px;
+               background-repeat: no-repeat;
+               border-color: #000;
+               /* opacity: 5%; */
+          }
+
+          .t1 {
+               padding-top: 70px;
+               text-align: center;
+               justify-items: center;
+               color: black;
+               font-weight: bold;
+          }
+
+          .t5 {
+               margin-top: -13px;
+          }
+
+          .t4 {
+               margin-top: -13px;
+
+          }
+
+          .whatsnew {
+               /* background-image: url("../Images/Website/back.jpeg"); */
+
+               background-color: red;
+
+          }
+
+          .f2 {
+               margin-left: 130px;
+               margin-right: 150px;
+          }
+
+          .f3 {
+               margin-right: 150px;
+
+          }
+
+          .f4 {
+               margin-right: 150px;
+          }
+
+          .pictus {
+               margin-top: 200px;
+               /* background-color: red; */
+          }
+
+          .pictus>img {
+               height: 100px;
+
+               width: 150px;
+          }
+
+          .imag1 {
+               margin-top: 20px;
+               margin-left: 180px;
+          }
+
+          .imag2 {
+               margin-top: 20px;
+
+               margin-left: 340px;
+
+          }
+
+          .imag3 {
+               margin-top: 20px;
+
+               margin-left: 350px;
+
+          }
+
+          .imag1_under {
+               max-width: 250px;
+               width: 100%;
+               min-height: 100px;
+               margin-left: 100px;
+               text-align: center;
+               font-size: 20px;
+
+          }
+
+          .imag2_under {
+               max-width: 250px;
+               width: 100%;
+               min-height: 100px;
+               margin-left: 290px;
+               margin-top: 20px;
+               text-align: center;
+               font-size: 20px;
+          }
+
+          .imag3_under {
+               max-width: 250px;
+               width: 100%;
+               font-size: 20px;
+
+               min-height: 100px;
+               margin-left: 290px;
+               text-align: center;
+          }
+
+          .image {
+               max-width: 200px;
+          }
+
+          .aligncenter {
+               text-align: center;
+          }
+
+          .myfooter {
+               background-color: #292b2c;
+               color: goldenrod;
+               margin-top: 15px;
+          }
+
+          a {
+               color: goldenrod;
+          }
+
+          .navbar-inverse {
+               background: #00cc00;
+               color: black;
+          }
+
+          .navbar-inverse .navbar-brand,
+          .navbar-inverse a {
+               color: black;
+          }
+
+          .navbar-inverse .navbar-nav>li>a {
+               color: clack;
+          }
+
+          .caros {
+               margin-top: 30px;
+
+          }
+
+          hr {
+               border: 0;
+               height: 0.5px;
+               clear: both;
+               display: block;
+               width: 99%;
+               background-color: black;
+               margin-left: 0.5em;
+          }
+
+          img {
+               max-width: 100%;
+               display: inline-block;
+          }
+
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          nav {
+               background-color: #292b2c;
+          }
+
+          .navbar-custom {
+               background-color: #292b2c;
+          }
+
+          /* change the brand and text color */
+          .navbar-custom .navbar-brand,
+          .navbar-custom .navbar-text {
+               background-color: #292b2c;
+          }
+
+          .navbar-custom .navbar-nav .nav-link {
+               background-color: #292b2c;
+          }
+
+          .navbar-custom .nav-item.active .nav-link,
+          .navbar-custom .nav-item:hover .nav-link {
+               background-color: #292b2c;
+          }
+
+          .firstimage {
+               height: 500px;
+               width: 100%;
+          }
+
+          .mybtn {
+               border-color: green;
+               border-style: solid;
+          }
+
+          .card {
+               width: 100%;
+               height: 100%;
+               margin: 10px;
+          }
+
+          .right {
+               display: flex;
+          }
+
+          .left {
+               display: none;
+          }
+
+          .cart {
+               /* margin-left:10px; */
+               margin-right: -9px;
+          }
+
+          .profile {
+               margin-right: 2px;
+
+          }
+
+          .login {
+               margin-right: -2px;
+               margin-top: 12px;
+               display: none;
+          }
+
+          .searchbox {
+               width: 60%;
+          }
+
+          .lists {
+               display: inline-block;
+          }
+
+          .moblists {
+               display: none;
+          }
+
+          .logins {
+               text-align: center;
+               margin-right: -30%;
+               margin-left: 35%;
+          }
+
           .tab {
                width: 100%;
 
@@ -549,157 +788,271 @@
                padding: 2px;
 
           }
-          
+
           .tableyhead {
 
-color: red;
+               color: red;
 
-}
+          }
 
-.thy {
-background-color: #555;
-color: white;
+          .thy {
+               background-color: #555;
+               color: white;
 
-}
+          }
 
-.trow {
-align-content: center;
-}
+          .trow {
+               align-content: center;
+          }
+
+
+
+          /* For medium devices (e.g. tablets) */
+          /* @media (min-width: 420px) {
+               img {
+               max-width: 48%;
+               }
+          } */
+          /* For large devices (e.g. desktops) */
+          @media (min-width: 760px) {
+               .resizing {
+                    height: 500px;
+               }
+          }
+
+          @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+               .image {
+                    max-width: 48%;
+               }
+
+               .firstimage {
+                    height: auto;
+                    width: 90%;
+               }
+
+               .card {
+                    width: 80%;
+                    margin-left: 10%;
+                    margin-right: 10%;
+
+               }
+
+               .col {
+                    margin-top: 20px;
+               }
+
+               .right {
+                    display: none;
+                    background-color: #ff5500;
+               }
+
+               /* 
+           .settings{
+           margin-left:79%;
+       } */
+               .left {
+                    display: flex;
+               }
+
+               .moblogo {
+                    display: none;
+               }
+
+               .logins {
+                    text-align: center;
+                    margin-right: 35%;
+                    padding: 15px;
+               }
+
+               .searchbox {
+                    width: 95%;
+                    margin-right: 5%;
+                    margin-left: 0%;
+               }
+
+               .moblists {
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+               }
+
+
+          }
      </style>
 
 </head>
 
 <body>
 
-     <div class="header">
 
-          <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
-          <div class="dropdown">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
-               </button></i>
-               <ul class="dropdown-menu etc">
-                    <?php
-                    if (isset($_SESSION['phonenumber'])) {
-                         echo "<li class='options'> <a href='FarmerProfile.php'><label class='makeitgreen'>Profile</label></a><br></li>";
-                         echo "<li class='options'> <a href='CallCenter.php'><label class='makeitgreen'>Call Centers</label></a></li>";
-                         echo "<li class='options'> <a href='logout.php'><label class='makeitgreen'>Logout</label></a></li>";
-                    } else {
-                         echo "<li class='options'> <a href='../auth/FarmerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
-                    }
-                    ?>
-               </ul>
+
+
+     <body>
+
+          <nav class="navbar navbar-expand-xl ">
+               <!-- <a href="#" class="navbar-brand">Academind</a> -->
+               <div class=" flex-row-reverse left ">
+
+                    <div class="p-2">
+                         <!-- <div class="icon2">
+                    <a href="CartPage.php"> <i class="fa" style=" color:green ;font-size:20px;margin-top:-20px;margin-bottom:20px;">&#61562;</i></a> -->
+                         <!-- <span id="icon" style="color:green"> 5 </span>
+                </div>  -->
+                    </div>
+                    <!-- <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;'></i></div> -->
+                    <a class="float-left" href="#">
+                         <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
+                    </a>
+               </div>
+               <button class="navbar-toggler" data-toggle="collapse" style="margin-left:-20px;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:20px; "></i></span>
+               </button>
+               <a class="float-left" href="farmerHomepage.php">
+                    <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
+               </a>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+                    <div class="proicon">
+
+                         <?php
+                         if (!isset($_SESSION['phonenumber'])) {
+                              echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '></div></a>";
+                         }
+                         ?>
+                    </div>
+
+                    <div class="list-group moblists">
+
+                         <?php
+                         if (isset($_SESSION['phonenumber'])) {
+
+                              echo "<a href='FarmerProfile.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
+                              echo "<a href=Orders.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
+                              echo "<a href='logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
+                         } else {
+                              echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '>Login</div></a>";
+                         }
+                         ?>
+                         <div class='loginz' style="text-align:center;">
+                              <?php getFarmerUsername(); ?>
+                         </div>
+                    </div>
+               </div>
+
+
+
+
+               <div class=" flex-row-reverse right ">
+                    <div class="p-2 cart">
+                         <!-- <div class="icon2">
+                    <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green;margin-top:-20px;">&#61562;</i></a>
+                    <span id="icon" style="color:green"> 5 </span>
+                </div> -->
+                         <div class='loginz'>
+                              <?php getFarmerUsername(); ?>
+                         </div>
+                    </div>
+                    <div class="dropdown p-2 settings ">
+                         <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Settings
+                         </button>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <?php
+                              if (isset($_SESSION['phonenumber'])) {
+                                   echo "<a href='FarmerProfile.php' class='dropdown-item' style='padding-right:-20px;'>Profile</a>";
+                                   echo "<a href='Orders.php' class='dropdown-item' style='padding-right:-20px;'>Orders</a>";
+                                   echo "<a href='logout.php' class='dropdown-item' style='padding-right:-20px;'>Logout</a>";
+                              } else {
+                                   echo "<a href='../auth/FarmerLogin.php'> <div class='dropdown-item' style='padding-right:-20px;'>Login</div></a>";
+                              }
+                              ?>
+                         </div>
+                    </div>
+               </div>
+          </nav>
+          <br>
+          <div class="row" style="text-align:center;">
+               <div class="col-md-3 col-sm-12">
+                    <a href="farmerHomepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
+               </div>
+               <div class="col-md-3 col-sm-12">
+                    <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
+               </div>
+               <div class="col-md-3 col-sm-12">
+                    <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
+               </div>
+               <div class="col-md-3 col-sm-12">
+                    <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers/SMS</label></a>
+               </div>
           </div>
-
-          <div class="proicon">
-
-               <?php
-               if (!isset($_SESSION['phonenumber'])) {
-                    echo "<a href='../auth/FarmerLogin.php'> <i class='far fa-user-circle ' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
-               } else {
-                    echo "<a href='FarmerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
-               }
-               ?>
-          </div>
-
-          <div class="loginz">
-               <?php getFarmerUsername(); ?>
-          </div>
-     </div>
-
-     <br>
-
-     </div>
-
-
-     <div class="headerdown">
-
-          <a href="Homepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
-          <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
-          <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
-          <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers And Sms</label></a>
           <hr>
-     </div>
 
 
+          <br>
 
-     <br>
+          <div style="display:block;">
 
-     <div style="display:block;">
+               <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>TRANSACTION HISTORY</b></label></div>
+               <br>
+
+               <table class="table">
+                    <thead align="center" class=tableyhead>
+                         <th class=thy>Date</th>
+                         <th class=thy>Name</th>
+                         <th class=thy>Phone Number</th>
+                         <th class=thy>Address</th>
+                         <th class=thy>Quantity</th>
+                         <!-- <th class=thy>Phone Number</th> -->
+                         <th class=thy>Price</th>
+                    </thead>
+                    <tr align="center">
+                         <th>12-1-2000</th>
+                         <th>melissa</th>
+                         <th>1234567890</th>
+                         <th>sajgdkagdd</th>
+                         <th>500</th>
+                         <th>200</th>
+                    </tr>
+               </table>
+          </div>
+
+
           <br> <br>
-          <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>TRANSACTION HISTORY</b></label></div>
+          <section id="footer" class="myfooter">
+               <div class="container">
+                    <div class="row text-center text-xs-center text-sm-left text-md-left">
+                         <div class="col aligncenter">
+                              <br>
+                              <h5>Payment Option</h5>
+                              <img src="../Images/Website/paytm1.jpg" alt="paytm">
+                              <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
+                         </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                              <ul class="list-unstyled list-inline social text-center">
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                              </ul>
+                         </div>
 
-        <table align="center" border="2" style="margin-left:8%;">
+                    </div>
+                    <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                              <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
+                              <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
+                         </div>
+                         </hr>
+                    </div>
+               </div>
+          </section>
 
-            
-               <table class=tab>
-          <thead align="center" class=tableyhead>
-               <th class=thy>Date</th>
-               <th class=thy>Name</th>
-               <th class=thy>Phone Number</th>
-               <th class=thy>Address</th>
-               <th class=thy>Quantity</th>
-               <!-- <th class=thy>Phone Number</th> -->
-          <th class=thy>Price</th>
-          </thead>
-          <tr align="center">
-                    <th>12-1-2000</th>
-                    <th>melissa</th>
-                    <th>1234567890</th>
-                    <th>sajgdkagdd</th>
-                    <th>500</th>
-                    <th>200</th>
-               </tr> 
-          </table>
-     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-     <div class="footer">
-          <hr>
-          <label class="payment">Payment Options:-</label>
-          <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
-          <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
-     </div><br><br>
-     <h3><span> GET SOCIAL WITH US </span></h3>
-     </div>
-     <div class="morefooter">
-
-          <div class="call">
-               <i class="fas fa-phone-alt call_color"></i>
-               <a href="#" style="color:black;">+91-8191046421</a>
-          </div>
-
-          <div class="instagram"><img src="../Images/Website/Insta.jpg" height="45px" width="60px">
-          </div>
-
-          <div class="gmail">
-               <img src="../Images/Website/gmail.jpg" height="30px" width="50px">
-          </div>
-
-     </div>
-     <div class="instaid">
-          <div class="text"><a href="#" style="color:black;">@AgroCraft</a></div>
-
-          <div class="gmailid">
-               <a href="#" class="hypher" style="color:black;">agrocraft6@gmail.com</a>
-          </div>
-
-     </div>
-     <div class="copy">
-          <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
-     </div>
-
-</body>
+     </body>
 
 </html>
