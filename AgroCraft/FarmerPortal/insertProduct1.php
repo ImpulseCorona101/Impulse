@@ -68,20 +68,20 @@ $sessphonenumber = $_SESSION['phonenumber'];
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
-                            <div class="card-header">Insert Your New Product</div>
+                            <div class="card-header">Insert Your New Product...</div>
                                 <div class="card-body">
-                                    <form name="my-form" action="insertProduct1.php" method="POST" enctype="multipart/form-data">
+                                    <form name="my-form" action="insertProduct1.php" method="post" enctype="multipart/form-data">
                                         <div class="form-group row">
                                             <label for="full_name" class="col-md-4 col-form-label text-md-right">Product Title:</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="full_name" class="form-control" name="product_title" required>
+                                                <input type="text" id="full_name" class="form-control" name="product_title" placeholder="Enter Product title" required>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="email_address" class="col-md-4 col-form-label text-md-right">Product Stock:(In kg)</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="full_name" class="form-control" name="product_stock" required>
+                                                <input type="text" id="full_name" class="form-control" name="product_stock" placeholder="Enter Product Stock" required>
                                             </div>                    
                                         </div>
 
@@ -106,7 +106,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                                         <div class="form-group row">
                                             <label for="phone_number" class="col-md-4 col-form-label text-md-right">Product type :</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="phone_number" class="form-control" name="product_type" required>
+                                                <input type="text" id="phone_number" class="form-control" name="product_type" placeholder="Example . potato" required>
                                             </div>
                                         </div>
 
@@ -127,14 +127,14 @@ $sessphonenumber = $_SESSION['phonenumber'];
                                         <div class="form-group row">
                                             <label for="nid_number" class="col-md-4 col-form-label text-md-right">Product MRP : (Per kg)</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="nid_number" class="form-control" name="product_mrp" required>
+                                                <input type="text" id="nid_number" class="form-control" name="product_mrp" placeholder="Enter Product price" required>
                                             </div>
                                         </div>
                                         
                                         <div class="form-group row">
                                             <label for="nid_number1" class="col-md-4 col-form-label text-md-right">Product Base Price:(Per kg)</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="nid_number1" class="form-control" name="product_baseprice" required>
+                                                <input type="text" id="nid_number1" class="form-control" name="product_baseprice" placeholder="Enter Product base price" required>
                                             </div>
                                         </div>
 
@@ -148,7 +148,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                                         <div class="form-group row">
                                             <label for="nid_number3" class="col-md-4 col-form-label text-md-right">Product Keywords:</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="nid_number3" class="form-control" name="product_keywords" required>
+                                                <input type="text" id="nid_number3" class="form-control" name="product_keywords" placeholder="Example best potatos" required>
                                             </div>
                                         </div>
 
