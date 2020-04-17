@@ -1,3 +1,3 @@
 <?php 
-        $con = mysqli_connect("localhost","root","","agrocraft");
+        $con = mysqli_connect("localhost","root","","impulse");
 ?>

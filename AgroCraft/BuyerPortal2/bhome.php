@@ -370,13 +370,21 @@ include("../Functions/functions.php");
                 max-width: 50%;
                 max-height: 40%;
             }
+<<<<<<< HEAD
+=======
         }
 
+>>>>>>> 24d3d457047086821dc36c3e90b3c21ba0e48860
         @media screen and (max-width: 600px) {
             .kolum {
                 flex: 50%;
                 max-width: 50%;
+<<<<<<< HEAD
+                }
+                
+=======
                 max-height: 40%;
+>>>>>>> 24d3d457047086821dc36c3e90b3c21ba0e48860
             }
         }
 
