@@ -2,7 +2,12 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Farmer Registration Portal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
     <script>
         function state() {
             var a = document.getElementById('states').value;
@@ -86,179 +91,175 @@
         }
     </script>
     <style>
-        h1 {
-            background-color: transparent;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            text-align: center;
-            cursor: pointer
-        }
+    @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+    body{
+        margin: 0;
+        font-size: .9rem;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #212529;
+        text-align: left;
+        background-color: #f5f8fa;
+    }
 
-        .box {
-            color: rgb(6, 36, 7);
-            width: 350px;
-            line-height: 40px;
-            margin: auto;
-            text-align: center;
-            margin-top: 50px;
-            padding: 5px;
-            border-style: outset;
-            border-width: 5px;
-            border-radius: 16px;
-            border-color: green;
-        }
+    .my-form, .login-form
+    {
+        font-family: Raleway, sans-serif;
+    }
 
-        body {
+    .my-form
+    {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 
-            /* background: black; */
-            background-image: url(../Images/Website/FarmerLogin.jpg);
-            text-align: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            /*background-image:url(../Images/Website/forgotpassword.jpg);*/
-            border: chartreuse;
-        }
+    .my-form .row
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-        form {
+    .login-form
+    {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 
-            margin: 10px;
-            padding: 10px;
-            background-color: rgb(247, 248, 247);
+    .login-form .row
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-        }
-
-        input {
-            padding: 7px;
-            margin: 10px;
-            border-color: rgb(78, 180, 121);
-            display: inline-block;
-            border-radius: 16px;
-
-        }
-
-        textarea {
-            padding: 7px;
-            margin: 10px;
-            border-color: rgb(78, 180, 121);
-            display: inline-block;
-            border-radius: 16px;
-
-
-
-        }
-
-        input[type="submit"] {
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            color: rgb(246, 248, 246);
-            background-color: green;
-            /* display: inline-block; */
-            /*border-radius: 0px;*/
-            border-color: rgb(3, 66, 34);
-            width: 25%;
-        }
-
-        input[type="submit"]:hover {
-            background-color: rgb(97, 16, 33);
-            outline: none;
-            border-color: blanchedalmond;
-            color: rgb(155, 248, 4);
-            /*border-radius: 0px;*/
-            border-style: outset;
-            border-color: rgb(155, 248, 4);
-            font-weight: bolder;
-            width: 29%;
-            font-size: 18px;
-
-
-        }
-
-        .box {
-            color: rgb(6, 36, 7);
-            width: 400px;
-            line-height: 40px;
-            margin: auto;
-            text-align: center;
-            margin-top: 50px;
-            padding: 5px;
-            border-style: outset;
-            border-width: 5px;
-            background-color: white;
-            border-radius: 16px;
-            border-color: green;
-        }
     </style>
 </head>
 
 <body>
-    <div class="box">
-        <form action="FarmerRegister.php" method="post">
-            <h1> FARMER REGISTRATION </h1> <input type="text" name="name" placeholder="Name"><br>
+<main class="my-form">
+		<div class="cotainer">
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-header"><h4 style="font-style:bold;">Farmer Registration<h4></div>
+						<div class="card-body">
+							<form name="my-form" action="FarmerRegister.php" method="post">
+								<div class="form-group row">
+									<label for="full_name" class="col-md-4 col-form-label text-md-right">Full Name</label>
+									<div class="col-md-6">
+										<input type="text" id="full_name" class="form-control" name="name" placeholder="Enter Your Name" required>
+									</div>
+								</div>
 
-            <input type="number" name="phonenumber" placeholder="Phone Number"><br>
+								<div class="form-group row">
+									<label for="phone_number" class="col-md-4 col-form-label text-md-right">Phone Number</label>
+									<div class="col-md-6">
+										<input type="text" id="phone_number" class="form-control" name="phonenumber" placeholder="Phone Number" required>
+									</div>
+								</div>
 
-            <textarea rows="3" cols="20" name="address" placeholder="Address"></textarea><br>
+								<div class="form-group row">
+									<label for="present_address" class="col-md-4 col-form-label text-md-right">Present Address</label>
+									<div class="col-md-6">
+										<textarea type="text" id="present_address" class="form-control" rows="4" name="address" placeholder="Address" required></textarea>
+									</div>
+								</div>	
+							
+                                <div class="form-group row">
+                                    <label for="states" class="col-md-4 col-form-label text-md-right">State</label>
+                                    <div class="col-md-6">
+                                        <select name="statevalue" id="states" onchange="state()" class="form-control">
+                                            <option value="0">--Select State--</option>
+                                            <option value="ANDAMAN & NICOBAR ISLANDS">ANDAMAN & NICOBAR ISLANDS</option>
+                                            <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                                            <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                                            <option value="ASSAM">ASSAM</option>
+                                            <option value="BIHAR">BIHAR</option>
+                                            <option value="CHANDIGARH">CHANDIGARH</option>
+                                            <option value="CHHATTISGARH">CHHATTISGARH</option>
+                                            <option value="DADRA AND NAGAR HAVELI">DADRA AND NAGAR HAVELI</option>
+                                            <option value="DAMAN AND DIU">DAMAN AND DIU</option>
+                                            <option value="DELHI">DELHI</option>
+                                            <option value="GOA">GOA</option>
+                                            <option value="GUJARAT">GUJARAT</option>
+                                            <option value="HARYANA">HARYANA</option>
+                                            <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                                            <option value="JAMMU AND KASHMIR">JAMMU AND KASHMIR</option>
+                                            <option value="JHARKAND">JHARKAND</option>
+                                            <option value="KARNATAKA">KARNATAKA</option>
+                                            <option value="KERALA">KERALA</option>
+                                            <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                                            <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                                            <option value="MAHARASHTRA">MAHARASHTRA</option>
+                                            <option value="MANIPUR">MANIPUR</option>
+                                            <option value="MEGHALAYA">MEGHALAYA</option>
+                                            <option value="MIZORAM">MIZORAM</option>
+                                            <option value="NAGALAND">NAGALAND</option>
+                                            <option value="ODISHA">ODISHA</option>
+                                            <option value="PUDUCHERRY">PUDUCHERRY</option>
+                                            <option value="PUNJAB">PUNJAB</option>
+                                            <option value="RAJASTHAN">RAJASTHAN</option>
+                                            <option value="SIKKIM">SIKKIM</option>
+                                            <option value="TAMIL NADU">TAMIL NADU</option>
+                                            <option value="TELANGANA">TELANGANA</option>
+                                            <option value="TRIPURA">TRIPURA</option>
+                                            <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                                            <option value="UTTARAKHAND">UTTARAKHAND</option>
+                                            <option value="UTTARANCHAL">UTTARANCHAL</option>
+                                            <option value="WEST BENGAL">WEST BENGAL</option>
+                                        </select>
+                                    </div>
+                                </div>    
+                                <div class="form-group row">
+                                    <label for="states" class="col-md-4 col-form-label text-md-right">District</label>
+                                    <div class="col-md-6">
+                                        <select name="district" id="district" class="form-control">>
+                                            <option>Select District</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-            <select name="statevalue" id="states" onchange="state()" tabindex="1" style="width:170px;">
-                <option value="0">--Select State--</option>
-                <option value="ANDAMAN & NICOBAR ISLANDS">ANDAMAN & NICOBAR ISLANDS</option>
-                <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
-                <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
-                <option value="ASSAM">ASSAM</option>
-                <option value="BIHAR">BIHAR</option>
-                <option value="CHANDIGARH">CHANDIGARH</option>
-                <option value="CHHATTISGARH">CHHATTISGARH</option>
-                <option value="DADRA AND NAGAR HAVELI">DADRA AND NAGAR HAVELI</option>
-                <option value="DAMAN AND DIU">DAMAN AND DIU</option>
-                <option value="DELHI">DELHI</option>
-                <option value="GOA">GOA</option>
-                <option value="GUJARAT">GUJARAT</option>
-                <option value="HARYANA">HARYANA</option>
-                <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
-                <option value="JAMMU AND KASHMIR">JAMMU AND KASHMIR</option>
-                <option value="JHARKAND">JHARKAND</option>
-                <option value="KARNATAKA">KARNATAKA</option>
-                <option value="KERALA">KERALA</option>
-                <option value="LAKSHADWEEP">LAKSHADWEEP</option>
-                <option value="MADHYA PRADESH">MADHYA PRADESH</option>
-                <option value="MAHARASHTRA">MAHARASHTRA</option>
-                <option value="MANIPUR">MANIPUR</option>
-                <option value="MEGHALAYA">MEGHALAYA</option>
-                <option value="MIZORAM">MIZORAM</option>
-                <option value="NAGALAND">NAGALAND</option>
-                <option value="ODISHA">ODISHA</option>
-                <option value="PUDUCHERRY">PUDUCHERRY</option>
-                <option value="PUNJAB">PUNJAB</option>
-                <option value="RAJASTHAN">RAJASTHAN</option>
-                <option value="SIKKIM">SIKKIM</option>
-                <option value="TAMIL NADU">TAMIL NADU</option>
-                <option value="TELANGANA">TELANGANA</option>
-                <option value="TRIPURA">TRIPURA</option>
-                <option value="UTTAR PRADESH">UTTAR PRADESH</option>
-                <option value="UTTARAKHAND">UTTARAKHAND</option>
-                <option value="UTTARANCHAL">UTTARANCHAL</option>
-                <option value="WEST BENGAL">WEST BENGAL</option>
+                                <div class="form-group row">
+									<label for="account2" class="col-md-4 col-form-label text-md-right">PAN No.</label>
+									<div class="col-md-6">
+										<input type="text" id="account2" class="form-control" name="pan" placeholder="Pan number" required>
+									</div>
+								</div>
 
-            </select>
-            <br>
+                                <div class="form-group row">
+									<label for="account1" class="col-md-4 col-form-label text-md-right">Bank Account No.</label>
+									<div class="col-md-6">
+										<input type="text" id="account1" class="form-control" name="account" placeholder="Bank Account number" required>
+									</div>
+								</div>
 
-            <select name="district" id="district">
-                <option>Select District</option>
-            </select><br>
 
-            <input type="text" name="pan" placeholder="Pan Number"><br>
+								<div class="form-group row">
+									<label for="p1" class="col-md-4 col-form-label text-md-right">Password</label>
+									<div class="col-md-6">
+										<input id="p1" class="form-control" type="password" name="password" placeholder="Password" required>
+									</div>
+								</div>
 
-            <input type="text" name="account" placeholder="Bank Account number"><br>
+								<div class="form-group row">
+									<label for="p2" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
+									<div class="col-md-6">
+										<input id="p2" class="form-control" type="password" name="confirmpassword" placeholder="Confirm Password" required>
+									</div>
+								</div>
 
-            <input type="password" name="password" placeholder="Password" required><br>
+								<div class="col-md-6 offset-md-4">
+									<button type="submit" class="btn btn-primary" name="register" value="Register">
+										Register
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
-            <input type="password" name="confirmpassword" placeholder="Confirm Password" required><br>
-
-            <input type="submit" name="register" value="Register">
-
-        </form>
-    </div>
 </body>
 
 </html>
@@ -304,7 +305,7 @@ if (isset($_POST['register'])) {
                 '$encryption')";
 
         $run_register_query = mysqli_query($con, $query);
-        echo "<script>alert('SucessFully Inserted');</script>";
+        echo "<script>console.log('SucessFully Inserted');</script>";
         echo "<script>window.open('FarmerLogin.php','_self')</script>";
     } else if (strcmp($password, $confirmpassword) != 0) {
         echo "<script>

@@ -68,7 +68,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
-                            <div class="card-header">Insert Your New Product...</div>
+                            <div class="card-header"><h4 style="font-style:bold;">Insert Your New Product...</h4></div>
                                 <div class="card-body">
                                     <form name="my-form" action="insertProduct1.php" method="post" enctype="multipart/form-data">
                                         <div class="form-group row">
