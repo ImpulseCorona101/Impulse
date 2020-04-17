@@ -347,11 +347,12 @@
                 max-width: 50%;
                 } 
             }
-            @media screen and (max-width: 600px) {
+        @media screen and (max-width: 600px) {
             .kolum {
                 flex: 50%;
                 max-width: 50%;
                 }
+                
             }
         /* Responsive layout - makes a two column-layout instead of four columns */
         /* @media screen and (max-width: 800px) {
