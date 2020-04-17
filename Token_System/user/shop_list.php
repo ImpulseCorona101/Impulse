@@ -31,19 +31,7 @@
             display: none;
         }
         
-        @media only screen and (min-device-width:320px) and (max-device-width:480px) {
-            .mobileContent {
-                display: inline;
-            }
-            .table-responsive {
-                display: block;
-            }
-            .dropbtn{
-                position: relative;
-            }
-            
-            
-}
+        
 
 
         }
@@ -118,7 +106,7 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: green;}
+.dropdown a:hover {background-color: #2a5cff;}
 
 .show {display: block;}
 
@@ -181,6 +169,58 @@ form > .button:hover {
     position: absolute;
     top: 250px;
 }
+@media only screen and (min-device-width:320px) and (max-device-width:480px) {
+            .mobileContent {
+                display: inline;
+            }
+            .hrtable-responsive {
+                display: block;
+            }
+            .dropbtn{
+                position: relative;
+                right: 10px;
+               bottom:1px;
+            }
+            h3{
+                position: absolute;
+                right:  90px;
+            bottom: 628px;
+
+                width: 300px;
+            }
+            .dropdown-content a {
+             color: black;
+             padding: 12px 10px;
+             text-decoration: none;
+             display: block;
+             
+
+            }
+            .search{
+                position: absolute;
+                top: 130px;
+            }
+            .mob{
+                position: relative;
+                right: 425px;
+                bottom: 50px;
+                
+
+            }
+            .container-sm{
+                width: 325px;
+
+            }
+            .status{
+                position: absolute;
+                left:340px;
+                width: 10px;
+                bottom: 580px;
+            }
+
+ 
+            
+}
  
     </style>
  
@@ -236,6 +276,10 @@ form > .button:hover {
   <div id="myDropdown" class="dropdown-content">
     <a href="#home">Profile</a>
     <a href="#about">Logout</a>
+    <a href="#about">Home</a>
+    <a href="#about">Covid-19 Status</a>
+    <a href="#about">Agrocraft</a>
+    <a href="#about">Contact Us</a>
     
   </div>
 </div>
