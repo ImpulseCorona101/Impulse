@@ -833,7 +833,7 @@
 
      </div>
      <div class="copy">
-          <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
+          <h5 style="text-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
      </div>
 
 </body>

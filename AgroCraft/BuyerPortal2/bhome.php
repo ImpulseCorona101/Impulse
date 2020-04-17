@@ -120,6 +120,18 @@
 		}
 	</script>
     <style>
+         .myfooter {
+               background-color: #292b2c;
+
+               color: goldenrod;
+               margin-top: 15px;
+          }
+          .aligncenter {
+               text-align: center;
+          }
+          a {
+               color: goldenrod;
+          }
         * {
             margin: 0;
             padding: 0;
@@ -521,7 +533,7 @@
     <div class="container"> <img src="b4.jpeg" class="img-fluid firstimage d-block mx-auto" alt="Responsive image">
     </div>
     <br>
-    <div class="container">
+    <!-- <div class="container">
         <div class="d-flex justify-content-around bg-white mb-3">
 
             <div class="p-2 ">
@@ -550,7 +562,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <div class="container">
             <div class="row">
                 <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
