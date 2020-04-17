@@ -583,109 +583,139 @@ include("../Functions/functions.php");
         <br>
         <div class="row">
             <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
-                <div class="card p-3 ">
+                <div class="card pb-0 pl-1 pr-1 pt-0" style="height:585px">
                     <br>
                     <div><b>
                             <h3><img src="iconsmall.png"> ABHISHEK
                         </b></h3>
                     </div>
                     <img class="card-img-top" src="myfruit1.jfif" alt="Card image cap" height="300px">
-                    <div class="card-body">
+                    <div class="card-body pb-0">
                         <h5 class="card-title">Orange</h5>
                         <p class="card-text">PRICE:-20rs/kg</p>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                        <div class="row">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-warning border-secondary p-1" style="color:black;;" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                                    </div>
+                                    <input type="number" class="form-control" aria-label="Default" style="margin-top:0%;width:20%;padding:0%;" aria-describedby="inputGroup-sizing-default">
+                                </div>
                             </div>
-                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <a href="#" class="btn btn-warning border-secondary mr-1" style="color:black ;font-weight:50px;">Add to cart<img src="carticons.png" height="20px"></a>
+                            </div>
                         </div>
-                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
                     </div>
                 </div>
             </div>
             <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
-                <div class="card p-3 ">
+                <div class="card pb-0 pl-1 pr-1 pt-0" style="height:585px">
                     <br>
                     <div><b>
                             <h3><img src="iconsmall.png"> ABHISHEK
                         </b></h3>
                     </div>
-                    <img class="card-img-top" src="myfruit2.jpg" alt="Card image cap">
-                    <div class="card-body">
+                    <img class="card-img-top" src="myfruit2.jpg" alt="Card image cap" height="300px">
+                    <div class="card-body pb-0">
                         <h5 class="card-title">Orange</h5>
                         <p class="card-text">PRICE:-20rs/kg</p>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                        <div class="row">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-warning border-secondary p-1" style="color:black;;" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                                    </div>
+                                    <input type="number" class="form-control" aria-label="Default" style="margin-top:0%;width:20%;padding:0%;" aria-describedby="inputGroup-sizing-default">
+                                </div>
                             </div>
-                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <a href="#" class="btn btn-warning border-secondary mr-1" style="color:black ;font-weight:50px;">Add to cart<img src="carticons.png" height="20px"></a>
+                            </div>
                         </div>
-                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
                     </div>
                 </div>
             </div>
             <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
-                <div class="card p-3 ">
+                <div class="card pb-0 pl-1 pr-1 pt-0" style="height:585px">
                     <br>
                     <div><b>
                             <h3><img src="iconsmall.png"> ABHISHEK
                         </b></h3>
                     </div>
-                    <img class="card-img-top" src="myfruit4.jfif" alt="Card image cap">
-                    <div class="card-body">
+                    <img class="card-img-top" src="myfruit4.jfif" alt="Card image cap" height="300px">
+                    <div class="card-body pb-0">
                         <h5 class="card-title">Orange</h5>
                         <p class="card-text">PRICE:-20rs/kg</p>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                        <div class="row">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-warning border-secondary p-1" style="color:black;;" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                                    </div>
+                                    <input type="number" class="form-control" aria-label="Default" style="margin-top:0%;width:20%;padding:0%;" aria-describedby="inputGroup-sizing-default">
+                                </div>
                             </div>
-                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <a href="#" class="btn btn-warning border-secondary mr-1" style="color:black ;font-weight:50px;">Add to cart<img src="carticons.png" height="20px"></a>
+                            </div>
                         </div>
-                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
-                <div class="card p-3 ">
+            <div class="card pb-0 pl-1 pr-1 pt-0" style="height:585px">
                     <br>
                     <div><b>
                             <h3><img src="iconsmall.png"> ABHISHEK
                         </b></h3>
                     </div>
-                    <img class="card-img-top" src="myfruit4.jfif" alt="Card image cap">
-                    <div class="card-body">
+                    <img class="card-img-top" src="myfruit4.jfif" alt="Card image cap" height="300px">
+                    <div class="card-body pb-0">
                         <h5 class="card-title">Orange</h5>
                         <p class="card-text">PRICE:-20rs/kg</p>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                        <div class="row">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-warning border-secondary p-1" style="color:black;;" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                                    </div>
+                                    <input type="number" class="form-control" aria-label="Default" style="margin-top:0%;width:20%;padding:0%;" aria-describedby="inputGroup-sizing-default">
+                                </div>
                             </div>
-                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <a href="#" class="btn btn-warning border-secondary mr-1" style="color:black ;font-weight:50px;">Add to cart<img src="carticons.png" height="20px"></a>
+                            </div>
                         </div>
-                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
                     </div>
                 </div>
             </div>
             <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
-                <div class="card p-3 ">
+            <div class="card pb-0 pl-1 pr-1 pt-0" style="height:585px">
                     <br>
                     <div><b>
                             <h3><img src="iconsmall.png"> ABHISHEK
                         </b></h3>
                     </div>
-                    <img class="card-img-top" src="myfruit4.jfif" alt="Card image cap">
-                    <div class="card-body">
+                    <img class="card-img-top" src="myfruit4.jfif" alt="Card image cap" height="300px">
+                    <div class="card-body pb-0">
                         <h5 class="card-title">Orange</h5>
                         <p class="card-text">PRICE:-20rs/kg</p>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                        <div class="row">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-warning border-secondary p-1" style="color:black;;" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                                    </div>
+                                    <input type="number" class="form-control" aria-label="Default" style="margin-top:0%;width:20%;padding:0%;" aria-describedby="inputGroup-sizing-default">
+                                </div>
                             </div>
-                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <a href="#" class="btn btn-warning border-secondary mr-1" style="color:black ;font-weight:50px;">Add to cart<img src="carticons.png" height="20px"></a>
+                            </div>
                         </div>
-                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
                     </div>
                 </div>
             </div>
