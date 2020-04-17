@@ -379,10 +379,10 @@ window.onclick = function(event) {
   }
 }
 function myFunction() {
-  location.replace("success.html")
+  location.replace("success.php")
 }
 function myFunction1() {
-  location.replace("booking.html")
+  location.replace("booking.php")
 }
 
 </script>

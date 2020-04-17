@@ -358,7 +358,7 @@
             <div class="parent position-relative bg-white">
                 <div class="text-left ">
                     <div class="container-sm p-4 border border-top shadow-sm ">
-                        <a href="booking.html">
+                        <a href="booking.php">
                             <h4 class="font-weight-bold">Shop Name</h4>
                         </a>
                         <h5>Address</h5>
