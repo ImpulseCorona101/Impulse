@@ -70,13 +70,12 @@
                float: right;
                margin-right: 35px;
                margin-top: 20px;
-
           }
 
           .options {
                color: yellow;
                margin-left: 20px;
-               /* width: 25px; */
+               width: 25px;
                margin-right: 50px;
                display: inline;
           }
@@ -174,6 +173,7 @@
           .content_item {
                text-align: center;
                justify-content: center;
+               display: inline;
           }
 
           .etc {
@@ -362,6 +362,36 @@
                border-radius: 25px;
           }
 
+          /* .box{
+            
+            color: rgb(6, 36, 7);
+            width: 1050px;
+             line-height: 40px; 
+             float:center;
+            margin: auto;
+            text-align: center;
+              margin-top: 120px;  
+             /* padding: 5px;  */
+          /* border-style: outset;  */
+          /* border-width: 5px;
+            border-radius: 16px; */
+          /* border-color:black;  */
+          /* font-size:20px; */
+          /* height: 900px;
+            border-radius: 30px;
+            
+        }
+        .please{
+             text-align:center;
+             float:right;
+             margin-right:500px;
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+               background-size: cover;
+               background-position: center;
+               box-sizing: border-box;
+          } */
 
           .wrapper {
                background-image: 100px;
@@ -450,32 +480,6 @@
                height: auto;
           }
 
-          .productbox {
-               float: left;
-               margin: 15px;
-               margin-left: 30px;
-               padding: 15px;
-               border-style: outline;
-               border: 2px solid;
-               border-color: green;
-               border-radius: 10px;
-          }
-
-          .productbox:hover {
-               float: left;
-               margin: 25px;
-               margin-left: 30px;
-               padding: 20px;
-               border-style: outline;
-               border: 2px solid;
-               border-color: green;
-               border-radius: 5px;
-               font-weight: bolder;
-               height: 325px;
-               width: 240px;
-
-          }
-
           .slideshow {
                margin-top: 10px;
                margin-left: 100px;
@@ -504,133 +508,71 @@
                padding-top: 10px;
           }
 
-          #navbar i {
-               padding-right: 1%;
+          .products {
+               margin-left: 9%;
+
           }
 
-          .time {
-               background-color: red;
-               /* margin-left: 20px; */
-          }
-
-          .whats {
-               text-align: center;
-               margin-left: 30%;
-          }
-
-          .f1 {
+          .productbox {
                float: left;
-               background-color: #fff;
-               border: 1px solid red;
+               margin: 15px;
+               /* margin-left: 30px; */
+               padding: 15px;
+               border-style: outline;
+               border: 2px solid;
+               border-color: green;
+               border-radius: 10px;
+          }
+
+          .productbox img {
                height: 200px;
-               border-radius: 50%;
-               width: 200px;
-               padding-top: 20px;
-               border-style: solid;
-               background-image: url("../Images/Website/f2.jpg");
-               background-size: 200px 200px;
-               background-repeat: no-repeat;
-               border-color: #000;
-               /* opacity: 5%; */
+               width: 250px;
+               border-style: double;
+               border: 2px solid;
+               border-color: brown;
+               border-width: 2px;
+               border-radius: 10px;
           }
 
-          .t1 {
-               padding-top: 70px;
+          .productbox p {
                text-align: center;
-               justify-items: center;
-               color: black;
-               font-weight: bold;
+               text-decoration: underline;
           }
 
-          .t5 {
-               margin-top: -13px;
+          /* .productbox img:hover {
+               height: 220px;
+               width: 220px;
+               border-style: double;
+               border: 2px solid;
+               border-color: brown;
+               border-width: 3px;
+               border-radius: 15px;
           }
 
-          .t4 {
-               margin-top: -13px;
-
+          .productbox p:hover {
+               text-align: center;
+               text-decoration: underline;
+               /* font-weight: bold; */
+          
+          .add{
+               background-color: #FFD700;
+               margin-right:-900px;
+               margin-left: 300px;
           }
-
-          .whatsnew {
-               /* background-image: url("../Images/Website/back.jpeg"); */
-
-               background-color: red;
-
+          .imag{
+               width:900px;
           }
-
-          .f2 {
-               margin-left: 130px;
-               margin-right: 150px;
-          }
-
-          .f3 {
-               margin-right: 150px;
-
-          }
-
-          .f4 {
-               margin-right: 150px;
-          }
-
-          .pictus {
-               margin-top: 200px;
+          .pluz{
+               margin-left: 200px;;
+               margin-top: -72px;
                /* background-color: red; */
+               font-size: 40px;
           }
 
-          .pictus>img {
-               height: 100px;
-
-               width: 150px;
-          }
-
-          .imag1 {
-               margin-top: 20px;
-               margin-left: 180px;
-          }
-
-          .imag2 {
-               margin-top: 20px;
-
-               margin-left: 340px;
-
-          }
-
-          .imag3 {
-               margin-top: 20px;
-
-               margin-left: 350px;
-
-          }
-
-          .imag1_under {
-               max-width: 250px;
-               width: 100%;
-               min-height: 100px;
-               margin-left: 100px;
-               text-align: center;
-               font-size: 20px;
-
-          }
-
-          .imag2_under {
-               max-width: 250px;
-               width: 100%;
-               min-height: 100px;
-               margin-left: 290px;
-               margin-top: 20px;
-               text-align: center;
-               font-size: 20px;
-          }
-
-          .imag3_under {
-               max-width: 250px;
-               width: 100%;
-               font-size: 20px;
-
-               min-height: 100px;
-               margin-left: 290px;
-               text-align: center;
-          }
+         .x{
+              margin-top: -12px;
+         }
+         
      </style>
 
 </head>
@@ -642,14 +584,13 @@
           <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
           <div class="dropdown">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;">
-                    <i class="fa fa-bars fa-2x" style="color: white;">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
                </button></i>
                <ul class="dropdown-menu etc">
                     <?php
                     if (isset($_SESSION['phonenumber'])) {
                          echo "<li class='options'> <a href='FarmerProfile.php'><label class='makeitgreen'>Profile</label></a><br></li>";
-                         echo "<li class='options'> <a href='Orders.php'><label class='makeitgreen'>Orders</label></a></li>";
+                         echo "<li class='options'> <a href='CallCenter.php'><label class='makeitgreen'>Call Centers</label></a></li>";
                          echo "<li class='options'> <a href='logout.php'><label class='makeitgreen'>Logout</label></a></li>";
                     } else {
                          echo "<li class='options'> <a href='../auth/FarmerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
@@ -678,7 +619,6 @@
 
      </div>
 
-
      <div class="headerdown">
 
           <a href="Homepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
@@ -690,113 +630,36 @@
 
 
 
-     <div class="slideshow" id="showing">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-               </ol>
+     <br>
+     <div class="items">
 
-               <div class="carousel-inner">
-
-                    <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/Farmer1.jpeg" height="500px" width="1350px" alt=".x.">
-                         <div class="time"></div>
-                    </div>
-                    <div class="carousel-item active">
-                         <img class="images1" src="../Images/Website/Farmer2.jpeg" height="500px" width="1350px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/Farmer4.jpg" height="500px" width="1350px" alt="...">
-                    </div>
-               </div>
+          <div class=content_item><label style="font-size :40px;margin-left:650px;margin-right:100px; text-shadow: 1px 1px 1px gray;">
+                    <b><div class="isc">All Product's  </div></b></label>
+                    <a href="InsertProduct.php"><button class="add" style="margin-left:50px;border-style:solid;border-color:black;font-size:30px;border-radius:30%;width:250px;height:100px;"><b><div class="x"1> Add More Products</div></b><div class="pluz"> <i class="fas fa-plus "></div></i> </button></a>
           </div>
-     </div>
 
-
-     <div class="pictus">
-
-          <div class=content_item><label style="font-size :40px; text-shadow: 1px 1px 1px gray;"><b>Features</b></label></div>
-
-          <table>
-               <tr>
-                    <td><img class="imag1" src="../Images/Website/picha1.jpg">
-                    <td><img class="imag3" src="../Images/Website/picha3.jpg"></td>
-                    <td><img class="imag2" src="../Images/Website/picha4.jpg"></td>
-
-
-               </tr>
-               <tr>
-                    <td><label class="imag1_under"><b>Fixed Price Selling</b>
-                              Registered buyers can order organic products online by making online payment for the product which was set by the seller</label></td>
-                    </td>
-                    <td><label class="imag2_under">
-                              <b> Enquiry Based Buying</b>
-                              Registered buyers can place enquiry of a product and eligible sellers can place their quotes. The buyer can then buy from the qualified sellers </td>
-                    </td>
-                    <td><label class="imag3_under">
-                              <b> Raising Future Demands</b>
-                              Registered buyers can place their request for products which will be produced by the farmers in future </td>
-                    </td>
-               </tr>
-          </table>
-
-     </div>
-
-
-
-
-     <img class="whats" src="../Images/Website/whats.jpeg">
-
-     <div class="whatsnew">
-          <!-- <img class="whats" src="../Images/Website/whats.jpeg"> -->
-
-          <div class="f1 f2">
-               <div class="t1"> SMS SYSTEM </div>
-               <!-- <img class="images1" src="../Images/Website/back.jpg"> -->
-
-          </div>
-          <div class="f1 f3">
-               <div class="t1"> CALL CENTER </div>
-
-          </div>
-          <div class="f1 f4">
-               <div class="t1 t4"> PAYTM & OTHER OPTIONS</div>
-
-          </div>
-          <div class="f1 f5">
-               <div class="t1 t5">WIDE RANGE OF BUYERS
-               </div>
-
+          <div class="products">
+               <?php
+               include("../Includes/db.php");
+               if (isset($_SESSION['phonenumber'])) {
+                    $sess_phone_number = $_SESSION['phonenumber'];
+                    getFarmerProducts();
+               } else {
+                    echo "<br><br><h1 align = center>Please Login!</h1><br><br><hr>";
+               }
+               ?>
           </div>
 
      </div>
 
 
-     <div class="slideshow" id="showing">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-               </ol>
 
-               <div class="carousel-inner">
 
-                    <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt=".x.">
-                         <div class="time"></div>
-                    </div>
-                    <div class="carousel-item active">
-                         <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt="...">
-                    </div>
-               </div>
-          </div>
-     </div>
+
+
+
+
+
 
 
 
@@ -833,7 +696,7 @@
 
      </div>
      <div class="copy">
-          <h5 style="text-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
+          <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
      </div>
 
 </body>

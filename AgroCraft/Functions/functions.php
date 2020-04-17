@@ -249,10 +249,12 @@
         include("../Includes/db.php");
         global $con;
         $sess_phone_number = $_SESSION['phonenumber'];
-        $query = "select * from products where farmer_fk in (select farmer_id from farmerregistration where farmer_phone=$sess_phone_number)";
+        $query = "select * from products where farmer_fk in (select farmer_id from farmerregistration where farmer_phone=$sess_phone_number) limit 5";
         $run_query = mysqli_query($con, $query);
+        $count = 0;
         if ($run_query) {
             while ($row = mysqli_fetch_assoc($run_query)) {
+                $count = $count + 1;
                 $product_title =  $row['product_title'];
                 $image =  $row['product_image'];
                 $price =  $row['product_price'];
@@ -260,9 +262,11 @@
                 $path = "../Admin/product_images/" . $image;
 
                 echo "
-                    <div  class = 'productbox'  >
-                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg'><br></a>
-                        
+                    <div class='productbox'>
+                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'>
+                        <img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg'>
+                        </a>
+
                         <div>
                             <p><b>$product_title</b></p>
                             <p><b>Price : Rs $price</b></p>
