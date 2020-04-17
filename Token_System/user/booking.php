@@ -714,7 +714,7 @@
         alert("Please fill all the details");
         return false;
     }else{
-      location.replace("select-item.html")
+      location.replace("select-item.php")
     }
     
 }

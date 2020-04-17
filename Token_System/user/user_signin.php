@@ -214,11 +214,7 @@
                     <div class="text1" style="font-size: 25px;"><b>Are you a ?</b></div>
                 </div>
                 <div class="contains d-flex justify-content-around mb-3">
-                    <div class="form-check-inline text-left inners">
-                        <label class="form-check-label" for="radio1">
-                            <input type="radio" class="form-check-input" id="radio1" name="occupation" value="doctor"><b>Doctor</b>
-                        </label>
-                    </div>
+                    
                     <div class="form-check-inline ">
                        <label class="form-check-label" for="radio2">
                                 <input type="radio" class="form-check-input" id="radio2" name="occupation" value="visitor"><b>Visitor</b>
