@@ -12,6 +12,9 @@
     <title>Impulse - Slot</title>
 
     <style>
+        .hide{
+            display: none;
+        }
         *{
             font-family: sans-serif;
         }
@@ -58,7 +61,7 @@
         }
         .status{
             position: absolute;
-            bottom:640px;
+            bottom:310px;
             left:1100px;
             color: #A9A9A9;
             width: 400px;
@@ -159,6 +162,23 @@ form > .button {
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
 }
+.shop{
+    display: none;
+}
+select{
+        outline: 0;
+        height: 40px;
+         width: 180px;
+         margin-left: 80px;
+         line-height: 42px;
+         padding: 0 16px;
+         background-color: rgba(255, 255, 255, 0.8);
+         color: #212121;
+          border-color:#2a5cff;
+         float: left;
+         -webkit-border-radius: 4px 0 0 4px;
+         border-radius: 4px 0 0 4px;
+       }
 
 form > .button:hover {
   background-color: #2a5cff;
@@ -199,26 +219,55 @@ form > .button:hover {
             .search{
                 position: absolute;
                 top: 130px;
+                right: 150px;
             }
             .mob{
                 position: relative;
-                right: 425px;
+               right: 130px;
                 bottom: 50px;
 
 
             }
             .container-sm{
-                width: 325px;
+                width: 385px;
 
             }
-            .status{
-                position: absolute;
-                left:340px;
-                width: 10px;
-                bottom: 1155px;
-            }
+            .parent{
+      
+        width: 100px;
+           }
+           form > .textbox {
+  
+  width: 160px;
+  }
+  .dropdown{
+    position: absolute;
+    left: 310px;
+  }
+  .dropdown-content{
+    position: absolute;
+    right:  50px;
+  }
+.shop{
+    display: block;
+}
+.status{
+    display: none;
+}
+select{
+   
+    position: relative;
+    left: 150px;
+    bottom:50px;
+}
+.shop{
+    width: 120px;
+    height: 50px;
 
- 
+}
+ .hide{
+    display: block;
+ }
             
 }
 @media only screen and (min-device-width:360px) and (max-device-width:360px) {
@@ -236,23 +285,47 @@ form > .button:hover {
         position: absolute;
         top: 120px;
         left:10px;
+
     }
     .mob{
         position: relative;
-        right: 430px;
+        right: 130px;
         bottom: 60px;
     }
     .container-sm{
         
-        width: 300px;
+        width: 350px;
     }
-    .status{
-        position: absolute;
-        position: absolute;
-                left:320px;
-                width: 10px;
-                bottom: 1155px;
+    
+    .parent{
+      
+        width: 100px;
     }
+    form > .textbox {
+  
+  width: 150px;
+  }
+  .shop{
+    display: block;
+}
+.status{
+    display: none;
+}
+select{
+   
+    position: relative;
+    left: 120px;
+    bottom:50px;
+}
+.shop{
+    width: 120px;
+    height: 50px;
+
+}
+.hide{
+    display: block;
+}
+
 }
      @media only screen and (min-device-width:375px) and (max-device-width:375px) {
         .navbar{
@@ -268,25 +341,49 @@ form > .button:hover {
         .search{
         position: absolute;
         top: 120px;
-        left:10px;
+        left:5px;
     }
      .mob{
         position: relative;
-        right: 445px;
+        right:  130px;
         bottom: 60px;
+
+       
     }
     .container-sm{
         
-        width: 280px;
-    }
-    .status{
-        position: absolute;
-        position: absolute;
-                left:300px;
-                width: 10px;
-                bottom: 1155px;
+        width: 320px;
     }
 
+    .parent{
+      
+        width: 100px;
+    }
+    form > .textbox {
+  
+  width: 180px;
+  }
+  .shop{
+    display: block;
+}
+.status{
+    display: none;
+}
+select{
+   
+    position: relative;
+    left: 150px;
+    bottom:50px;
+}
+.shop{
+    width: 120px;
+    height: 50px;
+
+}
+.hide{
+    display: block;
+}
+ 
 
 
     
@@ -347,10 +444,12 @@ form > .button:hover {
   <div id="myDropdown" class="dropdown-content">
     <a href="#home">Profile</a>
     <a href="#about">Logout</a>
+    <div class="hide">
     <a href="#about">Home</a>
     <a href="#about">Covid-19 Status</a>
     <a href="#about">Agrocraft</a>
     <a href="#about">Contact Us</a>
+<div>
     
   </div>
 </div>
@@ -423,6 +522,7 @@ form > .button:hover {
     </div>
     </div>
 </div>
+</div>
 
     <br>
     <br>
@@ -441,13 +541,20 @@ form > .button:hover {
 
     </div>
 </div>
-</div>
+    
+
     <div class="search">
        <form method="post">
 
-          <input type="text" class="textbox" placeholder="Search...">
-             <input title="Search"  value="" class="button">
+          <input type="seacrh" class="textbox" placeholder="Enter Your Pincode">
+             <input title="Search"  value="" class="button ">
         </form>
+        <select class="shop">
+            <option value="store">Store</option>
+            <option value="medical">Medical</option>
+            <option value="clinic">Clinic</option>
+            
+            </select>
         </div>
 
        
