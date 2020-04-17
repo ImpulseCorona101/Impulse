@@ -204,7 +204,7 @@ form > .button:hover {
                 position: relative;
                 right: 425px;
                 bottom: 50px;
-                
+
 
             }
             .container-sm{
@@ -215,7 +215,7 @@ form > .button:hover {
                 position: absolute;
                 left:340px;
                 width: 10px;
-                bottom: 580px;
+                bottom: 1155px;
             }
 
  
@@ -308,6 +308,26 @@ form > .button:hover {
            
         </div>
     <div class="container-sm p-4 border border-top shadow-sm  ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
         <h4 class="font-weight-bold">Shop Name</h4>
         <h5>Address</h5>
         <h6>Phone Number</h6>
