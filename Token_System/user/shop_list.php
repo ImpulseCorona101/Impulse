@@ -12,9 +12,7 @@
     <title>Impulse - Slot</title>
 
     <style>
-        .hide {
-            display: none;
-        }
+        
 
         * {
             font-family: sans-serif;
@@ -126,7 +124,10 @@
             display: block;
         }
 
-
+        .search{
+          position: absolute;
+          left:575px;
+        }
         form {
             outline: 0;
             float: left;
@@ -139,7 +140,7 @@
         form>.textbox {
             outline: 0;
             height: 50px;
-            width: 280px;
+            width: 350px;
             line-height: 42px;
             padding: 0 16px;
             background-color: rgba(255, 255, 255, 0.8);
@@ -203,173 +204,10 @@
         .full {
             position: absolute;
             top: 250px;
+            left:180px;
         }
 
-        @media only screen and (min-device-width:414px) and (max-device-width:414px) {
-            .mobileContent {
-                display: inline;
-            }
-
-            .hrtable-responsive {
-                display: block;
-            }
-
-            .dropbtn {
-                position: relative;
-                right: 10px;
-                bottom: 1px;
-            }
-
-            h3 {
-                position: absolute;
-                right: 90px;
-                bottom: 628px;
-
-                width: 300px;
-            }
-
-            .dropdown-content a {
-                color: black;
-                padding: 12px 10px;
-                text-decoration: none;
-                display: block;
-
-
-            }
-
-            .search {
-                position: absolute;
-                top: 130px;
-                right: 150px;
-            }
-
-            .mob {
-                position: relative;
-                right: 130px;
-                bottom: 50px;
-
-
-            }
-
-            .container-sm {
-                width: 385px;
-
-            }
-
-            .parent {
-
-                width: 100px;
-            }
-
-            form>.textbox {
-
-                width: 160px;
-            }
-
-            .dropdown {
-                position: absolute;
-                left: 310px;
-            }
-
-            .dropdown-content {
-                position: absolute;
-                right: 50px;
-            }
-
-            .shop {
-                display: block;
-            }
-
-            .status {
-                display: none;
-            }
-
-            select {
-
-                position: relative;
-                left: 150px;
-                bottom: 50px;
-            }
-
-            .shop {
-                width: 120px;
-                height: 50px;
-
-            }
-
-            .hide {
-                display: block;
-            }
-
-        }
-
-        @media only screen and (min-device-width:360px) and (max-device-width:360px) {
-            .navbar {
-                width: 400px;
-            }
-
-            h3 {
-                right: 50px;
-                width: 300px;
-                top: 65px;
-                position: absolute;
-
-            }
-
-            .search {
-                position: absolute;
-                top: 120px;
-                left: 10px;
-
-            }
-
-            .mob {
-                position: relative;
-                right: 130px;
-                bottom: 60px;
-            }
-
-            .container-sm {
-
-                width: 350px;
-            }
-
-            .parent {
-
-                width: 100px;
-            }
-
-            form>.textbox {
-
-                width: 150px;
-            }
-
-            .shop {
-                display: block;
-            }
-
-            .status {
-                display: none;
-            }
-
-            select {
-
-                position: relative;
-                left: 120px;
-                bottom: 50px;
-            }
-
-            .shop {
-                width: 120px;
-                height: 50px;
-
-            }
-
-            .hide {
-                display: block;
-            }
-
-        }
+        
 
         @media only screen and (min-device-width:310px) and (max-device-width:460px) {
             .navbar {
@@ -387,12 +225,12 @@
             .search {
                 position: absolute;
                 top: 120px;
-                left: 5px;
+                left: 70px;
             }
 
             .mob {
                 position: relative;
-                right: 130px;
+                right: 300px;
                 bottom: 60px;
 
 
@@ -437,6 +275,7 @@
             .hide {
                 display: block;
             }
+            .
 
 
 
@@ -576,20 +415,7 @@
     <br>
     <br>
     <br>
-    <div class="st">
-        <div class="status font-weight-bold">
-            <h5>TYPE</h5>
-
-            <input type="checkbox" id="shop" class="shop" value="shop">
-            <label for="shop"> Grocery Store</label><br>
-            <input type="checkbox" id="shop" class="shop" value="shop">
-            <label for="shop"> Medical Store</label><br>
-            <input type="checkbox" id="shop" class="shop" value="shop">
-            <label for="shop"> Clinic</label><br>
-            <hr>
-
-        </div>
-    </div>
+    
 
 
     <div class="search">
@@ -598,12 +424,7 @@
             <input type="seacrh" class="textbox" placeholder="Enter Your Pincode">
             <input title="Search" value="" class="button ">
         </form>
-        <select class="shop">
-            <option value="store">Store</option>
-            <option value="medical">Medical</option>
-            <option value="clinic">Clinic</option>
-
-        </select>
+        
     </div>
 
 
