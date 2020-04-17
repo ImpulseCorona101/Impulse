@@ -322,7 +322,12 @@
         a{
                color:goldenrod;
           }
+        .BigBox{
+            border:2px solid black;
+            padding : 15px;
+            border-radius:10px;
 
+        }
         @media screen and (max-width: 800px) {
             .kolum {
                 flex: 50%;
@@ -662,29 +667,9 @@
                 <h2 style="color: rgb(68, 68, 68); text-align:center;font-weight: bold;">Fresh fruits</h2>
             </div>
             <br> 
-            <!-- <div class="non-linear row custom-component">
-                
-                <div class="col-md-3 col-sm-4 col-xs-12" >
-                    <div class="row" style="margin:10px;">
-                        <img src="../Admin/product_images/Bananas.jpg" width="300px" height="200px" alt="image">
-                    </div>
-                    <div class="row" style="margin:10px;">
-                        <img src="../Admin/product_images/Apple.jpg" width="300px" height="200px" alt="image">
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-12 hidden-sm hidden-xs">
-                    <div class="row" >
-                        <div class="col-sm-6 col-md-12 col-xs-6 col" style="margin:10px;">
-                            <img src="../Admin/product_images/Mango.jpg" width="300px" height="200px" alt="image">
-                        </div>
-                        <div class="col-sm-6 col-md-12 col-xs-6 col" style="margin:10px;">
-                            <img src="../Admin/product_images/orange.jpg" width="300px" height="200px" alt="image">
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            
 
-            <div class="row">
+            <div class="row BigBox">
                 <div class="column kolum">
                     <div class="img-thumbnail ">
                         <img class="rounded mx-auto d-block" src="../Admin/product_images/Bananas.jpg"  width="350px" height="190px" alt="image">

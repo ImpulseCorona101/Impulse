@@ -669,27 +669,17 @@
                margin-top: 30px;
 
           }
-<<<<<<< HEAD
-          /* hr {
-=======
 
           hr {
->>>>>>> cfdd51123131bba6ccadb1e10f68725d7d1e8d32
                border: 0;
                height: 0.5px;
                clear: both;
                display: block;
                width: 99%;
-<<<<<<< HEAD
-               background-color:black;
-               margin-left: 0.5em; 
-          } */
-=======
                background-color: black;
                margin-left: 0.5em;
           }
 
->>>>>>> cfdd51123131bba6ccadb1e10f68725d7d1e8d32
           img {
                max-width: 100%;
                display: inline-block;
@@ -990,17 +980,6 @@
                          <span class="sr-only">Next</span>
                     </a>
                </div>
-<<<<<<< HEAD
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="sr-only">Next</span>
-          </a>
-=======
->>>>>>> cfdd51123131bba6ccadb1e10f68725d7d1e8d32
           </div>
 
           <br><br>
