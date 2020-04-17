@@ -336,8 +336,9 @@
           }
         .BigBox{
             border:2px solid black;
-            padding : 15px;
-            border-radius:10px;
+            padding : 10px;
+            border-radius: 10px;
+            margin : auto 5px;
 
         }
         @media screen and (max-width: 800px) {
