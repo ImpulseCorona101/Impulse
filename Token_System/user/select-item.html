@@ -71,7 +71,7 @@
     <div class="search">
        <form method="post">
 
-          <input type="text" class="textbox" placeholder="Search...">
+          <input type="search" class="textbox" placeholder="Enter Product">
              <input title="Search"  value="" class="button">
         </form>
          <div class="full">
@@ -84,9 +84,16 @@
             <input type="text" name="pname">
             
             <br>
-            <br>
-            <h6>Quantity</h6>
+            
+            <h5 class="mt-4 font-weight-bold">Quantity</h5>
             <input type="Number" name="quantity">
+            <select id="cars">
+            <option value="volvo">Gram</option>
+            <option value="saab">Kilo gram</option>
+            <option value="opel">Litre</option>
+            <option value="audi">Milli Litre</option>
+            <option value="audi">Packet</option>
+            </select>
             
            
         </div>
@@ -225,6 +232,34 @@ form > .button:hover {
            top: 15%;
            left:9%;
         }
+
+      input[type=number],select{
+      	outline: 0;
+  height: 35px;
+  width: 80px;
+  line-height: 42px;
+  margin-top: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #212121;
+  border-color:#2a5cff;
+  
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+
+      }
+       input[type=text]{
+       	outline: 0;
+        height: 40px;
+         width: 200px;
+         line-height: 42px;
+         padding: 0 16px;
+         background-color: rgba(255, 255, 255, 0.8);
+         color: #212121;
+          border-color:#2a5cff;
+         float: left;
+         -webkit-border-radius: 4px 0 0 4px;
+         border-radius: 4px 0 0 4px;
+       }
     </style>
 
 
