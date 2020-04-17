@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+
+    <title>Impulse - Slot</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Impulse</a>
+        
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('Homepage') }}">Home <span
+                            class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('Homepage') }}">Covid-19 Status <span
+                            class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('Homepage') }}"> Slot Booking <span
+                            class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('Homepage') }}">AgroCraft <span
+                            class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('About') }}">About Application</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('Contact') }}">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    
+                </li>
+
+            </ul>
+            <div class="p-2">
+                <div class="">
+                    <a> <i class="fa fa-user" style="font-size:30px; color:white ;margin-top:2px;"></i></a>
+                    <span id="" style="color:green"></span>
+                </div>
+
+
+            </div>
+             <div class="text  login" style="color: white;">Login</div>
+        </div>
+        <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Setting</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Profile</a>
+    <a href="#about">Logout</a>
+    
+  </div>
+</div>
+        </div>
+        </div>
+        
+    </nav>
+    <div class="search">
+       <form method="post">
+
+          <input type="search" class="textbox" placeholder="Enter Product">
+             <input title="Search"  value="" class="button">
+        </form>
+         <div class="full">
+    <div class="mob">
+    <div class="parent position-relative bg-white">
+    <div class="text-left ">
+        <div class="container-sm p-4 border border-top shadow-sm ">
+            
+            <h4 class="font-weight-bold">Product Name:</h4>
+            <input type="text" name="pname">
+            
+            <br>
+            
+            <h5 class="mt-4 font-weight-bold">Quantity</h5>
+            <input type="Number" name="quantity">
+            <select id="cars">
+            <option value="volvo">Gram</option>
+            <option value="saab">Kilo gram</option>
+            <option value="opel">Litre</option>
+            <option value="audi">Milli Litre</option>
+            <option value="audi">Packet</option>
+            </select>
+            
+           
+        </div>
+    <div class="container-sm p-4 border border-top shadow-sm  ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    
+    </div>
+    
+    </div>
+    </div>
+</div>
+
+    <style>
+    .full{
+    	position: absolute;
+    	top: 155%;
+    	width: 600px;
+    	height: 100px;
+    }	
+    	.dropbtn {
+  background-color:#343a40;
+  color: white;
+  padding: 8px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-right: 30px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2a5cff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: green;}
+
+.show {display: block;}
+
+form {
+  outline: 0;
+  float: left;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+form > .textbox {
+  outline: 0;
+  height: 50px;
+  width: 280px;
+  line-height: 42px;
+  padding: 0 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #212121;
+  border: 0;
+  float: left;
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+form > .textbox:focus {
+  outline: 0;
+  background-color: #FFF;
+}
+
+form > .button {
+  outline: 0;
+  background: none;
+  background-color: #2a5cff
+  float: left;
+  height: 50px;
+  width: 42px;
+  text-align: center;
+  line-height: 42px;
+  border: 0;
+  color: #2a5cff;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 16px;
+  text-rendering: auto;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color .4s ease;
+  transition: background-color .4s ease;
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+form > .button:hover {
+  background-color: #2a5cff;
+  cursor: pointer;
+  color: #fff;
+}
+.search{
+            position: absolute;
+           top: 15%;
+           left:9%;
+        }
+
+      input[type=number],select{
+      	outline: 0;
+  height: 35px;
+  width: 80px;
+  line-height: 42px;
+  margin-top: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #212121;
+  border-color:#2a5cff;
+  
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+
+      }
+       input[type=text]{
+       	outline: 0;
+        height: 40px;
+         width: 200px;
+         line-height: 42px;
+         padding: 0 16px;
+         background-color: rgba(255, 255, 255, 0.8);
+         color: #212121;
+          border-color:#2a5cff;
+         float: left;
+         -webkit-border-radius: 4px 0 0 4px;
+         border-radius: 4px 0 0 4px;
+       }
+    </style>
+
+
+
+
+	</body>
+</html>
