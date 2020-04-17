@@ -480,24 +480,6 @@
                height: auto;
           }
 
-
-
-          /* .productbox:hover {
-               float: left;
-               margin: 25px;
-               margin-left: 30px;
-               padding: 20px;
-               border-style: outline;
-               border: 2px solid;
-               border-color: green;
-               border-radius: 5px;
-               font-weight: bolder;
-               height: 305px;
-               width: 220px;
-               transition: 0.5s;
-
-          } */
-
           .slideshow {
                margin-top: 10px;
                margin-left: 100px;
