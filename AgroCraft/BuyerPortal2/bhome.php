@@ -14,6 +14,18 @@
 
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
     <style>
+         .myfooter {
+               background-color: #292b2c;
+
+               color: goldenrod;
+               margin-top: 15px;
+          }
+          .aligncenter {
+               text-align: center;
+          }
+          a {
+               color: goldenrod;
+          }
         * {
             margin: 0;
             padding: 0;
@@ -387,7 +399,7 @@
     <div class="container"> <img src="b4.jpeg" class="img-fluid firstimage d-block mx-auto" alt="Responsive image">
     </div>
     <br>
-    <div class="container">
+    <!-- <div class="container">
         <div class="d-flex justify-content-around bg-white mb-3">
 
             <div class="p-2 ">
@@ -416,7 +428,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <div class="container">
             <div class="row">
                 <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
@@ -529,6 +541,35 @@
             </div>
         </div>
     </div>
+    <section id="footer" class="myfooter">
+          <div class="container">
+               <div class="row text-center text-xs-center text-sm-left text-md-left">
+                    <div class="col aligncenter">
+                         <p>Payment Option</p>
+                         <img src="../Images/Website/paytm1.jpg" alt="paytm">
+                         <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                         <ul class="list-unstyled list-inline social text-center">
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                         </ul>
+                    </div>
+                    </hr>
+               </div>
+               <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                         <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
+                         <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
+                    </div>
+                    </hr>
+               </div>
+          </div>
 </body>
 
 </html>

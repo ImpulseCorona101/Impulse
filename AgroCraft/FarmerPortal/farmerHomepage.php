@@ -849,96 +849,89 @@
 </head>
 
 <body>
-     <!-- Image and text -->
-     <!-- <nav class="navbar navbar-light bg-light ">
-        <a href="Homepage.php">
-            <img id="logo" src="../portal_files/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-
-        </a>
-    </nav> -->
-     <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="#" class="navbar-brand"><span class="glyphicon glyphicon-picture"></span>AgroCraft</a>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-nav-demo">
-				<ul class="nav navbar-nav">
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Feedback</a></li>
-					<li><a href="#"></a></li>
-				</ul>
-			</div>
-		</div>
-     </nav> -->
+    
+    
+    
      <nav class="navbar navbar-expand-xl ">
           <!-- <a href="#" class="navbar-brand">Academind</a> -->
           <div class=" flex-row-reverse left ">
                <!-- 
             <div class="p-2">
-                <div class="icon2">
+                <!-- <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style=" color:green ;font-size:20px;margin-top:-20px;margin-bottom:20px;">&#61562;</i></a> -->
-               <!-- <span id="icon" style="color:green"> 5 </span> -->
-               <!-- </div>
-            </div> -->
-               <div class="p-2 "><i class='far fa-user-circle' style='font-size:30px; color: green;margin-left:270%;'></i></div>
-               <a class="float-left" href="#">
-                    <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
-               </a>
-          </div>
-          <button class="navbar-toggler" style="margin-left:70px;" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:30px;"></i></span>
-          </button>
-          <a class="float-left" href="#">
-               <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
-          </a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- <span id="icon" style="color:green"> 5 </span>
+                </div>  -->
+            </div>
+            <!-- <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;'></i></div> -->
+            <a class="float-left" href="#">
+                <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
+            </a>
+        </div>
+        <button class="navbar-toggler" data-toggle="collapse" style="margin-left:-20px;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:20px; "></i></span>
+        </button>
+        <a class="float-left" href="farmerHomepage.php">
+            <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-               <!-- <div class="input-group mb-1 ml-2 searchbox">
-                <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fas fa-search" style="font-size:20px;color:green; "></i></div>
+          
+
+            <div class="proicon">
+
+               <?php
+                    if (!isset($_SESSION['phonenumber'])) {
+                         echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '></div></a>";
+                    } 
+                    ?>
+               </div>
+               
+
+            <div class="list-group moblists">
+            <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo "<a href='FarmerProfile.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
+                         echo "<a href=Orders.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
+                         echo "<a href='logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
+                    }
+                    else{
+                         echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '>Login</div></a>"; 
+                    }
+                    ?>
+            </div>
+        </div>
+
+
+
+
+        <div class=" flex-row-reverse right ">
+            <div class="p-2 cart">
+                <!-- <div class="icon2">
+                    <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green;margin-top:-20px;">&#61562;</i></a>
+                    <span id="icon" style="color:green"> 5 </span>
+                </div> -->
+            </div>
+            <div class="dropdown p-2 settings ">
+                <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Settings
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo "<a href='FarmerProfile.php' class='dropdown-item' style='padding-right:-20px;'>Profile</a>";
+                         echo "<a href='Orders.php' class='dropdown-item' style='padding-right:-20px;'>Orders</a>";
+                         echo "<a href='logout.php' class='dropdown-item' style='padding-right:-20px;'>Logout</a>";
+                    }
+                    else{
+                         echo "<a href='../auth/FarmerLogin.php'> <div class='dropdown-item' style='padding-right:-20px;'>Login</div></a>"; 
+                    }
+                    ?>
                 </div>
-                <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
-            </div> -->
-               <div class="text-white  logins ">Login</div>
-               <div class="list-group moblists">
-                    <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
-                         Profile
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Orders</a>
-                    <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
-               </div>
-          </div>
+            </div>
 
-
-
-
-          <div class=" flex-row-reverse right ">
-             
-               <div class="dropdown p-2 settings  " style="margin-left:220px">
-                    <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         Settings
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                         <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
-                         <a class="dropdown-item " style="padding-right:-20px;" href="">Orders</a>
-                         <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
-                    </div>
-               </div>
-  <div class="p-2 cart">
-                    <div class="login_ mt-2 " style="color:green;margin-right:-170px;margin">Login</div>
-               </div>
-               <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
-               <!-- <div class="text-success  login">Login</div> -->
-          </div>
+            <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
+            
+        </div>
 
      </nav>
      <div class="row" style="text-align:center;">
@@ -954,7 +947,7 @@
           <div class="col-md-3 col-sm-12">
                <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers/SMS</label></a>
           </div>
-     </div>
+     </div>    
      <hr>
      <div class="container caros">
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
