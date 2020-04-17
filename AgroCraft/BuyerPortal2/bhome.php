@@ -311,24 +311,47 @@
             vertical-align: middle;
             width: 100%;
         }
+        .myfooter{
+            background-color: #292b2c;
+            color: goldenrod;
+            margin-top:15px;
+          }
+        .aligncenter{
+           text-align: center;
+        }
+        a{
+               color:goldenrod;
+          }
 
-        /* Responsive layout - makes a two column-layout instead of four columns */
         @media screen and (max-width: 800px) {
+            .kolum {
+                flex: 50%;
+                max-width: 50%;
+                } 
+            }
+            @media screen and (max-width: 600px) {
+            .kolum {
+                flex: 50%;
+                max-width: 50%;
+                }
+            }
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        /* @media screen and (max-width: 800px) {
             .column {
                 -ms-flex: 50%;
                 flex: 50%;
                 max-width: 50%;
             }
-        }
+        } */
 
         /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
+        /* @media screen and (max-width: 600px) {
             .column {
                 -ms-flex: 100%;
                 flex: 100%;
                 max-width: 100%;
             }
-        }
+        } */
     </style>
     <!-- <script>
         var a;
@@ -633,8 +656,93 @@
                     </div>
                 </div>
             </div>
+            <br><br>
+            
+            <div class="text-center">
+                <h2 style="color: rgb(68, 68, 68); text-align:center;font-weight: bold;">Fresh fruits</h2>
+            </div>
+            <br> 
+            <!-- <div class="non-linear row custom-component">
+                
+                <div class="col-md-3 col-sm-4 col-xs-12" >
+                    <div class="row" style="margin:10px;">
+                        <img src="../Admin/product_images/Bananas.jpg" width="300px" height="200px" alt="image">
+                    </div>
+                    <div class="row" style="margin:10px;">
+                        <img src="../Admin/product_images/Apple.jpg" width="300px" height="200px" alt="image">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12 hidden-sm hidden-xs">
+                    <div class="row" >
+                        <div class="col-sm-6 col-md-12 col-xs-6 col" style="margin:10px;">
+                            <img src="../Admin/product_images/Mango.jpg" width="300px" height="200px" alt="image">
+                        </div>
+                        <div class="col-sm-6 col-md-12 col-xs-6 col" style="margin:10px;">
+                            <img src="../Admin/product_images/orange.jpg" width="300px" height="200px" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="row">
+                <div class="column kolum">
+                    <div class="img-thumbnail ">
+                        <img class="rounded mx-auto d-block" src="../Admin/product_images/Bananas.jpg"  width="350px" height="190px" alt="image">
+                    </div>
+                </div>
+                <div class="column kolum">
+                    <div class="img-thumbnail">
+                        <img class="rounded mx-auto d-block" src="../Admin/product_images/Apple.jpg"  width="350px" height="190px" alt="image">
+                    </div>    
+                </div>
+                <div class="column kolum">
+                    <div class="img-thumbnail">
+                        <img class="rounded mx-auto d-block" src="../Admin/product_images/Mango.jpg"  width="350px" height="190px" alt="image">
+                    </div>
+                </div>
+                <div class="column kolum">
+                    <div class="img-thumbnail">
+                        <img class="rounded mx-auto d-block" src="../Admin/product_images/orange.jpg"  width="350px" height="190px" alt="image">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
+    <!-- footer -->
+    <section id="footer" class="myfooter">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+				<div class="col aligncenter">
+					<p>Payment Option</p>
+						 <img src="../Images/Website/paytm1.jpg" alt="paytm">
+						 <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+				</hr>
+			</div>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+					<p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
+					<p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
+				</div>
+				</hr>
+			</div>	
+		</div>
+	</section>
+	<!-- ./Footer a ,myfooter,aligncenter-->
 </body>
 
 </html>

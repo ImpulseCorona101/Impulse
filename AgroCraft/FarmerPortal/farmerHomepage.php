@@ -662,7 +662,7 @@
           .caros{
                margin-top:15px;
           }
-          hr {
+          /* hr {
                border: 0;
                height:0.5px;
                clear:both;
@@ -670,7 +670,7 @@
                width: 99%;
                background-color:black;
                margin-left: 0.5em; 
-          }
+          } */
           img {
                max-width: 100%;
                display: inline-block;
@@ -947,12 +947,12 @@
                     </div>
                </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
           </a>
           <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
           </a>
           </div>
      </div>
