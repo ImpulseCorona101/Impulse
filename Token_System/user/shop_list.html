@@ -12,6 +12,9 @@
     <title>Impulse - Slot</title>
 
     <style>
+        .hide{
+            display: none;
+        }
         *{
             font-family: sans-serif;
         }
@@ -262,7 +265,9 @@ select{
     height: 50px;
 
 }
- 
+ .hide{
+    display: block;
+ }
             
 }
 @media only screen and (min-device-width:360px) and (max-device-width:360px) {
@@ -317,7 +322,9 @@ select{
     height: 50px;
 
 }
-
+.hide{
+    display: block;
+}
 
 }
      @media only screen and (min-device-width:375px) and (max-device-width:375px) {
@@ -372,6 +379,9 @@ select{
     width: 120px;
     height: 50px;
 
+}
+.hide{
+    display: block;
 }
  
 
@@ -434,10 +444,12 @@ select{
   <div id="myDropdown" class="dropdown-content">
     <a href="#home">Profile</a>
     <a href="#about">Logout</a>
+    <div class="hide">
     <a href="#about">Home</a>
     <a href="#about">Covid-19 Status</a>
     <a href="#about">Agrocraft</a>
     <a href="#about">Contact Us</a>
+<div>
     
   </div>
 </div>
