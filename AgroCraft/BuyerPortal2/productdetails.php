@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buyer Homepage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -116,22 +116,61 @@
         margin-right: -30%;
         margin-left: 35%;
     }
-    .imageblock{
-padding-left :10%;
+
+    .imageblock {
+        padding-left: 0%;
     }
-.image{
-    margin-left:10%;
-    background-color: #ff5500;
-}
-.addtocart{
-    margin-top:40%;
-}
+
+    .image {
+        margin-left: 0%;
+        background-color: #ff5500;
+    }
+
+    .addtocart {
+        margin-top: 30%;
+        margin-bottom: 10%;
+    }
+
+    .saveforlater {
+        margin-top: 30%;
+        margin-bottom: 10%;
+    }
+
+    .quantity {
+        margin-top: 20%;
+
+    }
+
+    .quantitynumber {
+        margin-top: 20%;
+    }
+
+    .wholequantity {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
     @media only screen and (min-device-width:320px) and (max-device-width:480px) {
-        .mycarousel {
-            display: none;
-        }
 
 
+
+
+        .firstimage {
+                height: auto;
+                width: 90%;
+            }
+
+            .card {
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+
+            }
+
+            .col {
+                margin-top: 20px;
+            }
 
 
 
@@ -172,6 +211,70 @@ padding-left :10%;
             width: 100%;
         }
 
+        .imageblock {
+            padding-left: 0%;
+        }
+
+        .image {
+            margin-left: 10%;
+            background-color: #ff5500;
+        }
+
+        .addtocart {
+            margin-top: 0%;
+            margin-bottom: 0%;
+            width: 88%;
+            margin-left: 12%;
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        .saveforlater {
+            margin-top: 0%;
+            margin-bottom: 0%;
+            width: 88%;
+            margin-left: 12%;
+            margin-top: 5%;
+            margin-bottom: 10%;
+        }
+
+        .quantity {
+            margin-top: 0%;
+
+        }
+
+        .quantitynumber {
+            margin-top: 0%;
+        }
+
+        .wholequantity {
+            margin-top: 0%;
+            margin-bottom: 0%;
+            width: 88%;
+            margin-left: 12%;
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+
+        .price {
+            margin-top: 0%;
+            margin-bottom: 0%;
+            width: 80%;
+            margin-left: 5%;
+            margin-right: 15%;
+            /* margin-top:10%;
+    margin-bottom:10%; */
+        }
+
+        .stock {
+            margin-top: 0%;
+            margin-bottom: 0%;
+            width: 80%;
+            margin-right: 15%;
+            margin-left: 5%;
+            /* margin-top:10%;
+    margin-bottom:10%; */
+        }
     }
 </style>
 
@@ -250,8 +353,8 @@ padding-left :10%;
             <h1>Omkar Banana</h1>
         </div>
         <div class="row">
-            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 border border-dark  imageblock"> <img src="fruit1.jpeg" class="d-flex mx-auto btn-dark border border-dark image"></div>
-            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 border border-dark block">
+            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12   imageblock"> <img src="fruit1.jpeg" class="d-flex mx-auto btn-dark image"></div>
+            <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 block">
                 <div class="text-center mt-2 mr-5">
                     <!-- <h1>Omkar Bannana</h1> -->
                     <br>
@@ -261,35 +364,40 @@ padding-left :10%;
 
                         </div>
                         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 stock">
-                            <h3>Stock : 20 kgs</h3>
+                            <h4>Stock : 20 kgs</h4>
                         </div>
                     </div>
                     <div class="text-center">
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-3 wholequantity">
                             <div class="input-group-prepend quantity">
-                                <span class="input-group-text bg-warning border-secondary quantitylabel" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                                <span class="input-group-text bg-warning border-secondary quantitylabel" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b><img src="bag2.png"class="ml-1 mb-1"></span>
                             </div>
                             <input type="number" class="form-control quantitynumber" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12"> <a href="#" class="btn btn-warning border-secondary addtocart" style="color:black"><b>Add to cart</b><img src="carticons.png"></a></div>
-                        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12"> <a href="#" class="btn btn-warning border-secondary saveforlater" style="color:black"><b>Save For later</b><img src="carticons.png"></a></div>
+                        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12"> <a href="#" class="btn btn-warning border-secondary saveforlater" style="color:black"><b>Save For later</b><img src="saveforlater4.png" class="ml-1 mb-1"></a></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-left mt-1 description">Description</div>
-        <br>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. minus nulla. Illum quaerat iure dignissimos dolores odit quia.
-        <div class="text-left farmerdetails">Farmer Details</div>
-        Name : Omkar
-        <br>
-        Phone Number :9819104641
-        <br>
-        Address : Lorem ipsum dolor, sit Eum, ad eaque earum voluptates nemo vero possimus, dolor aspernatur ea aut quisquam quas consequuntur distinctio!
+        <div class="text-left  description mt-0"><b>
+                <h4>Description</h4>
+            </b></div>
+        <!-- <br> -->
+       <div class="texty" style="margin-top:0%;"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. minus nulla. Illum quaerat iure dignissimos dolores odit quia.</div>
+        <div class="text-left farmerdetails mt-4 "><b>
+                <h4>Farmer Details <a href="#" class="btn btn-warning border-secondary " style="color:black;padding:2px;"><b>CHAT</b><img src="chat2.png" class="ml-1 mb-1"></a>
+        </h4></b>
+</div>
+        <div class="details mt-1"><b> Name </b> : Omkar
+            <br>
+            <b> Phone Number </b>:9819104641
+            <br>
+            <b> Address</b> : Lorem ipsum dolor, sit Eum, ad eaque earum voluptates nemo vero possimus, dolor aspernatur ea aut quisquam quas consequuntur distinctio!
+        </div>
     </div>
-
 
 
 
