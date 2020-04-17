@@ -169,7 +169,7 @@ form > .button:hover {
     position: absolute;
     top: 250px;
 }
-@media only screen and (min-device-width:320px) and (max-device-width:480px) {
+@media only screen and (min-device-width:414px) and (max-device-width:414px) {
             .mobileContent {
                 display: inline;
             }
@@ -220,6 +220,77 @@ form > .button:hover {
 
  
             
+}
+@media only screen and (min-device-width:360px) and (max-device-width:360px) {
+    .navbar{
+        width: 400px;
+    }
+    h3{
+        right: 50px;
+        width: 300px;
+        top:65px;
+         position: absolute;
+                
+    }
+    .search{
+        position: absolute;
+        top: 120px;
+        left:10px;
+    }
+    .mob{
+        position: relative;
+        right: 430px;
+        bottom: 60px;
+    }
+    .container-sm{
+        
+        width: 300px;
+    }
+    .status{
+        position: absolute;
+        position: absolute;
+                left:320px;
+                width: 10px;
+                bottom: 1155px;
+    }
+}
+     @media only screen and (min-device-width:375px) and (max-device-width:375px) {
+        .navbar{
+        width: 100%;
+    }
+   h3{
+        right: 50px;
+        width: 300px;
+        top:65px;
+         position: absolute;
+                
+    }
+        .search{
+        position: absolute;
+        top: 120px;
+        left:10px;
+    }
+     .mob{
+        position: relative;
+        right: 445px;
+        bottom: 60px;
+    }
+    .container-sm{
+        
+        width: 280px;
+    }
+    .status{
+        position: absolute;
+        position: absolute;
+                left:300px;
+                width: 10px;
+                bottom: 1155px;
+    }
+
+
+
+    
+
 }
  
     </style>
@@ -272,7 +343,7 @@ form > .button:hover {
              <div class="text  login" style="color: white;">Login</div>
         </div>
         <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Setting</button>
+  <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
   <div id="myDropdown" class="dropdown-content">
     <a href="#home">Profile</a>
     <a href="#about">Logout</a>
