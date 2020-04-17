@@ -499,8 +499,8 @@
                padding: 20px;
                color: green;
                text-decoration: underline;
-               margin: 20px;
-               font-size: 30px;
+               margin: 15px;
+               font-size: 25px;
                font-weight: bolder;
                padding-top: 10px;
           }
@@ -640,10 +640,15 @@
           .aligncenter {
                text-align: center;
           }
+<<<<<<< HEAD
 
           .myfooter {
                background-color: #292b2c;
+=======
+>>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
 
+          .myfooter {
+               background-color: #292b2c;
                color: goldenrod;
                margin-top: 15px;
           }
@@ -664,22 +669,47 @@
 
           .navbar-inverse .navbar-nav>li>a {
                color: clack;
+<<<<<<< HEAD
           }
 
           .caros {
                margin-top: 15px;
           }
+=======
+          }
+
+          .caros {
+               margin-top: 30px;
+
+          }
+<<<<<<< HEAD
+          /* hr {
+=======
+>>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
 
           hr {
+>>>>>>> cfdd51123131bba6ccadb1e10f68725d7d1e8d32
                border: 0;
                height: 0.5px;
                clear: both;
                display: block;
                width: 99%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+               background-color:black;
+               margin-left: 0.5em; 
+          } */
+=======
+>>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
                background-color: black;
                margin-left: 0.5em;
           }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cfdd51123131bba6ccadb1e10f68725d7d1e8d32
+>>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
           img {
                max-width: 100%;
                display: inline-block;
@@ -767,12 +797,22 @@
           }
 
           .logins {
+<<<<<<< HEAD
                /* text-align: center;
                 margin-right: -30%;
                 margin-left:35%; */
                display: none;
           }
 
+=======
+               text-align: center;
+               margin-right: -30%;
+               margin-left: 35%;
+          }
+
+
+
+>>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
           /* For medium devices (e.g. tablets) */
           /* @media (min-width: 420px) {
                img {
@@ -780,11 +820,12 @@
                }
           } */
           /* For large devices (e.g. desktops) */
-          /* @media (min-width: 760px) {
-               img {
-               max-width: 24%;
+          @media (min-width: 760px) {
+               .resizing {
+                    height: 500px;
                }
-          } */
+          }
+
           @media only screen and (min-device-width:320px) and (max-device-width:480px) {
                .image {
                     max-width: 48%;
@@ -824,6 +865,7 @@
                }
 
                .logins {
+<<<<<<< HEAD
                     display: inline-block;
                     width: 80%;
                     text-align: center;
@@ -843,12 +885,33 @@
                     text-align: center;
                     width: 100%;
                }
+=======
+                    text-align: center;
+                    margin-right: 35%;
+                    padding: 15px;
+               }
+
+               .searchbox {
+                    width: 95%;
+                    margin-right: 5%;
+                    margin-left: 0%;
+               }
+
+               .moblists {
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+               }
+
+
+>>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
           }
      </style>
 
 </head>
 
 <body>
+<<<<<<< HEAD
     
     
     
@@ -858,58 +921,77 @@
                <!-- 
             <div class="p-2">
                 <!-- <div class="icon2">
+=======
+
+
+
+
+
+     <body>
+
+          <nav class="navbar navbar-expand-xl ">
+               <!-- <a href="#" class="navbar-brand">Academind</a> -->
+               <div class=" flex-row-reverse left ">
+
+                    <div class="p-2">
+                         <!-- <div class="icon2">
+>>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
                     <a href="CartPage.php"> <i class="fa" style=" color:green ;font-size:20px;margin-top:-20px;margin-bottom:20px;">&#61562;</i></a> -->
-                    <!-- <span id="icon" style="color:green"> 5 </span>
+                         <!-- <span id="icon" style="color:green"> 5 </span>
                 </div>  -->
-            </div>
-            <!-- <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;'></i></div> -->
-            <a class="float-left" href="#">
-                <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
-            </a>
-        </div>
-        <button class="navbar-toggler" data-toggle="collapse" style="margin-left:-20px;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:20px; "></i></span>
-        </button>
-        <a class="float-left" href="farmerHomepage.php">
-            <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-          
-
-            <div class="proicon">
-
-               <?php
-                    if (!isset($_SESSION['phonenumber'])) {
-                         echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '></div></a>";
-                    } 
-                    ?>
+                    </div>
+                    <!-- <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;'></i></div> -->
+                    <a class="float-left" href="#">
+                         <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
+                    </a>
                </div>
-               
-
-            <div class="list-group moblists">
-            <?php
-                    if (isset($_SESSION['phonenumber'])) {
-                         echo "<a href='FarmerProfile.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
-                         echo "<a href=Orders.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
-                         echo "<a href='logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
-                    }
-                    else{
-                         echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '>Login</div></a>"; 
-                    }
-                    ?>
-            </div>
-        </div>
+               <button class="navbar-toggler" data-toggle="collapse" style="margin-left:-20px;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:20px; "></i></span>
+               </button>
+               <a class="float-left" href="farmerHomepage.php">
+                    <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
+               </a>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 
 
+                    <div class="proicon">
 
-        <div class=" flex-row-reverse right ">
-            <div class="p-2 cart">
-                <!-- <div class="icon2">
+                         <?php
+                         if (!isset($_SESSION['phonenumber'])) {
+                              echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '></div></a>";
+                         }
+                         ?>
+                    </div>
+
+                    <div class="list-group moblists">
+
+                         <?php
+                         if (isset($_SESSION['phonenumber'])) {
+
+                              echo "<a href='FarmerProfile.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
+                              echo "<a href=Orders.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
+                              echo "<a href='logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
+                         } else {
+                              echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '>Login</div></a>";
+                         }
+                         ?>
+                         <div class='loginz' style="text-align:center;">
+                              <?php getFarmerUsername(); ?>
+                         </div>
+                    </div>
+               </div>
+
+
+
+
+               <div class=" flex-row-reverse right ">
+                    <div class="p-2 cart">
+                         <!-- <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green;margin-top:-20px;">&#61562;</i></a>
                     <span id="icon" style="color:green"> 5 </span>
                 </div> -->
+<<<<<<< HEAD
             </div>
             <div class="dropdown p-2 settings ">
                 <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -954,14 +1036,71 @@
                <div class="carousel-inner">
                     <div class="carousel-item active">
                          <img class="d-block w-100" src="../Images/Website/farm1.jpeg" alt="First slide">
+=======
+                         <div class='loginz'>
+                              <?php getFarmerUsername(); ?>
+                         </div>
+>>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
                     </div>
-                    <div class="carousel-item">
-                         <img class="d-block w-100" src="../Images/Website/farm3.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                         <img class="d-block w-100" src="../Images/Website/farm4.jpg" alt="Third slide">
+                    <div class="dropdown p-2 settings ">
+                         <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Settings
+                         </button>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <?php
+                              if (isset($_SESSION['phonenumber'])) {
+                                   echo "<a href='FarmerProfile.php' class='dropdown-item' style='padding-right:-20px;'>Profile</a>";
+                                   echo "<a href='Orders.php' class='dropdown-item' style='padding-right:-20px;'>Orders</a>";
+                                   echo "<a href='logout.php' class='dropdown-item' style='padding-right:-20px;'>Logout</a>";
+                              } else {
+                                   echo "<a href='../auth/FarmerLogin.php'> <div class='dropdown-item' style='padding-right:-20px;'>Login</div></a>";
+                              }
+                              ?>
+                         </div>
                     </div>
                </div>
+          </nav>
+          <br>
+          <div class="row" style="text-align:center;">
+               <div class="col-md-3 col-sm-12">
+                    <a href="farmerHomepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
+               </div>
+               <div class="col-md-3 col-sm-12">
+                    <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
+               </div>
+               <div class="col-md-3 col-sm-12">
+                    <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
+               </div>
+               <div class="col-md-3 col-sm-12">
+                    <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers/SMS</label></a>
+               </div>
+          </div>
+          <hr>
+
+          <div class="container caros">
+               <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                         <div class="carousel-item active">
+                              <img class="d-block w-100 resizing" src="../Images/Homepage/fruitsbasket.jpg" alt="First slide">
+                         </div>
+                         <div class="carousel-item">
+                              <img class="d-block w-100 resizing" src="../Images/Website/farm1.jpeg" alt="Third slide">
+                         </div>
+                         <div class="carousel-item">
+                              <img class="d-block w-100 resizing" src="../Images/Homepage/vegetables.jpg" alt="Second slide">
+                         </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                         <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                         <span class="sr-only">Next</span>
+                    </a>
+               </div>
+<<<<<<< HEAD
                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
@@ -1038,5 +1177,91 @@
      </section>
      <!-- ./Footer -->
 </body>
+=======
+<<<<<<< HEAD
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+          </a>
+=======
+>>>>>>> cfdd51123131bba6ccadb1e10f68725d7d1e8d32
+          </div>
+
+          <br><br>
+          <div class="features container">
+               <h1 style="font-weight: bold;color:black; text-align:center">Standout Features</h1>
+               <div class="card-deck row text-center" style="display: flex; flex-wrap: wrap;">
+                    <div class="card">
+                         <p class="aligncenter">
+                              <img class="card-img-top image" src="../Images/Homepage/sms.png" alt="Card image cap" width="250px" height="200px">
+                         </p>
+                         <div class="card-body">
+                              <h4 class="card-title font-weight-bold">Sms System </h4>
+                              <br>
+                              <h5 class="card-text">Upload and Edit Your Products via SMS </h5>
+                         </div>
+                    </div>
+                    <div class="card">
+                         <p class="aligncenter">
+                              <img class="card-img-top image" src="../Images/Homepage/handshake.png" alt="Card image cap" width="250px" height="200px">
+                         </p>
+                         <div class="card-body">
+                              <h4 class="card-title font-weight-bold">Buyer Connection</h4>
+                              <br>
+                              <h5 class="card-text">Get in direct touch with the buyer to satisfy its need </h5>
+                         </div>
+                    </div>
+                    <div class="card">
+                         <p class="aligncenter">
+                              <img class="card-img-top image" src="../Images/Homepage/farmer.png" alt="Card image cap" width="250px" height="200px">
+                         </p>
+                         <div class="card-body">
+                              <h4 class="card-title font-weight-bold">Farmer Group Formation</h4>
+                              <br>
+                              <h5 class="card-text">Get in touch with other farmers making your own community where you can ask for help</h5>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          </div>
+          <br> <br>
+          <section id="footer" class="myfooter">
+               <div class="container">
+                    <div class="row text-center text-xs-center text-sm-left text-md-left">
+                         <div class="col aligncenter">
+                              <br>
+                              <h5>Payment Option</h5>
+                              <img src="../Images/Website/paytm1.jpg" alt="paytm">
+                              <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
+                         </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                              <ul class="list-unstyled list-inline social text-center">
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                              </ul>
+                         </div>
+
+                    </div>
+                    <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                              <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
+                              <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
+                         </div>
+                         </hr>
+                    </div>
+               </div>
+          </section>
+
+     </body>
+>>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
 
 </html>

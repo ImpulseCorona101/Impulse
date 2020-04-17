@@ -8,6 +8,7 @@
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+
     <title>Impulse - Slot</title>
 
     <style>
@@ -16,8 +17,8 @@
         }
         .search{
             position: absolute;
-           top: 12%;
-           left:80%;
+           top: 25%;
+           left:9%;
         }
 
         .form-actions {
@@ -30,13 +31,9 @@
             display: none;
         }
         
-        @media only screen and (min-device-width:320px) and (max-device-width:480px) {
-            .mobileContent {
-                display: inline;
-            }
-            .table-responsive {
-                display: none;
-            }
+        
+
+
         }
         body { 
             background-color:#f3f7f7;
@@ -53,7 +50,7 @@
 
             
         }
-        
+
         .container-sm:hover{
             background-color: #dfdfdf;
             color: #2a5cff;
@@ -61,19 +58,20 @@
         }
         .status{
             position: absolute;
-            bottom:350px;
+            bottom:640px;
             left:1100px;
             color: #A9A9A9;
+            width: 400px;
             font-family: sans-serif;
         }
         label{
             color: #000;
         }
         .dropbtn {
-  background-color: green;
+  background-color:#343a40;
   color: white;
-  padding: 5px;
-  font-size: 16px;
+  padding: 8px;
+  font-size: 18px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -82,7 +80,7 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: green;
+  background-color: #2a5cff;
 }
 
 .dropdown {
@@ -108,7 +106,7 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: green;}
+.dropdown a:hover {background-color: #2a5cff;}
 
 .show {display: block;}
 
@@ -124,8 +122,8 @@ form {
 
 form > .textbox {
   outline: 0;
-  height: 42px;
-  width: 244px;
+  height: 50px;
+  width: 280px;
   line-height: 42px;
   padding: 0 16px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -144,14 +142,14 @@ form > .textbox:focus {
 form > .button {
   outline: 0;
   background: none;
-  background-color: rgba(38, 50, 56, 0.8);
+  background-color: #2a5cff
   float: left;
-  height: 42px;
+  height: 50px;
   width: 42px;
   text-align: center;
   line-height: 42px;
   border: 0;
-  color: #FFF;
+  color: #2a5cff;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 16px;
   text-rendering: auto;
@@ -163,25 +161,164 @@ form > .button {
 }
 
 form > .button:hover {
-  background-color: green;
+  background-color: #2a5cff;
   cursor: pointer;
+  color: #fff;
 }
+.full{
+    position: absolute;
+    top: 250px;
+}
+@media only screen and (min-device-width:414px) and (max-device-width:414px) {
+            .mobileContent {
+                display: inline;
+            }
+            .hrtable-responsive {
+                display: block;
+            }
+            .dropbtn{
+                position: relative;
+                right: 10px;
+               bottom:1px;
+            }
+            h3{
+                position: absolute;
+                right:  90px;
+            bottom: 628px;
+
+                width: 300px;
+            }
+            .dropdown-content a {
+             color: black;
+             padding: 12px 10px;
+             text-decoration: none;
+             display: block;
+             
+
+            }
+            .search{
+                position: absolute;
+                top: 130px;
+            }
+            .mob{
+                position: relative;
+                right: 425px;
+                bottom: 50px;
+
+
+            }
+            .container-sm{
+                width: 325px;
+
+            }
+            .status{
+                position: absolute;
+                left:340px;
+                width: 10px;
+                bottom: 1155px;
+            }
+
+ 
+            
+}
+@media only screen and (min-device-width:360px) and (max-device-width:360px) {
+    .navbar{
+        width: 400px;
+    }
+    h3{
+        right: 50px;
+        width: 300px;
+        top:65px;
+         position: absolute;
+                
+    }
+    .search{
+        position: absolute;
+        top: 120px;
+        left:10px;
+    }
+    .mob{
+        position: relative;
+        right: 430px;
+        bottom: 60px;
+    }
+    .container-sm{
         
+        width: 300px;
+    }
+    .status{
+        position: absolute;
+        position: absolute;
+                left:320px;
+                width: 10px;
+                bottom: 1155px;
+    }
+}
+     @media only screen and (min-device-width:375px) and (max-device-width:375px) {
+        .navbar{
+        width: 100%;
+    }
+   h3{
+        right: 50px;
+        width: 300px;
+        top:65px;
+         position: absolute;
+                
+    }
+        .search{
+        position: absolute;
+        top: 120px;
+        left:10px;
+    }
+     .mob{
+        position: relative;
+        right: 445px;
+        bottom: 60px;
+    }
+    .container-sm{
+        
+        width: 280px;
+    }
+    .status{
+        position: absolute;
+        position: absolute;
+                left:300px;
+                width: 10px;
+                bottom: 1155px;
+    }
+
+
+
+    
+
+}
+ 
     </style>
+ 
 </head>
 
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Impulse</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="{{ url_for('Homepage') }}">Home <span
+                            class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('Homepage') }}">Covid-19 Status <span
+                            class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('Homepage') }}"> Slot Booking <span
+                            class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('Homepage') }}">AgroCraft <span
                             class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -197,19 +334,23 @@ form > .button:hover {
             </ul>
             <div class="p-2">
                 <div class="">
-                    <a> <i class="fa fa-user" style="font-size:30px; color:green ;margin-top:2px;"></i></a>
+                    <a> <i class="fa fa-user" style="font-size:30px; color:white ;margin-top:2px;"></i></a>
                     <span id="" style="color:green"></span>
                 </div>
 
 
             </div>
-             <div class="text-success  login">Login</div>
+             <div class="text  login" style="color: white;">Login</div>
         </div>
         <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
   <div id="myDropdown" class="dropdown-content">
     <a href="#home">Profile</a>
     <a href="#about">Logout</a>
+    <a href="#about">Home</a>
+    <a href="#about">Covid-19 Status</a>
+    <a href="#about">Agrocraft</a>
+    <a href="#about">Contact Us</a>
     
   </div>
 </div>
@@ -220,11 +361,13 @@ form > .button:hover {
     
     
     <div class="container-fluid p-4 border-top shadow-sm p-3 mb-5 bg-white  ">
-        <h3 class="header font-weight-bold">Select Your Shop</h3>
+        <h3 class="header font-weight-bold "><i class ="fas fa-store fa-lg" style="margin-right: 10px; color:#2a5cff;  "></i>Select Your Shop</h3>
         
 
         
     </div>
+    <div class="full">
+    <div class="mob">
     <div class="parent position-relative bg-white">
     <div class="text-left ">
         <div class="container-sm p-4 border border-top shadow-sm ">
@@ -245,6 +388,31 @@ form > .button:hover {
         <h5>Address</h5>
         <h6>Phone Number</h6>
     </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
+    <div class="container-sm p-4 border border-top shadow-sm    ">
+        <h4 class="font-weight-bold">Shop Name</h4>
+        <h5>Address</h5>
+        <h6>Phone Number</h6>
+    </div>
     <div class="container-sm p-4 border border-top shadow-sm ">
         <h4 class="font-weight-bold">Shop Name</h4>
         <h5>Address</h5>
@@ -254,9 +422,12 @@ form > .button:hover {
     
     </div>
     </div>
+</div>
+
     <br>
     <br>
     <br>
+    <div class="st">
     <div class="status font-weight-bold">
         <h5>TYPE</h5>
         
@@ -269,6 +440,8 @@ form > .button:hover {
         <hr>
 
     </div>
+</div>
+</div>
     <div class="search">
        <form method="post">
 
@@ -301,6 +474,7 @@ window.onclick = function(event) {
   }
 }
 </script>
+
     </body>
     </html>
     
