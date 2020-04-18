@@ -491,6 +491,7 @@
             </div>
         </div>
     </div>
+   
     </div>
     <section id="footer" class="myfooter">
         <div class="container">
