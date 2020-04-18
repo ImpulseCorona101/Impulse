@@ -132,7 +132,7 @@
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: white;
   color: white;
   text-align: center;
 }
@@ -168,7 +168,7 @@
 
         .parent{
             width: 850px;
-            height: 350px;
+            height: 600px;
             left: 600px;
             top: 48px;
         }
@@ -248,10 +248,10 @@
 
             .parent{
               position: absolute;
-              left:15px;
-              width: 350px;
+              left:05px;
+              width: 405px;
               top:480px;
-              height: 630px;
+              height: 1100px;
             }
             .btnn{
               position: absolute;
@@ -345,7 +345,7 @@
               left:15px;
               width: 335px;
               top:480px;
-              height: 1000px;
+              height: 1850px;
             }
             .btnn1{
               position: relative;
@@ -423,35 +423,31 @@
 
 <body>
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Impulse</a>
-        
+        <a class="navbar-brand" href="../../index.php">Impulse</a>
+
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}">Home <span
-                            class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}">Covid-19 Status <span
-                            class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}"> Slot Booking <span
-                            class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}">AgroCraft <span
-                            class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('About') }}">About Application</a>
+                    <a class="nav-link" href="#">About Application</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('Contact') }}">Contact Us</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    
+
                 </li>
 
             </ul>
@@ -463,25 +459,25 @@
 
 
             </div>
-             <div class="text  login" style="color: white;">Login</div>
+            <div class="text  login" style="color: white;">Login</div>
         </div>
         <div class="dropdown">
-  <button onclick="myFunctio()" class="dropbtn fas fa-bars"></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Profile</a>
-    <a href="#about">Logout</a>
-    <div class="hide">
-    <a href="#about">Home</a>
-    <a href="#about">Covid-19 Status</a>
-    <a href="#about">Agrocraft</a>
-    <a href="#about">Contact Us</a>
-  </div>
-    
-  </div>
-</div>
+            <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../../User_Pages/profile.html">Profile</a>
+                <a href="../../User_Pages/SIGN_IN.html">Logout</a>
+                <div class="hide">
+                    <a href="../../index.php">Home</a>
+                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                    <a href="../../AgroCraft/index.html">Agrocraft</a>
+                    <a href="#about">Contact Us</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-        
+
     </nav>
     <br>
     <div class="container ">
@@ -525,7 +521,7 @@
                         <button type="button" class="btn btn-outline-warning ml-5 mr-5" onclick="myFunction()">Morning</button>
                       
                         
-                        <button type="button" class="btn btn-outline-secondary ml-5 btnn2" onclick="myFunction1()">Evening</button>
+                        <button type="button" class="btn btn-outline-secondary ml-5 btnn2" onclick="myFunction1()" id="btnn1">Evening</button>
                       
                         
                         </div>
@@ -619,18 +615,83 @@
         <h2 class="font-weight-bold">Select Your Time Slot</h2>
      </div>
     <div class="row btc" >
+        <?php
+$con = mysqli_connect("localhost", "root", "", "impulse");
+
+if (mysqli_connect_errno()) {
+     echo "Failed to connect to MySql " . mysqli_connect_error();
+}
+
+
+$search_query = 421200;
+// echo $search_query;
+
+$get_shop = "select * from shopkeeper where pincode = $search_query";
+$run_shop = mysqli_query($con, $get_shop);
+$count = mysqli_num_rows($run_shop);
+if ($count > 0) {
+     while ($rows = mysqli_fetch_array($run_shop)) {
+          
+          $startTime = $rows['startTime'];
+          $endTime = $rows['endTime'];
+
+          $starttimehour = substr($startTime, 0, 2);
+          $starttimemin = substr($startTime, 3);
+
+          $endtimehour = substr($endTime, 0, 2);
+          $endtimemin = substr($endTime, 3);
+
+          $TempEndTime = $endTime;
+          $TempStartTime = $startTime;
+          while ((int) $starttimehour <= (int) $endtimehour && (int) $starttimemin <= (int) $endtimemin) {
+            
+
+                   $endtimehour1 = (int) $starttimehour;
+                   $endtimemin1 = (int) $starttimemin + 30;
+                    if ($endtimemin1 == 60)  {
+                    $endtimemin1 = 00;
+                    
+                    $endtimehour1 = $endtimehour1 + 1;
+
+               }
+                if ($endtimemin1 == 0)  {
+                    $endtimemin1 = 00;
+                    
+                    
+
+               }
+                
+                $a = strval($starttimehour) . ":" . strval($starttimemin) . "-" . strval($endtimehour1) . ":" . strval($endtimemin1);
+                echo "
+        <button type='button' onclick='fil()'   class='btn btn-outline-success mt-5 ml-5 mr-5 p-2' ><h4 class='font-weight-bold'>$a<h4></button>";
+        $starttimemin = (int) $starttimemin + 30;
+        $endtimehour1 = (int) $endtimehour;
         
-        <button type="button" onclick="fill1()" id="btn" value="9:00 am - 9:30 am" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2" ><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>9:00am - 9:30am</button>
-        <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>9:45am - 10:15am</button>
-        <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>10:30am-11:00am</button>
-        
-        <button type="button" class="btn btnn3 btn-outline-success mt-5 ml-4 mr-4 p-2" ><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>11:15am-11:45am</button>
-        <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-5 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>12:00pm-12:30pm</button>
-        <button type="button" class="btn btnn6 btn-outline-success btnn4 mt-5 ml-4 mr-5 p-2"><i class="fa  fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>12:45pm - 1:15pm</button>
-        <button type="button" class="btn  btnn btn-outline-success mt-5 ml-4 mr-4 p-2" ><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>1:30pm - 2:00pm</button>
-        <button type="button" class="btn btnn5 btn-outline-success mt-5 ml-4 p-2"><i class="fa fa-user  fa-lg"><label class="ml-2"> 5 slots</i></label><br>2:15pm - 2:45pm</button>
+                
         
         
+               if ($starttimemin == 60) {
+                    $starttimemin = 00;
+                    
+                    $starttimehour = $starttimehour + 1;
+
+               }
+             
+
+          }
+        
+        }
+      }
+      ?>
+       <script>
+        function fil(){
+           if(document.getElementById('date').value == 0){
+                  alert("Please Select Date");
+          }else{ location.replace("select-item.php");
+
+          }
+      }
+        </script>
         
       </div>
       
@@ -638,34 +699,8 @@
 </div>
 </div>
 <br>
-<div class="parent position-relative border shadow-sm bg-white"id="myDIV1" >
-    <div class="container-sm " >
-       <div class="card-header bg-light shadow-sm">
-           <h2 class="font-weight-bold">Select  Time Slot</h2>
-        </div>
-       <div class="row btc" >
-        <button type="button" id="btn" class="btn  btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>3:00pm - 3:30 pm</button>
-        <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-5 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>3:45pm - 4:15pm</button>
-        <button type="button" class="btn btnn6 btn-outline-success mt-5 ml-4 mr-5 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>4:30pm - 5:00pm</button>
-           <button type="button" class="btn btnn7 btn-outline-success mt-5 ml-4 mr-4 p-2" ><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>5:15pm - 5:45pm</button>
-           <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>6:00pm - 6:30pm</button>
-           <button type="button" class="btn btnn8 btn-outline-success mt-5 ml-5 mr-4 p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>6:45pm - 7:15pm</button>
-           
-           <button type="button" class="btn btn-outline-success mt-5 ml-5 mr-5 p-2" ><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>7:30pm-8:00pm</button>
-           <button type="button" class="btn btnn9 btn-outline-success mt-5 ml-5  p-2"><i class="fa fa-user fa-lg"><label class="ml-2"> 5 slots</i></label><br>8:15pm-8:45pm</button>
-           
-           
-           
-         </div>
-         
-   
-   </div>
-   </div>
-   
-                 <script>
-                 
-            </script>
-            
+
+           <!-- 
             <div class="scam">
             <div class="confirm1 position-relative">
                 <div class="col-md-5 offset-md-3 mr-3 mt-3 ">
@@ -697,7 +732,7 @@
                                </div>
                                 <div class="confirm2 position-relative">
                
-                             </div>
+                             </div>-->
                              <br>
                               
                               
@@ -718,17 +753,21 @@
     }
     
 }
+ 
     </script>
 
                                              <script>
+
                                               function fill(){
-                                                if(document.getElementById('date').value != 0){
-                                                  document.getElementById('demo').value=document.getElementById('date').value;
+                                                if(document.getElementById('date').value == 0){
+                                                  alert("Please Select Date");
+                                                }else{
+                                                  alert("Please Select Schedule");
                                                 }
                                               }
                                               function fill1(){
                                                 if(document.getElementById('btn').value != 0){
-                                                  document.getElementById('demo1').value=document.getElementById('btn').value;
+                                                  document.getElementById('demo1').value=document.getElementById('btn');
                                                 }
                                               }
 
@@ -778,16 +817,15 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <div class="modal-header">
-      
-      <h2>Are You Sure?</h2>
+    <div class="modal-header"
+    >
+     <button id="qr1" class="fas fa-close" style = "background: none;"></button> 
+      <h2 style="color: red; margin-right:  130px;">Oops!</h2>
     </div>
+
     <div class="modal-body">
       <br>
-        <a href="success.html" value="1" id="qr"  class="btn btn-outline-info   mr-5 p-3" >Yes</a>
-        <span >
-         <button type="button" value="1" id="qr1"  class="btn btn-outline-danger    mr-2 p-3" >No</button>
-       </span>
+        <h5> This  shop is not opened after evening. </h5>
         <div id="qrResult" style="height:100px;width: 100px">
   
 </div>
@@ -805,14 +843,14 @@
                                                 var modal = document.getElementById("myModal");
                                                 
                                                 // Get the button that opens the modal
-                                                var btn = document.getElementById("myBtn");
+                                                var btnn1 = document.getElementById("btnn1");
                                                  var qr1 = document.getElementById("qr1")
                                                 
                                                 // Get the <span> element that closes the modal
                                                 var span = document.getElementsByClassName("close")[0];
                                                 
                                                 // When the user clicks the button, open the modal 
-                                                btn.onclick = function() {
+                                                btnn1.onclick = function() {
                                                   modal.style.display = "block";
                                                 }
                                                 
@@ -827,6 +865,7 @@
                                                     modal.style.display = "none";
                                                   }
                                                 }
+                                                var 
                                                 </script>
                                             </div>
                                             <script>
