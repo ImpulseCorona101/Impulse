@@ -110,7 +110,7 @@
     function getProducts()
     {
         global $con;
-        $query = "select * from products  order by RAND() LIMIT 0,8";
+        $query = "select * from products  order by RAND() LIMIT 0,6";
         $run_query = mysqli_query($con, $query);
         echo "<br>";
         while ($rows = mysqli_fetch_array($run_query)) {
@@ -119,22 +119,60 @@
             $product_image = $rows['product_image'];
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
+            $farmer_fk = $rows['farmer_fk'];
+            $farmer_name_query = "select farmer_name from farmerregistration where farmer_id = $farmer_fk";
+            $running_query_name = mysqli_query($con, $farmer_name_query);
+            while ($names = mysqli_fetch_array($running_query_name)) {
+                $name = $names['farmer_name'];
+            }
             if ($product_delivery == "yes") {
                 $product_delivery = "Delivery by Farmer";
             } else {
                 $product_delivery = "Delivery by Farmer Not Available";
             }
-            echo " <div class='inputwrapper'>
-                            <br>
-                            <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
-                            <label>$product_title</label><br>
-                            <label>PRICE:- $product_price Rs/kg</label><br>	
-                            <label id='shop2'></label>$product_delivery<br>Qty:-
-                            <form action = ''  method = 'post'>
-                            <input class='numberinput' type='number' name='quantity' value = '1' >
-                            </form>
-                            <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
-                        </div> ";
+
+
+            echo "
+                    <div class='col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4'>
+                <div class='card pb-1 pl-1 pr-1 pt-0' style='height:542px'>
+                    <br>
+                    <div class='mt-0'><b>
+                            <h4><img src='iconsmall.png' style='width: 28px; margin-bottom:  10px;'> $name
+                        </b></h4>
+                    </div>
+                    <a href='../BuyerPortal2/ProductDetails.php?id=$product_id'>
+                        <img class='card-img-top' src='../Admin/product_images/$product_image' alt='Card image cap' height='300px'>
+                    </a>
+                    <div class='card-body pb-0'>
+                        <div class='row'>
+                            <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
+                                <div class='input-group mb'>
+                                    <div class='input-group-prepend'>
+                                        <h5 class='card-title font-weight-bold'>$product_title</h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
+                                <div class='input-group mb-1'>
+                                    <div class='input-group-prepend'>
+                                        <span class='input-group-text bg-warning border-secondary p-1' style='color:black;' id='inputGroup-sizing-default' placeholder='1'><b>Quantity</b></span>
+                                    </div>
+                                    <input type='number' class='form-control' aria-label='Default' style='margin-top:0%;width:20%;padding:0%;' aria-describedby='inputGroup-sizing-default'>
+                                </div>
+                            </div>
+                        </div>
+                        <p class='card-text mb-2 font-weight-bold'>PRICE:- $product_price Rs/kg</p>
+                        <div class='row'>
+                            <div class='col-1 col-xl-3 col-lg-2 col-md-2 col-sm-2'></div>
+                            <div class='col-12 col-xl-6 col-lg-6 col-md-6  col-sm-12'>
+                                <a href='../BuyerPortal2/bhome.php?add_cart=$product_id' class='btn btn-warning border-secondary mr-1  ' style='color:black ;font-weight:50px;'>Add to cart<img src='carticons.png' height='20px'></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           ";
         }
     }
 
@@ -152,6 +190,7 @@
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
             $product_cat = $rows['product_cat'];
+            $product_type = $rows['product_type'];
 
             // echo "  <div class='veg'>
             //             <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
@@ -159,7 +198,7 @@
 
             echo "<div class='column kolum'>
                 <div class='img-thumbnail ''>
-                     <a href='../BuyerPortal2/ProductDetails.php?id=$product_id'>
+                     <a href='../BuyerPortal2/Categories.php?type=$product_type'>
                         <img class='rounded mx-auto d-block images' src='../Admin/product_images//$product_image' width='350px' height='200px' alt='image'>
                      </a>
                 </div>
@@ -179,10 +218,10 @@
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
             $product_cat = $rows['product_cat'];
-
+            $product_type = $rows['product_type'];
             echo "<div class='column kolum'>
                 <div class='img-thumbnail ''>
-                     <a href='../BuyerPortal2/ProductDetails.php?id=$product_id'>
+                     <a href='../BuyerPortal2/Categories.php?type=$product_type'>
                         <img class='rounded mx-auto d-block images' src='../Admin/product_images//$product_image' width='350px' height='200px' alt='image'>
                      </a>
                 </div>
@@ -252,7 +291,7 @@
                     $run_insert_pro = mysqli_query($con, $insert_pro);
                 }
 
-                echo "<script>window.open('BuyerHomepage.php','_self')</script>";
+                echo "<script>window.open('bhome.php','_self')</script>";
             }
         } else {
             // echo "<script>alert('Please Login First! ');</script>";
