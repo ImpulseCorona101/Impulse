@@ -443,9 +443,47 @@ include("../Functions/functions.php");
         
         <hr/>
 
-        
-    </div>
-
+        <div class='col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4'>
+            <div class='card pb-1 pl-1 pr-1 pt-0' style='height:542px'>
+                <br>
+                <div class='mt-0'><b>
+                    <h4><img src='iconsmall.png' style='width: 28px; margin-bottom:  10px;'> $name
+                    </b></h4>
+                    </div>
+                    <a href='../BuyerPortal2/ProductDetails.php?id=$product_id'>
+                        <img class='card-img-top' src='../Admin/product_images/Coffee.jpg' alt='Card image cap' height='300px'>
+                    </a>
+                    <div class='card-body pb-0'>
+                        <div class='row'>
+                            <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
+                                <div class='input-group mb'>
+                                    <div class='input-group-prepend'>
+                                        <h5 class='card-title font-weight-bold'>$product_title</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
+                                <div class='input-group mb-1'>
+                                    <div class='input-group-prepend'>
+                                        <span class='input-group-text bg-warning border-secondary p-1' style='color:black;' id='inputGroup-sizing-default' placeholder='1'><b>Quantity</b></span>
+                                    </div>
+                                    <input type='number' class='form-control' aria-label='Default' style='margin-top:0%;width:20%;padding:0%;' aria-describedby='inputGroup-sizing-default'>
+                                </div>
+                            </div>
+                        </div>
+                        <p class='card-text mb-2 font-weight-bold'>PRICE:- $product_price Rs/kg</p>
+                        <div class='row'>
+                            <div class='col-1 col-xl-3 col-lg-2 col-md-2 col-sm-2'></div>
+                                <div class='col-12 col-xl-6 col-lg-6 col-md-6  col-sm-12'>
+                                    <a href='../BuyerPortal2/bhome.php?add_cart=$product_id' class='btn btn-warning border-secondary mr-1  ' style='color:black ;font-weight:50px;'>Add to cart<img src='carticons.png' height='20px'></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>           
     <br><br>
 
     <div>
