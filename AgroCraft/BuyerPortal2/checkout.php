@@ -3,13 +3,14 @@ include("../Functions/functions.php");
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart Page</title>
+    <title>Checkout Page</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -81,7 +82,7 @@ include("../Functions/functions.php");
     }
 
     .cart {
-
+        /* margin-left:10px; */
         margin-right: -9px;
     }
 
@@ -114,6 +115,16 @@ include("../Functions/functions.php");
         margin-left: 35%;
     }
 
+    body {
+        margin: 0;
+        padding: 0px;
+        font-family: sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     .table {
         width: 100%;
         border-collapse: collapse;
@@ -121,16 +132,10 @@ include("../Functions/functions.php");
 
     .table td,
     .table th {
-        padding: 8px 8px;
-        border: 0.5px solid black;
+        padding: 10px 10px;
+        border: 1px solid #ddd;
         text-align: center;
         font-size: 16px;
-        background-color: white;
-    }
-
-    .table thead th {
-        vertical-align: bottom;
-        border-bottom: 0px solid #dee2e6;
     }
 
     .table th {
@@ -142,20 +147,72 @@ include("../Functions/functions.php");
         background-color: #f5f5f5;
     }
 
-    .add {
-        width: 40%;
+    .goback {
+        /* text-align:none; */
+        width: 20%;
+        /* margin-left:10%; */
+        margin-right: -7%;
+        margin-left: 0%
+    }
+
+    .placeorder {
+        /* text-align:none; */
+        width: 20%;
+        margin-right: -3.5%;
+    }
+
+    .hey {
+        width: 50%;
     }
 
     @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+        .table thead {
+            display: none;
+        }
 
+        .hey {
+            width: 100%;
+        }
+
+        .table,
+        .table tbody,
+        .table tr,
+        .table td {
+            display: block;
+            width: 100%;
+        }
+
+        .table tr {
+            margin-bottom: 15px;
+        }
+
+        .table td {
+            text-align: right;
+            padding-left: 50%;
+            text-align: right;
+            position: relative;
+        }
+
+        .table td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            padding-left: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
 
         .right {
             display: none;
             background-color: #ff5500;
-
         }
 
-
+        /* 
+            .settings{
+            margin-left:79%;
+        } */
         .left {
             display: flex;
         }
@@ -182,73 +239,43 @@ include("../Functions/functions.php");
             width: 100%;
         }
 
-        .table thead {
-            display: none;
-            background-color: #292b2c;
-            color: goldenrod;
-        }
+        /* .pic{
+        height:auto;
+    } */
 
-        .table,
-        .table tbody,
-        .table tr,
-        .table td {
-            display: block;
-            width: 100%;
-
-        }
-
-        .table tr {
-            margin-bottom: 15px;
-
-        }
-
-        .table td {
-            text-align: right;
-            padding-left: 50%;
-            text-align: right;
-            position: relative;
-
-
-        }
-
-        .table td::before {
-            content: attr(data-label);
-            position: absolute;
-            left: 0;
+        /* .mobtext{
+        display:none;
+    }
+    .destext{
+        display:inline-block;
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    } */
+        .goback {
+            text-align: center;
             width: 50%;
-            padding-left: 15px;
-            font-size: 15px;
-            font-weight: bold;
-            text-align: left;
-            /* background-color: #292b2c;
-        color: goldenrod; */
+            margin-left: 25%;
+
+            /* margin-left:10%; */
+            margin-right: 0%;
         }
 
-        .add {
+        .placeorder {
             width: auto;
+            margin-bottom: -10%;
+            margin-top: 10%;
+            margin-left: 22%;
         }
 
-        .emptycart {
-            /* margin-left: 20%;
-            width:80%;  */
-            float: none;
+        .payment {
+            width: 90%;
+            margin-left: 20%;
+
+        }
+
+        .text {
             text-align: center;
-
-        }
-
-        .continueshopping {
-            /* margin-top:20%;
-            margin-left: 20%;  */
-            float: none;
-            text-align: center;
-            margin-top: -20%;
-
-        }
-
-        .grandtotal {
-            /* margin-right: 20%; */
-            float: none;
-            margin-top: 40%;
         }
     }
 </style>
@@ -285,7 +312,9 @@ include("../Functions/functions.php");
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-search" style="font-size:20px;color:green; "></i></div>
                 </div>
-                <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
+                <form action="SearchResult.php" method="get" enctype="multipart/form-data">
+                    <input type="text" class="form-control " id="inlineFormInputGroup" name="search" placeholder="Search for fruits,vegetables or crops " style="width:500px;">
+                </form>
             </div>
             <?php
             getUsername();
@@ -342,191 +371,130 @@ include("../Functions/functions.php");
 
     </nav>
 
-
-    <div class="container">
-
+    <form action="checkout.php" method="post">
         <?php
-        if (isset($_SESSION['phonenumber'])) {
-            $temp = totalItems();
-            echo   "<div class='text-left'>
-                        <h3>Your Items :- $temp</h3>
-                        <hr>";
+        $phonenumber = $_SESSION['phonenumber'];
+        $get_addr = "select buyer_addr from buyerregistration where buyer_phone=$phonenumber";
+        $run = mysqli_query($con, $get_addr);
+        while ($row = mysqli_fetch_array($run)) {
+            $buyer_addr = $row['buyer_addr'];
         }
         ?>
 
-        <table class="table">
-            <thead>
-                <th>S.No</th>
-                <th>Item Name</th>
-                <th>Unit Price </th>
-                <th style="width:25%;">Quantity</th>
-                <th>Subtotal</th>
-                <th>Delete</th>
-            </thead>
-
-            <?php
-            $total = 0;
-            global $con;
-            if (isset($_SESSION['phonenumber'])) {
-                $sess_phone_number = $_SESSION['phonenumber'];
-                $sel_price = "select * from cart where phonenumber = '$sess_phone_number'";
-                $run_price = mysqli_query($con, $sel_price);
-
-                $qtycart = array();
-                $i = 0;
-                while ($p_price = mysqli_fetch_array($run_price)) {
-                    $product_id = $p_price['product_id'];
-                    $_SESSION['qtycart'][$i] = $p_price['qty'];
-
-                    $pro_price = "select * from products where product_id='$product_id'";
-                    $run_pro_price = mysqli_query($con, $pro_price);
-                    while ($pp_price = mysqli_fetch_array($run_pro_price)) {
-                        $product_title = $pp_price['product_title'];
-                        $product_price = $pp_price['product_price'];
-                        $subtotal = $_SESSION['qtycart'][$i] * $product_price;
-
-            ?>
+        <div class="container mt-2">
+            <div class="text">
+                <br>
+                <h3 style="font-family:Georgia, 'Times New Roman', Times, serif">Check your address </h3>
+            </div>
+            <hr style="margin-top:-0.5%">
+            <form>
+                <div class=" float-none float-sm-none float-md-none float-lg-right float-xl-rightcheckout mr-0 p-2 mb-5   " style="border-radius:5%;">
+                    <h4 style="font-family: sans-serif"><b>Grand total = Rs. <?php echo $_SESSION['grandtotal']; ?> </b></h4>
+                </div>
+                <div class="input-group mt-2 hey ">
+                    <div class="input-group-prepend ">
+                        <span class="input-group-text" style="background-color:#292b2c;color:goldenrod">Delivery Address</span>
+                    </div>
+                    <textarea class="form-control" name="address" aria-label="With textarea"><?php echo $buyer_addr ?></textarea>
+                </div>
+        </div>
+        <div class="container mt-5">
+            <div class="text">
+                <h3 style="font-family:Georgia, 'Times New Roman', Times, serif">Check your Items </h3>
+            </div>
+            <hr style="margin-top:-0.5%">
+            <table class="table">
+                <thead>
+                    <th>Serial No</th>
+                    <th>Name</th>
+                    <th>Total (in Rs)</th>
+                    <th>Delivery options</th>
+                    <!-- <th>Status</th> -->
+                </thead>
 
 
 
-                        <!-- <td class="tdy" data-label="quantity"><a style="color:black;margin-right:12px;" href="MinusQty.php?id=<?php echo $product_id; ?>"><label class="add ladd"><i style="padding: 4px;" class=" icon left  fas fa-minus">
-                                    </label></a></i>
-                                <input type="number" oninput="this.value = Math.abs(this.value)" min="1" value='<?php echo $_SESSION['qtycart'][$i]; ?>' name="qty" style="width:40px; "><a style="color:black;margin-left:4px;" href="AddQty.php?id=<?php echo $product_id; ?>"><label class="add radd">
-                                        <i style="padding: 4px;" class="icon right  fas fa-plus"></label></a></i></td>
-                            </td> -->
-
-
-                        <tbody>
-                            <tr>
-                                <td data-label="S.No" style="font-size:20px;"><?php echo $i + 1; ?></td>
-                                <td data-label="Item Name " style="font-size:20px;"><?php echo $product_title; ?></td>
-                                <td data-label="Unit Price" style="font-size:20px;"><?php echo $product_price; ?></td>
-
-                                <td data-label="Quantity p-0 " style="padding-top:1.5%;padding-bottom:-2%">
-                                    <div class="d-flex justify-content-center " style="width:90%;padding-left:10%;">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <a href="AddQty.php?id=<?php echo $product_id; ?>">
-                                                    <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon1">
-                                                        <b style="color:goldenrod"><i class="fas fa-plus"></i></b>
-                                                    </button>
-                                                </a>
-                                            </div>
-                                            <input type="number" class="form-control" oninput="this.value = Math.abs(this.value)" min="1" value='<?php echo $_SESSION['qtycart'][$i]; ?>' name="qty" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                            <div class="input-group-append">
-                                                <a href="MinusQty.php?id=<?php echo $product_id; ?>">
-                                                    <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon2">
-                                                        <b style="color:goldenrod"><i class="fas fa-minus"></i></b>
-                                                    </button>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-
-
-                                <?php $subtotal = $_SESSION['qtycart'][$i] * $product_price; ?>
-                                <?php
-                                $subquery = "update cart set subtotal = $subtotal where product_id = $product_id";
-                                $run = mysqli_query($con, $subquery);
-                                ?>
-
-                                <td data-label="Subtotal" style="font-size:20px;"><?php echo $subtotal; ?></td>
-                                <?php $total = $total + $subtotal ?>
-                                <td data-label="Delete" style="font-size:20px;"><a href="DeleteProductCart.php?id=<?php echo $product_id; ?>" id="Deletionlink"><i class="far fa-times-circle"></i></a></td>
-                            </tr>
                 <?php
+
+                global $con;
+                if (isset($_SESSION['phonenumber'])) {
+                    $sess_phone_number = $_SESSION['phonenumber'];
+                    $sel_price = "select * from cart where phonenumber = '$sess_phone_number'";
+                    $run_price = mysqli_query($con, $sel_price);
+                    $i = 0;
+
+                    while ($p_price = mysqli_fetch_array($run_price)) {
+                        $product_id = $p_price['product_id'];
+                        $qty = $p_price['qty'];
+                        $subtotal = $p_price['subtotal'];
+
+                        $pro_price = "select * from products where product_id='$product_id'";
+                        $run_pro_price = mysqli_query($con, $pro_price);
+                        while ($pp_price = mysqli_fetch_array($run_pro_price)) {
+                            $product_title = $pp_price['product_title'];
+                ?>
+
+
+                            <tbody>
+                                <tr>
+                                    <td data-label="Sr.No"><?php echo $i + 1; ?></td>
+                                    <td data-label="Name"><?php echo $product_title; ?></td>
+                                    <td data-label="Total (in Rs)"><?php echo $subtotal; ?></td>
+                                    <td data-label=">Delivery options">
+                                        <select class="custom-select custom-select" name="delivery">
+                                            <option selected value="Farmer">Farmer</option>
+                                            <option value="Buyer">Buyer</option>
+                                            <option value="Courier">Courier</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                <?php
+                        }
+                        $i++;
                     }
-                    $i++;
-                }
-            } else {
-                echo "<h1 align = center>Please Login First!</h1><br><br><hr>";
-            } ?>
-
-                        </tbody>
-        </table>
-
-    </div>
-
-    </div>
-
-
-    <div class="container">
-        <div class="float-none float-sm-none float-md-none float-lg-left float-xl-left  emptycart">
-            <a href="emptyCart.php">
-                <button type="button" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">Empty Cart
-                    <i class="fas fa-shopping-cart ml-1"></i></button>
-            </a>
-        </div>
-        <!-- <div class="grandtotal  float-none float-sm-none float-md-none float-lg-right float-xl-right"></div><br> -->
-        <br>
-        <div class=" float-none float-sm-none float-md-none float-lg-right float-xl-rightcheckout mr-0 p-2 border border-dark  " style="border-radius:5%;">
-
-            <h2>Grand total = Rs <?php echo $total; ?> </h2>
-
-
-
-
-            <?php
-            if (isset($_SESSION['phonenumber'])) {
-                $sel_price = "select * from cart where phonenumber = '$sess_phone_number'";
-                $run_price = mysqli_query($con, $sel_price);
-                $count = mysqli_num_rows($run_price);
-                if ($count > 0) {
-                    echo "<a href='Checkout.php'>
-                                <button type='button' class='btn btn-lg border border-dark d-flex mx-auto' style='font-size:22px;color:black;background-color:#FFD700'>
-                                    Checkout<i class='fas fa-arrow-right ml-2 mt-2 mb-1'></i>
-                                </button>
-                            </a>";
                 } else {
-
-                    echo "<a href='Includes/alert.php'>
-                                <button type='button' class='btn btn-lg border border-dark d-flex mx-auto' style='font-size:22px;color:black;background-color:#FFD700'>
-                                    Checkout<i class='fas fa-arrow-right ml-2 mt-2 mb-1'></i>
-                                </button>
-                            </a>";
-                }
-            } else {
-
-                echo "<a href='../auth/BuyerLogin.php'>
-                                <button type='button' class='btn btn-lg border border-dark d-flex mx-auto' style='font-size:22px;color:black;background-color:#FFD700'>
-                                    Checkout<i class='fas fa-arrow-right ml-2 mt-2 mb-1'></i>
-                                </button>
-                            </a>";
-            }
-
-            ?>
-
+                    echo "<h1 align = center>Please Login First!</h1><br><br><hr>";
+                } ?>
+            </table>
         </div>
 
+        <div class="container mt-5">
+            <div class="text">
+                <h3 style="font-family:Georgia, 'Times New Roman', Times, serif">Select Your Payment Mode</h3>
+            </div>
+            <hr style="margin-top:-0.5%">
+
+            <div class="payment">
+                <h4>Payment Options :-
+                    <input type="radio" aria-label="Radio button for following text input" name="payment" value="paytm" required>
+                    <img src="../Images/Website/paytm1.jpg" alt="paytm" class="paytm">
+                    <input type="radio" aria-label="Radio button for following text input" name="payment" value="cod" required>
+                    <img src="../Images/Website/cod.jpg" alt="paytm" class="cod" style="height:37px">
+                </h4>
+            </div>
+
+            <div class="float-none float-sm-none float-md-none float-lg-right float-xl-right placeorder">
+                <a href="#"><button type="submit" name="submit" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">
+                        Place Order
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
+                </a>
+            </div>
+    </form>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <?php $_SESSION['grandtotal'] = $total; ?>
-        <br>
-        <br>
-        <div class=" float-none float-sm-none float-md-none float-lg-left float-xl-left continueshopping mt-5">
-            <a href="bhome.php"><button type="button" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">Continue Shopping
-                    <i class="fas fa-shopping-bag ml-1"></i></button></a>
-        </div>
+    <br> <br><br>
+    <div class="float-none float-sm-none float-md-none float-lg-right float-xl-right goback ">
+        <a href="cartpage.php"><button type="button" class="btn btn-lg  border border-dark  " style="font-size:22px;color:black;background-color:#FFD700;margin-left:-8%;">
+                <i class="fas fa-arrow-left"></i> Go Back </button></a>
     </div>
-    <br>
-    <br>
-    <br>
+    </div>
+
+
+
     <br>
     <br>
     <section id="footer" class="myfooter">
@@ -534,7 +502,7 @@ include("../Functions/functions.php");
             <div class="row text-center text-xs-center text-sm-left text-md-left">
                 <div class="col aligncenter">
                     <br>
-                    <h5>Payment Option</h5>
+                    <h4>Payment Option</h4>
                     <img src="../Images/Website/paytm1.jpg" alt="paytm">
                     <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
                 </div>
@@ -562,3 +530,18 @@ include("../Functions/functions.php");
 </body>
 
 </html>
+
+<?php
+if (isset($_POST['submit'])) {
+    $address = $_POST['address'];
+    $delivery = $_POST['delivery'];
+    $payment = $_POST['payment'];
+    $total = $_SESSION['grandtotal'];
+
+    $query1 = "insert into orders (product_id,qty,address,delivery,phonenumber,total,payment) values ('$product_id','$qty','$address','$delivery','$sess_phone_number','$total','$payment')";
+    $run = mysqli_query($con, $query1);
+    if ($run) {
+        echo "<script>window.open('Success.php','_self')</script>";
+    }
+}
+?>
