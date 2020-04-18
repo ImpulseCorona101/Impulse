@@ -900,7 +900,7 @@
 
                                              <div class='row' style='padding:7px; margin-bottom:15px;' >
                                                   <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 aligncenter'> <a href='#' class='btn btn-warning border-secondary' style='color:black'><b>Edit Product</b></a></div>
-                                                  <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 aligncenter'> <a href='#' class='btn btn-warning border-secondary' style='color:black'><b>My Transaction</b></a></div>
+                                                  <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 aligncenter'> <a href='Transactions.php' class='btn btn-warning border-secondary' style='color:black'><b>My Transaction</b></a></div>
                                              </div>
                                         </div>         
                                    </div>
