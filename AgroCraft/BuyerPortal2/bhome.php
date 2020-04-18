@@ -467,7 +467,7 @@ include("../Functions/functions.php");
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;margin-right:-9%;font-size:28px;"></i></span>
         </button>
-        <a class="float-left" href="#">
+        <a class="float-left" href="bhome.php">
             <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -478,15 +478,24 @@ include("../Functions/functions.php");
                 </div>
                 <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
             </div>
-            <div class="text-success  logins ">Login</div>
+            <?php
+            getUsername();
+            ?>
             <div class="list-group moblists">
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
-                    Profile
-                </a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Transactions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">subscriptions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Farmers</a>
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
+
+                <?php
+                if (isset($_SESSION['phonenumber'])) {
+                    echo "<a href='productsdetails.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
+                    echo "<a href= 'Transaction.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Transactions</a>";
+                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Save For Later</a>";
+                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Subscriptions</a>";
+                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Farmers</a>";
+                    echo "<a href='../Includes/logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
+                } else {
+                    echo "<a href='../auth/BuyerLogin.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Login</a>";
+                }
+                ?>
+
             </div>
         </div>
 
@@ -505,11 +514,18 @@ include("../Functions/functions.php");
                     Settings
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Transactions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Subscriptions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Farmers</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                        echo "<a href='productsdetails.php' class='dropdown-item  ' style='padding-right:-20px;'>Profile</a>";
+                        echo "<a href='#' class='dropdown-item ' style='padding-right:-20px;'>Transactions</a>";
+                        echo "<a href='#' class='dropdown-item'  style='padding-right:-20px;'>Subscriptions</a>";
+                        echo "<a href='#' class='dropdown-item' style='padding-right:-20px;'>Save For Later</a>";
+                        echo "<a href='#' class='dropdown-item' style='padding-right:-20px;' >Farmers</a>";
+                        echo "<a href='../Includes/logout.php' class='dropdown-item ' style='padding-right:-20px;'>Logout</a>";
+                    } else {
+                        echo "<a href='../auth/BuyerLogin.php' class='dropdown-item ' style='padding-right:-20px;'>Login</a>";
+                    }
+                    ?>
                 </div>
             </div>
 
@@ -527,9 +543,9 @@ include("../Functions/functions.php");
                         Fruits
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Orange</a>
-                        <a class="dropdown-item" href="#">Watermellon</a>
-                        <a class="dropdown-item" href="#">Strawberry</a>
+                        <?php
+                        getFruits();
+                        ?>
                     </div>
                 </div>
             </div>
@@ -539,9 +555,9 @@ include("../Functions/functions.php");
                         Vegetables
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Patato</a>
-                        <a class="dropdown-item" href="#">Carrot</a>
-                        <a class="dropdown-item" href="#">Onion</a>
+                        <?php
+                        getVegetables();
+                        ?>
                     </div>
                 </div>
             </div>
@@ -551,16 +567,22 @@ include("../Functions/functions.php");
                         Crops
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Wheat</a>
-                        <a class="dropdown-item" href="#">Rice</a>
-                        <a class="dropdown-item" href="#">Bajra</a>
+                        <?php
+                        getCrops();
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
     <div class="container"> <img src="b4.jpeg" class="img-fluid firstimage d-block mx-auto" alt="Responsive image">
     </div>
+    <br>
     <br>
 
 
@@ -575,26 +597,32 @@ include("../Functions/functions.php");
 
         <div class="row BigBox">
 
-            <div class="column kolum">
-                <div class="img-thumbnail ">
-                    <img class="rounded mx-auto d-block images" src="../Admin/product_images/Bananas.jpg" width="350px" height="200px" alt="image">
-                </div>
-            </div>
-            <div class="column kolum">
-                <div class="img-thumbnail">
-                    <img class="rounded mx-auto d-block images" src="../Admin/product_images/Apple.jpg" width="350px" height="200px" alt="image">
-                </div>
-            </div>
-            <div class="column kolum">
-                <div class="img-thumbnail">
-                    <img class="rounded mx-auto d-block images" src="../Admin/product_images/Mango.jpg" width="350px" height="200px" alt="image">
-                </div>
-            </div>
-            <div class="column kolum">
-                <div class="img-thumbnail">
-                    <img class="rounded mx-auto d-block images" src="../Admin/product_images/orange.jpg" width="350px" height="200px" alt="image">
-                </div>
-            </div>
+            <?php
+            getFruitsHomepage();
+            ?>
+
+            <hr>
+        </div>
+        <hr>
+    </div>
+    <br><br>
+
+
+    <div class="container">
+        <div class="text-center">
+            <!-- <h2 id="headings" class="destext">Fresh fruits</h2> -->
+            <h1 id="headings" class="guard"><span><b>Fresh Vegetables </b></span>
+            </h1>
+        </div>
+
+        <hr>
+
+        <div class="row BigBox">
+
+            <?php
+            getVegetablesHomepage();
+            ?>
+
             <hr>
         </div>
         <hr>
