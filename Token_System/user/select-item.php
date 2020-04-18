@@ -13,36 +13,32 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Impulse</a>
-        
+	 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../index.php">Impulse</a>
+
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}">Home <span
-                            class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}">Covid-19 Status <span
-                            class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}"> Slot Booking <span
-                            class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}">AgroCraft <span
-                            class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('About') }}">About Application</a>
+                    <a class="nav-link" href="#">About Application</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('Contact') }}">Contact Us</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    
+
                 </li>
 
             </ul>
@@ -54,71 +50,77 @@
 
 
             </div>
-             <div class="text  login" style="color: white;">Login</div>
+            <div class="text  login" style="color: white;">Login</div>
         </div>
         <div class="dropdown">
-  <button onclick="myFunctio()" class="dropbtn fas fa-bars"></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Profile</a>
-    <a href="#about">Logout</a>
-    <div class="hide">
-    <a href="#about">Home</a>
-    <a href="#about">Covid-19 Status</a>
-    <a href="#about">Agrocraft</a>
-    <a href="#about">Contact Us</a>
-  </div>
-    
-  </div>
-</div>
+            <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../../User_Pages/profile.html">Profile</a>
+                <a href="../../User_Pages/SIGN_IN.html">Logout</a>
+                <div class="hide">
+                    <a href="../../index.php">Home</a>
+                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                    <a href="../../AgroCraft/index.html">Agrocraft</a>
+                    <a href="#about">Contact Us</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-        
+
     </nav>
-    <div class="search">
+    <?php
+    getdet();
+    ?>
+     <div class='search'>
        
 
           
         
-         <div class="full">
-    <div class="mob">
-    <div class="parent  bg-white">
-    <div class="text-left ">
-        <div class="container-md p-4 border border-top shadow-lg ">
-            <a class="fas fa-store fa-2x "style="color: #D2691E;"></a>
-            <h4 class="font-weight-bold">Shop Name:</h4>
-            <input type="text" name="pname" autocomplete="off" placeholder="Shop Name">
+         <div class='full'>
+    <div class='mob'>
+    <div class='parent  bg-white'>
+    <div class='text-left '>
+
+        <div class='container-md p-4 border border-top shadow-lg '>
+          
+            <a class='fas fa-store fa-2x 'style='color: #D2691E;'></a>
+             <br>
+            <h4 class='font-weight-bold'>Shop Name</h4>
+            <!--<input type='text' name='pname' autocomplete='off' placeholder='Shop Name'>-->
             
             <br>
             <br>
-            <a class="fas fa-map fa-2x"style="color: #D2691E;"></a>
-            <h4 class=" font-weight-bold">Shop Address</h4>
-            <input type="text" name="sadd" autocomplete="off" placeholder="Shop Address">
+            <a class='fas fa-map fa-2x' style='color: #D2691E;'></a>
+            <h4 class=' font-weight-bold'>Shop Address</h4>
+            <!--<input type='text' name='sadd' autocomplete='off' placeholder='Shop Address'>-->
 
             <br>
             <br>
             <br>
-            <a class="fas fa-phone fa-2x "style="color: #D2691E;"></a>
-            <h4 class="font-weight-bold">Phone Number</h4>
-            <input type="text" name="pno" autocomplete="off" placeholder="Phonenumber">
+            <a class='fas fa-phone fa-2x 'style='color: #D2691E;'></a>
+            <h4 class='font-weight-bold'>Phone Number</h4>
+            <!--<input type='text' name='pno' autocomplete='off' placeholder='Phonenumber'>-->
             
             <br>
             <br>
-            <a class="fas fa-calendar fa-2x "style="color: #D2691E;"></a>
-            <h4 class=" font-weight-bold">Date</h4>
-            <input type="text" name="Date" autocomplete="off" placeholder="Date">
+            <a class='fas fa-calendar fa-2x 'style='color: #D2691E;'></a>
+            <h4 class=' font-weight-bold'>Date</h4>
+            <!--<input type='text' name='Date' autocomplete='off' placeholder='Date'>
+             -->
+            <br>
+            <br>
+            <a class='fas fa-clock fa-2x 'style='color: #D2691E;''></a>
+            <h4 class='mt-4 font-weight-bold'>Time Slot</h4>
+            <!--<input type='text' name='Time' autocomplete='off' placeholder='Time Slot'>-->
 
             <br>
             <br>
-            <a class="fas fa-clock fa-2x "style="color: #D2691E;"></a>
-            <h4 class="mt-4 font-weight-bold">Time Slot</h4>
-            <input type="text" name="Time" autocomplete="off" placeholder="Time Slot">
-
             <br>
-            <br>
-            <br>
-            <a class="fas fa-chair fa-2x" style="color: #D2691E;"></a>
-            <h4 class="font-weight-bold">Vacancy</h4>
-            <input type="text" name="Vacancy" autocomplete="off" placeholder="Vacancy">
+            <a class='fas fa-chair fa-2x' style='color: #D2691E;'></a>
+            <h4 class='font-weight-bold'>Vacancy</h4>
+            <!--<input type='text' name='Vacancy' autocomplete='off' placeholder='Vacancy'>-->
             
             
             </div>
@@ -126,15 +128,14 @@
 </div></div>
            
         </div>
-     <div class="button1">
-    <button type="button" class="btn btn-outline-success ml-5 w-5 mr-5" onclick="myFunction()">Yes</button>
-    <button type="button" onclick="myFunction1()" class="btn btn-outline-danger ml-5 mr-5" ">No</button>
+     <div class='button1'>
+      <h5 class='mt-2 ml-5'>Are  The Details Correct?</h5>
+    <button type='button' class='btn btn-outline-success mt-3 ml-5 w-5 mr-5' onclick='myFunction()'>Yes</button>
+    <button type='button' onclick='myFunction1()' class='btn btn-outline-danger ml-5 mr-5 mt-3'>No</button>
   </div>
             
     
     </form></div>
-    <br>
-    <br></body>
 
     <style>
       .btn{
@@ -154,7 +155,7 @@
       left: 150px;
     }	
     .container-md{
-      height: 980px;
+      height: 1040px;
       width: 500px;
       text-align: center;
     }
@@ -387,5 +388,97 @@ function myFunction1() {
 
 </script>
 
-	</body>
+</body>
 </html>
+<?php
+
+function getdet()
+{
+    $con = mysqli_connect("localhost", "root", "", "impulse");
+
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySql " . mysqli_connect_error();
+    }
+    $search_query = 421200;
+
+    if (isset($_POST['searchquery'])) {
+      $search_query = $_POST['searchquery'];
+       
+        $get_shop = "select * from shopkeeper where pincode = $search_query";
+        $run_shop = mysqli_query($con, $get_shop);
+        $count = mysqli_num_rows($run_shop);
+        if ($count > 0) {
+            while ($rows = mysqli_fetch_array($run_shop)) {
+                $name = $rows['shopName'];
+                $shopAddress = $rows['shopAddress'];
+                $phone = $rows['phone'];
+                
+                echo " <div class='search'>
+       
+
+          
+        
+         <div class='full'>
+    <div class='mob'>
+    <div class='parent  bg-white'>
+    <div class='text-left '>
+
+        <div class='container-md p-4 border border-top shadow-lg '>
+          
+            <a class='fas fa-store fa-2x 'style='color: #D2691E;'></a>
+            <h4 class='font-weight-bold'>$name</h4>
+           
+            
+            <br>
+            <br>
+            <a class='fas fa-map fa-2x' style='color: #D2691E;'></a>
+            <h4 class=' font-weight-bold'>$shopAddress</h4>
+            <input type='text' name='sadd' autocomplete='off' placeholder='Shop Address'>
+
+            <br>
+            <br>
+            <br>
+            <a class='fas fa-phone fa-2x 'style='color: #D2691E;'></a>
+            <h4 class='font-weight-bold'>$phone</h4>
+            <input type='text' name='pno' autocomplete='off' placeholder='Phonenumber'>
+            
+            <br>
+            <br>
+            <a class='fas fa-calendar fa-2x 'style='color: #D2691E;'></a>
+            <h4 class=' font-weight-bold'>Date</h4>
+            <input type='text' name='Date' autocomplete='off' placeholder='Date'>
+
+            <br>
+            <br>
+            <a class='fas fa-clock fa-2x 'style='color: #D2691E;''></a>
+            <h4 class='mt-4 font-weight-bold'>Time Slot</h4>
+            <input type='text' name='Time' autocomplete='off' placeholder='Time Slot'>
+
+            <br>
+            <br>
+            <br>
+            <a class='fas fa-chair fa-2x' style='color: #D2691E;'></a>
+            <h4 class='font-weight-bold'>Vacancy</h4>
+            <input type='text' name='Vacancy' autocomplete='off' placeholder='Vacancy'>
+            
+            
+            </div>
+    </div>
+</div></div>
+           
+        </div>
+     <div class='button1'>
+      <h5 class='mt-2 ml-5'>Are  The Details Correct?</h5>
+    <button type='button' class='btn btn-outline-success mt-3 ml-5 w-5 mr-5' onclick='myFunction()'>Yes</button>
+    <button type='button' onclick='myFunction1()' class='btn btn-outline-danger ml-5 mr-5 mt-3'>No</button>
+  </div>
+            
+    
+    </form></div>";
+    
+
+        }
+    }
+}
+}
+?>

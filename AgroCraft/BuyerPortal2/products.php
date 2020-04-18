@@ -395,6 +395,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
@@ -506,6 +507,7 @@
             </div>
         </div>
     </div>
+   
     </div>
     <section id="footer" class="myfooter">
         <div class="container">

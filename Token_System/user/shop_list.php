@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
 
-    <title>Impulse - Slot</title>
+    <title>Impulse - Shop List</title>
 
     <style>
         * {
@@ -94,6 +94,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
+            right:20px;
             background-color: #f1f1f1;
             min-width: 160px;
             overflow: auto;
@@ -278,22 +279,22 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Impulse</a>
+        <a class="navbar-brand" href="../../index.php">Impulse</a>
 
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#"> Slot Booking <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">AgroCraft <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Application</a>
@@ -319,12 +320,12 @@
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#home">Profile</a>
-                <a href="#about">Logout</a>
+                <a href="../../User_Pages/profile.html">Profile</a>
+                <a href="../../User_Pages/SIGN_IN.html">Logout</a>
                 <div class="hide">
-                    <a href="#about">Home</a>
-                    <a href="#about">Covid-19 Status</a>
-                    <a href="#about">Agrocraft</a>
+                    <a href="../../index.php">Home</a>
+                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                    <a href="../../AgroCraft/index.html">Agrocraft</a>
                     <a href="#about">Contact Us</a>
                     <div>
 
@@ -347,7 +348,7 @@
         <div class="mob">
             <div class="parent position-relative bg-white">
                 <div class="text-left ">
-<<<<<<< HEAD
+
 
                     <?php
                     getshops();
@@ -390,7 +391,7 @@
 
     <div class="search">
         <form action="shop_list.php" method="post" enctype="multipart/form-data">
-            <input type="text" name="searchquery" class="textbox" placeholder="Enter Your Pincode">
+            <input type="text" name="searchquery" class="textbox" placeholder="Enter Your Pincode" autocomplete="off">
             <br>
             <!-- <input title="Search" value="" class="button "> -->
         </form>
@@ -449,7 +450,7 @@ function getshops()
                 $shopAddress = $rows['shopAddress'];
                 $phone = $rows['phone'];
                 echo " <div class='container-sm p-4 border border-top shadow-sm '>
-                        <a href='#'>
+                        <a href='booking.php'>
                             <h4 class='font-weight-bold'>$name</h4>
                         </a>
                         <h5>$shopAddress</h5>
