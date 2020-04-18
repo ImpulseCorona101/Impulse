@@ -541,7 +541,7 @@ if (isset($_POST['submit'])) {
     $query1 = "insert into orders (product_id,qty,address,delivery,phonenumber,total,payment) values ('$product_id','$qty','$address','$delivery','$sess_phone_number','$total','$payment')";
     $run = mysqli_query($con, $query1);
     if ($run) {
-        echo "Succes";
+        echo "<script>window.open('Success.php','_self')</script>";
     }
 }
 ?>
