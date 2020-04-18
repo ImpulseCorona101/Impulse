@@ -640,12 +640,6 @@
           .aligncenter {
                text-align: center;
           }
-<<<<<<< HEAD
-
-          .myfooter {
-               background-color: #292b2c;
-=======
->>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
 
           .myfooter {
                background-color: #292b2c;
@@ -669,26 +663,12 @@
 
           .navbar-inverse .navbar-nav>li>a {
                color: clack;
-<<<<<<< HEAD
-          }
-
-          .caros {
-               margin-top: 15px;
-          }
-=======
           }
 
           .caros {
                margin-top: 30px;
 
           }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          /* hr {
-=======
->>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
->>>>>>> 8c76ffcaf1fe6523769ba347f6870f250aac7daf
 
           hr {
                border: 0;
@@ -696,28 +676,10 @@
                clear: both;
                display: block;
                width: 99%;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-               background-color:black;
-               margin-left: 0.5em; 
-          } */
-=======
->>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
->>>>>>> 8c76ffcaf1fe6523769ba347f6870f250aac7daf
                background-color: black;
                margin-left: 0.5em;
           }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cfdd51123131bba6ccadb1e10f68725d7d1e8d32
->>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
->>>>>>> 8c76ffcaf1fe6523769ba347f6870f250aac7daf
           img {
                max-width: 100%;
                display: inline-block;
@@ -805,14 +767,6 @@
           }
 
           .logins {
-<<<<<<< HEAD
-               /* text-align: center;
-                margin-right: -30%;
-                margin-left:35%; */
-               display: none;
-          }
-
-=======
                text-align: center;
                margin-right: -30%;
                margin-left: 35%;
@@ -820,7 +774,6 @@
 
 
 
->>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
           /* For medium devices (e.g. tablets) */
           /* @media (min-width: 420px) {
                img {
@@ -873,27 +826,6 @@
                }
 
                .logins {
-<<<<<<< HEAD
-                    display: inline-block;
-                    width: 80%;
-                    text-align: center;
-                    margin-right: 10%;
-                    margin-left: 10%;
-                    padding: 15px;
-               }
-
-               .searchbox {
-                    width: 95%;
-                    margin-right: 5%;
-                    margin-left: 0%;
-               }
-
-               .moblists {
-                    display: inline-block;
-                    text-align: center;
-                    width: 100%;
-               }
-=======
                     text-align: center;
                     margin-right: 35%;
                     padding: 15px;
@@ -912,24 +844,12 @@
                }
 
 
->>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
           }
      </style>
 
 </head>
 
 <body>
-<<<<<<< HEAD
-    
-    
-    
-     <nav class="navbar navbar-expand-xl ">
-          <!-- <a href="#" class="navbar-brand">Academind</a> -->
-          <div class=" flex-row-reverse left ">
-               <!-- 
-            <div class="p-2">
-                <!-- <div class="icon2">
-=======
 
 
 
@@ -943,7 +863,6 @@
 
                     <div class="p-2">
                          <!-- <div class="icon2">
->>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
                     <a href="CartPage.php"> <i class="fa" style=" color:green ;font-size:20px;margin-top:-20px;margin-bottom:20px;">&#61562;</i></a> -->
                          <!-- <span id="icon" style="color:green"> 5 </span>
                 </div>  -->
@@ -999,56 +918,9 @@
                     <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green;margin-top:-20px;">&#61562;</i></a>
                     <span id="icon" style="color:green"> 5 </span>
                 </div> -->
-<<<<<<< HEAD
-            </div>
-            <div class="dropdown p-2 settings ">
-                <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Settings
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <?php
-                    if (isset($_SESSION['phonenumber'])) {
-                         echo "<a href='FarmerProfile.php' class='dropdown-item' style='padding-right:-20px;'>Profile</a>";
-                         echo "<a href='Orders.php' class='dropdown-item' style='padding-right:-20px;'>Orders</a>";
-                         echo "<a href='logout.php' class='dropdown-item' style='padding-right:-20px;'>Logout</a>";
-                    }
-                    else{
-                         echo "<a href='../auth/FarmerLogin.php'> <div class='dropdown-item' style='padding-right:-20px;'>Login</div></a>"; 
-                    }
-                    ?>
-                </div>
-            </div>
-
-            <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
-            
-        </div>
-
-     </nav>
-     <div class="row" style="text-align:center;">
-          <div class="col-md-3 col-sm-12">
-               <a href="farmerHomepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
-          </div>
-          <div class="col-md-3 col-sm-12">
-               <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
-          </div>
-          <div class="col-md-3 col-sm-12">
-               <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
-          </div>
-          <div class="col-md-3 col-sm-12">
-               <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers/SMS</label></a>
-          </div>
-     </div>    
-     <hr>
-     <div class="container caros">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-               <div class="carousel-inner">
-                    <div class="carousel-item active">
-                         <img class="d-block w-100" src="../Images/Website/farm1.jpeg" alt="First slide">
-=======
                          <div class='loginz'>
                               <?php getFarmerUsername(); ?>
                          </div>
->>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
                     </div>
                     <div class="dropdown p-2 settings ">
                          <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1108,98 +980,6 @@
                          <span class="sr-only">Next</span>
                     </a>
                </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-               </a>
-               <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-               </a>
-          </div>
-     </div>
-     <div class="features">
-          <h1 style="font-weight: bold;color:black; text-align:center">Features</h1>
-          <div class="card-deck row text-center" style="display: flex; flex-wrap: wrap;">
-               <div class="card">
-                    <p class="aligncenter">
-                         <img class="card-img-top image" src="../Images/Website/picha1.jpg" alt="Card image cap">
-                    </p>
-                    <div class="card-body">
-                         <h5 class="card-title">Fixed Price Selling</h5>
-                         <p class="card-text">Registered buyers can order organic products online by making online payment for the product which was set by the seller</p>
-                    </div>
-               </div>
-               <div class="card">
-                    <p class="aligncenter">
-                         <img class="card-img-top image" src="../Images/Website/picha3.jpg" alt="Card image cap">
-                    </p>
-                    <div class="card-body">
-                         <h5 class="card-title">Enquiry Based Buying</h5>
-                         <p class="card-text"> Registered buyers can place enquiry of a product and eligible sellers can place their quotes. The buyer can then buy from the qualified sellers</p>
-                    </div>
-               </div>
-               <div class="card">
-                    <p class="aligncenter">
-                         <img class="card-img-top image" src="../Images/Website/picha4.jpg" alt="Card image cap">
-                    </p>
-                    <div class="card-body">
-                         <h5 class="card-title">Raising Future Demands</h5>
-                         <p class="card-text">Registered buyers can place their request for products which will be produced by the farmers in future</p>
-                    </div>
-               </div>
-          </div>
-     </div>
-     </div>
-
-     <section id="footer" class="myfooter">
-          <div class="container">
-               <div class="row text-center text-xs-center text-sm-left text-md-left">
-                    <div class="col aligncenter">
-                         <p>Payment Option</p>
-                         <img src="../Images/Website/paytm1.jpg" alt="paytm">
-                         <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
-                    </div>
-               </div>
-               <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                         <ul class="list-unstyled list-inline social text-center">
-                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                              <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                         </ul>
-                    </div>
-                    </hr>
-               </div>
-               <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-                         <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
-                         <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
-                    </div>
-                    </hr>
-               </div>
-          </div>
-     </section>
-     <!-- ./Footer -->
-</body>
-=======
-<<<<<<< HEAD
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="sr-only">Next</span>
-          </a>
-=======
->>>>>>> cfdd51123131bba6ccadb1e10f68725d7d1e8d32
->>>>>>> 8c76ffcaf1fe6523769ba347f6870f250aac7daf
           </div>
 
           <br><br>
@@ -1273,6 +1053,5 @@
           </section>
 
      </body>
->>>>>>> 60ed7c3fb385f38e693a3b7df1ca122762a4ad65
 
 </html>
