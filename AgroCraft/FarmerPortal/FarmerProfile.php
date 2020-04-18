@@ -27,7 +27,13 @@ while ($row = mysqli_fetch_array($run_query)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Farmer Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
+     <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
+     <script src="../portal_files/jquery.min.js.download"></script>
+     <script src="../portal_files/popper.min.js.download"></script>
+     <script src="../portal_files/bootstrap.min.js.download"></script>
 
     <style>
         h1 {
@@ -147,11 +153,8 @@ while ($row = mysqli_fetch_array($run_query)) {
 </head>
 
 <body>
-    <div class="just">
-        <a href="Homepage.php"> <i class="fa fa-home fa-4x"></i></a>
-    </div>
-
-    <div class="box">
+    
+    <div class="container-fluid" style="max-width:520px">
         <form action="EditProfile.php" method="post">
             <table align="center">
                 <tr colspan=2>
