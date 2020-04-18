@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buyer Homepage</title>
+    <title>Product Details</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -163,24 +163,31 @@
         margin-right: -10%;
         /* border-style: solid; */
     }
-    
-.description{
-    text-align: left;
-}
-.chat{
-            margin-bottom: 20px;
-            margin-top: 10px;
-        }
-        .query{
-            margin-top:60px;
-        }
-       
+
+    .description {
+        text-align: left;
+    }
+
+    .chat {
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .query {
+        margin-top: 60px;
+    }
+
+    #headings {
+        text-shadow: 2px 1px #666666;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+
     @media only screen and (min-device-width:320px) and (max-device-width:480px) {
-        .description{
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom:5px;
-}
+        .description {
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
 
 
 
@@ -303,7 +310,8 @@
             /* margin-top:10%;
     margin-bottom:10%; */
         }
-        .chat{
+
+        .chat {
             margin-bottom: 25px;
             margin-top: 20px;
         }
@@ -382,22 +390,32 @@
     </nav>
     <div class="container">
         <div class="text-center">
-            <h1>Omkar Banana</h1>
+            <br>
+            <h1 id="headings" class="font-weight-bold">Omkar Banana</h1>
         </div>
+        <br>
+
+
         <div class="row">
             <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12   imageblock border border-dark"> <img src="fruit1.jpeg" class="d-flex mx-auto btn-dark image" height="220px;"><br>
-        <b><div class="text-center"><h2>Banana</h2></div></b></div>
+                <b>
+                    <div class="text-center">
+                        <h2>Banana</h2>
+                        <br>
+                    </div>
+                </b></div>
+
             <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 block border border-dark">
                 <div class="text-center mt-2 ">
                     <!-- <h1>Omkar Bannana</h1> -->
                     <br>
                     <div class="row">
                         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 price">
-                            <h5>Price : Rs.40/kg</h5>
+                            <h5><b>Price : </b>40/kg</h5>
 
                         </div>
                         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 stock">
-                            <h5>Stock : 20 kgs</h5>
+                            <h5><b>Stock : </b>20 kgs</h5>
                         </div>
                     </div>
                     <div class="text-center">
@@ -412,30 +430,43 @@
                         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12"> <a href="#" class="btn btn-warning border-secondary addtocart" style="color:black"><b>Add to cart</b><i class="fa" style="font-size:17px; ">&#61562;</i></a></div>
                         <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12"> <a href="#" class="btn btn-warning border-secondary saveforlater" style="color:black"><b>Save For later</b><img src="saveforlater4.png" class="ml-1 mb-1"></a></div>
                     </div>
+                    <div class="row text-center ml-4 mt-3">
+                        <i class='fa fa-truck fa-2x'></i>
+                        <h3 style='padding-left:9px;'>Delivery By Farmer</h3>
+                    </div>
+
                 </div>
             </div>
             <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 text-white" style="background-color:#292b2c;">
                 <div class="text-center farmerdetails mt-4  " style="color:goldenrod"><b>
-                     <b>   <h2>Farmer Details 
-                        </h2></b>
+                        <b>
+                            <h2>Farmer Details
+                            </h2>
+                        </b>
                     </b>
                 </div>
-                <div class="details mt-1 text-center"><b> Name</b><span style="color:ghostwhite" >: Omkar</span>
-                    <br>  
-                    <b> Phone Number </b><span style="color:ghostwhite">:9819104641</span>
+                <div class="details mt-1 text-center">
+                    <h5><b> Name </b><span style="color:ghostwhite">: Omkar</span></h5>
+
+                    <h5><b> Phone Number </b><span style="color:ghostwhite">:9819104641</span></h5>
                     <br>
-                   <a href="#" class="btn btn-warning border-secondary  chat" style="color:black;padding:2px;"><b> View Farmer Profile <i class="fas fa-id-card-alt pl-1"></i> </b></a>
-                    <div class="text-center query"><h4  style="color:goldenrod">Have Some Query ?<br></h4>
-<a href="#" class="btn btn-warning border-secondary  chat" style="color:black;padding:2px;"><b>CHAT HERE</b><img src="chat2.png" class="ml-1 mb-1"></a></div>
+                    <h4 style="color:goldenrod" class="text-center ">Get In touch with Farmer</h4>
+                    <a href="#" class="btn btn-warning border-secondary  chat" style="color:black;padding:2px;"><b> View Farmer Profile <i class="fas fa-id-card-alt pl-1"></i> </b></a>
+
+                    <h4 style="color:goldenrod" class="text-center ">Have Some Query ?<br></h4>
+                    <a href="#" class="btn btn-warning border-secondary  chat" style="color:black;padding:2px;"><b>CHAT HERE</b><img src="chat2.png" class="ml-1 mb-1"></a>
+
                     <!-- <b> Address</b> : Lorem ipsum dolor, sit Eum, ad eaque earum voluptates nemo vero possimus, dolor aspernatur ea aut quisquam quas consequuntur distinctio! -->
                 </div>
             </div>
         </div>
+
+        <br><br>
         <div class="  description mt-0"><b>
-                <h4>Description</h4>
+                <h2 class="text-center font-weight-bold">Description</h2>
             </b></div>
-        <!-- <br> -->
-        <div class="texty" style="margin-top:0%;"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. minus nulla. Illum quaerat iure dignissimos dolores odit quia.</div>
+        <br>
+        <div class="texty" style="margin-top:0%; font-size:25px;"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. minus nulla. Illum quaerat iure dignissimos dolores odit quia.</div>
 
     </div>
 
@@ -450,7 +481,7 @@
 
 
 
-
+    <br><br>
 
 
 
@@ -466,7 +497,8 @@
         <div class="container">
             <div class="row text-center text-xs-center text-sm-left text-md-left">
                 <div class="col aligncenter">
-                    <p>Payment Option</p>
+                    <br>
+                    <h4>Payment Option</h4>
                     <img src="../Images/Website/paytm1.jpg" alt="paytm">
                     <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
                 </div>

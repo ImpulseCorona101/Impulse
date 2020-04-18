@@ -17,164 +17,164 @@ $sessphonenumber = $_SESSION['phonenumber'];
     <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
 
 
-    <title>Insert Product</title>
+    <title>Farmer - Insert Product</title>
     <style>
-    @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-    body{
-        margin: 0;
-        font-size: .9rem;
-        font-weight: 400;
-        line-height: 1.6;
-        color: #212529;
-        text-align: left;
-        background-color: #f5f8fa;
-    }
+        @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
-    .my-form, .login-form
-    {
-        font-family: Raleway, sans-serif;
-    }
+        body {
+            margin: 0;
+            font-size: .9rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #212529;
+            text-align: left;
+            background-color: #f5f8fa;
+        }
 
-    .my-form
-    {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
+        .my-form,
+        .login-form {
+            font-family: Raleway, sans-serif;
+        }
 
-    .my-form .row
-    {
-        margin-left: 0;
-        margin-right: 0;
-    }
+        .my-form {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
 
-    .login-form
-    {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
+        .my-form .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
 
-    .login-form .row
-    {
-        margin-left: 0;
-        margin-right: 0;
-    }
+        .login-form {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
 
+        .login-form .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
     </style>
 </head>
-<body>   
+
+<body>
     <div class="container">
         <main class="my-form">
             <div class="cotainer">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
-                            <div class="card-header"><h4 style="font-style:bold;">Insert Your New Product...</h4></div>
-                                <div class="card-body">
-                                    <form name="my-form" action="insertProduct1.php" method="post" enctype="multipart/form-data">
-                                        <div class="form-group row">
-                                            <label for="full_name" class="col-md-4 col-form-label text-md-right">Product Title:</label>
-                                            <div class="col-md-6">
-                                                <input type="text" id="full_name" class="form-control" name="product_title" placeholder="Enter Product title" required>
-                                            </div>
+                            <div class="card-header">
+                                <h4 style="font-style:bold;">Insert Your New Product...</h4>
+                            </div>
+                            <div class="card-body">
+                                <form name="my-form" action="insertProduct1.php" method="post" enctype="multipart/form-data">
+                                    <div class="form-group row">
+                                        <label for="full_name" class="col-md-4 col-form-label text-md-right">Product Title:</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="full_name" class="form-control" name="product_title" placeholder="Enter Product title" required>
                                         </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                            <label for="email_address" class="col-md-4 col-form-label text-md-right">Product Stock:(In kg)</label>
-                                            <div class="col-md-6">
-                                                <input type="text" id="full_name" class="form-control" name="product_stock" placeholder="Enter Product Stock" required>
-                                            </div>                    
+                                    <div class="form-group row">
+                                        <label for="email_address" class="col-md-4 col-form-label text-md-right">Product Stock:(In kg)</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="full_name" class="form-control" name="product_stock" placeholder="Enter Product Stock" required>
                                         </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                            <label for="user_name" class="col-md-4 col-form-label text-md-right">Product Categories:</label>
-                                            <div class="col-md-6">
-                                                <select name="product_cat" required>
-                                                    <option>Select a Category</option>
-                                                        <?php
-                                                            $get_cats = "select * from categories";
-                                                            $run_cats =  mysqli_query($con, $get_cats);
-                                                            while ($row_cats = mysqli_fetch_array($run_cats)) {
-                                                                $cat_id = $row_cats['cat_id'];
-                                                                $cat_title = $row_cats['cat_title'];
-                                                                echo "<option value='$cat_id'>$cat_title</option>";
-                                                            }
-                                                            ?>
-                                                </select>
-                                            </div>  
+                                    <div class="form-group row">
+                                        <label for="user_name" class="col-md-4 col-form-label text-md-right">Product Categories:</label>
+                                        <div class="col-md-6">
+                                            <select name="product_cat" required>
+                                                <option>Select a Category</option>
+                                                <?php
+                                                $get_cats = "select * from categories";
+                                                $run_cats =  mysqli_query($con, $get_cats);
+                                                while ($row_cats = mysqli_fetch_array($run_cats)) {
+                                                    $cat_id = $row_cats['cat_id'];
+                                                    $cat_title = $row_cats['cat_title'];
+                                                    echo "<option value='$cat_id'>$cat_title</option>";
+                                                }
+                                                ?>
+                                            </select>
                                         </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                            <label for="phone_number" class="col-md-4 col-form-label text-md-right">Product type :</label>
-                                            <div class="col-md-6">
-                                                <input type="text" id="phone_number" class="form-control" name="product_type" placeholder="Example . potato" required>
-                                            </div>
+                                    <div class="form-group row">
+                                        <label for="phone_number" class="col-md-4 col-form-label text-md-right">Product type :</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="phone_number" class="form-control" name="product_type" placeholder="Example . potato" required>
                                         </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                            <label for="present_address" class="col-md-4 col-form-label text-md-right">Product Expiry :</label>
-                                            <div class="col-md-6">
-                                                <input id="present_address" class="form-control" type="date" name="bday" required>
-                                            </div>
+                                    <div class="form-group row">
+                                        <label for="present_address" class="col-md-4 col-form-label text-md-right">Product Expiry :</label>
+                                        <div class="col-md-6">
+                                            <input id="present_address" class="form-control" type="date" name="bday" required>
                                         </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                            <label for="permanent_address" class="col-md-4 col-form-label text-md-right">Product Image :</label>
-                                            <div class="col-md-6">
-                                                <input id="permanent_address" type="file" name="product_image">
-                                            </div>
+                                    <div class="form-group row">
+                                        <label for="permanent_address" class="col-md-4 col-form-label text-md-right">Product Image :</label>
+                                        <div class="col-md-6">
+                                            <input id="permanent_address" type="file" name="product_image">
                                         </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                            <label for="nid_number" class="col-md-4 col-form-label text-md-right">Product MRP : (Per kg)</label>
-                                            <div class="col-md-6">
-                                                <input type="text" id="nid_number" class="form-control" name="product_mrp" placeholder="Enter Product price" required>
-                                            </div>
+                                    <div class="form-group row">
+                                        <label for="nid_number" class="col-md-4 col-form-label text-md-right">Product MRP : (Per kg)</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="nid_number" class="form-control" name="product_mrp" placeholder="Enter Product price" required>
                                         </div>
-                                        
-                                        <div class="form-group row">
-                                            <label for="nid_number1" class="col-md-4 col-form-label text-md-right">Product Base Price:(Per kg)</label>
-                                            <div class="col-md-6">
-                                                <input type="text" id="nid_number1" class="form-control" name="product_baseprice" placeholder="Enter Product base price" required>
-                                            </div>
-                                        </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                            <label for="nid_number2" class="col-md-4 col-form-label text-md-right"> Product Description:</label>
-                                            <div class="col-md-6">
-                                                <textarea name="product_desc" id="nid_number2" class="form-control" name="product_baseprice" rows="3" required></textarea>
-                                            </div>
+                                    <div class="form-group row">
+                                        <label for="nid_number1" class="col-md-4 col-form-label text-md-right">Product Base Price:(Per kg)</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="nid_number1" class="form-control" name="product_baseprice" placeholder="Enter Product base price" required>
                                         </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                            <label for="nid_number3" class="col-md-4 col-form-label text-md-right">Product Keywords:</label>
-                                            <div class="col-md-6">
-                                                <input type="text" id="nid_number3" class="form-control" name="product_keywords" placeholder="Example best potatos" required>
-                                            </div>
+                                    <div class="form-group row">
+                                        <label for="nid_number2" class="col-md-4 col-form-label text-md-right"> Product Description:</label>
+                                        <div class="col-md-6">
+                                            <textarea name="product_desc" id="nid_number2" class="form-control" name="product_baseprice" rows="3" required></textarea>
                                         </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                            <label for="nid_number4" class="col-md-4 col-form-label text-md-right">Delivery :</label>
-                                            <div class="col-md-6">
-                                                <input type="radio" id="nid_number4" name="product_delivery" value="yes"/>Yes
-                                                <input type="radio" id="nid_number4" name="product_delivery" value="no"/>No
-                                            </div>
-                                        </div>                          
-                                        <div class="col-md-6 offset-md-4">
-                                            <button type="submit" class="btn btn-primary" name="insert_pro">
-                                                INSERT
-                                            </button>
+                                    <div class="form-group row">
+                                        <label for="nid_number3" class="col-md-4 col-form-label text-md-right">Product Keywords:</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="nid_number3" class="form-control" name="product_keywords" placeholder="Example best potatos" required>
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="nid_number4" class="col-md-4 col-form-label text-md-right">Delivery :</label>
+                                        <div class="col-md-6">
+                                            <input type="radio" id="nid_number4" name="product_delivery" value="yes" />Yes
+                                            <input type="radio" id="nid_number4" name="product_delivery" value="no" />No
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-primary" name="insert_pro">
+                                            INSERT
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+    </div>
+    </main>
     </div>
 
-<body>
+    <body>
+
 </html>
 
 
