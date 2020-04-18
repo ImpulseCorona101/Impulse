@@ -1,6 +1,6 @@
-<!-- <?php
+ <?php
      include("../Functions/functions.php");
-     ?> -->
+     ?> 
 
 <!DOCTYPE html>
 
@@ -897,7 +897,7 @@
                          if (isset($_SESSION['phonenumber'])) {
 
                               echo "<a href='FarmerProfile.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
-                              echo "<a href=Orders.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
+                              echo "<a href='Orders.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
                               echo "<a href='logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
                          } else {
                               echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '>Login</div></a>";
