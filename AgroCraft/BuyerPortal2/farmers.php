@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- kro to dcv -->
 
 <head>
     <meta charset="UTF-8">
@@ -17,6 +16,20 @@
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
 </head>
 <style>
+        .guard {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ffc857;
+        /* background-color: #ffc857; */
+        line-height: 0.1em;
+        margin: 10px 0 20px;
+        font-family: serif;
+    }
+
+    .guard span {
+        background-color: white;
+        padding: 0 10px;
+    }
     .myfooter {
         background-color: #292b2c;
 
@@ -77,7 +90,7 @@
     }
 
     .cart {
-
+        /* margin-left:10px; */
         margin-right: -9px;
     }
 
@@ -109,49 +122,41 @@
         margin-right: -30%;
         margin-left: 35%;
     }
+.card{
+ width: 14rem;
 
-    .table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    .table td,
-    .table th {
-        padding: 8px 8px;
-        border: 0.5px solid black;
-        text-align: center;
-        font-size: 16px;
-        background-color: white;
-    }
-
-    .table thead th {
-        vertical-align: bottom;
-        border-bottom: 0px solid #dee2e6;
-    }
-
-    .table th {
-        background-color: #292b2c;
-        color: goldenrod;
-    }
-
-    .table tbody tr:nth-child(even) {
-        background-color: #f5f5f5;
-    }
-
-    .add {
-        width: 40%;
-    }
-
+}
     @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+        /* .mycarousel {
+            display: none;
+        }
 
+        .firstimage {
+            height: auto;
+            width: 90%;
+        }
+*/
+        .card {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom:10%;
+
+        }
+
+       /* .col {
+            margin-top: 20px;
+        } */
 
         .right {
             display: none;
             background-color: #ff5500;
-
         }
 
-
+        /* 
+            .settings{
+            margin-left:79%;
+        } */
         .left {
             display: flex;
         }
@@ -176,76 +181,22 @@
             display: inline-block;
             text-align: center;
             width: 100%;
-        }
+               }
 
-        .table thead {
-            display: none;
-            background-color: #292b2c;
-            color: goldenrod;
-        }
+        /* .pic{
+        height:auto;
+    } */
 
-        .table,
-        .table tbody,
-        .table tr,
-        .table td {
-            display: block;
-            width: 100%;
+        /* .mobtext{
+        display:none;
+    }
+    .destext{
+        display:inline-block;
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    } */
 
-        }
-
-        .table tr {
-            margin-bottom: 15px;
-
-        }
-
-        .table td {
-            text-align: right;
-            padding-left: 50%;
-            text-align: right;
-            position: relative;
-
-
-        }
-
-        .table td::before {
-            content: attr(data-label);
-            position: absolute;
-            left: 0;
-            width: 50%;
-            padding-left: 15px;
-            font-size: 15px;
-            font-weight: bold;
-            text-align: left;
-            /* background-color: #292b2c;
-        color: goldenrod; */
-        }
-
-        .add {
-            width: auto;
-        }
-
-        .emptycart {
-            /* margin-left: 20%;
-            width:80%;  */
-            float: none;
-            text-align: center;
-
-        }
-
-        .continueshopping {
-            /* margin-top:20%;
-            margin-left: 20%;  */
-            float: none;
-            text-align: center;
-            margin-top: -20%;
-
-        }
-
-        .grandtotal {
-            /* margin-right: 20%; */
-            float: none;
-            margin-top: 40%;
-        }
     }
 </style>
 
@@ -324,85 +275,88 @@
         </div>
 
     </nav>
+    <div class="text-center container">
+            <br>
 
+            <b>
+                <h1 class="guard text-center"style="  font-family: 'Times New Roman', Times, serif;"><span><b>Farmers</b></span>
+                </h1>
+            </b>
+        </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 ">
+                <div class="card border-dark border" >
+                    <div class="card-body ">
+                        <h5 class="card-title text-center"><img src="iconbig3.png" style=" margin-bottom:  10px;"></h5>
+                        <h4 class="card-subtitle mb-2  text-center">Abhishek</h4>
+                        <p class="card-text text-center">Vashi, Maharashtra<br><br>
+                            <button type="button" class="btn  border-dark border" style="background-color:#FFD700;color:black">View Profile </button>
+                        </p>
+                        <!-- <a href="#" class="card-link text-center">Card link</a>
+                      <a href="#" class="card-link text-center">Another link</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 ">
+                <div class="card border-dark border" >
+                    <div class="card-body ">
+                        <h5 class="card-title text-center"><img src="iconbig.png" style=" margin-bottom:  10px;"></h5>
+                        <h4 class="card-subtitle mb-2  text-center">Ansh</h4>
+                        <p class="card-text text-center">Kopar, Maharashtra<br><br>
+                            <button type="button" class="btn  border-dark border" style="background-color:#FFD700;color:black">View Profile </button>
+                        </p>
+                        <!-- <a href="#" class="card-link text-center">Card link</a>
+                      <a href="#" class="card-link text-center">Another link</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 ">
+                <div class="card border-dark border" >
+                    <div class="card-body ">
+                        <h5 class="card-title text-center"><img src="iconbig2.png" style=" margin-bottom:  10px;"></h5>
+                        <h4 class="card-subtitle mb-2  text-center">Gladina</h4>
+                        <p class="card-text text-center">Thane, Maharashtra<br><br>
+                            <button type="button" class="btn  border-dark border" style="background-color:#FFD700;color:black">View Profile </button>
+                        </p>
+                        <!-- <a href="#" class="card-link text-center">Card link</a>
+                      <a href="#" class="card-link text-center">Another link</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 ">
+                <div class="card border-dark border" >
+                    <div class="card-body ">
+                        <h5 class="card-title text-center"><img src="iconbig4.png" style=" margin-bottom:  10px;"></h5>
+                        <h4 class="card-subtitle mb-2  text-center">Calista</h4>
+                        <p class="card-text text-center">Wadala, Maharashtra<br><br>
+                            <button type="button" class="btn  border-dark border" style="background-color:#FFD700;color:black">View Profile </button>
+                        </p>
+                        <!-- <a href="#" class="card-link text-center">Card link</a>
+                      <a href="#" class="card-link text-center">Another link</a> -->
+                    </div>
+                </div>
+            </div>
 
-    <div class="container">
-        <div class="text-left">
-            <h3>Your Items :-</h3>
-            <hr>
-            <table class="table">
-                <thead>
-                    <th>S.No</th>
-                    <th>Item Name</th>
-                    <th>Unit Price </th>
-                    <th style="width:25%;">Quantity</th>
-                    <th>Subtotal</th>
-                    <th>Delete</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="S.No" style="font-size:27px;padding-top:1.5%">1</td>
-                        <td data-label="Item Name " style="font-size:27px;padding-top:1.5%">Omkar Banana</td>
-                        <td data-label="Unit Price" style="font-size:27px;padding-top:1.5%">54</td>
-                        <td data-label="Quantity p-0 " style="padding-top:1.5%;padding-bottom:-2%">
-                            <div class="d-flex justify-content-center "style="width:90%;padding-left:10%;">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon1"><b style="color:goldenrod">+</b></button>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon2"><b style="color:goldenrod">-</b></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td data-label="Subtotal" style="font-size:27px;padding-top:1.5%">50</td>
-                        <td data-label="Delete" style="font-size:27px;padding-top:1.5%"><i class="far fa-times-circle"></i></td>
-                    </tr>
-
-                    <tr>
-                        <td data-label="S.No" style="font-size:27px;padding-top:1.5%">1</td>
-                        <td data-label="Item Name " style="font-size:27px;padding-top:1.5%">Omkar Banana</td>
-                        <td data-label="Unit Price" style="font-size:27px;padding-top:1.5%">54</td>
-                        <td data-label="Quantity p-0 " style="padding-top:1.5%;padding-bottom:-2%">
-                            <div class="d-flex justify-content-center "style="width:90%;padding-left:10%;">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon1"><span style="color:goldenrod">+</span></button>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon2"><span style="color:goldenrod">-</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td data-label="Subtotal" style="font-size:27px;padding-top:1.5%">50</td>
-                        <td data-label="Delete" style="font-size:27px;padding-top:1.5%"><i class="far fa-times-circle"></i></td>
-                    </tr>
-
-                </tbody>
-            </table>
         </div>
 
+
     </div>
-    <div class="container">
-        <div class="float-none float-sm-none float-md-none float-lg-left float-xl-left  emptycart"><button type="button" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">Empty Cart<i class="fas fa-shopping-cart ml-1"></i> </div>
-        <!-- <div class="grandtotal  float-none float-sm-none float-md-none float-lg-right float-xl-right"></div><br> -->
-        <br>
-        <div class=" float-none float-sm-none float-md-none float-lg-right float-xl-rightcheckout mr-0 p-2 border border-dark  " style="border-radius:5%;">
-            <h2>Grand total = Rs.345 </h2><button type="button" class="btn btn-lg border border-dark d-flex mx-auto " style="font-size:22px;color:black;background-color:#FFD700">Checkout<i class='fas fa-arrow-right ml-2 mt-2 mb-1'></i>
-        </div>
-        <br>
-        <br>
-        <div class=" float-none float-sm-none float-md-none float-lg-left float-xl-left continueshopping mt-5"><button type="button" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">Continue Shopping <i class="fas fa-shopping-bag ml-1"></i></div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section id="footer" class="myfooter">
         <div class="container">
             <div class="row text-center text-xs-center text-sm-left text-md-left">

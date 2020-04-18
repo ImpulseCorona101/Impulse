@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- kro to dcv -->
 
 <head>
     <meta charset="UTF-8">
@@ -77,7 +76,7 @@
     }
 
     .cart {
-
+        /* margin-left:10px; */
         margin-right: -9px;
     }
 
@@ -110,6 +109,16 @@
         margin-left: 35%;
     }
 
+    body {
+        margin: 0;
+        padding: 0px;
+        font-family: sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     .table {
         width: 100%;
         border-collapse: collapse;
@@ -117,16 +126,10 @@
 
     .table td,
     .table th {
-        padding: 8px 8px;
-        border: 0.5px solid black;
+        padding: 10px 10px;
+        border: 1px solid #ddd;
         text-align: center;
         font-size: 16px;
-        background-color: white;
-    }
-
-    .table thead th {
-        vertical-align: bottom;
-        border-bottom: 0px solid #dee2e6;
     }
 
     .table th {
@@ -137,21 +140,66 @@
     .table tbody tr:nth-child(even) {
         background-color: #f5f5f5;
     }
-
-    .add {
-        width: 40%;
+    .goback{
+        /* text-align:none; */
+        width:20%;
+        /* margin-left:10%; */
+        margin-right:-7%;margin-left:0%
     }
-
+    .placeorder{
+        /* text-align:none; */
+        width:20%;
+        margin-right:-3.5%;
+    }
+    .hey{
+        width:50%;
+    }
     @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+        .table thead {
+            display: none;
+        }
+        .hey{
+        width:100%;
+    }
+        .table,
+        .table tbody,
+        .table tr,
+        .table td {
+            display: block;
+            width: 100%;
+        }
 
+        .table tr {
+            margin-bottom: 15px;
+        }
+
+        .table td {
+            text-align: right;
+            padding-left: 50%;
+            text-align: right;
+            position: relative;
+        }
+
+        .table td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            padding-left: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
 
         .right {
             display: none;
             background-color: #ff5500;
-
         }
 
-
+        /* 
+            .settings{
+            margin-left:79%;
+        } */
         .left {
             display: flex;
         }
@@ -178,74 +226,41 @@
             width: 100%;
         }
 
-        .table thead {
-            display: none;
-            background-color: #292b2c;
-            color: goldenrod;
-        }
+        /* .pic{
+        height:auto;
+    } */
 
-        .table,
-        .table tbody,
-        .table tr,
-        .table td {
-            display: block;
-            width: 100%;
-
-        }
-
-        .table tr {
-            margin-bottom: 15px;
-
-        }
-
-        .table td {
-            text-align: right;
-            padding-left: 50%;
-            text-align: right;
-            position: relative;
-
-
-        }
-
-        .table td::before {
-            content: attr(data-label);
-            position: absolute;
-            left: 0;
-            width: 50%;
-            padding-left: 15px;
-            font-size: 15px;
-            font-weight: bold;
-            text-align: left;
-            /* background-color: #292b2c;
-        color: goldenrod; */
-        }
-
-        .add {
-            width: auto;
-        }
-
-        .emptycart {
-            /* margin-left: 20%;
-            width:80%;  */
-            float: none;
-            text-align: center;
-
-        }
-
-        .continueshopping {
-            /* margin-top:20%;
-            margin-left: 20%;  */
-            float: none;
-            text-align: center;
-            margin-top: -20%;
-
-        }
-
-        .grandtotal {
-            /* margin-right: 20%; */
-            float: none;
-            margin-top: 40%;
-        }
+        /* .mobtext{
+        display:none;
+    }
+    .destext{
+        display:inline-block;
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    } */
+    .goback{
+        text-align:center;
+        width:50%;
+        margin-left:25%;
+     
+        /* margin-left:10%; */
+        margin-right:0%;
+    }
+    .placeorder{
+        width:auto;
+        margin-bottom:-10%;
+        margin-top:10%;
+        margin-left:22%;
+    }
+   .payment{
+       width:90%;
+       margin-left:20%;
+    
+   }
+   .text{
+       text-align:center;
+   }
     }
 </style>
 
@@ -296,9 +311,6 @@
             </div>
         </div>
 
-
-
-
         <div class=" flex-row-reverse right ">
             <div class="p-2 cart">
                 <div class="icon2">
@@ -324,85 +336,76 @@
         </div>
 
     </nav>
-
-
-    <div class="container">
-        <div class="text-left">
-            <h3>Your Items :-</h3>
-            <hr>
-            <table class="table">
-                <thead>
-                    <th>S.No</th>
-                    <th>Item Name</th>
-                    <th>Unit Price </th>
-                    <th style="width:25%;">Quantity</th>
-                    <th>Subtotal</th>
-                    <th>Delete</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="S.No" style="font-size:27px;padding-top:1.5%">1</td>
-                        <td data-label="Item Name " style="font-size:27px;padding-top:1.5%">Omkar Banana</td>
-                        <td data-label="Unit Price" style="font-size:27px;padding-top:1.5%">54</td>
-                        <td data-label="Quantity p-0 " style="padding-top:1.5%;padding-bottom:-2%">
-                            <div class="d-flex justify-content-center "style="width:90%;padding-left:10%;">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon1"><b style="color:goldenrod">+</b></button>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon2"><b style="color:goldenrod">-</b></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td data-label="Subtotal" style="font-size:27px;padding-top:1.5%">50</td>
-                        <td data-label="Delete" style="font-size:27px;padding-top:1.5%"><i class="far fa-times-circle"></i></td>
-                    </tr>
-
-                    <tr>
-                        <td data-label="S.No" style="font-size:27px;padding-top:1.5%">1</td>
-                        <td data-label="Item Name " style="font-size:27px;padding-top:1.5%">Omkar Banana</td>
-                        <td data-label="Unit Price" style="font-size:27px;padding-top:1.5%">54</td>
-                        <td data-label="Quantity p-0 " style="padding-top:1.5%;padding-bottom:-2%">
-                            <div class="d-flex justify-content-center "style="width:90%;padding-left:10%;">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon1"><span style="color:goldenrod">+</span></button>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon2"><span style="color:goldenrod">-</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td data-label="Subtotal" style="font-size:27px;padding-top:1.5%">50</td>
-                        <td data-label="Delete" style="font-size:27px;padding-top:1.5%"><i class="far fa-times-circle"></i></td>
-                    </tr>
-
-                </tbody>
-            </table>
+    <div class="container mt-2">
+        <div class="text">
+            <h3 style="font-family:Georgia, 'Times New Roman', Times, serif" >Check your address </h3>
         </div>
-
+        <hr style="margin-top:-0.5%">
+        <form>
+            <div class=" float-none float-sm-none float-md-none float-lg-right float-xl-rightcheckout mr-0 p-2 mb-5   " style="border-radius:5%;">
+                <h4 style="font-family: sans-serif"><b>Grand total = Rs.345 </b></h4>
+            </div>
+            <div class="input-group mt-2 hey ">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" style="background-color:#292b2c;color:goldenrod">Delivery Address</span>
+                </div>
+                <textarea class="form-control" placeholder="hey" aria-label="With textarea"></textarea>
+            </div>
+            <!-- 
+    <textarea class="form-control inp area mb-5 " id="exampleFormControlTextarea1" rows="2" ="Shop Address" ></textarea> -->
     </div>
-    <div class="container">
-        <div class="float-none float-sm-none float-md-none float-lg-left float-xl-left  emptycart"><button type="button" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">Empty Cart<i class="fas fa-shopping-cart ml-1"></i> </div>
-        <!-- <div class="grandtotal  float-none float-sm-none float-md-none float-lg-right float-xl-right"></div><br> -->
-        <br>
-        <div class=" float-none float-sm-none float-md-none float-lg-right float-xl-rightcheckout mr-0 p-2 border border-dark  " style="border-radius:5%;">
-            <h2>Grand total = Rs.345 </h2><button type="button" class="btn btn-lg border border-dark d-flex mx-auto " style="font-size:22px;color:black;background-color:#FFD700">Checkout<i class='fas fa-arrow-right ml-2 mt-2 mb-1'></i>
+    <div class="container mt-5">
+        <div class="text">
+            <h3 style="font-family:Georgia, 'Times New Roman', Times, serif">Check your Items </h3>
         </div>
-        <br>
-        <br>
-        <div class=" float-none float-sm-none float-md-none float-lg-left float-xl-left continueshopping mt-5"><button type="button" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">Continue Shopping <i class="fas fa-shopping-bag ml-1"></i></div>
+        <hr style="margin-top:-0.5%">
+
+        <table class="table">
+            <thead>
+                <th>Sr.No</th>
+                <th>Name</th>
+                <th>Total (in Rs)</th>
+                <th>Delivery options</th>
+                <!-- <th>Status</th> -->
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Sr.No" >1</td>
+                    <td data-label="Name" >Dinesh</td>
+                    <td data-label="Total (in Rs)" >34</td>
+                    <td data-label=">Delivery options"><select class="custom-select custom-select ">
+                            <option selected>Farmer</option>
+                            <option value="1">
+                                Buyer
+                            </option>
+                            <option value="2">Courier</option>
+
+                        </select></td>
+                    <!-- <td data-label="Staus">Passed</td> -->
+                </tr>
+
+
+            </tbody>
+        </table>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    </form>
+    <div class="container mt-5">
+        <div class="text">
+            <h3 style="font-family:Georgia, 'Times New Roman', Times, serif" >Select Your Payment Mode</h3>
+        </div>
+        <hr style="margin-top:-0.5%">
+        <div class="payment">
+            <h4 >Payment Options :-
+            <input type="radio" aria-label="Radio button for following text input">  <img src="../Images/Website/paytm1.jpg" alt="paytm" class="paytm">
+                <input type="radio" aria-label="Radio button for following text input"> <img src="../Images/Website/cod.jpg" alt="paytm" class="cod" style="height:37px"></h4>
+        </div>
+        <div class="float-none float-sm-none float-md-none float-lg-right float-xl-right placeorder"><button type="button" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">Place Order <i class="fas fa-thumbs-up"></i> </div>
+       <br>  <br><br><div class="float-none float-sm-none float-md-none float-lg-right float-xl-right goback "><button type="button" class="btn btn-lg  border border-dark  " style="font-size:22px;color:black;background-color:#FFD700;margin-left:-8%;"><i class="fas fa-arrow-left"></i> Go Back </div>
+    </div>
+ 
+
+<br>
+<br>
     <section id="footer" class="myfooter">
         <div class="container">
             <div class="row text-center text-xs-center text-sm-left text-md-left">
