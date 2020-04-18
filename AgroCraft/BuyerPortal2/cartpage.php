@@ -5,10 +5,6 @@ include("../Functions/functions.php");
 
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-<!-- kro to dcv -->
-=======
->>>>>>> 3d6139ff9717d29168884803c62ab79c27f86312
 
 <head>
     <meta charset="UTF-8">
@@ -264,7 +260,6 @@ include("../Functions/functions.php");
 
 
     <nav class="navbar navbar-expand-xl ">
-        <!-- <a href="#" class="navbar-brand">Academind</a> -->
         <div class=" flex-row-reverse left ">
 
             <div class="p-2">
@@ -349,72 +344,12 @@ include("../Functions/functions.php");
 
 
     <div class="container">
-<<<<<<< HEAD
-        <div class="text-left">
-            <h3>Your Items :-</h3>
-            <hr>
-            <table class="table">
-                <thead>
-                    <th>S.No</th>
-                    <th>Item Name</th>
-                    <th>Unit Price </th>
-                    <th style="width:25%;">Quantity</th>
-                    <th>Subtotal</th>
-                    <th>Delete</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="S.No" style="font-size:27px;padding-top:1.5%">1</td>
-                        <td data-label="Item Name " style="font-size:27px;padding-top:1.5%">Omkar Banana</td>
-                        <td data-label="Unit Price" style="font-size:27px;padding-top:1.5%">54</td>
-                        <td data-label="Quantity p-0 " style="padding-top:1.5%;padding-bottom:-2%">
-                            <div class="d-flex justify-content-center "style="width:90%;padding-left:10%;">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon1"><b style="color:goldenrod">+</b></button>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon2"><b style="color:goldenrod">-</b></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td data-label="Subtotal" style="font-size:27px;padding-top:1.5%">50</td>
-                        <td data-label="Delete" style="font-size:27px;padding-top:1.5%"><i class="far fa-times-circle"></i></td>
-                    </tr>
-
-                    <tr>
-                        <td data-label="S.No" style="font-size:27px;padding-top:1.5%">1</td>
-                        <td data-label="Item Name " style="font-size:27px;padding-top:1.5%">Omkar Banana</td>
-                        <td data-label="Unit Price" style="font-size:27px;padding-top:1.5%">54</td>
-                        <td data-label="Quantity p-0 " style="padding-top:1.5%;padding-bottom:-2%">
-                            <div class="d-flex justify-content-center "style="width:90%;padding-left:10%;">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon1"><span style="color:goldenrod">+</span></button>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon2"><span style="color:goldenrod">-</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-                        <td data-label="Subtotal" style="font-size:27px;padding-top:1.5%">50</td>
-                        <td data-label="Delete" style="font-size:27px;padding-top:1.5%"><i class="far fa-times-circle"></i></td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-=======
 
         <?php
         if (isset($_SESSION['phonenumber'])) {
             $temp = totalItems();
             echo   "<div class='text-left'>
-                        <h3>Your Items :-</h3>
+                        <h3>Your Items :- $temp</h3>
                         <hr>";
         }
         ?>
@@ -467,17 +402,28 @@ include("../Functions/functions.php");
                                 <td data-label="Item Name " style="font-size:20px;"><?php echo $product_title; ?></td>
                                 <td data-label="Unit Price" style="font-size:20px;"><?php echo $product_price; ?></td>
 
-                                <td data-label="Quantity p-0">
-                                    <div class="d-flex justify-content-center p-0">
-                                        <div class="input-group add" style="margin-left:0%">
+                                <td data-label="Quantity p-0 " style="padding-top:1.5%;padding-bottom:-2%">
+                                    <div class="d-flex justify-content-center " style="width:90%;padding-left:10%;">
+                                        <div class="input-group mb-3">
                                             <div class="input-group-prepend">
+                                                <a href="AddQty.php?id=<?php echo $product_id; ?>">
+                                                    <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon1">
+                                                        <b style="color:goldenrod"><i class="fas fa-plus"></i></b>
+                                                    </button>
+                                                </a>
                                             </div>
-                                            <input type="number" class="form-control text-center " style="padding:0%" aria-label="Dollar amount (with dot and two decimal places)" value="1">
-                                            <div class="input-group-prepend ">
+                                            <input type="number" class="form-control" oninput="this.value = Math.abs(this.value)" min="1" value='<?php echo $_SESSION['qtycart'][$i]; ?>' name="qty" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                            <div class="input-group-append">
+                                                <a href="MinusQty.php?id=<?php echo $product_id; ?>">
+                                                    <button class="btn btn-outline-secondary" style=" background-color:#292b2c;" type="button" id="button-addon2">
+                                                        <b style="color:goldenrod"><i class="fas fa-minus"></i></b>
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
+
 
                                 <?php $subtotal = $_SESSION['qtycart'][$i] * $product_price; ?>
                                 <?php
@@ -504,19 +450,18 @@ include("../Functions/functions.php");
 
     </div>
 
->>>>>>> 3d6139ff9717d29168884803c62ab79c27f86312
 
     <div class="container">
         <div class="float-none float-sm-none float-md-none float-lg-left float-xl-left  emptycart">
-            <a href="emptyCart.php"><button type="button" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">Empty Cart<i class="fas fa-shopping-cart ml-1"></i>
+            <a href="emptyCart.php">
+                <button type="button" class="btn btn-lg  border border-dark " style="font-size:22px;color:black;background-color:#FFD700">Empty Cart
+                    <i class="fas fa-shopping-cart ml-1"></i></button>
             </a>
         </div>
         <!-- <div class="grandtotal  float-none float-sm-none float-md-none float-lg-right float-xl-right"></div><br> -->
         <br>
         <div class=" float-none float-sm-none float-md-none float-lg-right float-xl-rightcheckout mr-0 p-2 border border-dark  " style="border-radius:5%;">
-<<<<<<< HEAD
-            <h2>Grand total = Rs.345 </h2><button type="button" class="btn btn-lg border border-dark d-flex mx-auto " style="font-size:22px;color:black;background-color:#FFD700">Checkout<i class='fas fa-arrow-right ml-2 mt-2 mb-1'></i>
-=======
+
             <h2>Grand total = Rs <?php echo $total; ?> </h2>
 
 
@@ -552,11 +497,6 @@ include("../Functions/functions.php");
 
             ?>
 
-
-
-
-
->>>>>>> 3d6139ff9717d29168884803c62ab79c27f86312
         </div>
 
 

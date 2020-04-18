@@ -1044,7 +1044,22 @@
 
           <div class=content_item>
                <label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>All Products</b></label>
-               <a href="InsertProduct.php"><button class="btn btn-warning btn-lg p-3 m-3 font-weight-bold">Add New Product <i class="fas fa-plus-square p-2 fa-1x"></i></button></a>
+               <?php
+               include("../Includes/db.php");
+               if (isset($_SESSION['phonenumber'])) {
+
+                    echo "<a href='InsertProduct.php'>
+                    <button class='btn btn-warning btn-lg p-3 m-3 font-weight-bold'>Add New Product <i class='fas fa-plus-square p-2 fa-1x'></i>
+                    </button>
+                    </a>";
+               } else {
+                    echo "<a href='../auth/FarmerLogin.php'>
+                    <button class='btn btn-warning btn-lg p-3 m-3 font-weight-bold'>Add New Product <i class='fas fa-plus-square p-2 fa-1x'></i>
+                    </button>
+                    </a>";
+               }
+               ?>
+
           </div>
 
           <br>
