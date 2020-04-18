@@ -69,15 +69,9 @@ $sessphonenumber = $_SESSION['phonenumber'];
                                 <h4 class="text-center font-weight-bold">Insert Your New Product <i class="fas fa-leaf"></i></h4>
                             </div>
                             <div class="card-body">
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-                                <form name="my-form" action="insertProduct.php" method="post" enctype="multipart/form-data">
-=======
->>>>>>> 41ca82bb5bf1a1734935211401122f69b523974e
                                 <form name="my-form" action="InsertProduct.php" method="post" enctype="multipart/form-data">
->>>>>>> 0fa98f1dc89d98e64bf74906b941df67e8417e78
+
                                     <div class="form-group row">
                                         <label for="full_name" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Title:</label>
                                         <div class="col-md-6">
@@ -120,7 +114,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                                     <div class="form-group row">
                                         <label for="present_address" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Expiry :</label>
                                         <div class="col-md-6">
-                                            <input id="present_address" class="form-control" type="date" name="bday" required>
+                                            <input id="present_address" class="form-control" type="date" name="product_expiry" required>
                                         </div>
                                     </div>
 
@@ -134,21 +128,21 @@ $sessphonenumber = $_SESSION['phonenumber'];
                                     <div class="form-group row">
                                         <label for="nid_number" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product MRP : (Per kg)</label>
                                         <div class="col-md-6">
-                                            <input type="text" id="nid_number" class="form-control" name="product_mrp" placeholder="Enter Product price" required>
+                                            <input type="text" id="nid_number" class="form-control" name="product_price" placeholder="Enter Product price" required>
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label for="nid_number1" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Base Price:(Per kg)</label>
                                         <div class="col-md-6">
                                             <input type="text" id="nid_number1" class="form-control" name="product_baseprice" placeholder="Enter Product base price" required>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group row">
                                         <label for="nid_number2" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder"> Product Description:</label>
                                         <div class="col-md-6">
-                                            <textarea name="product_desc" id="nid_number2" class="form-control" name="product_baseprice" rows="3" required></textarea>
+                                            <textarea name="product_desc" id="nid_number2" class="form-control" name="product_desc" rows="3" required></textarea>
                                         </div>
                                     </div>
 
@@ -194,8 +188,8 @@ if (isset($_POST['insert_pro'])) {    // when button is clicked
     $product_cat = $_POST['product_cat'];
     $product_type = $_POST['product_type'];
     $product_stock = $_POST['product_stock'];
-    $product_mrp = $_POST['product_mrp'];
-    $product_baseprice = $_POST['product_baseprice'];
+    $product_price = $_POST['product_price'];
+    $product_expiry = $_POST['product_expiry'];
     $product_desc = $_POST['product_desc'];
     $product_keywords = $_POST['product_keywords'];
     $product_delivery = $_POST['product_delivery'];
@@ -212,12 +206,12 @@ if (isset($_POST['insert_pro'])) {    // when button is clicked
         $run = mysqli_query($con, $getting_id);
         $row = mysqli_fetch_array($run);
         $id = $row['farmer_id'];
-        $insert_product = "insert into products (farmer_fk, product_cat, product_title,
-                                product_type, product_stock, product_mrp, product_baseprice,
-                                product_desc, product_image, product_keywords, product_delivery) 
-                                values ('$id','$product_cat','$product_title','$product_type','$product_stock',
-                                        '$product_mrp','$product_baseprice','$product_desc',
-                                        '$product_image','$product_keywords','$product_delivery')";
+        $insert_product = "insert into products (farmer_fk,product_title, product_cat, 
+                                product_type,product_expiry,product_image, product_stock, product_price,
+                                product_desc,  product_keywords, product_delivery) 
+                                values ('$id','$product_title','$product_cat','$product_type','$product_expiry','$product_image','$product_stock',
+                                        '$product_price','$product_desc',
+                                        '$product_keywords','$product_delivery')";
 
         $insert_query = mysqli_query($con, $insert_product);
         echo $insert_product;
