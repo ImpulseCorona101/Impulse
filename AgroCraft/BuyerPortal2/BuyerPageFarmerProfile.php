@@ -10,7 +10,7 @@ include("../Functions/functions.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
+    <title>Farmer Details</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -23,7 +23,6 @@ include("../Functions/functions.php");
 <style>
     .myfooter {
         background-color: #292b2c;
-
         color: goldenrod;
         margin-top: 15px;
     }
@@ -375,9 +374,6 @@ include("../Functions/functions.php");
             </div>
         </div>
 
-
-
-
         <div class=" flex-row-reverse right ">
             <div class="p-2 cart">
                 <div class="icon2">
@@ -406,197 +402,85 @@ include("../Functions/functions.php");
             </div>
 
             <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
-            <div class="text-success  login">Login</div>
+            
         </div>
-
     </nav>
 
+    <div class="container">  
+        <div class="card-body text-center">
+			<form name="my-form" >
+				<div class="form-group row ">
+					<label for="full_name" class="col-md-4 col-form-label text-md-right">Full Name  </label>
+						<div class="col-md-6">
+							<label id="full_name" class="form-control">Ramlal prakash sharma</label>
+						</div>
+				</div>
 
-
-    <?php
-
-    if (isset($_GET['id'])) {
-        global $con;
-        $product_id  = $_GET['id'];
-        $query = "select * from products where product_id = $product_id";
-        $run_query = mysqli_query($con, $query);
-        echo "<br>";
-        while ($rows = mysqli_fetch_array($run_query)) {
-            $farmer_fk = $rows['farmer_fk'];
-            $product_title = $rows['product_title'];
-            $product_image = $rows['product_image'];
-            $product_price = $rows['product_price'];
-            $product_stock = $rows['product_stock'];
-            $product_type = $rows['product_type'];
-            $product_delivery = $rows['product_delivery'];
-            $product_desc = $rows['product_desc'];
-            if ($product_delivery == "yes") {
-                $product_delivery = "Delivery by Farmer";
-            } else {
-                $product_delivery = "Delivery by Farmer Not Available";
-            }
-            $querya = "select * from farmerregistration where farmer_id = $farmer_fk";
-            $runa_query = mysqli_query($con, $querya);
-
-            while ($rows = mysqli_fetch_array($runa_query)) {
-                $name = $rows['farmer_name'];
-                $phone = $rows['farmer_phone'];
-                $address = $rows['farmer_address'];
-
-
-                echo "
-                <div class='container'>
-                    <div class='text-center'>
-                        <br>
-                        <h1 id='headings' class='font-weight-bold'>$product_title</h1>
+                <div class="form-group row">
+                    <label for="phone_number" class="col-md-4 col-form-label text-md-right">Phone Number  </label>
+                    <div class="col-md-6">
+                        <label id="phone_number" class="form-control"> 8169193101 </label>
                     </div>
-                    <br>
-
-
-                    <div class='row'>
-                        <div class='col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12   imageblock border border-dark'> <img src='../Admin/product_images/$product_image' class='d-flex mx-auto btn-dark image' height='290px;' width='380px;'><br>
-                            <b>
-                                <div class='text-center'>
-                                    <h2>$product_type</h2>
-                                    <br>
-                                </div>
-                            </b></div>
-
-                        <div class='col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 block border border-dark'>
-                            <div class='text-center mt-2 ''>
-                            
-                                <br>
-                                <div class='row'>
-                                    <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 price'>
-                                        <h5><b>Price : </b>$product_price /kg</h5>
-
-                                    </div>
-                                    <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 stock'>
-                                        <h5><b>Stock : </b>$product_stock kgs</h5>
-                                    </div>
-                                </div>
-                                <form actions='' method='post'>
-                                    <div class='text-center'>
-                                        <div class='input-group mb-3 wholequantity'>
-                                            <div class='input-group-prepend quantity'>
-                                                <span class='input-group-text bg-warning border-secondary quantitylabel' style='color:black' id='inputGroup-sizing-default' ><b>Quantity</b><img src='bag2.png' class='ml-1 mb-1'></span>
-                                            </div>
-                                            <input type='number' name='qty' placeholder=1 class='form-control quantitynumber' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
-                                        </div>
-                                    </div>
-                                    <div class='row'>
-                                        <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'> 
-                                            <button name='cart' type='submit' class='btn btn-warning border-secondary addtocart' style='color:black'><b>Add to cart</b><i class='fa' style='font-size:17px; '>&#61562;</i></button>
-                                        </div>
-                                        <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'> <a href='#' class='btn btn-warning border-secondary saveforlater' style='color:black'><b>Save For later</b><img src='saveforlater4.png' class='ml-1 mb-1'></a></div>
-                                    </div>
-                                </form>
-                                <div class='row text-center ml-4 mt-3'>
-                                    <i class='fa fa-truck fa-2x'></i>
-                                    <h3 style='padding-left:9px;'>$product_delivery</h3>
-                                </div>
-
-                            </div>
+                </div>
+                                        
+                <div class="form-group row">
+                    <label for="state" class="col-md-4 col-form-label text-md-right">State  </label>
+                        <div class="col-md-6">
+                            <label id="state" class="form-control"> Goa </label>
                         </div>
-                        <div class='col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 text-white' style='background-color:#292b2c;'>
-                            <div class='text-center farmerdetails mt-4 ' style='color:goldenrod'><b>
-                                    <b>
-                                        <h2>Farmer Details
-                                        </h2>
-                                    </b>
-                                </b>
-                            </div>
-                            <div class='details mt-1 text-center'>
-                                <h5><b> Name </b><span style='color:ghostwhite'>: $name</span></h5>
-
-                                <h5><b> Phone Number </b><span style='color:ghostwhite'>:$phone</span></h5>
-                                <br>
-                                <h4 style='color:goldenrod' class='text-center '>Get In touch with Farmer</h4>
-                                <a href='BuyerPageFarmerProfile.php' class='btn btn-warning border-secondary  chat' style='color:black;padding:2px;'><b> View Farmer Profile <i class='fas fa-id-card-alt pl-1'></i> </b></a>
-
-                                <h4 style='color:goldenrod' class='text-center ''>Have Some Query ?<br></h4>
-                                <a href='#' class='btn btn-warning border-secondary  chat' style='color:black;padding:2px;'><b>CHAT HERE</b><img src='chat2.png' class='ml-1 mb-1'></a>
-
-                                <!-- <b> Address</b> : Lorem ipsum dolor, sit Eum, ad eaque earum voluptates nemo vero possimus, dolor aspernatur ea aut quisquam quas consequuntur distinctio! -->
-                            </div>
+                </div>
+                                        
+                <div class="form-group row">
+                    <label for="district" class="col-md-4 col-form-label text-md-right">District  </label>
+                        <div class="col-md-6">
+                            <label id="district" class="form-control"> Panji</label>
                         </div>
-                    </div>
+                </div>
 
-                    <br><br>
-                    <div class='  description mt-0'><b>
-                            <h2 class='text-center font-weight-bold'>Description</h2>
-                        </b></div>
-                    <br>
-                    <div class='texty' style='margin-top:0%; font-size:25px;'> $product_desc.</div>
+            </form>
+		</div>          
+        <div class="text-center"><h3 style="padding:5px;">Farmer All Products</div></div>            
+        
+        <hr/>
 
-                    
-                </div>";
-            }
-        }
-    }
-
-    if (isset($_POST['cart'])) {
-
-        if (isset($_POST['quantity'])) {
-            $qty = $_POST['quantity'];
-        } else {
-            $qty = 1;
-        }
-        global $con;
-        if (isset($_SESSION['phonenumber'])) {
-            $sess_phone_number = $_SESSION['phonenumber'];
-
-            $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
-
-            $run_check = mysqli_query($con, $check_pro);
-
-            if (mysqli_num_rows($run_check) > 0) {
-                echo "";
-            } else {
-                $subtotal = $product_price * $qty;
-                $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
-                $run_insert_pro = mysqli_query($con, $insert_pro);
-                echo "<script>window.location.reload(true)</script>";
-            }
-        } else {
-            echo "<script>window.alert('Please Login First!');</script>";
-        }
-    }
-    ?>
-
-
+        
+    </div>
 
     <br><br>
 
+    <div>
     <section id="footer" class="myfooter">
-        <div class="container">
-            <div class="row text-center text-xs-center text-sm-left text-md-left">
-                <div class="col aligncenter">
-                    <br>
-                    <h4>Payment Option</h4>
-                    <img src="../Images/Website/paytm1.jpg" alt="paytm">
-                    <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                    <ul class="list-unstyled list-inline social text-center">
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                    </ul>
-                </div>
-                </hr>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-                    <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
-                    <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
-                </div>
-                </hr>
-            </div>
+               <div class="container">
+                    <div class="row text-center text-xs-center text-sm-left text-md-left">
+                         <div class="col aligncenter">
+                              <br>
+                              <h5>Payment Option</h5>
+                              <img src="../Images/Website/paytm1.jpg" alt="paytm">
+                              <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
+                         </div>
+                    </div>
+
+                    <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                              <ul class="list-unstyled list-inline social text-center">
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                                   <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="row">
+                         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                              <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
+                              <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
+                         </div>
+                         </hr>
+                    </div>
+               </div>
+          </section>
         </div>
 </body>
 
