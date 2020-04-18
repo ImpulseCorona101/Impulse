@@ -13,340 +13,170 @@ $sessphonenumber = $_SESSION['phonenumber'];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
 
 
-
-    <title>Inserting Product</title>
-
-
-
-
-
+    <title>Farmer - Insert Product</title>
     <style>
-        table {
-            border: none;
-        }
-
-
-        tr td {
-            border: none;
-        }
-
-        #protitle {
-            font-size: 10px;
-
-        }
-
-        table {
-            background-color: white;
-            height: 650px;
-            width: 100%;
-            /* width: 98.5%;
-            margin-left: 10px;
-            margin-right: 10px; */
-        }
+        @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
         body {
-            background-color: white;
-        }
-
-        .header {
-            /* background-color:   #66ffff;
-     */
-            font-size: 30px;
-            background-color: white;
-            color: black;
-            text-align: center;
-        }
-
-        * {
-            box-sizing: border-box;
             margin: 0;
+            font-size: .9rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #212529;
+            text-align: left;
+            background-color: #f5f8fa;
         }
 
-        .col1 {
-            font-size: 20px;
-            background-color: #f5ca0a;
-
-            border-style: solid;
-            border-radius: 10px;
-            padding: 10px;
-            float: left;
-            width: 250px;
-            margin-left: 100px;
-
+        .my-form,
+        .login-form {
+            font-family: Raleway, sans-serif;
         }
 
-        select {
-            font-size: 20px;
-            border-style: solid;
-            width: 250px;
-            /* margin-left: 40px; */
-            border-radius: 10px;
-            padding: 10px;
-            border-width: 2px;
-            border-color: black;
-
+        .my-form {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
         }
 
-        .col2 {
-            float: left;
-            margin-left: 20px;
-
+        .my-form .row {
+            margin-left: 0;
+            margin-right: 0;
         }
 
-        .text1 {
-            font-size: 20px;
-            height: 50px;
-            width: 300px;
-            border-radius: 10px;
-            border-style: solid;
-            padding: 10px;
+        .login-form {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
         }
 
-        .grp2 {
-            /* float: left; */
-        }
-
-        .col3 {
-            background-color: #f5ca0a;
-
-            font-size: 20px;
-            border-style: solid;
-            border-radius: 10px;
-            padding: 10px;
-            width: 250px;
-            float: left;
-            margin-right: 20px;
-        }
-
-        .col4 {
-            /* margin-left: 20px; */
-            float: left;
-
-        }
-
-        .t1 {
-            text-align: center;
-        }
-
-        .foot {
-            text-align: center;
-            font-size: 20px;
-            border-style: solid;
-            border-radius: 10px;
-            padding: 10px;
-            margin-left: 40%;
-            /* float: left; */
-            width: 250px;
-            background-color: #f5ca0a;
-
-        }
-
-        .footer {
-            margin-left: 40%;
-            margin-top: 10px;
-            text-align: center;
-            font-size: 20px;
-            border-style: solid;
-            border-radius: 10px;
-            padding: 10px;
-            /* float: left; */
-            width: 250px;
-            background-color: #f5ca0a;
-            /* background-color: white; */
-            border-color: black;
-            font-weight: bold;
-        }
-
-        textarea {
-            border-style: solid;
-            border-color: black;
-            border-width: 2px;
-        }
-
-        .inp {
-            margin-top: 10px;
-            font-size: 30px;
-        }
-
-        .danger {
-            background-color: #00e600;
-            border: 2px solid;
-            border-style: outline;
-            border-color: yellow;
-        }
-
-        .danger:hover {
-            font-weight: bolder;
-            width: 300px;
-            height: 60px;
-            transition: .7s;
-
-        }
-
-        .btn {
-            border: 2px solid;
-            border-style: outline;
-            border-color: #f5ca0a;
-            color: black;
-
-            cursor: pointer;
-            width: 250px;
+        .login-form .row {
+            margin-left: 0;
+            margin-right: 0;
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <form action="Insertproduct.php" method="post" enctype="multipart/form-data">
-            <br>
-            <!-- <div class="inp">Insert New Product Here</div> -->
-            <div><label style="font-size :50px; text-shadow: 1px 1px 1px gray;"><b>Insert New Product Here</b><i style="padding-left:1%;color:green;" class="fas fa-leaf "></i></label></div>
+    <div class="container">
+        <main class="my-form">
+            <div class="cotainer">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="text-center font-weight-bold">Insert Your New Product <i class="fas fa-leaf"></i></h4>
+                            </div>
+                            <div class="card-body">
+                                <form name="my-form" action="insertProduct1.php" method="post" enctype="multipart/form-data">
+                                    <div class="form-group row">
+                                        <label for="full_name" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Title:</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="full_name" class="form-control" name="product_title" placeholder="Enter Product title" required>
+                                        </div>
+                                    </div>
 
-    </div>
-    <br>
+                                    <div class="form-group row">
+                                        <label for="email_address" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Stock:(In kg)</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="full_name" class="form-control" name="product_stock" placeholder="Enter Product Stock" required>
+                                        </div>
+                                    </div>
 
+                                    <div class="form-group row">
+                                        <label for="user_name" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Categories:</label>
+                                        <div class="col-md-6">
+                                            <select name="product_cat" required>
+                                                <option>Select a Category</option>
+                                                <?php
+                                                $get_cats = "select * from categories";
+                                                $run_cats =  mysqli_query($con, $get_cats);
+                                                while ($row_cats = mysqli_fetch_array($run_cats)) {
+                                                    $cat_id = $row_cats['cat_id'];
+                                                    $cat_title = $row_cats['cat_title'];
+                                                    echo "<option value='$cat_id'>$cat_title</option>";
+                                                }
+                                                ?>
+                                            </select>
+                                        </div>
+                                    </div>
 
+                                    <div class="form-group row">
+                                        <label for="phone_number" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product type :</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="phone_number" class="form-control" name="product_type" placeholder="Example . potato" required>
+                                        </div>
+                                    </div>
 
-    <table>
-        <tr id="protitle">
-            <td>
-                <div class="grp1">
-                    <div class="col1 t1"><b> Product Title:</b> </div>
+                                    <div class="form-group row">
+                                        <label for="present_address" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Expiry :</label>
+                                        <div class="col-md-6">
+                                            <input id="present_address" class="form-control" type="date" name="bday" required>
+                                        </div>
+                                    </div>
 
-                    <div class="col2"><input class="text1" type="text" name="product_title" required>
-            </td>
-            </div>
-            </div>
-            <td>
-                <div class="grp2">
+                                    <div class="form-group row">
+                                        <label for="permanent_address" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Image :</label>
+                                        <div class="col-md-6">
+                                            <input id="permanent_address" type="file" name="product_image">
+                                        </div>
+                                    </div>
 
-                    <div class="col3 t1"><b>Product Stock:(In kg</b>)</div>
-                    <div class="col4">
-                        <input type="text " class="text1" name="product_stock" required>
+                                    <div class="form-group row">
+                                        <label for="nid_number" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product MRP : (Per kg)</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="nid_number" class="form-control" name="product_mrp" placeholder="Enter Product price" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="nid_number1" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Base Price:(Per kg)</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="nid_number1" class="form-control" name="product_baseprice" placeholder="Enter Product base price" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="nid_number2" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder"> Product Description:</label>
+                                        <div class="col-md-6">
+                                            <textarea name="product_desc" id="nid_number2" class="form-control" name="product_baseprice" rows="3" required></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="nid_number3" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Keywords:</label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="nid_number3" class="form-control" name="product_keywords" placeholder="Example best potatos" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="nid_number4" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Delivery :</label>
+                                        <div class="col-md-6">
+                                            <input type="radio" id="nid_number4" name="product_delivery" value="yes" />Yes
+                                            <input type="radio" id="nid_number4" name="product_delivery" value="no" />No
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-primary" name="insert_pro">
+                                            INSERT
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-            </td>
-
+                </div>
             </div>
-
-        </tr>
-
-        <tr id="procat">
-            <td>
-                <div class="grp1">
-                    <div class="col1 t1">
-                        <b> Product Categories:</b></div>
-                    <div class="col2">
-                        <select name="product_cat" required>
-                            <option>Select a Category</option>
-                            <?php
-                            $get_cats = "select * from categories";
-
-                            $run_cats =  mysqli_query($con, $get_cats);
-
-                            while ($row_cats = mysqli_fetch_array($run_cats)) {
-
-                                $cat_id = $row_cats['cat_id'];
-                                $cat_title = $row_cats['cat_title'];
-
-                                echo "<option value='$cat_id'>$cat_title</option>";
-                            }
-                            ?>
-                        </select>
-            </td>
-            </div>
-            </div>
-            <td>
-                <div class="grp2">
-
-                    <div class="col3 t1"><b> Product type :</b> </div>
-                    <div class="col4"> <input type="text" class="text1" name="product_type" required>
-                    </div>
-            </td>
-            </div>
-        </tr>
-
-        <tr id="procalender">
-            <td>
-                <div class="grp1">
-                    <div class="col1 t1"><b>Product Expiry :</b></div>
-                    <div class="col2">
-                        <input type="date" class="text1" name="bday">
-            </td>
-            </div>
-
-            </div>
-            <td>
-                <div class="grp2">
-                    <div class="col3 t1">
-                        <b> Product Image :</b> </div>
-                    <div class="col4">
-                        <input type="file" class="text1" name="product_image">
-            </td>
-            </td>
-            </div>
-
-            </div>
-
-
-        <tr id="proprice">
-            <td>
-                <div class="grp1">
-                    <div class="col1 t1"><b> Product MRP : (Per kg) </b></div>
-                    <div class="col2">
-                        <input type="text" class="text1" name="product_mrp" required>
-            </td>
-            </div>
-            </div>
-            <td>
-                <div class="grp2">
-                    <div class="col3 t1"> <b>Product Base Price:(Per kg) </b></div>
-                    <div class="col4">
-
-                        <input type="text" class="text1" name="product_baseprice" required>
-            </td>
-            </td>
-            </div>
-            </div>
-
-
-        <tr id="prodesc">
-            <td>
-                <div class="grp1">
-                    <div class="col1 t1">
-
-                        <b> Product Description:</b> </div>
-                    <div class="col2">
-                        <textarea name="product_desc" class="text1" cols="40" rows="8"></textarea>
-            </td>
-            </div>
-            </div>
-
-            <td>
-                <div class="grp2">
-                    <div class="col3 t1"><b> Product Keywords:</b> </div>
-
-                    <div class="col4"> <input type="text" class="text1" name="product_keywords" size="60">
-            </td>
-            </td>
-            </div>
-            </div>
-    </table>
-
-    <div class="foot">
-        <b> Delivery :</b>
-        <input type="radio" class="yes" name="product_delivery" value="yes"/>Yes
-        <input type="radio" class="yes" name="product_delivery" value="no"/>No
     </div>
-    <!-- <div class="footer"> -->
-    <button class="footer btn danger" id="insnow" name="insert_pro">
-            Insert Product Now <i style="color: #f5ca0a;" class="fas fa-shopping-bag"></i></button>
-    </form>
+    </main>
+    </div>
 
-</body>
+    <body>
 
 </html>
+
 
 <?php
 if (isset($_POST['insert_pro'])) {    // when button is clicked
