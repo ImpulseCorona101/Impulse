@@ -233,6 +233,21 @@ include("../Functions/functions.php");
             transition: 0.3s;
         }
 
+        .guard {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #ffc857;
+            /* background-color: #ffc857; */
+            line-height: 0.1em;
+            margin: 10px 0 20px;
+            /* font-family: serif; */
+        }
+
+        .guard span {
+            background: white;
+            padding: 0 10px;
+        }
+
         /* .settings{
     margin-left:10px;
 } */
@@ -290,6 +305,22 @@ include("../Functions/functions.php");
                 display: inline-block;
                 text-align: center;
                 width: 100%;
+            }
+
+            .guard {
+                /* width: 100%; */
+                text-align: center;
+                border-bottom: 1px solid #ffc857;
+                /* background-color: #ffc857; */
+                /* line-height: 0.1em; */
+                /* margin: 10px 0 20px; */
+                /* font-family: serif; */
+
+            }
+
+            .guard span {
+                background: white;
+                padding: 0 10px;
             }
         }
 
@@ -352,15 +383,13 @@ include("../Functions/functions.php");
             color: goldenrod;
         }
 
-        .BigBox {
-            border: 2px solid black;
-            padding: 10px;
-            border-radius: 10px;
-            margin: auto 5px;
-        }
+
+
+
+
 
         #headings {
-            text-shadow: 2px 1px #666666;
+            /* text-shadow: 2px 1px #666666; */
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
@@ -370,21 +399,13 @@ include("../Functions/functions.php");
                 max-width: 50%;
                 max-height: 40%;
             }
-<<<<<<< HEAD
-=======
         }
 
->>>>>>> 24d3d457047086821dc36c3e90b3c21ba0e48860
         @media screen and (max-width: 600px) {
             .kolum {
                 flex: 50%;
                 max-width: 50%;
-<<<<<<< HEAD
-                }
-                
-=======
                 max-height: 40%;
->>>>>>> 24d3d457047086821dc36c3e90b3c21ba0e48860
             }
         }
 
@@ -545,12 +566,15 @@ include("../Functions/functions.php");
 
     <div class="container">
         <div class="text-center">
-            <h2 id="headings">Fresh fruits</h2>
+            <!-- <h2 id="headings" class="destext">Fresh fruits</h2> -->
+            <h1 id="headings" class="guard"><span><b>Fresh Fruits </b></span>
+            </h1>
         </div>
-        <br>
 
+        <hr>
 
         <div class="row BigBox">
+
             <div class="column kolum">
                 <div class="img-thumbnail ">
                     <img class="rounded mx-auto d-block images" src="../Admin/product_images/Bananas.jpg" width="350px" height="200px" alt="image">
@@ -571,14 +595,17 @@ include("../Functions/functions.php");
                     <img class="rounded mx-auto d-block images" src="../Admin/product_images/orange.jpg" width="350px" height="200px" alt="image">
                 </div>
             </div>
+            <hr>
         </div>
+        <hr>
     </div>
     <br><br>
 
     <div class="container">
 
         <div class="text-center">
-            <h2 id="headings">BestSelling Products All Over India</h2>
+            <h1 id="headings" class="longguard"><span><b>Best Selling Products All Over India </b></span>
+            </h1>
         </div>
         <br>
         <div class="row">
@@ -666,7 +693,7 @@ include("../Functions/functions.php");
         </div>
         <div class="row mt-3">
             <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
-            <div class="card pb-0 pl-1 pr-1 pt-0" style="height:585px">
+                <div class="card pb-0 pl-1 pr-1 pt-0" style="height:585px">
                     <br>
                     <div><b>
                             <h3><img src="iconsmall.png"> ABHISHEK
@@ -693,7 +720,7 @@ include("../Functions/functions.php");
                 </div>
             </div>
             <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
-            <div class="card pb-0 pl-1 pr-1 pt-0" style="height:585px">
+                <div class="card pb-0 pl-1 pr-1 pt-0" style="height:585px">
                     <br>
                     <div><b>
                             <h3><img src="iconsmall.png"> ABHISHEK
