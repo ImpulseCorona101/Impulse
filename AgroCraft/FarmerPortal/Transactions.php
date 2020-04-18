@@ -781,7 +781,7 @@
 
           }
 
-          th {
+          /* th {
                border-color: white;
                border-style: solid;
                border-width: 2px;
@@ -803,9 +803,39 @@
 
           .trow {
                align-content: center;
-          }
+          } */
 
-
+          body {
+            margin: 0;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .table td,
+        .table th {
+            padding: 12px 15px;
+            border: 0px solid #ddd;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .table th {
+            background-color: #292b2c;
+            color: goldenrod;
+        }
+        
+        .table tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
 
           /* For medium devices (e.g. tablets) */
           /* @media (min-width: 420px) {
@@ -846,10 +876,35 @@
                     background-color: #ff5500;
                }
 
-               /* 
-           .settings{
-           margin-left:79%;
-       } */
+               .table thead {
+                display: none;
+            }
+            .table,
+            .table tbody,
+            .table tr,
+            .table td {
+                display: block;
+                width: 100%;
+            }
+            .table tr {
+                margin-bottom: 15px;
+            }
+            .table td {
+                text-align: right;
+                padding-left: 50%;
+                text-align: right;
+                position: relative;
+            }
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
                .left {
                     display: flex;
                }
@@ -998,15 +1053,15 @@
                <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>TRANSACTION HISTORY</b></label></div>
                <br>
 
-               <table class="table">
+               <!-- <table class="table">
                     <thead align="center" class=tableyhead>
                          <th class=thy>Date</th>
                          <th class=thy>Name</th>
                          <th class=thy>Phone Number</th>
                          <th class=thy>Address</th>
-                         <th class=thy>Quantity</th>
+                         <th class=thy>Quantity</th> -->
                          <!-- <th class=thy>Phone Number</th> -->
-                         <th class=thy>Price</th>
+                         <!-- 
                     </thead>
                     <tr align="center">
                          <th>12-1-2000</th>
@@ -1016,11 +1071,47 @@
                          <th>500</th>
                          <th>200</th>
                     </tr>
-               </table>
+               </table> -->
           </div>
+<div class="container">
 
+          <table class="table">
+    <thead>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Quantity</th><th >Price</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Date">12-1-2000</td>
+            <td data-label="Name">melissa</td>
+            <td data-label="Phone Number">1234567890</td>
+            <td data-label="Address">sajgdkagdd%</td>
+            <td data-label="Quantity">200</td>
+            <td data-label="Price">500</td>
+        </tr>
 
-          <br> <br>
+        <tr>
+            <td data-label="Date">12-1-2000</td>
+            <td data-label="Name">melissa</td>
+            <td data-label="Phone Number">1234567890</td>
+            <td data-label="Address">sajgdkagdd%</td>
+            <td data-label="Quantity">200</td>
+            <td data-label="Price">500</td>
+        </tr>
+        <tr>
+            <td data-label="Date">12-1-2000</td>
+            <td data-label="Name">melissa</td>
+            <td data-label="Phone Number">1234567890</td>
+            <td data-label="Address">sajgdkagdd%</td>
+            <td data-label="Quantity">200</td>
+            <td data-label="Price">500</td>
+        </tr>
+    </tbody>
+</table>
+ </div>         <br> <br>
           <section id="footer" class="myfooter">
                <div class="container">
                     <div class="row text-center text-xs-center text-sm-left text-md-left">
