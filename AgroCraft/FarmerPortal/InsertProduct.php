@@ -69,8 +69,15 @@ $sessphonenumber = $_SESSION['phonenumber'];
                                 <h4 class="text-center font-weight-bold">Insert Your New Product <i class="fas fa-leaf"></i></h4>
                             </div>
                             <div class="card-body">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+                                <form name="my-form" action="insertProduct.php" method="post" enctype="multipart/form-data">
+=======
+>>>>>>> 41ca82bb5bf1a1734935211401122f69b523974e
                                 <form name="my-form" action="InsertProduct.php" method="post" enctype="multipart/form-data">
+>>>>>>> 0fa98f1dc89d98e64bf74906b941df67e8417e78
                                     <div class="form-group row">
                                         <label for="full_name" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Title:</label>
                                         <div class="col-md-6">
