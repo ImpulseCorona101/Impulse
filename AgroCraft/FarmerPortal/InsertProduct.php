@@ -69,7 +69,15 @@ $sessphonenumber = $_SESSION['phonenumber'];
                                 <h4 class="text-center font-weight-bold">Insert Your New Product <i class="fas fa-leaf"></i></h4>
                             </div>
                             <div class="card-body">
-                                <form name="my-form" action="insertProduct1.php" method="post" enctype="multipart/form-data">
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+                                <form name="my-form" action="insertProduct.php" method="post" enctype="multipart/form-data">
+=======
+>>>>>>> 41ca82bb5bf1a1734935211401122f69b523974e
+                                <form name="my-form" action="InsertProduct.php" method="post" enctype="multipart/form-data">
+>>>>>>> 0fa98f1dc89d98e64bf74906b941df67e8417e78
                                     <div class="form-group row">
                                         <label for="full_name" class="col-md-4 col-form-label text-md-right text-center font-weight-bolder">Product Title:</label>
                                         <div class="col-md-6">
@@ -215,7 +223,7 @@ if (isset($_POST['insert_pro'])) {    // when button is clicked
         echo $insert_product;
         if ($insert_query) {
             echo "<script>alert('Product has been added')</script>";
-            echo "<script>window.open('Homepage.php','_self')</script>";
+            echo "<script>window.open('farmerHomepage.php','_self')</script>";
         } else {
             echo "<script>alert('Error Uploading Data Please Check your Connections ')</script>";
         }

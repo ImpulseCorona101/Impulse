@@ -526,7 +526,7 @@ include("../Functions/functions.php");
                          <div class="input-group-text"><i class="fas fa-search" style="font-size:20px;color:green; "></i></div>
                     </div>
                     <form action="SearchResult.php" method="get" enctype="multipart/form-data">
-                         <input type="text" class="form-control " id="inlineFormInputGroup" name="search" placeholder="Search for fruits,vegetables or crops " style="width:500px;">
+                         <input type="text" class="form-control " id="inlineFormInputGroup" name="search" placeholder="Search for fruits,vegetables or crops" style="width:500px;">
                     </form>
                </div>
                <?php
@@ -689,13 +689,13 @@ include("../Functions/functions.php");
                cart();
                ?>
                <?php
-               if (isset($_GET['type'])) {
+               if (isset($_GET['search'])) {
 
-                    $search_query = $_GET['type'];
-                    $get_pro = "select * from products where product_type = '$search_query'";
+                    $search_query = $_GET['search'];
+                    $get_pro = "select * from products where product_keywords like '%$search_query%'";
                     $run_pro = mysqli_query($con, $get_pro);
-                    // $count = mysqli_num_rows($run_pro);
-                    if ($run_pro) {
+                    $count = mysqli_num_rows($run_pro);
+                    if ($count > 0) {
                          echo "<br>";
                          while ($rows = mysqli_fetch_array($run_pro)) {
                               $product_id = $rows['product_id'];
@@ -709,64 +709,59 @@ include("../Functions/functions.php");
                               while ($names = mysqli_fetch_array($running_query_name)) {
                                    $name = $names['farmer_name'];
                               }
-
-                              if ($product_delivery == "yes") {
-                                   $product_delivery = "Delivery by Farmer";
-                              } else {
-                                   $product_delivery = "Delivery by Farmer Not Available";
-                              }
                               echo "
-                    <div class='col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4'>
-                <div class='card pb-1 pl-1 pr-1 pt-0' style='height:542px'>
-                    <br>
-                    <div class='mt-0'><b>
-                            <h4><img src='iconsmall.png' style='width: 28px; margin-bottom:  10px;'> $name
-                        </b></h4>
-                    </div>
-                    <a href='../BuyerPortal2/ProductDetails.php?id=$product_id'>
-                        <img class='card-img-top' src='../Admin/product_images/$product_image' alt='Card image cap' height='300px'>
-                    </a>
-                    <form action = '' method = 'post'>
-                    <div class='card-body pb-0'>
-                        <div class='row'>
-                            <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
-                                <div class='input-group mb'>
-                                    <div class='input-group-prepend'>
-                                        <h5 class='card-title font-weight-bold'>$product_title</h5>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
-                                <div class='input-group mb-1'>
-                                    <div class='input-group-prepend'>
-                                        <span class='input-group-text bg-warning border-secondary p-1' style='color:black;' id='inputGroup-sizing-default' placeholder='1'><b>Quantity</b></span>
-                                    </div>
-                                    <input type='number' class='form-control' aria-label='Default' style='margin-top:0%;width:20%;padding:0%;' aria-describedby='inputGroup-sizing-default'>
-                                </div>
-                            </div>
-                        </div>
-                        <p class='card-text mb-2 font-weight-bold'>PRICE:- $product_price Rs/kg</p>
-                        <div class='row'>
-                            <div class='col-1 col-xl-3 col-lg-2 col-md-2 col-sm-2'></div>
-                            <div class='col-12 col-xl-6 col-lg-6 col-md-6  col-sm-12'>
-                              <button class='btn btn-warning border-secondary mr-1 ' name='cart' type = 'submit' style='color:black ;font-weight:50px;'>Add to cart<img src='carticons.png' height='20px'></button>
-                            </div>
-                        </div>
-                    </div>
-                       </form>
-                </div>
-            </div>
+                                        <div class='col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4'>
+                                             <div class='card pb-1 pl-1 pr-1 pt-0' style='height:542px'>
+                                                  <br>
+                                                  <div class='mt-0'><b>
+                                                       <h4><img src='iconsmall.png' style='width: 28px; margin-bottom:  10px;'> $name
+                                                       </b></h4>
+                                                  </div>
+                                                  <a href='../BuyerPortal2/ProductDetails.php?id=$product_id'>
+                                                  <img class='card-img-top' src='../Admin/product_images/$product_image' alt='Card image cap' height='300px'>
+                                                  </a>
+                                                  <form action = '' method = 'post'>
+                                                       <div class='card-body pb-0'>
+                                                            <div class='row'>
+                                                                 <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
+                                                                      <div class='input-group mb'>
+                                                                           <div class='input-group-prepend'>
+                                                                                <h5 class='card-title font-weight-bold'>$product_title</h5>
+                                                                           </div>
+                                                                      </div>
+                                                                 </div>
+                                        
+                                                                 <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'>
+                                                                 <div class='input-group mb-1'>
+                                                                      <div class='input-group-prepend'>
+                                                                           <span class='input-group-text bg-warning border-secondary p-1' style='color:black;' id='inputGroup-sizing-default' placeholder='1'><b>Quantity</b></span>
+                                                                      </div>
+                                                                      <input type='number' class='form-control' aria-label='Default' style='margin-top:0%;width:20%;padding:0%;' aria-describedby='inputGroup-sizing-default'>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                       <p class='card-text mb-2 font-weight-bold'>PRICE:- $product_price Rs/kg</p>
+                                                       <div class='row'>
+                                                            <div class='col-1 col-xl-3 col-lg-2 col-md-2 col-sm-2'></div>
+                                                                 <div class='col-12 col-xl-6 col-lg-6 col-md-6  col-sm-12'>
+                                                                      <button class='btn btn-warning border-secondary mr-1 ' name='cart' type = 'submit' style='color:black ;font-weight:50px;'>Add to cart<img src='carticons.png' height='20px'></button>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </form>
+                                             </div>
+                                        </div>
            ";
                               if (isset($_POST['cart'])) {
-
+                                   echo "<h1>Hello</h1>";
                                    if (isset($_POST['quantity'])) {
-                                        $qty = $_POST['quantity'];
+                                        $qty = mysqli_real_escape_string($con, $_POST['quantity']);
                                    } else {
                                         $qty = 1;
                                    }
                                    global $con;
                                    if (isset($_SESSION['phonenumber'])) {
+                                        echo "<h1>Hello</h1>";
                                         $sess_phone_number = $_SESSION['phonenumber'];
 
                                         $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
@@ -779,6 +774,7 @@ include("../Functions/functions.php");
                                              $subtotal = $product_price * $qty;
                                              $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
                                              $run_insert_pro = mysqli_query($con, $insert_pro);
+                                             echo "<h1>Hello</h1>";
                                              echo "<script>window.location.reload(true)</script>";
                                         }
                                    } else {
@@ -787,7 +783,7 @@ include("../Functions/functions.php");
                               }
                          }
                     } else {
-                         echo "<br><br><hr><h1 align = center>Product's Not Available !</h1><br><br><hr>";
+                         echo "<br><br><hr><h1 align = center>Product Not Available !</h1><br><br><hr>";
                     }
                }
                ?>

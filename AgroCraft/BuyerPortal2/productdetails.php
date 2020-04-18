@@ -332,18 +332,18 @@ include("../Functions/functions.php");
             <div class="p-2">
                 <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green ;margin-top:2px;">&#61562;</i></a>
-                    <span id="icon" style="color:green"> 5 </span>
+                    <span id="icon" style="color:green"> <?php echo totalItems(); ?> </span>
                 </div>
             </div>
             <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;margin-top:2px; visibility:hidden;'></i></div>
-            <a class="float-left" href="#">
+            <a class="float-left" href="bhome.php">
                 <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
             </a>
         </div>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;margin-right:-9%;font-size:28px;"></i></span>
         </button>
-        <a class="float-left" href="#">
+        <a class="float-left" href="bhome.php">
             <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -352,17 +352,26 @@ include("../Functions/functions.php");
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-search" style="font-size:20px;color:green; "></i></div>
                 </div>
-                <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
+                <form action="SearchResult.php" method="get" enctype="multipart/form-data">
+                    <input type="text" class="form-control " id="inlineFormInputGroup" name="search" placeholder="Search for fruits,vegetables or crops " style="width:500px;">
+                </form>
             </div>
-            <div class="text-success  logins ">Login</div>
+            <?php
+            getUsername();
+            ?>
             <div class="list-group moblists">
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
-                    Profile
-                </a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Transactions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">subscriptions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Farmers</a>
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
+                <?php
+                if (isset($_SESSION['phonenumber'])) {
+                    echo "<a href='productsdetails.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
+                    echo "<a href= 'Transaction.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Transactions</a>";
+                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Save For Later</a>";
+                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Subscriptions</a>";
+                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Farmers</a>";
+                    echo "<a href='../Includes/logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
+                } else {
+                    echo "<a href='../auth/BuyerLogin.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Login</a>";
+                }
+                ?>
             </div>
         </div>
 
@@ -373,7 +382,7 @@ include("../Functions/functions.php");
             <div class="p-2 cart">
                 <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green">&#61562;</i></a>
-                    <span id="icon" style="color:green"> 5 </span>
+                    <span id="icon" style="color:green"> <?php echo totalItems(); ?> </span>
                 </div>
             </div>
             <div class="dropdown p-2 settings ">
@@ -381,11 +390,18 @@ include("../Functions/functions.php");
                     Settings
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Transactions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Subscriptions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Farmers</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                        echo "<a href='productsdetails.php' class='dropdown-item  ' style='padding-right:-20px;'>Profile</a>";
+                        echo "<a href='#' class='dropdown-item ' style='padding-right:-20px;'>Transactions</a>";
+                        echo "<a href='#' class='dropdown-item'  style='padding-right:-20px;'>Subscriptions</a>";
+                        echo "<a href='#' class='dropdown-item' style='padding-right:-20px;'>Save For Later</a>";
+                        echo "<a href='#' class='dropdown-item' style='padding-right:-20px;' >Farmers</a>";
+                        echo "<a href='../Includes/logout.php' class='dropdown-item ' style='padding-right:-20px;'>Logout</a>";
+                    } else {
+                        echo "<a href='../auth/BuyerLogin.php' class='dropdown-item ' style='padding-right:-20px;'>Login</a>";
+                    }
+                    ?>
                 </div>
             </div>
 
@@ -459,18 +475,22 @@ include("../Functions/functions.php");
                                         <h5><b>Stock : </b>$product_stock kgs</h5>
                                     </div>
                                 </div>
-                                <div class='text-center'>
-                                    <div class='input-group mb-3 wholequantity'>
-                                        <div class='input-group-prepend quantity'>
-                                            <span class='input-group-text bg-warning border-secondary quantitylabel' style='color:black' id='inputGroup-sizing-default'><b>Quantity</b><img src='bag2.png' class='ml-1 mb-1'></span>
+                                <form actions='' method='post'>
+                                    <div class='text-center'>
+                                        <div class='input-group mb-3 wholequantity'>
+                                            <div class='input-group-prepend quantity'>
+                                                <span class='input-group-text bg-warning border-secondary quantitylabel' style='color:black' id='inputGroup-sizing-default' ><b>Quantity</b><img src='bag2.png' class='ml-1 mb-1'></span>
+                                            </div>
+                                            <input type='number' name='qty' placeholder=1 class='form-control quantitynumber' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
                                         </div>
-                                        <input type='number' class='form-control quantitynumber' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
                                     </div>
-                                </div>
-                                <div class='row'>
-                                    <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'> <a href='#'class='btn btn-warning border-secondary addtocart' style='color:black'><b>Add to cart</b><i class='fa' style='font-size:17px; '>&#61562;</i></a></div>
-                                    <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'> <a href='#' class='btn btn-warning border-secondary saveforlater' style='color:black'><b>Save For later</b><img src='saveforlater4.png' class='ml-1 mb-1'></a></div>
-                                </div>
+                                    <div class='row'>
+                                        <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'> 
+                                            <button name='cart' type='submit' class='btn btn-warning border-secondary addtocart' style='color:black'><b>Add to cart</b><i class='fa' style='font-size:17px; '>&#61562;</i></button>
+                                        </div>
+                                        <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'> <a href='#' class='btn btn-warning border-secondary saveforlater' style='color:black'><b>Save For later</b><img src='saveforlater4.png' class='ml-1 mb-1'></a></div>
+                                    </div>
+                                </form>
                                 <div class='row text-center ml-4 mt-3'>
                                     <i class='fa fa-truck fa-2x'></i>
                                     <h3 style='padding-left:9px;'>$product_delivery</h3>
@@ -512,6 +532,34 @@ include("../Functions/functions.php");
                     
                 </div>";
             }
+        }
+    }
+
+    if (isset($_POST['cart'])) {
+
+        if (isset($_POST['quantity'])) {
+            $qty = $_POST['quantity'];
+        } else {
+            $qty = 1;
+        }
+        global $con;
+        if (isset($_SESSION['phonenumber'])) {
+            $sess_phone_number = $_SESSION['phonenumber'];
+
+            $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
+
+            $run_check = mysqli_query($con, $check_pro);
+
+            if (mysqli_num_rows($run_check) > 0) {
+                echo "";
+            } else {
+                $subtotal = $product_price * $qty;
+                $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
+                $run_insert_pro = mysqli_query($con, $insert_pro);
+                echo "<script>window.location.reload(true)</script>";
+            }
+        } else {
+            echo "<script>window.alert('Please Login First!');</script>";
         }
     }
     ?>
