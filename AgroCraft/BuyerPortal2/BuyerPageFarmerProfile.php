@@ -407,45 +407,58 @@ include("../Functions/functions.php");
     </nav>
 
     <div class="container">  
-        <div class="card-body text-center">
+        <div class="card-body text-center border" style="margin-top: 0px;">
 			<form name="my-form" >
-				<div class="form-group row">
-						<div class="col-md-12">
-                            <span>
-							    <h4 id="full_name" class=""><img src="iconsmall.png" style="width: 28px; margin-bottom:  10px;"><b> Ramlal Chatur Singh</b></h4>
-                            </span>
-						</div>
-				</div>
-
-                <div class="form-group row">
-                    <div class="col-md-12">
-                        <span>
-                            <h4 id="full_name" style="margin-left:-9%;"><img src="phoneicon.jpg" style="width: 32px; margin-bottom:  10px;"><b> 8169193101 </b></h4>
-                        </span>
-                    </div>
-                </div>
-                                        
-                <div class="form-group row">
-                    <div class="col-md-12">
-                        <span>
-                            <h4 id="full_name" class=""><img src="location.jpg" style="width: 32px; margin-bottom:  10px;"><b> Maharashtra , Thane</b></h4>
-                        </span>
-                    </div>
-                </div>
-
+				<div class="form-group row" >
+					<div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12" style="margin-top:35px;">
+                                <span style="padding:15px;">
+                                    <h4 id="full_name" class=""><img src="iconsmall.png" style="width: 28px; margin-bottom:  10px;"><b> Ramlal Chatur Singh</b></h4>
+                                </span>
+                                <span style="padding:15px;">
+                                    <h4 id="full_name" style="margin-left:-9%;"><img src="phoneicon.jpg" style="width: 32px; margin-bottom:  10px;"><b> 8169193101 </b></h4>
+                                </span>
+                                <span style="padding:15px;">
+                                    <h4 id="full_name" class=""><img src="location.jpg" style="width: 32px; margin-bottom:  10px;"><b> Maharashtra , Thane</b></h4>
+                                </span>
+                            </div>
+                        </div>
+					</div>
+                    <div class="col-md-6 " style="background-color:#292b2c;">
+                        <div class="row">
+                                <div class="col-md-12 ">
+                                    <span>
+                                        <h4 style='color:goldenrod;' class='text-center'>Have Some Query ?<br></h4>
+                                        <a href='#' class='btn btn-warning border-secondary  chat' style='color:black;padding:2px;'><b>Chat Here</b><img src='chat2.png' class='ml-1 mb-1'></a>
+                                    </span>
+                                    <span>
+                                        <h4 style='color:goldenrod;' class='text-center ''>Get Latest Notifications<br></h4>
+                                        <button href='#' class='btn btn-warning btn-btn-lg border-secondary  chat' style='color:black;padding:2px;'><b>Subscriptions  </b><img class='ml-1 mb-1'></button>
+                                    </span>
+                                    <span>
+                                        <h4 style='color:goldenrod;' class='text-center ''>Report Query <br></h4>
+                                        <a href='#' class='btn btn-warning border-secondary  chat' style='color:black;padding:2px;'><b>Report</b><img src='report.jpg' style='width: 28px; margin-bottom:  10px;' class='ml-1 mb-1'></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+				    </div>
+                </div>                        
             </form>
 		</div> 
-        <hr>         
-        <div class="text-center"><h3 style="padding:5px;">Farmer All Products</div></div>            
-        
-        <hr>
+    </div>
+          
+    <div class="text-center"><h3 style="padding:5px; margin-top:20px;">Farmer All Products</div>  
+    <hr>           
+    <div class="container">                
         <div class="row BigBox">
-        <div class='col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4'>
-            <div class='card pb-1 pl-1 pr-1 pt-0' style='height:542px'>
-                <br>
-                <div class='mt-0'><b>
-                    <h4><img src='iconsmall.png' style='width: 28px; margin-bottom:  10px;'> $name
-                    </b></h4>
+            <div class='col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4'>
+                <div class='card pb-1 pl-1 pr-1 pt-0' style='height:542px'>
+                    <br>
+                    <div class='mt-0'><b>
+                        <h4><img src='iconsmall.png' style='width: 28px; margin-bottom:  10px;'> $name
+                        </b></h4>
                     </div>
                     <a href='../BuyerPortal2/ProductDetails.php?id=$product_id'>
                         <img class='card-img-top' src='../Admin/product_images/Coffee.jpg' alt='Card image cap' height='300px'>
@@ -479,9 +492,8 @@ include("../Functions/functions.php");
                     </div>
                 </div>
             </div>
-            </div>
-        </div> 
-    </div>           
+        </div>
+    </div>            
     <br><br>
 
     <div>
