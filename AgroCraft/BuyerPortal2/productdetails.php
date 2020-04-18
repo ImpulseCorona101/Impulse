@@ -1,3 +1,9 @@
+<?php
+
+include("../Functions/functions.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -326,18 +332,18 @@
             <div class="p-2">
                 <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green ;margin-top:2px;">&#61562;</i></a>
-                    <span id="icon" style="color:green"> 5 </span>
+                    <span id="icon" style="color:green"> <?php echo totalItems(); ?> </span>
                 </div>
             </div>
             <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;margin-top:2px; visibility:hidden;'></i></div>
-            <a class="float-left" href="#">
+            <a class="float-left" href="bhome.php">
                 <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
             </a>
         </div>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;margin-right:-9%;font-size:28px;"></i></span>
         </button>
-        <a class="float-left" href="#">
+        <a class="float-left" href="bhome.php">
             <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -346,17 +352,26 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-search" style="font-size:20px;color:green; "></i></div>
                 </div>
-                <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
+                <form action="SearchResult.php" method="get" enctype="multipart/form-data">
+                    <input type="text" class="form-control " id="inlineFormInputGroup" name="search" placeholder="Search for fruits,vegetables or crops " style="width:500px;">
+                </form>
             </div>
-            <div class="text-success  logins ">Login</div>
+            <?php
+            getUsername();
+            ?>
             <div class="list-group moblists">
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
-                    Profile
-                </a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Transactions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">subscriptions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Farmers</a>
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
+                <?php
+                if (isset($_SESSION['phonenumber'])) {
+                    echo "<a href='productsdetails.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
+                    echo "<a href= 'Transaction.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Transactions</a>";
+                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Save For Later</a>";
+                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Subscriptions</a>";
+                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Farmers</a>";
+                    echo "<a href='../Includes/logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
+                } else {
+                    echo "<a href='../auth/BuyerLogin.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Login</a>";
+                }
+                ?>
             </div>
         </div>
 
@@ -367,7 +382,7 @@
             <div class="p-2 cart">
                 <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green">&#61562;</i></a>
-                    <span id="icon" style="color:green"> 5 </span>
+                    <span id="icon" style="color:green"> <?php echo totalItems(); ?> </span>
                 </div>
             </div>
             <div class="dropdown p-2 settings ">
@@ -375,11 +390,18 @@
                     Settings
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Transactions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Subscriptions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Farmers</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                        echo "<a href='productsdetails.php' class='dropdown-item  ' style='padding-right:-20px;'>Profile</a>";
+                        echo "<a href='#' class='dropdown-item ' style='padding-right:-20px;'>Transactions</a>";
+                        echo "<a href='#' class='dropdown-item'  style='padding-right:-20px;'>Subscriptions</a>";
+                        echo "<a href='#' class='dropdown-item' style='padding-right:-20px;'>Save For Later</a>";
+                        echo "<a href='#' class='dropdown-item' style='padding-right:-20px;' >Farmers</a>";
+                        echo "<a href='../Includes/logout.php' class='dropdown-item ' style='padding-right:-20px;'>Logout</a>";
+                    } else {
+                        echo "<a href='../auth/BuyerLogin.php' class='dropdown-item ' style='padding-right:-20px;'>Login</a>";
+                    }
+                    ?>
                 </div>
             </div>
 
@@ -388,87 +410,161 @@
         </div>
 
     </nav>
-    <div class="container">
-        <div class="text-center">
-            <br>
-            <h1 id="headings" class="font-weight-bold">Omkar Banana</h1>
-        </div>
-        <br>
 
 
-        <div class="row">
-            <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12   imageblock border border-dark"> <img src="fruit1.jpeg" class="d-flex mx-auto btn-dark image" height="220px;"><br>
-                <b>
-                    <div class="text-center">
-                        <h2>Banana</h2>
+
+    <?php
+
+    if (isset($_GET['id'])) {
+        global $con;
+        $product_id  = $_GET['id'];
+        $query = "select * from products where product_id = $product_id";
+        $run_query = mysqli_query($con, $query);
+        echo "<br>";
+        while ($rows = mysqli_fetch_array($run_query)) {
+            $farmer_fk = $rows['farmer_fk'];
+            $product_title = $rows['product_title'];
+            $product_image = $rows['product_image'];
+            $product_price = $rows['product_price'];
+            $product_stock = $rows['product_stock'];
+            $product_type = $rows['product_type'];
+            $product_delivery = $rows['product_delivery'];
+            $product_desc = $rows['product_desc'];
+            if ($product_delivery == "yes") {
+                $product_delivery = "Delivery by Farmer";
+            } else {
+                $product_delivery = "Delivery by Farmer Not Available";
+            }
+            $querya = "select * from farmerregistration where farmer_id = $farmer_fk";
+            $runa_query = mysqli_query($con, $querya);
+
+            while ($rows = mysqli_fetch_array($runa_query)) {
+                $name = $rows['farmer_name'];
+                $phone = $rows['farmer_phone'];
+                $address = $rows['farmer_address'];
+
+
+                echo "
+                <div class='container'>
+                    <div class='text-center'>
                         <br>
+                        <h1 id='headings' class='font-weight-bold'>$product_title</h1>
                     </div>
-                </b></div>
-
-            <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 block border border-dark">
-                <div class="text-center mt-2 ">
-                    <!-- <h1>Omkar Bannana</h1> -->
                     <br>
-                    <div class="row">
-                        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 price">
-                            <h5><b>Price : </b>40/kg</h5>
 
-                        </div>
-                        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 stock">
-                            <h5><b>Stock : </b>20 kgs</h5>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <div class="input-group mb-3 wholequantity">
-                            <div class="input-group-prepend quantity">
-                                <span class="input-group-text bg-warning border-secondary quantitylabel" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b><img src="bag2.png" class="ml-1 mb-1"></span>
+
+                    <div class='row'>
+                        <div class='col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12   imageblock border border-dark'> <img src='../Admin/product_images/$product_image' class='d-flex mx-auto btn-dark image' height='290px;' width='380px;'><br>
+                            <b>
+                                <div class='text-center'>
+                                    <h2>$product_type</h2>
+                                    <br>
+                                </div>
+                            </b></div>
+
+                        <div class='col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 block border border-dark'>
+                            <div class='text-center mt-2 ''>
+                            
+                                <br>
+                                <div class='row'>
+                                    <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 price'>
+                                        <h5><b>Price : </b>$product_price /kg</h5>
+
+                                    </div>
+                                    <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 stock'>
+                                        <h5><b>Stock : </b>$product_stock kgs</h5>
+                                    </div>
+                                </div>
+                                <form actions='' method='post'>
+                                    <div class='text-center'>
+                                        <div class='input-group mb-3 wholequantity'>
+                                            <div class='input-group-prepend quantity'>
+                                                <span class='input-group-text bg-warning border-secondary quantitylabel' style='color:black' id='inputGroup-sizing-default' ><b>Quantity</b><img src='bag2.png' class='ml-1 mb-1'></span>
+                                            </div>
+                                            <input type='number' name='qty' placeholder=1 class='form-control quantitynumber' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
+                                        </div>
+                                    </div>
+                                    <div class='row'>
+                                        <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'> 
+                                            <button name='cart' type='submit' class='btn btn-warning border-secondary addtocart' style='color:black'><b>Add to cart</b><i class='fa' style='font-size:17px; '>&#61562;</i></button>
+                                        </div>
+                                        <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12'> <a href='#' class='btn btn-warning border-secondary saveforlater' style='color:black'><b>Save For later</b><img src='saveforlater4.png' class='ml-1 mb-1'></a></div>
+                                    </div>
+                                </form>
+                                <div class='row text-center ml-4 mt-3'>
+                                    <i class='fa fa-truck fa-2x'></i>
+                                    <h3 style='padding-left:9px;'>$product_delivery</h3>
+                                </div>
+
                             </div>
-                            <input type="number" class="form-control quantitynumber" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class='col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 text-white' style='background-color:#292b2c;'>
+                            <div class='text-center farmerdetails mt-4 ' style='color:goldenrod'><b>
+                                    <b>
+                                        <h2>Farmer Details
+                                        </h2>
+                                    </b>
+                                </b>
+                            </div>
+                            <div class='details mt-1 text-center'>
+                                <h5><b> Name </b><span style='color:ghostwhite'>: $name</span></h5>
+
+                                <h5><b> Phone Number </b><span style='color:ghostwhite'>:$phone</span></h5>
+                                <br>
+                                <h4 style='color:goldenrod' class='text-center '>Get In touch with Farmer</h4>
+                                <a href='#' class='btn btn-warning border-secondary  chat' style='color:black;padding:2px;'><b> View Farmer Profile <i class='fas fa-id-card-alt pl-1'></i> </b></a>
+
+                                <h4 style='color:goldenrod' class='text-center ''>Have Some Query ?<br></h4>
+                                <a href='#' class='btn btn-warning border-secondary  chat' style='color:black;padding:2px;'><b>CHAT HERE</b><img src='chat2.png' class='ml-1 mb-1'></a>
+
+                                <!-- <b> Address</b> : Lorem ipsum dolor, sit Eum, ad eaque earum voluptates nemo vero possimus, dolor aspernatur ea aut quisquam quas consequuntur distinctio! -->
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12"> <a href="#" class="btn btn-warning border-secondary addtocart" style="color:black"><b>Add to cart</b><i class="fa" style="font-size:17px; ">&#61562;</i></a></div>
-                        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12"> <a href="#" class="btn btn-warning border-secondary saveforlater" style="color:black"><b>Save For later</b><img src="saveforlater4.png" class="ml-1 mb-1"></a></div>
-                    </div>
-                    <div class="row text-center ml-4 mt-3">
-                        <i class='fa fa-truck fa-2x'></i>
-                        <h3 style='padding-left:9px;'>Delivery By Farmer</h3>
-                    </div>
 
-                </div>
-            </div>
-            <div class="col-12 col-xl-4 col-lg-4 col-md-4 col-sm-12 text-white" style="background-color:#292b2c;">
-                <div class="text-center farmerdetails mt-4  " style="color:goldenrod"><b>
-                        <b>
-                            <h2>Farmer Details
-                            </h2>
-                        </b>
-                    </b>
-                </div>
-                <div class="details mt-1 text-center">
-                    <h5><b> Name </b><span style="color:ghostwhite">: Omkar</span></h5>
-
-                    <h5><b> Phone Number </b><span style="color:ghostwhite">:9819104641</span></h5>
+                    <br><br>
+                    <div class='  description mt-0'><b>
+                            <h2 class='text-center font-weight-bold'>Description</h2>
+                        </b></div>
                     <br>
-                    <h4 style="color:goldenrod" class="text-center ">Get In touch with Farmer</h4>
-                    <a href="#" class="btn btn-warning border-secondary  chat" style="color:black;padding:2px;"><b> View Farmer Profile <i class="fas fa-id-card-alt pl-1"></i> </b></a>
+                    <div class='texty' style='margin-top:0%; font-size:25px;'> $product_desc.</div>
 
-                    <h4 style="color:goldenrod" class="text-center ">Have Some Query ?<br></h4>
-                    <a href="#" class="btn btn-warning border-secondary  chat" style="color:black;padding:2px;"><b>CHAT HERE</b><img src="chat2.png" class="ml-1 mb-1"></a>
+                    
+                </div>";
+            }
+        }
+    }
 
-                    <!-- <b> Address</b> : Lorem ipsum dolor, sit Eum, ad eaque earum voluptates nemo vero possimus, dolor aspernatur ea aut quisquam quas consequuntur distinctio! -->
-                </div>
-            </div>
-        </div>
+    if (isset($_POST['cart'])) {
 
-        <br><br>
-        <div class="  description mt-0"><b>
-                <h2 class="text-center font-weight-bold">Description</h2>
-            </b></div>
-        <br>
-        <div class="texty" style="margin-top:0%; font-size:25px;"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. minus nulla. Illum quaerat iure dignissimos dolores odit quia.</div>
+        if (isset($_POST['quantity'])) {
+            $qty = $_POST['quantity'];
+        } else {
+            $qty = 1;
+        }
+        global $con;
+        if (isset($_SESSION['phonenumber'])) {
+            $sess_phone_number = $_SESSION['phonenumber'];
 
-    </div>
+            $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
+
+            $run_check = mysqli_query($con, $check_pro);
+
+            if (mysqli_num_rows($run_check) > 0) {
+                echo "";
+            } else {
+                $subtotal = $product_price * $qty;
+                $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
+                $run_insert_pro = mysqli_query($con, $insert_pro);
+                echo "<script>window.location.reload(true)</script>";
+            }
+        } else {
+            echo "<script>window.alert('Please Login First!');</script>";
+        }
+    }
+    ?>
+
+
 
     <br><br>
 

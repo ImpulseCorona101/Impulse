@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2020 at 02:26 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.12
+-- Generation Time: Apr 18, 2020 at 01:12 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -63,7 +63,7 @@ INSERT INTO `buyerregistration` (`buyer_id`, `buyer_name`, `buyer_phone`, `buyer
 CREATE TABLE `cart` (
   `product_id` int(255) NOT NULL,
   `phonenumber` bigint(10) NOT NULL,
-  `qty` int(10) NOT NULL DEFAULT '1',
+  `qty` int(10) NOT NULL DEFAULT 1,
   `subtotal` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -72,8 +72,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`product_id`, `phonenumber`, `qty`, `subtotal`) VALUES
-(24, 0, 1, 0),
-(19, 1234567890, 7, 392);
+(30, 1234567890, 1, 65),
+(19, 1234567890, 1, 56);
 
 -- --------------------------------------------------------
 
@@ -314,7 +314,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `farmer_fk`, `product_title`, `product_cat`, `product_type`, `product_expiry`, `product_image`, `product_stock`, `product_price`, `product_desc`, `product_keywords`, `product_delivery`) VALUES
-(1, 1, 'Ramlal Potato', '2', 'Potato', '', 'Potato.webp', 1000, 12, 'Best Quality product guarented 100 percent', 'potato', 'yes'),
+(1, 1, 'Ramlal Potato', '2', 'Potato', '', 'Potato.jpg', 1000, 12, 'Best Quality product guarented 100 percent', 'potato', 'yes'),
 (3, 1, 'Ramlal Tomato', '2', 'Tomato', '', 'Tomato.jpg', 500, 5, 'Best Quality toamato assured', 'tomato , best quality tomato , Ramlal Tomato', 'no'),
 (17, 3, 'Shivneri Bananas', '3', 'Bananas', '', 'Bananas.jpg', 250, 30, 'Best Quality Bananas', 'banana, shivneri ,', 'yes'),
 (18, 3, 'Ram Rice', '1', 'Rice', '', 'Rice.jpg', 1500, 2, 'waqd', 'best rice', 'yes'),
@@ -324,7 +324,6 @@ INSERT INTO `products` (`product_id`, `farmer_fk`, `product_title`, `product_cat
 (23, 1, 'Arpit Grapes', '3', 'Grapes', '', 'Green Grapes.jpg', 4560, 56, 'Best Grapes you will ever find', 'grapes,green grapes,best grapes', 'yes'),
 (24, 1, 'Arpit Apples', '3', 'Apple', '', 'Apple.jpg', 1500, 101, 'Best Apples grown in Kashmir and handled with love and care', 'apples,apple,best apple', 'no'),
 (25, 1, 'Ramlal Wheat', '1', 'Wheat', '', 'Wheat.jpg', 2000, 80, 'Thin , Fragrant wheat grains grown with love', 'wheat,best quality wheat,best wheat', 'no'),
-(26, 3, 'Ansh Coffee', '1', 'Coffee', '', '', 1500, 500, 'Best  Quality Coffee grown in Assam', 'coffee,best coffee', 'no'),
 (27, 3, 'Arpit Alphonso Mango', '3', 'Mango', '', 'Mango.jpg', 2000, 200, 'Grown with love in Ratnagiri', 'mango,alponso mango,best mango', 'yes'),
 (28, 1, 'Ansh Custard Apple', '3', 'Custard Apple', '', 'custartapple.cms', 500, 45, 'Custard Apple so tasty ,to die for', 'Custard Apple,custart apple, apple, best custard apple', 'yes'),
 (29, 3, 'Omkar Cabbage', '2', 'Cabbage', '', 'Cabbage.jpg', 1500, 50, 'Best Quality Cabbage', 'cabbage, best Cabbage', 'yes'),
@@ -339,7 +338,7 @@ INSERT INTO `products` (`product_id`, `farmer_fk`, `product_title`, `product_cat
 --
 
 CREATE TABLE `shopkeeper` (
-  `id` int(11) NOT NULL,
+  `id` int(255) NOT NULL,
   `name` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
   `pincode` varchar(6) NOT NULL,
@@ -359,6 +358,20 @@ INSERT INTO `shopkeeper` (`id`, `name`, `email`, `pincode`, `password`, `shopNam
 (1, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'xyz', 'xyz', '8828071232', '10:30', '12:30'),
 (3, 'int main 123', 'intmain1221@gmail.co', '421201', 'yw==', 'hopes', 'no hopes', '101', '10:30', '11:30'),
 (4, 'kerela', 'es@dd.com', '421200', 'yw==', '1', 'm', '8369674856', '10:00', '12:30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `slot`
+--
+
+CREATE TABLE `slot` (
+  `slot_id` int(255) NOT NULL,
+  `shop_id` int(255) NOT NULL,
+  `slot_st_time` varchar(6) NOT NULL,
+  `slot_end_time` varchar(6) NOT NULL,
+  `vacancy` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -418,6 +431,13 @@ ALTER TABLE `shopkeeper`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `slot`
+--
+ALTER TABLE `slot`
+  ADD PRIMARY KEY (`slot_id`),
+  ADD UNIQUE KEY `shop_fid` (`shop_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -461,7 +481,23 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `shopkeeper`
 --
 ALTER TABLE `shopkeeper`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `slot`
+--
+ALTER TABLE `slot`
+  MODIFY `slot_id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `slot`
+--
+ALTER TABLE `slot`
+  ADD CONSTRAINT `slot_ibfk_1` FOREIGN KEY (`shop_id`) REFERENCES `shopkeeper` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
