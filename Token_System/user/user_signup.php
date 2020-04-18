@@ -356,12 +356,6 @@
                 </div>
                 <div class="contains d-flex justify-content-around mb-3">
 
-                    <div class="form-check-inline text-left inners">
-                        <label class="form-check-label" for="radio1">
-                            <input type="radio" class="form-check-input" id="radio1" name="occupation" value="doctor"
-                                onclick="myfunction(this.value)"><b>Doctor</b>
-                        </label>
-                    </div>
                     <div class="form-check-inline ">
                         <label class="form-check-label" for="radio2">
                             <input type="radio" class="form-check-input" id="radio2" name="occupation" value="visitor"
@@ -495,7 +489,7 @@
 
 </html>
 <?php 
-include("Impulse/Token_Systems/Includes/db.php");
+include("../Includes/db.php");
 
 $ciphering = "AES-128-CTR";
 $iv_length = openssl_cipher_iv_length($ciphering);
@@ -519,29 +513,7 @@ if (isset($_POST['register'])) {
     );
 
     $radio_val = $_POST["occupation"];
-    if($radio_val == "doctor"){
-        $clinic_name = mysqli_real_escape_string($con, $_POST['clinicName']);
-        $clinic_address = mysqli_real_escape_string($con, $_POST['clinicAddress']);
-        $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
-        $start_time = mysqli_real_escape_string($con, $_POST['startTime']);
-        $end_time = mysqli_real_escape_string($con, $_POST['endTime']);
-        if (strcmp($password, $confirmpassword) == 0) {
-            $query = "insert into doctor(name,email,
-                    pincode,password,clinicName,clinicAddress,phone,startTime,endTime) 
-                    values ('$name','$email','$pincode','$encryption','$clinic_name',
-                    '$clinic_address','$phonenumber','$start_time','$end_time'
-                    )";
-            $run_register_query = mysqli_query($con, $query);
-            echo "<script>alert('SucessFully Registered');</script>";
-            echo "<script>window.open('user_signin.php','_self')</script>";
-        }
-        else if (strcmp($password, $confirmpassword) != 0) {
-            echo "<script>
-                    alert('Password and Confirm Password Should be same');
-                </script>";
-        }
-    }
-    else if($radio_val=="Shopkeeper"){
+     if($radio_val=="Shopkeeper"){
         $shop_name = mysqli_real_escape_string($con, $_POST['shopName']);
         $shop_address = mysqli_real_escape_string($con, $_POST['shopAddress']);
         $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);

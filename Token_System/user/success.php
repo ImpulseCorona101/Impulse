@@ -57,10 +57,17 @@
     }
     @media only screen and (min-device-width:320px) and (max-device-width:480px){
         .container{
-            position: absolute;
-            left: 1px;
+            position: relative;
+            left:   10px;
+            
 
         }
+        
+        
+        p{
+            font-size: 2px;
+        }
+        
     }
 </style>
 </body>

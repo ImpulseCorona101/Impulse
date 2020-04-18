@@ -226,7 +226,6 @@ $sessphonenumber = $_SESSION['phonenumber'];
                     <div class="col4">
                         <input type="text " class="text1" name="product_stock" required>
                     </div>
-
             </td>
 
             </div>

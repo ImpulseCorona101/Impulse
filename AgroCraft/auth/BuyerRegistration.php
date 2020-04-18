@@ -2,36 +2,158 @@
 <html>
 
 <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="../Styles/buyer_reg.css">
 	<script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
 	<title>Buyer Registration</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
+	<style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+    body{
+        margin: 0;
+        font-size: .9rem;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #212529;
+        text-align: left;
+        background-color: #f5f8fa;
+    }
+
+    .my-form, .login-form
+    {
+        font-family: Raleway, sans-serif;
+    }
+
+    .my-form
+    {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .my-form .row
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .login-form
+    {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .login-form .row
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    </style>
 </head>
 
 <body>
-	<div class="flex-container">
-		<div class="box">
-			<i class="fas fa-user" style="font-size:100px; "></i>
+	<main class="my-form">
+		<div class="cotainer">
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<div class="card">
+					<div class="card-header"><h4 style="font-style:bold;">Register</h4></div>
+						<div class="card-body">
+							<form name="my-form" action="BuyerRegistration.php" method="post">
+								<div class="form-group row">
+									<label for="full_name" class="col-md-4 col-form-label text-md-right">Full Name</label>
+									<div class="col-md-6">
+										<input type="text" id="full_name" class="form-control" name="name" placeholder="Enter Your Name" required>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="phone_number" class="col-md-4 col-form-label text-md-right">Phone Number</label>
+									<div class="col-md-6">
+										<input type="text" id="phone_number" class="form-control" name="phonenumber" placeholder="Phone Number" required>
+									</div>
+								</div>
+								
+								<div class="form-group row">
+									<label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+									<div class="col-md-6">
+										<input type="email" id="email_address" class="form-control" name="mail" placeholder="E-Mail ID" required>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="present_address" class="col-md-4 col-form-label text-md-right">Present Address</label>
+									<div class="col-md-6">
+										<textarea type="text" id="present_address" class="form-control" rows="4" name="address" placeholder="Address" required></textarea>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="campany_name" class="col-md-4 col-form-label text-md-right">Company Name</label>
+									<div class="col-md-6">
+										<input type="text" id="campany_name" class="form-control" name="company_name" placeholder="Company name" required>
+									</div>
+								</div>			
+
+								<div class="form-group row">
+									<label for="lisence" class="col-md-4 col-form-label text-md-right">Lisence</label>
+									<div class="col-md-6">
+										<input type="text" id="lisence" class="form-control" name="license" placeholder="license" required>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="account1" class="col-md-4 col-form-label text-md-right">Bank Account No.</label>
+									<div class="col-md-6">
+										<input type="text" id="account1" class="form-control" name="account" placeholder="Bank Account number" required>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="account2" class="col-md-4 col-form-label text-md-right">PAN No.</label>
+									<div class="col-md-6">
+										<input type="text" id="account2" class="form-control" name="pan" placeholder="Pan number" required>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="user_name" class="col-md-4 col-form-label text-md-right">User Name</label>
+									<div class="col-md-6">
+										<input type="text" id="user_name" class="form-control" name="username" placeholder="Username" required>
+									</div>
+								</div>
+
+
+								<div class="form-group row">
+									<label for="p1" class="col-md-4 col-form-label text-md-right">Password</label>
+									<div class="col-md-6">
+										<input id="p1" class="form-control" type="password" name="password" placeholder="Password" required>
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="p2" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
+									<div class="col-md-6">
+										<input id="p2" class="form-control" type="password" name="confirmpassword" placeholder="Confirm Password" required>
+									</div>
+								</div>
+
+								<div class="col-md-6 offset-md-4">
+									<button type="submit" class="btn btn-primary" name="register" value="Register">
+										Register
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<form action="BuyerRegistration.php" method="post">
+	</main>
 
-			<input class="box" id="name" type="text" name="name" placeholder="Enter Your Name" required> <br>
-			<input class="box" id="phone" type="phonenumber" name="phonenumber" placeholder="Phone Number" required><br>
-			<textarea class="box" rows="4" cols="25" name="address" placeholder="Address"></textarea><br>
-
-			<input class="box" type="text" name="company_name" placeholder="Company name"><br>
-			<input class="box" id="lisc" type="text" name="license" placeholder="license"><br>
-			<input class="box" type="text" name="account" placeholder="Bank Account number"><br>
-			<input class="box" type="text" name="pan" placeholder="Pan number" required><br>
-
-			<input class="box" type="mail" name="mail" placeholder="Mail ID"><br>
-			<input class="box" type="text" name="username" placeholder="Username" required><br>
-			<input class="box" type="password" name="password" placeholder="Password" required><br>
-			<input class="box" type="password" name="confirmpassword" placeholder="Confirm Password" required><br><br>
-
-			<input id="button" type="submit" name="register" value="Register">
-
-		</form>
-	</div>
 </body>
 
 </html>

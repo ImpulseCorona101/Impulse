@@ -347,12 +347,17 @@
         <div class="mob">
             <div class="parent position-relative bg-white">
                 <div class="text-left ">
+<<<<<<< HEAD
 
                     <?php
                     getshops();
                     ?>
                     <!-- <div class="container-sm p-4 border border-top shadow-sm ">
                         <a href="booking.html">
+=======
+                    <div class="container-sm p-4 border border-top shadow-sm ">
+                        <a href="booking.php">
+>>>>>>> 4393f28273eba583a1a27c7029d8233eede9a499
                             <h4 class="font-weight-bold">Shop Name</h4>
                         </a>
                         <h5>Address</h5>

@@ -1044,7 +1044,7 @@
 
           <div class=content_item>
                <label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>All Products</b></label>
-               <a href="InsertProduct.php"><button class="btn btn-warning btn-lg p-3 m-3 font-weight-bold">Add New Product <i class="fas fa-plus-square p-2 fa-1x"></i></button></a>
+               <a href="insertProduct1.php"><button class="btn btn-warning btn-lg p-3 m-3 font-weight-bold">Add New Product <i class="fas fa-plus-square p-2 fa-1x"></i></button></a>
           </div>
 
           <br>
