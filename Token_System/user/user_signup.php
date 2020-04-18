@@ -489,7 +489,7 @@
 
 </html>
 <?php 
-include("Impulse/Token_Systems/Includes/db.php");
+include("../Includes/db.php");
 
 $ciphering = "AES-128-CTR";
 $iv_length = openssl_cipher_iv_length($ciphering);

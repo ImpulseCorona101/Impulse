@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buyer - Products</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -116,15 +116,19 @@
         margin-right: -30%;
         margin-left: 35%;
     }
-.states{
-    margin-right: 10%;
-}
-    .districts{
-        margin-left:10%;
+
+    .states {
+        margin-right: 10%;
     }
-    .pic{
-        height:313px;
+
+    .districts {
+        margin-left: 10%;
     }
+
+    .pic {
+        height: 313px;
+    }
+
     .guard {
         width: 100%;
         text-align: center;
@@ -139,12 +143,15 @@
         background: white;
         padding: 0 10px;
     }
-    .mobtext{
-        display:block;
+
+    .mobtext {
+        display: block;
     }
-    .destext{
-        display:none;
+
+    .destext {
+        display: none;
     }
+
     @media only screen and (min-device-width:320px) and (max-device-width:480px) {
         .mycarousel {
             display: none;
@@ -200,32 +207,36 @@
             text-align: center;
             width: 100%;
         }
-        .pic{
-        height:auto;
-    }
-        .guard {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #ffc857;
-        /* background-color: #ffc857; */
-        line-height: 0.1em;
-        margin: 10px 0 20px;
-        font-family: serif;
-    }
 
-    .guard span {
-        background: white;
-        padding: 0 10px;
-    }
-    .mobtext{
-        display:none;
-    }
-    .destext{
-        display:inline-block;
-        width:90%;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
+        .pic {
+            height: auto;
+        }
+
+        .guard {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #ffc857;
+            /* background-color: #ffc857; */
+            line-height: 0.1em;
+            margin: 10px 0 20px;
+            font-family: serif;
+        }
+
+        .guard span {
+            background: white;
+            padding: 0 10px;
+        }
+
+        .mobtext {
+            display: none;
+        }
+
+        .destext {
+            display: inline-block;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
     }
 </style>
 
@@ -299,7 +310,7 @@
         </div>
 
     </nav>
-   
+
     <div class="container">
         <div class="d-flex justify-content-around bg-white mb-3">
 
@@ -341,45 +352,49 @@
             </div>
         </div>
     </div>
-    
-<div class="text-center destext"><h2> Select Your Region</h2></div>
-    <div class="container mobtext"><div class="text-center">
+
+    <div class="text-center destext">
+        <h2> Select Your Region</h2>
+    </div>
+    <div class="container mobtext">
+        <div class="text-center">
             <br>
 
             <b>
                 <h1 class="guard"><span><b>Please Select Your Region</b></span>
                 </h1>
             </b>
-        </div></div>
-        <br>
+        </div>
+    </div>
+    <br>
     <div class="d-flex justify-content-center bg-white mb-3">
 
-<div class="p-2 states ">
-    <div class="dropdown">
-        <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="p-2 states ">
+            <div class="dropdown">
+                <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-           <b> States</b>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Orange</a>
-            <a class="dropdown-item" href="#">Watermellon</a>
-            <a class="dropdown-item" href="#">Strawberry</a>
+                    <b> States</b>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Orange</a>
+                    <a class="dropdown-item" href="#">Watermellon</a>
+                    <a class="dropdown-item" href="#">Strawberry</a>
+                </div>
+            </div>
+        </div>
+        <div class="p-2 districts">
+            <div class="dropdown">
+                <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <b>Districts</b>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Patato</a>
+                    <a class="dropdown-item" href="#">Carrot</a>
+                    <a class="dropdown-item" href="#">Onion</a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="p-2 districts">
-    <div class="dropdown">
-        <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b>Districts</b>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Patato</a>
-            <a class="dropdown-item" href="#">Carrot</a>
-            <a class="dropdown-item" href="#">Onion</a>
-        </div>
-    </div>
-</div>
-</div>
     <div class="container">
         <div class="row">
             <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
@@ -389,7 +404,7 @@
                             <h3><img src="iconsmall.png"> ABHISHEK
                         </b></h3>
                     </div>
-                    <img class="card-img-top"  src="fruit1.jpeg" alt="Card image cap">
+                    <img class="card-img-top" src="fruit1.jpeg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Orange</h5>
                         <p class="card-text">PRICE:-20rs/kg</p>
@@ -468,7 +483,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4" >
+            <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
                 <div class="card pl-3 pr-3 pb-0 pt-2 mt-2 ">
                     <br>
                     <div><b>

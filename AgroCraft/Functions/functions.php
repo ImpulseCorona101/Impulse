@@ -1,7 +1,9 @@
  <?php
+
     session_start();
-    $con = mysqli_connect("localhost", "root", "", "impulse");
+
     include("../Includes/db.php");
+
     function getUsername()
     {
         if (isset($_SESSION['phonenumber'])) {
@@ -16,10 +18,12 @@
                     $buyer_name = 'Hello ,' . $buyer_name;
                 }
 
-                echo @"<label>$buyer_name</label>";
+                // echo @"<label>$buyer_name</label>";
+                echo @"<div class='text-success  logins mx-1 ml-5  '>$buyer_name</div>";
             }
         } else {
-            echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
+            echo "<a href = '../auth/BuyerLogin.php'><div class='text-success logins mx-5'>Login</div></a>";
+            // echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
         }
     }
 
@@ -65,8 +69,7 @@
 
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
-            echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../BuyerPortal/Categories.php?type=$product_type'> 
-                    <label class='crop_items'>$product_type</label></a></li>";
+            echo "<a class='dropdown-item' href='../BuyerPortal2/Categories.php?type=$product_type'>$product_type</a>";
         }
     }
 
@@ -81,8 +84,10 @@
 
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
-            echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../BuyerPortal/Categories.php?type=$product_type'> 
-                    <label class='crop_items'>$product_type</label></a></li>";
+            // echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../BuyerPortal/Categories.php?type=$product_type'> 
+            //         <label class='crop_items'>$product_type</label></a></li>";
+
+            echo "<a class='dropdown-item' href='../BuyerPortal2/Categories.php?type=$product_type'>$product_type</a>";
         }
     }
 
@@ -97,8 +102,7 @@
 
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
-            echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../BuyerPortal/Categories.php?type=$product_type'> 
-                    <label class='crop_items'>$product_type</label></a></li>";
+            echo "<a class='dropdown-item' href='../BuyerPortal2/Categories.php?type=$product_type'>$product_type</a>";
         }
     }
 
@@ -149,16 +153,24 @@
             $product_delivery = $rows['product_delivery'];
             $product_cat = $rows['product_cat'];
 
-            echo "  <div class='veg'>
-                        <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
-                    </div>";
+            // echo "  <div class='veg'>
+            //             <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
+            //         </div>";
+
+            echo "<div class='column kolum'>
+                <div class='img-thumbnail ''>
+                     <a href='../BuyerPortal2/ProductDetails.php?id=$product_id'>
+                        <img class='rounded mx-auto d-block images' src='../Admin/product_images//$product_image' width='350px' height='200px' alt='image'>
+                     </a>
+                </div>
+            </div>";
         }
     }
 
-    function getCropsHomepage()
+    function getFruitsHomepage()
     {
         global $con;
-        $query = "select * from products where product_cat = 1 and not (product_image = '') order by RAND() LIMIT 0,4";
+        $query = "select * from products where product_cat = 3 and not (product_image = '') order by RAND() LIMIT 0,4";
         $run_query = mysqli_query($con, $query);
         while ($rows = mysqli_fetch_array($run_query)) {
             $product_id = $rows['product_id'];
@@ -168,9 +180,13 @@
             $product_delivery = $rows['product_delivery'];
             $product_cat = $rows['product_cat'];
 
-            echo "  <div class='veg'>
-                        <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
-                    </div>";
+            echo "<div class='column kolum'>
+                <div class='img-thumbnail ''>
+                     <a href='../BuyerPortal2/ProductDetails.php?id=$product_id'>
+                        <img class='rounded mx-auto d-block images' src='../Admin/product_images//$product_image' width='350px' height='200px' alt='image'>
+                     </a>
+                </div>
+            </div>";
         }
     }
     //function  which is link with FarmerProductDetails

@@ -12,8 +12,6 @@
     <title>Impulse - Slot</title>
 
     <style>
-        
-
         * {
             font-family: sans-serif;
         }
@@ -32,11 +30,6 @@
 
         .mobileContent {
             display: none;
-        }
-
-
-
-
         }
 
         body {
@@ -124,10 +117,11 @@
             display: block;
         }
 
-        .search{
-          position: absolute;
-          left:575px;
+        .search {
+            position: absolute;
+            left: 575px;
         }
+
         form {
             outline: 0;
             float: left;
@@ -159,7 +153,8 @@
         form>.button {
             outline: 0;
             background: none;
-            background-color: #2a5cff float: left;
+            background-color: #2a5cff;
+            float: left;
             height: 50px;
             width: 42px;
             text-align: center;
@@ -204,10 +199,10 @@
         .full {
             position: absolute;
             top: 250px;
-            left:180px;
+            left: 180px;
         }
 
-        
+
 
         @media only screen and (min-device-width:310px) and (max-device-width:460px) {
             .navbar {
@@ -275,12 +270,6 @@
             .hide {
                 display: block;
             }
-            .
-
-
-
-
-
         }
     </style>
 
@@ -295,22 +284,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}">Home <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Covid-19 Status <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}"> Slot Booking <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"> Slot Booking <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url_for('Homepage') }}">AgroCraft <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">AgroCraft <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('About') }}">About Application</a>
+                    <a class="nav-link" href="#">About Application</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('Contact') }}">Contact Us</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
                 <li class="nav-item">
 
@@ -348,64 +337,45 @@
 
 
     <div class="container-fluid p-4 border-top shadow-sm p-3 mb-5 bg-white  ">
-        <h3 class="header font-weight-bold "><i class="fas fa-store fa-lg" style="margin-right: 10px; color:#2a5cff;  "></i>Select Your Shop</h3>
-
-
-
+        <h3 class="header font-weight-bold ">
+            <i class="fas fa-store fa-lg" style="margin-right: 10px; color:#2a5cff;  "></i>
+            Select Your Shop
+        </h3>
     </div>
+    <br>
     <div class="full">
         <div class="mob">
             <div class="parent position-relative bg-white">
                 <div class="text-left ">
+<<<<<<< HEAD
+
+                    <?php
+                    getshops();
+                    ?>
+                    <!-- <div class="container-sm p-4 border border-top shadow-sm ">
+                        <a href="booking.html">
+=======
                     <div class="container-sm p-4 border border-top shadow-sm ">
                         <a href="booking.php">
+>>>>>>> 4393f28273eba583a1a27c7029d8233eede9a499
                             <h4 class="font-weight-bold">Shop Name</h4>
                         </a>
                         <h5>Address</h5>
                         <h6>Phone Number</h6>
+                    </div> -->
 
-                    </div>
-                    <div class="container-sm p-4 border border-top shadow-sm  ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div>
-                    <div class="container-sm p-4 border border-top shadow-sm    ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div>
-                    <div class="container-sm p-4 border border-top shadow-sm    ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div>
-                    <div class="container-sm p-4 border border-top shadow-sm    ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div>
-                    <div class="container-sm p-4 border border-top shadow-sm    ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div>
-                    <div class="container-sm p-4 border border-top shadow-sm    ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div>
-                    <div class="container-sm p-4 border border-top shadow-sm    ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div>
-                    <div class="container-sm p-4 border border-top shadow-sm ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
 
+                    <!-- <div class="container-sm p-4 border border-top shadow-sm  ">
+                        <h4 class="font-weight-bold">Shop Name</h4>
+                        <h5>Address</h5>
+                        <h6>Phone Number</h6>
                     </div>
+                    <div class="container-sm p-4 border border-top shadow-sm    ">
+                        <h4 class="font-weight-bold">Shop Name</h4>
+                        <h5>Address</h5>
+                        <h6>Phone Number</h6>
+                    </div> -->
+
 
                 </div>
             </div>
@@ -415,16 +385,15 @@
     <br>
     <br>
     <br>
-    
+
 
 
     <div class="search">
-        <form method="post">
-
-            <input type="seacrh" class="textbox" placeholder="Enter Your Pincode">
-            <input title="Search" value="" class="button ">
+        <form action="shop_list.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="searchquery" class="textbox" placeholder="Enter Your Pincode">
+            <br>
+            <!-- <input title="Search" value="" class="button "> -->
         </form>
-        
     </div>
 
 
@@ -455,3 +424,39 @@ toggle between hiding and showing the dropdown content */
 </body>
 
 </html>
+
+
+<?php
+
+function getshops()
+{
+    $con = mysqli_connect("localhost", "root", "", "impulse");
+
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySql " . mysqli_connect_error();
+    }
+
+    if (isset($_POST['searchquery'])) {
+        $search_query = $_POST['searchquery'];
+        // echo $search_query;
+
+        $get_shop = "select * from shopkeeper where pincode = $search_query";
+        $run_shop = mysqli_query($con, $get_shop);
+        $count = mysqli_num_rows($run_shop);
+        if ($count > 0) {
+            while ($rows = mysqli_fetch_array($run_shop)) {
+                $name = $rows['name'];
+                $shopAddress = $rows['shopAddress'];
+                $phone = $rows['phone'];
+                echo " <div class='container-sm p-4 border border-top shadow-sm '>
+                        <a href='#'>
+                            <h4 class='font-weight-bold'>$name</h4>
+                        </a>
+                        <h5>$shopAddress</h5>
+                        <h6>$phone</h6>
+                    </div> ";
+            }
+        }
+    }
+}
+?>

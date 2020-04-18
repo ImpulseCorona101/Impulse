@@ -2,6 +2,9 @@
 <html>
 
 <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="../Styles/buyer_reg.css">
 	<script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
 	<title>Buyer Registration</title>
@@ -57,7 +60,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-8">
 					<div class="card">
-						<div class="card-header">Register</div>
+					<div class="card-header"><h4 style="font-style:bold;">Register</h4></div>
 						<div class="card-body">
 							<form name="my-form" action="BuyerRegistration.php" method="post">
 								<div class="form-group row">
@@ -150,30 +153,7 @@
 			</div>
 		</div>
 	</main>
-	<!-- <div class="flex-container">
-		<div class="box">
-			<i class="fas fa-user" style="font-size:100px; "></i>
-		</div>
-		<form action="BuyerRegistration.php" method="post">
 
-			<input class="box" id="name" type="text" name="name" placeholder="Enter Your Name" required> <br>
-			<input class="box" id="phone" type="phonenumber" name="phonenumber" placeholder="Phone Number" required><br>
-			<textarea class="box" rows="4" cols="25" name="address" placeholder="Address"></textarea><br>
-
-			<input class="box" type="text" name="company_name" placeholder="Company name"><br>
-			<input class="box" id="lisc" type="text" name="license" placeholder="license"><br>
-			<input class="box" type="text" name="account" placeholder="Bank Account number"><br>
-			<input class="box" type="text" name="pan" placeholder="Pan number" required><br>
-
-			<input class="box" type="email" name="mail" placeholder="Mail ID"><br>
-			<input class="box" type="text" name="username" placeholder="Username" required><br>
-			<input class="box" type="password" name="password" placeholder="Password" required><br>
-			<input class="box" type="password" name="confirmpassword" placeholder="Confirm Password" required><br><br>
-
-			<input id="button" type="submit" name="register" value="Register">
-
-		</form>
-	</div> -->
 </body>
 
 </html>
