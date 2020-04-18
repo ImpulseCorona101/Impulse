@@ -21,6 +21,10 @@
   <script type="text/javascript" src="qrcode.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
+    #myDIV {
+      height: 900px;
+    }
+
     .dropbtn {
       background-color: #343a40;
       color: white;
@@ -46,6 +50,8 @@
     .dropdown-content {
       display: none;
       position: absolute;
+
+      right: 40px;
       background-color: #f1f1f1;
       min-width: 160px;
       overflow: auto;
@@ -110,6 +116,10 @@
       animation-duration: 0.4s
     }
 
+    .container {
+      height: 100px;
+    }
+
     /* Add Animation */
     @-webkit-keyframes animatetop {
       from {
@@ -163,7 +173,7 @@
 
     .modal-header {
       padding: 2px 16px;
-      background-color: white;
+      background-color: #5cb85c;
       color: white;
       text-align: center;
     }
@@ -204,7 +214,7 @@
 
     .parent {
       width: 850px;
-      height: 600px;
+      height: 350px;
       left: 600px;
       top: 48px;
     }
@@ -300,10 +310,10 @@
 
       .parent {
         position: absolute;
-        left: 05px;
-        width: 405px;
+        left: 15px;
+        width: 350px;
         top: 480px;
-        height: 1100px;
+        height: 630px;
       }
 
       .btnn {
@@ -414,7 +424,7 @@
         left: 15px;
         width: 335px;
         top: 480px;
-        height: 1850px;
+        height: 1000px;
       }
 
       .btnn1 {
@@ -500,28 +510,28 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="../../index.php">Impulse</a>
+    <a class="navbar-brand" href="#">Impulse</a>
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
-          <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
+          <a class="nav-link" href="{{ url_for('Homepage') }}">Home <span class=" sr-only">(current)</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+          <a class="nav-link" href="{{ url_for('Homepage') }}">Covid-19 Status <span class=" sr-only">(current)</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+          <a class="nav-link" href="{{ url_for('Homepage') }}"> Slot Booking <span class=" sr-only">(current)</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
+          <a class="nav-link" href="{{ url_for('Homepage') }}">AgroCraft <span class=" sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Application</a>
+          <a class="nav-link" href="{{ url_for('About') }}">About Application</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="{{ url_for('Contact') }}">Contact Us</a>
         </li>
         <li class="nav-item">
 
@@ -539,84 +549,80 @@
       <div class="text  login" style="color: white;">Login</div>
     </div>
     <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+      <button onclick="myFunctio()" class="dropbtn fas fa-bars"></button>
       <div id="myDropdown" class="dropdown-content">
-        <a href="../../User_Pages/profile.html">Profile</a>
-        <a href="../../User_Pages/SIGN_IN.html">Logout</a>
+        <a href="#home">Profile</a>
+        <a href="#about">Logout</a>
         <div class="hide">
-          <a href="../../index.php">Home</a>
-          <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
-          <a href="../../AgroCraft/index.html">Agrocraft</a>
+          <a href="#about">Home</a>
+          <a href="#about">Covid-19 Status</a>
+          <a href="#about">Agrocraft</a>
           <a href="#about">Contact Us</a>
-          <div>
-
-          </div>
         </div>
+
       </div>
+    </div>
+    </div>
     </div>
 
   </nav>
   <br>
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-5 offset-md-3 mt-5 ">
+        <div class="card shadow-sm">
+          <div class="card-header bg-light  shadow-sm">
+            <h6 class="font-weight-bold">Select Your Date</h6>
+          </div>
+          <div class="card-body">
+            <form action="#">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
 
-
-  <form action="booking.php" method="post">
-    <div class="container ">
-      <div class="row">
-        <div class="col-md-5 offset-md-3 mt-5 ">
-          <div class="card shadow-sm">
-            <div class="card-header bg-light  shadow-sm">
-              <h6 class="font-weight-bold">Select Your Date</h6>
-            </div>
-            <div class="card-body">
-              <form action="#">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group">
-
-                      <input type="text" id="date" name="date" class="datepicker form-control" autocomplete="off" placeholder="Select Date" onchange="addressFunction()" required onkeydown="return false">
-                      <code class=" text ">Note : Dates Can Only be Selected For This Week</code>
-                    </div>
+                    <input type="text" id="date" name="date" class="datepicker form-control" autocomplete="off" placeholder="Select Date" onchange="addressFunction()" required onkeydown="return false">
+                    <code class=" text ">Note : Dates Can Only be Selected For This Week</code>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <!-- <button type="submit" onclick="fill()" class="btn btn-primary float-right">Submit</button> -->
-                    <button type="submit" name='submit' class="btn btn-primary float-right">Submit</button>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="button" onclick="fill()" class="btn btn-primary float-right">Submit</button>
                 </div>
-
-            </div>
+              </div>
+            </form>
           </div>
         </div>
-
-        <div class="col-md-5 offset-md-3 mt-3 ">
-          <div class="card shadow-sm">
-            <div class="card-header shadow-sm bg-light">
-              <h6 class="font-weight-bold">Select Your Schedule</h6>
-            </div>
-            <div class="card-body">
-              <form action="#">
-                <div class="row">
-
-                  <div class="btnn1 col-md-12">
-                    <button type="button" class="btn btn-outline-warning ml-5 mr-5" onclick="myFunction()">Morning</button>
-
-
-                    <button type="button" class="btn btn-outline-secondary ml-5 btnn2" onclick="myFunction1()" id="btnn1">Evening</button>
-
-
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-
-
       </div>
-    </div>
-    </div>
 
-  </form>
+      <div class="col-md-5 offset-md-3 mt-3 ">
+        <div class="card shadow-sm">
+          <div class="card-header shadow-sm bg-light">
+            <h6 class="font-weight-bold">Select Your Schedule</h6>
+          </div>
+          <div class="card-body">
+            <form action="#">
+              <div class="row">
+
+                <div class="btnn1 col-md-12">
+                  <button type="button" class="btn btn-outline-warning ml-5 mr-5" onclick="myFunction()">Morning</button>
+
+
+                  <button type="button" class="btn btn-outline-secondary ml-5 btnn2" id="bt" onclick="myFunction1()">Evening</button>
+
+
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+
 
   </script>
   <script>
@@ -726,7 +732,7 @@
             $TempStartTime = $startTime;
             while ((int) $starttimehour <= (int) $endtimehour && (int) $starttimemin <= (int) $endtimemin) {
 
-              echo "<br";
+
               $endtimehour1 = (int) $starttimehour;
               $endtimemin1 = (int) $starttimemin + 30;
               if ($endtimemin1 == 60) {
@@ -739,14 +745,18 @@
               }
 
               $a = strval($starttimehour) . ":" . strval($starttimemin) . "-" . strval($endtimehour1) . ":" . strval($endtimemin1);
-              // echo "
-              //       <button type='submit' onclick='fil()' name = 'time' class='btn btn-outline-success mt-5 ml-5 mr-5 p-2'  ><h4 class='font-weight-bold'>$a<h4></button>";
-              echo "<br><br>
-                <input type='radio'  name='time' value=$a><label>$a</label>";
+              echo "
+        <div class='form-group ml-3'>
+         <div class='col-xs-1'>
+  <input class='form-control ml-5 mr-1 mt-4' id='di' value='$a' name='a' >
+  <button type='submit' onsubmit='my()' name='book' class='btn btn-dark ml-5 mr-4 mt-4'>Book This Slot</button>
+</div> </div>";
+
 
 
               $starttimemin = (int) $starttimemin + 30;
               $endtimehour1 = (int) $endtimehour;
+
 
 
 
@@ -759,16 +769,42 @@
             }
           }
         }
+        $con = mysqli_connect("localhost", "root", "", "impulse");
+
+        if (mysqli_connect_errno()) {
+          echo "Failed to connect to MySql " . mysqli_connect_error();
+        }
+        if (isset($_POST['submit'])) {
+
+          $date = mysqli_real_escape_string($con, $_POST['date']);
+
+          $query = "insert into slot(date) values ('$date')";
+          $run_register_query = mysqli_query($con, $query);
+          echo "<script>alert('SucessFully Registered');</script>";
+        }
+
+
         ?>
         <script>
-          function fil() {
-            if (document.getElementById('date').value == 0) {
-              alert("Please Select Date");
-            } else {
-              // location.replace("select-item.php");
-
+          function fi1() {
+            if (document.getElementById('di').value != 0) {
+              document.getElementById('demo1').value = document.getElementById('di').value;
             }
-          }
+
+            function fi() {
+              if (document.getElementById('date').value != 0) {
+                document.getElementById('demo').value = document.getElementById('date').value;
+              }
+            }
+
+            function fi() {
+              if (document.getElementById('date').value == 0) {
+                alert("Please Select Date");
+              } else {
+                location.replace("select-item.php");
+
+              }
+            }
         </script>
 
       </div>
@@ -778,131 +814,165 @@
   </div>
   <br>
 
-  <br>
+  <div class="scam">
+    <div class="confirm1 position-relative">
+      <div class="col-md-5 offset-md-3 mr-3 mt-3 ">
+        <div class="card shadow-sm">
+          <div class="card-header shadow-sm bg-light">
+            <h5 class="font-weight-bold">Confirm Your Slot</h5>
+          </div>
+          <div class="card-body">
+            <form action="#">
+              <div class="row">
+                <div class="col-md-10">
 
-  </div>
-  <script>
-    function userValid() {
-      var Description;
-      Description = document.getElementById("demo1").value;
-
-      if (Description == "") {
-        alert("Please fill all the details");
-        return false;
-      } else {
-        location.replace("select-item.php")
-      }
-
-    }
-  </script>
-
-  <script>
-    function fill() {
-      if (document.getElementById('date').value == 0) {
-        alert("Please Select Date");
-      } else {
-        alert("Please Select Schedule");
-      }
-    }
-
-    function fill1() {
-      if (document.getElementById('btn').value != 0) {
-        document.getElementById('demo1').value = document.getElementById('btn');
-      }
-    }
-
-    (function() {
-      $('form > input').keyup(function() {
-
-        var empty = false;
-        $('form > input').each(function() {
-          if ($(this).val() == '') {
-            empty = true;
-          }
-        });
-
-        if (empty) {
-          $('#register').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-        } else {
-          $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-        }
-      });
-    })()
-  </script>
-  <script>
-    function generate() {
-      var number = Math.floor(Math.random() * 10000000000000000) + 1;
-      console.log(number);
-      let qrcode = new QRCode("qr", {
-        text: number,
-        width: 100,
-        height: 100,
-        colorDark: "#990000",
-        colorLight: "#ffffff",
-
-      });
-      const Uniqueid = document.querySelector(".Uniqueid");
-      Uniqueid.textContent = "Unique Number is : " + number;
-      qrcode.makeCode(message.value);
-    }
-  </script>
-  <div class="col-md-5 offset-md-3 mr-3 mt-1">
+                  <h4 class="font-weight-bold">Date: </h4><input class="d" disabled="disabled" id="demo" required>
 
 
-    <div id="myModal" class="modal">
+                  <h4 class="font-weight-bold">Time:</h4> <input class="s" disabled="disabled" id="demo1" required="required">
 
-      <!-- Modal content -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button id="qr1" class="fas fa-close" style="background: none;"></button>
-          <h2 style="color: red; margin-right:  130px;">Oops!</h2>
-        </div>
+                  <div class="sl">
+                    <button type="button" id="myBt" class="btn btn-primary" name="confirm" onclick="userValid()"> Confirm</button>
 
-        <div class="modal-body">
-          <br>
-          <h5> This shop is not opened after evening. </h5>
-          <div id="qrResult" style="height:100px;width: 100px">
-
+                  </div>
+                </div>
+              </div>
           </div>
 
+
+
+        </div>
+      </div>
+      <div class="confirm2 position-relative">
+
+      </div>
+      <br>
+
+
+
+      <br><br>
+
+    </div>
+    <script>
+      function userValid() {
+        var Description;
+        Description = document.getElementById("demo1").value;
+
+        if (Description == "") {
+          alert("Please fill all the details");
+          return false;
+        } else {
+          location.replace("select-item.php")
+        }
+
+      }
+    </script>
+
+    <script>
+      function fill() {
+        if (document.getElementById('date').value != 0) {
+          document.getElementById('demo').value = document.getElementById('date').value;
+        }
+      }
+
+      function fill1() {
+        if (document.getElementById('btn').value != 0) {
+          document.getElementById('demo1').value = document.getElementById('btn').value;
+        }
+      }
+
+      (function() {
+        $('form > input').keyup(function() {
+
+          var empty = false;
+          $('form > input').each(function() {
+            if ($(this).val() == '') {
+              empty = true;
+            }
+          });
+
+          if (empty) {
+            $('#register').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+          } else {
+            $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+          }
+        });
+      })()
+    </script>
+    <script>
+      function generate() {
+        var number = Math.floor(Math.random() * 10000000000000000) + 1;
+        console.log(number);
+        let qrcode = new QRCode("qr", {
+          text: number,
+          width: 100,
+          height: 100,
+          colorDark: "#990000",
+          colorLight: "#ffffff",
+
+        });
+        const Uniqueid = document.querySelector(".Uniqueid");
+        Uniqueid.textContent = "Unique Number is : " + number;
+        qrcode.makeCode(message.value);
+      }
+    </script>
+    <div class="col-md-5 offset-md-3 mr-3 mt-1">
+
+
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <h2>Are You Sure?</h2>
+          </div>
+          <div class="modal-body">
+            <br>
+            <a href="success.html" value="1" id="qr" class="btn btn-outline-info   mr-5 p-3">Yes</a>
+            <span>
+              <button type="button" value="1" id="qr1" class="btn btn-outline-danger    mr-2 p-3">No</button>
+            </span>
+            <div id="qrResult" style="height:100px;width: 100px">
+
+            </div>
+
+
+          </div>
 
         </div>
 
       </div>
 
     </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
 
-  </div>
+      // Get the button that opens the modal
+      var bt = document.getElementById("bt");
+      var qr1 = document.getElementById("qr1")
 
-  <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
 
-    // Get the button that opens the modal
-    var btnn1 = document.getElementById("btnn1");
-    var qr1 = document.getElementById("qr1")
+      // When the user clicks the button, open the modal 
+      bt.onclick = function() {
+        modal.style.display = "block";
+      }
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btnn1.onclick = function() {
-      modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    qr1.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
+      // When the user clicks on <span> (x), close the modal
+      qr1.onclick = function() {
         modal.style.display = "none";
       }
-    }
-    var
-  </script>
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
   </div>
   <script>
     /* When the user clicks on the button, 
@@ -930,16 +1000,3 @@ toggle between hiding and showing the dropdown content */
 </body>
 
 </html>
-
-<?php
-
-
-
-if (isset($_POST['submit'])) {
-  $date  = $_POST['date'];
-  $time = $_POST['time'];
-  echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
-  echo "<h1>$date</h1>";
-  echo "<h1>$time</h1>";
-}
-?>
