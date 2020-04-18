@@ -409,40 +409,37 @@ include("../Functions/functions.php");
     <div class="container">  
         <div class="card-body text-center">
 			<form name="my-form" >
-				<div class="form-group row ">
-					<label for="full_name" class="col-md-4 col-form-label text-md-right">Full Name  </label>
-						<div class="col-md-6">
-							<label id="full_name" class="form-control">Ramlal prakash sharma</label>
+				<div class="form-group row">
+						<div class="col-md-12">
+                            <span>
+							    <h4 id="full_name" class=""><img src="iconsmall.png" style="width: 28px; margin-bottom:  10px;"><b> Ramlal Chatur Singh</b></h4>
+                            </span>
 						</div>
 				</div>
 
                 <div class="form-group row">
-                    <label for="phone_number" class="col-md-4 col-form-label text-md-right">Phone Number  </label>
-                    <div class="col-md-6">
-                        <label id="phone_number" class="form-control"> 8169193101 </label>
+                    <div class="col-md-12">
+                        <span>
+                            <h4 id="full_name" style="margin-left:-9%;"><img src="phoneicon.jpg" style="width: 32px; margin-bottom:  10px;"><b> 8169193101 </b></h4>
+                        </span>
                     </div>
                 </div>
                                         
                 <div class="form-group row">
-                    <label for="state" class="col-md-4 col-form-label text-md-right">State  </label>
-                        <div class="col-md-6">
-                            <label id="state" class="form-control"> Goa </label>
-                        </div>
-                </div>
-                                        
-                <div class="form-group row">
-                    <label for="district" class="col-md-4 col-form-label text-md-right">District  </label>
-                        <div class="col-md-6">
-                            <label id="district" class="form-control"> Panji</label>
-                        </div>
+                    <div class="col-md-12">
+                        <span>
+                            <h4 id="full_name" class=""><img src="location.jpg" style="width: 32px; margin-bottom:  10px;"><b> Maharashtra , Thane</b></h4>
+                        </span>
+                    </div>
                 </div>
 
             </form>
-		</div>          
+		</div> 
+        <hr>         
         <div class="text-center"><h3 style="padding:5px;">Farmer All Products</div></div>            
         
-        <hr/>
-
+        <hr>
+        <div class="row BigBox">
         <div class='col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4'>
             <div class='card pb-1 pl-1 pr-1 pt-0' style='height:542px'>
                 <br>
@@ -481,6 +478,7 @@ include("../Functions/functions.php");
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div> 
     </div>           
