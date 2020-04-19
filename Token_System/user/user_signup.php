@@ -343,6 +343,12 @@
                 </div>
                 <div class="contains d-flex justify-content-around mb-3">
 
+                    <!-- <div class="form-check-inline text-left inners">
+                        <label class="form-check-label" for="radio1">
+                            <input type="radio" class="form-check-input" id="radio1" name="occupation" value="doctor"
+                                onclick="myfunction(this.value)"><b>Doctor</b>
+                        </label>
+                    </div> -->
                     <div class="form-check-inline ">
                         <label class="form-check-label" for="radio2">
                             <input type="radio" class="form-check-input" id="radio2" name="occupation" value="visitor" onclick="myfunction(this.value)"><b>Visitor</b>
@@ -396,7 +402,7 @@
                         <span class="input-group-text  text pl-3 pr-3" id="inputGroup-sizing-default"><i
                                 class="fas fa-phone-alt mr-2"></i>Phone number </span>
                     </div>
-                    <input type="phonenumber" class="form-control inp mb-5 " name="phonenumber" aria-label="Sizing example input "
+                    <input type="text" class="form-control inp mb-5 " name="phonenumber" aria-label="Sizing example input "
                         aria-describedby="inputGroup-sizing-default " placeholder="Phone number ">
 
                 </div>
@@ -419,7 +425,7 @@
                         <div class="input-group-prepend mb-5 ">
                             <span class="input-group-text  text" id="inputGroup-sizing-default" style="width: 100%"><i class="fas fa-user mr-2"></i> Shop name</span>
                         </div>
-                        <input type="password" class="form-control inp mb-1" name="shopName" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Shopname">
+                        <input type="text" class="form-control inp mb-1" name="shopName" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Shopname">
                 </div>
                 
             <div class="input-group mt-1 s">
@@ -433,7 +439,7 @@
                         <span class="input-group-text  text pl-3 pr-3" id="inputGroup-sizing-default"><i
                                 class="fas fa-phone-alt mr-2"></i>Phone number </span>
                     </div>
-                    <input type="phonenumber" class="form-control inp mb-5 " name="phonenumber1" aria-label="Sizing example input "
+                    <input type="text" class="form-control inp mb-5 " name="phonenumber" aria-label="Sizing example input "
                         aria-describedby="inputGroup-sizing-default " placeholder="Phone number ">
 
                 </div>
@@ -452,32 +458,32 @@
                 <div class="input-group mt-1  s">
                     <div class="input-group-prepend mb-5 ">
                         <span class="input-group-text p-2  text" id="inputGroup-sizing-default"><i class="fas fa-stopwatch mr-2"></i>Time Interval</span>
-                        </div>
-                        <label class="radio-inline ml-3"><input type="radio" name="optradio" checked>30 Mins</label>
-                           <label class="radio-inline ml-3"><input type="radio" name="optradio">45 Mins</label>
-                           <label class="radio-inline ml-3"><input type="radio" name="optradio">60 Mins</label>
-                       
+                    </div>
+                    <label class="radio-inline ml-3"><input type="radio" name="optradio" checked value="30">30 Mins</label>
+                    <label class="radio-inline ml-3"><input type="radio" name="optradio" value="45">45 Mins</label>
+                    <label class="radio-inline ml-3"><input type="radio" name="optradio" value="60">60 Mins</label>
+                </div>
                 <div class="input-group mt-1  s">
                     <div class="input-group-prepend mb-5 ">
                         <span class="input-group-text p-2  text" id="inputGroup-sizing-default"><i class="fas fa-user-friends mr-2"></i>No. Of User Per Slot</span>
                     </div>
-                    <input type="text"  onfocusout="(this.type='text')" class="form-control inp timeinput mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="User Per Slot " name="SlotUser">
-
-                </div>`
+                    <input type="text"  onfocusout="(this.type='text')" class="form-control inp timeinput mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="User Per Slot " name="slotUser">
+                </div>
+                `
             console.log(values)
         } else {
             boxid.innerHTML = ` <br>    <div class="input-group mt-1 s">
                 <div class="input-group-prepend mb-5 ">
-                    <span class="input-group-text  text pl-3 pr-3 align-middle p-3" id="inputGroup-sizing-default"><i class="fas fa-home mr-2"></i>Shop Address </span>
+                    <span class="input-group-text  text pl-3 pr-3 align-middle p-3" id="inputGroup-sizing-default"><i class="fas fa-home mr-2"></i>Address </span>
                 </div>
-                <textarea class="form-control inp area mb-5 " name="homeAddress" id="exampleFormControlTextarea1" rows="2" placeholder="Shop Address"></textarea>
+                <textarea class="form-control inp area mb-5 " name="address" id="exampleFormControlTextarea1" rows="2" placeholder="Address"></textarea>
             </div>
             <div class="input-group mt-5  s">
                     <div class="input-group-prepend mb-5 ">
                         <span class="input-group-text  text pl-3 pr-3" id="inputGroup-sizing-default"><i
                                 class="fas fa-phone-alt mr-2"></i>Phone number </span>
                     </div>
-                    <input type="phonenumber" class="form-control inp mb-5 " name="phonenumber2" aria-label="Sizing example input "
+                    <input type="text" class="form-control inp mb-5 " name="phonenumber" aria-label="Sizing example input "
                         aria-describedby="inputGroup-sizing-default " placeholder="Phone number ">
 
             </div>`
@@ -511,19 +517,65 @@ if (isset($_POST['register'])) {
     );
 
     $radio_val = $_POST["occupation"];
+<<<<<<< HEAD
     if ($radio_val == "Shopkeeper") {
         $SlotInterval = mysqli_real_escape_string($con, $_POST['optradio']);
         $SlotUser = mysqli_real_escape_string($con, $_POST['SlotUser']);
+=======
+    if($radio_val == "doctor"){
+        $clinic_name = mysqli_real_escape_string($con, $_POST['clinicName']);
+        $clinic_address = mysqli_real_escape_string($con, $_POST['clinicAddress']);
+        $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
+        $start_time = mysqli_real_escape_string($con, $_POST['startTime']);
+        $end_time = mysqli_real_escape_string($con, $_POST['endTime']);
+        if (strcmp($password, $confirmpassword) == 0) {
+            $query = "insert into doctor(name,email,
+                    pincode,password,clinicName,clinicAddress,phone,startTime,endTime) 
+                    values ('$name','$email','$pincode','$encryption','$clinic_name',
+                    '$clinic_address','$phonenumber','$start_time','$end_time'
+                    )";
+            $run_register_query = mysqli_query($con, $query);
+            echo "<script>alert('SucessFully Registered');</script>";
+            echo "<script>window.open('user_signin.php','_self')</script>";
+        }
+        else if (strcmp($password, $confirmpassword) != 0) {
+            echo "<script>
+                    alert('Password and Confirm Password Should be same');
+                </script>";
+        }
+    }
+    else if($radio_val=="Shopkeeper"){
+>>>>>>> 352a332c81b33f58845df4bea9fd49098cc20a45
         $shop_name = mysqli_real_escape_string($con, $_POST['shopName']);
         $shop_address = mysqli_real_escape_string($con, $_POST['shopAddress']);
         $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
         $start_time1 = mysqli_real_escape_string($con, $_POST['startTime1']);
         $end_time1 = mysqli_real_escape_string($con, $_POST['endTime1']);
+        $slots_intv = $_POST["optradio"];
+        if($slots_intv == "30"){
+            $slot_interval = "30";
+        }else if($slots_intv == "45"){
+            $slot_interval = "45";
+        }else if($slots_intv == "60"){
+            $slot_interval = "60";
+        }else{
+            $slot_interval = "30";
+        }
+
+        $slot_user = mysqli_real_escape_string($con, $_POST['slotUser']);
+
+
         if (strcmp($password, $confirmpassword) == 0) {
             $query = "insert into shopkeeper(name,email,
+<<<<<<< HEAD
                     pincode,password,shopName,shopAddress,phone,startTime,endTime,Slot-Interval,Slot-User) 
                     values ('$name','$email','$pincode','$encryption','$shop_name',
                     '$shop_address','$phonenumber','$start_time1','$end_time1','$SlotInterval',$SlotUser
+=======
+                    pincode,password,shopName,shopAddress,phone,startTime,endTime,slotInterval,slotUser) 
+                    values ('$name','$email','$pincode','$encryption','$shop_name',
+                    '$shop_address','$phonenumber','$start_time1','$end_time1','$slot_interval','$slot_user'
+>>>>>>> 352a332c81b33f58845df4bea9fd49098cc20a45
                     )";
             $run_register_query = mysqli_query($con, $query);
             echo "<script>alert('SucessFully Registered');</script>";
@@ -539,7 +591,7 @@ if (isset($_POST['register'])) {
         if (strcmp($password, $confirmpassword) == 0) {
             $query = "insert into consumer(name,email,
                     pincode,password,address,phone) 
-                    values ('$name','$email','$pincode','$password',
+                    values ('$name','$email','$pincode','$encryption',
                     '$visitor_address','$phonenumber'
                     )";
             $run_register_query = mysqli_query($con, $query);

@@ -140,7 +140,11 @@ margin-top:-10px;
      /* margin-left: -70%; */
           /* margin-left:-240%;
 margin-top:2%;
-} */
+} */       .myfooter{
+          position: absolute;
+          width: 1536px;
+          bottom:0px;
+     }
           .aligncenter {
                text-align: center;
           }
@@ -303,6 +307,7 @@ margin-top:2%;
           }
 
           @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+               
                .States {
                     margin-right: 0%;
                     margin-left: 0%;
@@ -418,6 +423,7 @@ margin-top:2%;
                     background: white;
                     padding: 0 10px;
                }
+               
           }
 
 
@@ -522,6 +528,9 @@ margin-top:2%;
                 max-width: 100%;
             }
         } */
+        
+
+        }
      </style>
      <!-- <script>
         var a;
@@ -676,11 +685,13 @@ margin-top:2%;
 
 
      <form action="" method="post">
-          <div class="container">
-               <div class="row   p-2">
-                    <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12">
-                         <div class="text-center">
-                              <h4>Select your region</h4>
+          <div class="Responsive">
+          <div class="container mt-5" style="position: absolute; left: 300px; ">
+               <div class="row  mt-4 p-2">
+                    <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 districts">
+                         
+                         <div class="text-center mr-5">
+                              <h4>Select your State</h4>
                          </div>
                     </div>
                     <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 p-0 States">
@@ -695,7 +706,8 @@ margin-top:2%;
                               <a class="dropdown-item" href="#">Strawberry</a>
                          </div>
                     </div> -->
-                         <select id="states" name="stateInput" onchange="state()" tabindex="1">
+                         <select class="shadow-lg mr-5" id="states" name="stateInput" onchange="state()" tabindex="1" style="padding: 6px ;border:1px solid blue;  border-radius:4px;margin-left:10px;
+                         ">
                               <option value="0">Select State</option>
                               <option value="31">ANDAMAN & NICOBAR ISLANDS</option>
                               <option value="01">ANDHRA PRADESH</option>
@@ -748,17 +760,24 @@ margin-top:2%;
                               <a class="dropdown-item" href="#">Onion</a>
                          </div>
                     </div> -->
-                         <select name="districtInput" id="district">
+
+                         <div class="text-center">
+                              <h4>Select your District</h4>
+                         </div>
+                    </div>
+                         <select class="shadow-lg" style="padding: 2px ;border:1px solid blue; margin-left: 150px ; border-radius:4px;
+                         " name="districtInput" id="district">
                               <option>Select District</option>
                          </select>
 
-                    </div>
-                    <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12 go"> <button class='btn btn-warning border-secondary ' name='go' type='submit' style='color:black ;font-weight:50px;'>Go !</button>
+                    
+                    <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12 go"> <button class='btn btn-outline-success border-success ' name='go' type='submit' style='color:black ;font-weight:50px;'>Go !</button>
                     </div>
                </div>
-
+            </div>
           </div>
           </div>
+     </div>
      </form>
      <?php
      if (isset($_POST['go'])) {
@@ -887,8 +906,8 @@ margin-top:2%;
 
 
      <!-- footer -->
-     <section id="footer" class="myfooter">
-          <div class="container">
+     <section id="footer" class="myfooter mb-1 mt-5">
+          <div class="container mt-5">
                <div class="row text-center text-xs-center text-sm-left text-md-left">
                     <div class="col aligncenter">
                          <br>
