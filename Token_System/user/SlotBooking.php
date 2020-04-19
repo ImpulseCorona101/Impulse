@@ -10,9 +10,9 @@ session_start();
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
      <title>Slot Booking</title>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -417,142 +417,6 @@ toggle between hiding and showing the dropdown content */
 </head>
 
 <body>
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../../index.php">Impulse</a>
-
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="../../index.php">Home <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Application</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Contact.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-
-                </li>
-
-            </ul>
-            <div class="p-2">
-                <div class="">
-                    <a> <i class="fa fa-user" style="font-size:30px; color:white ;margin-top:2px;"></i></a>
-                    <span id="" style="color:green"></span>
-                </div>
-
-
-            </div>
-            <div class="text  login" style="color: white;">Login</div>
-        </div>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="../../User_Pages/profile.html">Profile</a>
-                <!--<a href="user_signin">Logout</a>
-                <div class="hide">
-                    <a href="../../index.php">Home</a>
-                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
-                    <a href="../../AgroCraft/index.html">Agrocraft</a>
-                    <a href="Contact.html">Contact Us</a>
-                    <div>
-
-                    </div>-->
-                </div>
-            </div>
-        </div>
-
-    </nav>
-     <script type="text/javascript">
-          function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-        
-
-     </script>
-     <style type="text/css">
-          <style>
-           .hide{
-        display: none;
-    }
-    
-    .dropbtn {
-            background-color: #343a40;
-            color: white;
-            padding: 8px;
-            font-size: 18px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            margin-left: 50px;
-            margin-right: 30px;
-        }
-
-        .dropbtn:hover,
-        .dropbtn:focus {
-            background-color: #2a5cff;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right:20px;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            overflow: auto;
-            border-radius: 10px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown a:hover {
-            background-color: #2a5cff;
-        }
-
-        .show {
-            display: block;
-        }
-     </style>
-     <form method="post">
-=======
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="../../index.php">Impulse</a>
 
@@ -560,7 +424,7 @@ toggle between hiding and showing the dropdown content */
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav mr-auto">
                     <li class="nav-item ">
-                         <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
+                         <a class="nav-link" href="../../index.php">Home <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
                          <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
@@ -572,7 +436,7 @@ toggle between hiding and showing the dropdown content */
                          <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link" href="About.html">About Application</a>
+                         <a class="nav-link" href="#">About Application</a>
                     </li>
                     <li class="nav-item">
                          <a class="nav-link" href="Contact.html">Contact Us</a>
@@ -590,29 +454,100 @@ toggle between hiding and showing the dropdown content */
 
 
                </div>
-               <div class="text login" style="color: white;">Login</div>
+               <div class="text  login" style="color: white;">Login</div>
           </div>
           <div class="dropdown">
                <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
                <div id="myDropdown" class="dropdown-content">
                     <a href="../../User_Pages/profile.html">Profile</a>
-                    <a href="logout.php">Logout</a>
-                    <div class="hide">
-                         <a href="../../index.php">Home</a>
-                         <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
-                         <a href="../../AgroCraft/index.html">Agrocraft</a>
-                         <a href="Contact.html">Contact Us</a>
-                         <div>
+                    <!--<a href="user_signin">Logout</a>
+                <div class="hide">
+                    <a href="../../index.php">Home</a>
+                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                    <a href="../../AgroCraft/index.html">Agrocraft</a>
+                    <a href="Contact.html">Contact Us</a>
+                    <div>
 
-                         </div>
-                    </div>
+                    </div>-->
                </div>
           </div>
+          </div>
+
      </nav>
+     <script type="text/javascript">
+          function myFunction() {
+               document.getElementById("myDropdown").classList.toggle("show");
+          }
 
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
+               if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                         var openDropdown = dropdowns[i];
+                         if (openDropdown.classList.contains('show')) {
+                              openDropdown.classList.remove('show');
+                         }
+                    }
+               }
+          }
+     </script>
+     <style type="text/css">
+          <style>.hide {
+               display: none;
+          }
 
-     <form method="post" action="">
->>>>>>> ac76625dbafba18956afa52a404b2e1de60fdb81
+          .dropbtn {
+               background-color: #343a40;
+               color: white;
+               padding: 8px;
+               font-size: 18px;
+               border: none;
+               border-radius: 10px;
+               cursor: pointer;
+               margin-left: 50px;
+               margin-right: 30px;
+          }
+
+          .dropbtn:hover,
+          .dropbtn:focus {
+               background-color: #2a5cff;
+          }
+
+          .dropdown {
+               position: relative;
+               display: inline-block;
+          }
+
+          .dropdown-content {
+               display: none;
+               position: absolute;
+               right: 20px;
+               background-color: #f1f1f1;
+               min-width: 160px;
+               overflow: auto;
+               border-radius: 10px;
+               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+               z-index: 1;
+          }
+
+          .dropdown-content a {
+               color: black;
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+          }
+
+          .dropdown a:hover {
+               background-color: #2a5cff;
+          }
+
+          .show {
+               display: block;
+          }
+     </style>
+     <form method="post">
           <div class="section over-hide z-bigger">
                <input class="checkbox" type="checkbox" name="general" id="general">
                <label class="for-checkbox" for="general"></label>

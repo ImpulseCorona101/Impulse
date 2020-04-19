@@ -324,6 +324,11 @@ session_start();
 
 
             <?php
+            $con = mysqli_connect("localhost", "root", "", "impulse");
+
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySql " . mysqli_connect_error();
+            }
             if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
                 $phone = $_SESSION['phonenumber'];
                 $name_query = "select * from shopkeeper where phone=$phone ";
@@ -354,16 +359,11 @@ session_start();
             <div id="myDropdown" class="dropdown-content">
                 <a href="../../User_Pages/profile.html">Profile</a>
                 <a href="logout.php">Logout</a>
-                <div class="hide">
-                    <a href="../../index.php">Home</a>
-                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
-                    <a href="../../AgroCraft/index.html">Agrocraft</a>
-                    <a href="Contact.html">Contact Us</a>
-                    <div>
 
-                    </div>
-                </div>
+
             </div>
+        </div>
+        </div>
         </div>
 
     </nav>
@@ -436,11 +436,7 @@ toggle between hiding and showing the dropdown content */
 
 function getshops()
 {
-    $con = mysqli_connect("localhost", "root", "", "impulse");
 
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySql " . mysqli_connect_error();
-    }
 
     if (isset($_POST['searchquery'])) {
         $search_query = $_POST['searchquery'];
