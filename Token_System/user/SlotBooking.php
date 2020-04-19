@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -161,6 +166,215 @@
                text-align: center;
           }
      </style>
+
+
+     <style>
+          * {
+               font-family: sans-serif;
+          }
+
+          .search {
+               position: absolute;
+               top: 25%;
+               left: 9%;
+          }
+
+          .form-actions {
+               margin: 0;
+               background-color: transparent;
+               text-align: center;
+          }
+
+          .mobileContent {
+               display: none;
+          }
+
+          body {
+               background-color: #f3f7f7;
+
+          }
+
+          .parent {
+               font-family: sans-serif;
+               width: 900px;
+               left: 140px;
+          }
+
+          h3 {
+               position: relative;
+               margin-left: 125px;
+
+
+          }
+
+          .container-sm:hover {
+               background-color: #dfdfdf;
+               color: #2a5cff;
+
+          }
+
+          .status {
+               position: absolute;
+               bottom: 310px;
+               left: 1100px;
+               color: #A9A9A9;
+               width: 400px;
+               font-family: sans-serif;
+          }
+
+          label {
+               color: #000;
+          }
+
+          .dropbtn {
+               background-color: #343a40;
+               color: white;
+               padding: 8px;
+               font-size: 18px;
+               border: none;
+               border-radius: 10px;
+               cursor: pointer;
+               margin-left: 50px;
+               margin-right: 30px;
+          }
+
+          .dropbtn:hover,
+          .dropbtn:focus {
+               background-color: #2a5cff;
+          }
+
+          .dropdown {
+               position: relative;
+               display: inline-block;
+          }
+
+          .dropdown-content {
+               display: none;
+               position: absolute;
+               right: 20px;
+               background-color: #f1f1f1;
+               min-width: 160px;
+               overflow: auto;
+               border-radius: 10px;
+               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+               z-index: 1;
+          }
+
+          .dropdown-content a {
+               color: black;
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+          }
+
+          .dropdown a:hover {
+               background-color: #2a5cff;
+          }
+
+          .show {
+               display: block;
+          }
+
+          .search {
+               position: absolute;
+               left: 575px;
+          }
+
+
+
+          .shop {
+               display: none;
+          }
+
+          select {
+               outline: 0;
+               height: 40px;
+               width: 180px;
+               margin-left: 80px;
+               line-height: 42px;
+               padding: 0 16px;
+               background-color: rgba(255, 255, 255, 0.8);
+               color: #212121;
+               border-color: #2a5cff;
+               float: left;
+               -webkit-border-radius: 4px 0 0 4px;
+               border-radius: 4px 0 0 4px;
+          }
+
+
+          .full {
+               position: absolute;
+               top: 250px;
+               left: 180px;
+          }
+
+
+
+          @media only screen and (min-device-width:310px) and (max-device-width:460px) {
+               .navbar {
+                    width: 100%;
+               }
+
+               h3 {
+                    right: 50px;
+                    width: 300px;
+                    top: 65px;
+                    position: absolute;
+
+               }
+
+               .search {
+                    position: absolute;
+                    top: 120px;
+                    left: 70px;
+               }
+
+               .mob {
+                    position: relative;
+                    right: 300px;
+                    bottom: 60px;
+
+
+               }
+
+               .container-sm {
+
+                    width: 320px;
+               }
+
+               .parent {
+
+                    width: 100px;
+               }
+
+
+
+               .shop {
+                    display: block;
+               }
+
+               .status {
+                    display: none;
+               }
+
+               select {
+
+                    position: relative;
+                    left: 150px;
+                    bottom: 50px;
+               }
+
+               .shop {
+                    width: 120px;
+                    height: 50px;
+
+               }
+
+               .hide {
+                    display: block;
+               }
+          }
+     </style>
      <script>
           $(document).ready(function() {
                var date_input = $('input[name="date"]'); //our date input has the name "date"
@@ -174,10 +388,90 @@
                date_input.datepicker(options);
           })
      </script>
+
+     <script>
+          /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+          function myFunction() {
+               document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
+               if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                         var openDropdown = dropdowns[i];
+                         if (openDropdown.classList.contains('show')) {
+                              openDropdown.classList.remove('show');
+                         }
+                    }
+               }
+          }
+     </script>
 </head>
 
 <body>
-     <form method="post">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="../../index.php">Impulse</a>
+
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                         <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                         <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                         <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                         <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="About.html">About Application</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="Contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+
+                    </li>
+
+               </ul>
+               <div class="p-2">
+                    <div class="">
+                         <a> <i class="fa fa-user" style="font-size:30px; color:white ;margin-top:2px;"></i></a>
+                         <span id="" style="color:green"></span>
+                    </div>
+
+
+               </div>
+               <div class="text login" style="color: white;">Login</div>
+          </div>
+          <div class="dropdown">
+               <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+               <div id="myDropdown" class="dropdown-content">
+                    <a href="../../User_Pages/profile.html">Profile</a>
+                    <a href="logout.php">Logout</a>
+                    <div class="hide">
+                         <a href="../../index.php">Home</a>
+                         <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                         <a href="../../AgroCraft/index.html">Agrocraft</a>
+                         <a href="Contact.html">Contact Us</a>
+                         <div>
+
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </nav>
+
+
+     <form method="post" action="">
           <div class="section over-hide z-bigger">
                <input class="checkbox" type="checkbox" name="general" id="general">
                <label class="for-checkbox" for="general"></label>
@@ -187,14 +481,16 @@
                          <div class="row justify-content-center pb-5">
 
                               <div class="form-group">
-                                   <label class="control-label form-weight-bold " for="date">Enter Your Date</label>
+                                   <label class=" text-center  form-weight-bold p-3" style="font-size: 24px;" for="date">Enter Your Date</label>
                                    <input class="form-control" id="date" name="date" placeholder="DD/MM/YYY" type="text" />
                               </div>
                               <div class="col-12 pb-5">
                                    <br>
-                                   <h3>Select Your Slot</h3>
-                                   <br>
+                                   <label class="text-center font-weight-bold p-3" style="font-size: 24px;">Select Your Time Slot</label>
+
+
                                    <?php
+                                   echo "<br>";
                                    $con = mysqli_connect("localhost", "root", "", "impulse");
 
                                    if (mysqli_connect_errno()) {
@@ -202,7 +498,7 @@
                                    }
 
 
-                                   $pincode = 421202;
+                                   $pincode = $_GET['pincode'];
 
                                    $get_shop = "select * from shopkeeper where pincode = $pincode";
                                    $run_shop = mysqli_query($con, $get_shop);
@@ -300,6 +596,8 @@
      </form>
 
 
+
+
 </body>
 
 </html>
@@ -308,10 +606,10 @@
 if (isset($_POST['submit'])) {
      $date = $_POST['date'];
      $time = $_POST['time'];
-     echo "Date " . $date;
-     echo "<br>";
-     echo "Time : " . $time;
-     echo "<br>" . $interval;
+     // echo "Date " . $date;
+     // echo "<br>";
+     // echo "Time : " . $time;
+     // echo "<br>" . $interval;
 
 
      $check = "select * from slot where date='$date' and slot='$time'";
@@ -336,7 +634,7 @@ if (isset($_POST['submit'])) {
           $passcode = rand(10000, 99999);
           $add_slot = "insert into slot (shop_id,slot,vacancy,date,phonenumber,passcode) values ('$id','$time','$customers','$date','1234567890',$passcode)";
           $run = mysqli_query($con, $add_slot);
-          echo $add_slot;
+          // echo $add_slot;
           if ($run) {
                echo "<script>window.alert('Success');</script>";
           }
