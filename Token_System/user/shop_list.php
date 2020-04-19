@@ -320,7 +320,34 @@ session_start();
 
 
             </div>
-            <div class="text login" style="color: white;">Login</div>
+
+
+
+            <?php
+            if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
+                $phone = $_SESSION['phonenumber'];
+                $name_query = "select * from shopkeeper where phone=$phone ";
+                $run = mysqli_query($con, $name_query);
+                while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+                }
+                echo "<div class='text login' style='color: white;'>Hello , $name</div>";
+            } else if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "visitor")) {
+                $phone = $_SESSION['phonenumber'];
+                $name_query = "select * from consumer where phone=$phone ";
+                $run = mysqli_query($con, $name_query);
+                while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+                }
+                echo "<div class='text login' style='color: white;'>>Hello , $name</div>";
+            } else {
+
+                echo "<a href='user_signin.php' ><div class='text login' style='color: white;'>Login</div></a>";
+            }
+            ?>
+
+
+
         </div>
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
