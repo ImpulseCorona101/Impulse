@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGNIN</title>
+    <title>Confirmation_User</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -169,28 +169,17 @@
         .button1 {
             margin-top: 10%;
         }
-
-        /* .guard {
-            width: 100%;
-            text-align: none;
-            border: none;
-            /* background-color: #ffc857; */
-        /* margin: 20px 20px;
-            font-family: serif;
-            line-height: 20px;
-        }  */
-        /* .guard span {
-            background: none;
-            padding: 20 20px;
-    */
+    }
 </style>
 
 <body>
 
+    <!-- <p class="line-1 anim-typewriter">Animation typewriter style using css steps()</p> -->
 
     <br>
-
-    <img src="Impulse.png" class="mx-auto d-block imag" />
+    <!-- <img src="Guadian.png" >
+     -->
+    <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
     <div class="text-center">
         <h1>Impulse</h1>
     </div>
@@ -200,52 +189,37 @@
             <br>
 
             <b>
-                <h1 class="guard "><span><b>Forgot Password</b></span>
+                <h1 class="guard"><span><b>Please Confirm Your Password</b></span>
                 </h1>
             </b>
         </div>
         <div class="form">
+
             <div class="input-group mt-3 s">
+                
+
                 <div class="input-group mt-5  s">
-                    <div class="input-group-prepend mb-5 ">
-                        <span class="input-group-text  text" id="inputGroup-sizing-default"><i
-                                class="fas fa-key mr-2"></i>Token </span>
-                    </div>
-                    <input type="text " class="form-control inp mb-5 " aria-label="Sizing example input "
-                        aria-describedby="inputGroup-sizing-default " placeholder="Email ">
 
-                </div>
-                <div class="input-group mt-2  s">
                     <div class="input-group-prepend mb-5 ">
+
                         <span class="input-group-text  text" id="inputGroup-sizing-default"><i
-                                class="fas fa-lock mr-2"></i>Password</span>
+                                class="far fa-envelope mr-2"></i> Password</span>
                     </div>
-                    <input type="password " class="form-control inp mb-5 " aria-label="Sizing example input "
+                    <input type="password" class="form-control inp mr-5" aria-label="Sizing example input "
                         aria-describedby="inputGroup-sizing-default " placeholder="Password">
+                        <h6 class="mb-5" style="color:red;">Please Note: ONLY FOR VISITOR</h6>
 
                 </div>
-                <div class="input-group mt-2  s">
-                    <div class="input-group-prepend mb-5 ">
-                        <span class="input-group-text  text" id="inputGroup-sizing-default"><i
-                                class="fas fa-lock mr-2"></i>Confirm Password</span>
-                    </div>
-                    <input type="password " class="form-control inp mb-5 " aria-label="Sizing example input "
-                        aria-describedby="inputGroup-sizing-default " placeholder="Confirm Password">
-
-                </div>
-                <!-- <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
-
-                <div class="text1" style="font-size: 15px;">Forgot password ? </div>
-                <div class="text2" style="font-size: 15px;"> New User ? </div>-->
 
 
-                <button type="button" class="btn btn-dark btn-lg btn-block ml-5 mr-5"
-                    style="color: gold;">SUBMIT</button>
-                <!-- <div class="text-center"><input type="submit"></div> -->
+
+<a href="shop_list.php">
+                <button type="button"  class="btn btn-dark btn-lg btn-block ml-5 mr-5" style="color: gold;">Submit</button></a>
 
             </div>
         </div>
     </div>
+    
 
 </body>
 

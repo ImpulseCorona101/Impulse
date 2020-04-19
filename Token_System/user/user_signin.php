@@ -187,6 +187,10 @@ session_start();
     <!-- <br> -->
     <!-- <img src="Guadian.png" >
      -->
+<<<<<<< HEAD
+    
+    <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
+=======
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Impulse</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -208,6 +212,7 @@ session_start();
         </div>
     </nav>
     <img src="Impulse.png" class="mx-auto d-block imag" />
+>>>>>>> ac76625dbafba18956afa52a404b2e1de60fdb81
     <div class="text-center">
         <h1><b>Impulse</b></h1>
     </div>
@@ -254,11 +259,20 @@ session_start();
 
                 </div>
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
-
+                    <a href="Email_ForgotPassword.html">
                     <div class="text1">Forgot password ? </div>
+<<<<<<< HEAD
+                </a>
+
+                    <a href="user_signup.php">
+                    <div class="text2"> New User ? </div>
+                </a>
+
+=======
                     <div class="text2">
                         <a href="user_signup.php">New User ? </a>
                     </div>
+>>>>>>> ac76625dbafba18956afa52a404b2e1de60fdb81
                 </div>
 
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3" style="margin-top: -5%;">

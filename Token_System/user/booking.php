@@ -516,8 +516,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../index.php">Home <span class=" sr-only">(current)</span></a>
                 </li>
+
                 <li class="nav-item ">
                     <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
                 </li>
@@ -900,23 +901,7 @@
         });
       })()
     </script>
-    <script>
-      function generate() {
-        var number = Math.floor(Math.random() * 10000000000000000) + 1;
-        console.log(number);
-        let qrcode = new QRCode("qr", {
-          text: number,
-          width: 100,
-          height: 100,
-          colorDark: "#990000",
-          colorLight: "#ffffff",
-
-        });
-        const Uniqueid = document.querySelector(".Uniqueid");
-        Uniqueid.textContent = "Unique Number is : " + number;
-        qrcode.makeCode(message.value);
-      }
-    </script>
+    
     <div class="col-md-5 offset-md-3 mr-3 mt-1">
 
 
