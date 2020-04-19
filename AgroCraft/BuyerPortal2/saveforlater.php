@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Buyer login</title>
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -15,9 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-	<style>
-		@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-		.myfooter {
+</head>
+<style>
+    .myfooter {
         background-color: #292b2c;
 
         color: goldenrod;
@@ -109,42 +108,12 @@
         margin-right: -30%;
         margin-left: 35%;
     }
- 
-		body {
-			margin: 0;
-			font-size: .9rem;
-			font-weight: 400;
-			line-height: 1.6;
-			color: #212529;
-			text-align: left;
-			/* background-color: #f5f8fa; */
-		}
-
-		.my-form,
-		.login-form {
-			font-family: Raleway, sans-serif;
-		}
-
-		.my-form {
-			padding-top: 1.5rem;
-			padding-bottom: 1.5rem;
-		}
-
-		.my-form .row {
-			margin-left: 0;
-			margin-right: 0;
-		}
-
-		.login-form {
-			padding-top: 1.5rem;
-			padding-bottom: 1.5rem;
-		}
-
-		.login-form .row {
-			margin-left: 0;
-			margin-right: 0;
-		}
-		@media only screen and (min-device-width:320px) and (max-device-width:480px) {
+.cross{
+    /* margin-left:27%; */
+    margin-top:-8%;
+    float:right;
+}
+    @media only screen and (min-device-width:320px) and (max-device-width:480px) {
         /* .mycarousel {
             display: none;
         }
@@ -169,7 +138,11 @@
             display: none;
             background-color: #ff5500;
         }
-
+        .cross{
+    /* margin-left:21%; */
+    margin-top:-8%;
+    float:right;
+}
         /* 
             .settings{
             margin-left:79%;
@@ -199,11 +172,12 @@
             text-align: center;
             width: 100%;
         }
+
         /* .pic{
         height:auto;
     } */
-    
-    /* .mobtext{
+
+        /* .mobtext{
         display:none;
     }
     .destext{
@@ -213,12 +187,15 @@
         margin-right: 5%;
     } */
     }
-	</style>
-</head>
+</style>
 
 <body>
 
-<nav class="navbar navbar-expand-xl ">
+
+
+
+
+    <nav class="navbar navbar-expand-xl ">
         <!-- <a href="#" class="navbar-brand">Academind</a> -->
         <div class=" flex-row-reverse left ">
 
@@ -287,50 +264,139 @@
         </div>
 
     </nav>
-	<main class="my-form">
-		<div class="cotainer">
-			<div class="row justify-content-center">
-				<div class="col-md-8">
-					<div class="card">
-						<div class="card-header" style="background-color:#292b2c">
-							<h4 style="font-style:bold;color:goldenrod;">Login</h4>
-						</div>
-						<div class="card-body">
-							<form name="my-form" action="BuyerLogin.php" method="post">
+    <div class="container">
 
-								<div class="form-group row">
-									<label for="phone_number" class="col-md-4 col-form-label text-md-right  "><b><i class="fas fa-phone-alt mr-2"></i>Phone Number</b></label>
-									<div class="col-md-6">
-										<input type="text" id="phone_number" class="form-control border border-dark" name="phonenumber" placeholder="Phone Number" required>
-									</div>
-								</div>
+        <div class="text-left ">
+            <h2>Save For later
+                <div class="text-right"><button type="button" class="btn btn-warning border border-dark " style="margin-top:-5%"><b>Delete all</b></button></div>
+            </h2>
+            <hr style="margin-top:-2%">
 
-								<div class="form-group row">
-									<label for="p1" class="col-md-4 col-form-label text-md-right"><b><i class="fas fa-lock mr-2"></i>Password</b></label>
-									<div class="col-md-6">
-										<input id="p1" class="form-control border border-dark" type="password" name="password" placeholder="Password" required>
-									</div>
-								</div>
+        </div>
+    </div>
 
-								<div class="col-md-6 offset-md-4">
-									<button type="submit" class="btn " style="background-color:#292b2c;color:goldenrod" name="login" value="Login">
-										Login
-									</button>
-								</div>
-								<br>
-								<div class="col-md-6 offset-md-4">
-									<label id="forgotPassword"><a id='link' href="BuyerForgotPassword.php"><b style="color:black"> Forgot your password ?</b></a></label>
-									<br>
-									<label id="account"><a id='link' href="BuyerRegistration.php"><b style="color:black">Create New Account</b></a></label>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	 <section id="footer" class="myfooter">
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
+                <div class="card pl-3 pr-3 pb-0 pt-2 mt-2 ">
+                    <br>
+                    <div><b>
+                            <h3><img src="iconsmall.png"> ABHISHEK
+                        </b>
+                       <button class="cross" style="border-style:none;background-color:transparent;"><i class="fas fa-times"style=""></i></button>
+                        </h3>
+
+                    </div>
+                    <img class="card-img-top" src="fruit1.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Orange</h5>
+                        <p class="card-text">PRICE:-20rs/kg</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
+                <div class="card  pl-3 pr-3 pb-0 pt-2 mt-2 ">
+                    <br>
+                    <div><b>
+                            <h3><img src="iconsmall.png"> ABHISHEK
+                        </b></h3>
+                    </div>
+                    <img class="card-img-top pic" src="myfruit1.jfif" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Orange</h5>
+                        <p class="card-text">PRICE:-20rs/kg</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
+                <div class="card pl-3 pr-3 pb-0 pt-2 mt-2  ">
+                    <br>
+                    <div><b>
+                            <h3><img src="iconsmall.png"> ABHISHEK
+                        </b></h3>
+                    </div>
+                    <img class="card-img-top" src="myfruit4.jfif" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Orange</h5>
+                        <p class="card-text">PRICE:-20rs/kg</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
+                <div class="card pl-3 pr-3 pb-0 pt-2 mt-2  ">
+                    <br>
+                    <div><b>
+                            <h3><img src="iconsmall.png"> ABHISHEK
+                        </b></h3>
+                    </div>
+                    <img class="card-img-top" src="myfruit4.jfif" alt="Card image cap" height="315px">
+                    <div class="card-body">
+                        <h5 class="card-title">Orange</h5>
+                        <p class="card-text">PRICE:-20rs/kg</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-4 col-xl-4 col-lg-4">
+                <div class="card pl-3 pr-3 pb-0 pt-2 mt-2 ">
+                    <br>
+                    <div><b>
+                            <h3><img src="iconsmall.png"> ABHISHEK
+                        </b></h3>
+                    </div>
+                    <img class="card-img-top" src="myfruit4.jfif" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Orange</h5>
+                        <p class="card-text">PRICE:-20rs/kg</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-warning border-secondary" style="color:black" id="inputGroup-sizing-default"><b>Quantity</b></span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <a href="#" class="btn btn-warning border-secondary" style="color:black"><b>Add to cart</b><img src="carticons.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+    <section id="footer" class="myfooter">
         <div class="container">
             <div class="row text-center text-xs-center text-sm-left text-md-left">
                 <div class="col aligncenter">
@@ -362,44 +428,3 @@
 </body>
 
 </html>
-
-
-<?php
-include("../Includes/db.php");
-session_start();
-if (isset($_POST['login'])) {
-
-	$phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
-	$password = mysqli_real_escape_string($con, $_POST['password']);
-
-	$ciphering = "AES-128-CTR";
-	$iv_length = openssl_cipher_iv_length($ciphering);
-	$options = 0;
-	$encryption_iv = '2345678910111211';
-	$encryption_key = "DE";
-
-	$encryption = openssl_encrypt(
-		$password,
-		$ciphering,
-		$encryption_key,
-		$options,
-		$encryption_iv
-	);
-
-	$query = "select * from buyerregistration where buyer_phone = '$phonenumber' and buyer_password = '$encryption'";
-	$run_query = mysqli_query($con, $query);
-	$count_rows = mysqli_num_rows($run_query);
-	if ($count_rows == 0) {
-		echo "<script>alert('Please Enter Valid Details');</script>";
-		echo "<script>window.open('BuyerLogin.php','_self')</script>";
-	}
-	while ($row = mysqli_fetch_array($run_query)) {
-		$id = $row['buyer_id'];
-	}
-
-
-	$_SESSION['phonenumber'] = $phonenumber;
-	echo "<script>window.open('../BuyerPortal2/bhome.php','_self')</script>";
-}
-
-?>
