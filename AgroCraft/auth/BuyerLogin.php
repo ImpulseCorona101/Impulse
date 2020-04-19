@@ -1,12 +1,18 @@
+<?php
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Buyer login</title>
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buyer login</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -15,137 +21,139 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-	<style>
-		@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-		.myfooter {
-        background-color: #292b2c;
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
-        color: goldenrod;
-        margin-top: 15px;
-    }
+        .myfooter {
+            background-color: #292b2c;
 
-    .aligncenter {
-        text-align: center;
-    }
+            color: goldenrod;
+            margin-top: 15px;
+        }
 
-    a {
-        color: goldenrod;
-    }
+        .aligncenter {
+            text-align: center;
+        }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        a {
+            color: goldenrod;
+        }
 
-    nav {
-        background-color: #292b2c;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .navbar-custom {
-        background-color: #292b2c;
-    }
+        nav {
+            background-color: #292b2c;
+        }
 
-    /* change the brand and text color */
-    .navbar-custom .navbar-brand,
-    .navbar-custom .navbar-text {
-        background-color: #292b2c;
-    }
+        .navbar-custom {
+            background-color: #292b2c;
+        }
 
-    .navbar-custom .navbar-nav .nav-link {
-        background-color: #292b2c;
-    }
+        /* change the brand and text color */
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+            background-color: #292b2c;
+        }
 
-    .navbar-custom .nav-item.active .nav-link,
-    .navbar-custom .nav-item:hover .nav-link {
-        background-color: #292b2c;
-    }
+        .navbar-custom .navbar-nav .nav-link {
+            background-color: #292b2c;
+        }
 
-
-    .mybtn {
-        border-color: green;
-        border-style: solid;
-    }
+        .navbar-custom .nav-item.active .nav-link,
+        .navbar-custom .nav-item:hover .nav-link {
+            background-color: #292b2c;
+        }
 
 
-    .right {
-        display: flex;
-    }
+        .mybtn {
+            border-color: green;
+            border-style: solid;
+        }
 
-    .left {
-        display: none;
-    }
 
-    .cart {
-        /* margin-left:10px; */
-        margin-right: -9px;
-    }
+        .right {
+            display: flex;
+        }
 
-    .profile {
-        margin-right: 2px;
+        .left {
+            display: none;
+        }
 
-    }
+        .cart {
+            /* margin-left:10px; */
+            margin-right: -9px;
+        }
 
-    .login {
-        margin-right: -2px;
-        margin-top: 12px;
-        display: none;
-    }
+        .profile {
+            margin-right: 2px;
 
-    .searchbox {
-        width: 60%;
-    }
+        }
 
-    .lists {
-        display: inline-block;
-    }
+        .login {
+            margin-right: -2px;
+            margin-top: 12px;
+            display: none;
+        }
 
-    .moblists {
-        display: none;
-    }
+        .searchbox {
+            width: 60%;
+        }
 
-    .logins {
-        text-align: center;
-        margin-right: -30%;
-        margin-left: 35%;
-    }
- 
-		body {
-			margin: 0;
-			font-size: .9rem;
-			font-weight: 400;
-			line-height: 1.6;
-			color: #212529;
-			text-align: left;
-			/* background-color: #f5f8fa; */
-		}
+        .lists {
+            display: inline-block;
+        }
 
-		.my-form,
-		.login-form {
-			font-family: Raleway, sans-serif;
-		}
+        .moblists {
+            display: none;
+        }
 
-		.my-form {
-			padding-top: 1.5rem;
-			padding-bottom: 1.5rem;
-		}
+        .logins {
+            text-align: center;
+            margin-right: -30%;
+            margin-left: 35%;
+        }
 
-		.my-form .row {
-			margin-left: 0;
-			margin-right: 0;
-		}
+        body {
+            margin: 0;
+            font-size: .9rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #212529;
+            text-align: left;
+            /* background-color: #f5f8fa; */
+        }
 
-		.login-form {
-			padding-top: 1.5rem;
-			padding-bottom: 1.5rem;
-		}
+        .my-form,
+        .login-form {
+            font-family: Raleway, sans-serif;
+        }
 
-		.login-form .row {
-			margin-left: 0;
-			margin-right: 0;
-		}
-		@media only screen and (min-device-width:320px) and (max-device-width:480px) {
-        /* .mycarousel {
+        .my-form {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .my-form .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .login-form {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .login-form .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+            /* .mycarousel {
             display: none;
         }
 
@@ -165,45 +173,46 @@
             margin-top: 20px;
         } */
 
-        .right {
-            display: none;
-            background-color: #ff5500;
-        }
+            .right {
+                display: none;
+                background-color: #ff5500;
+            }
 
-        /* 
+            /* 
             .settings{
             margin-left:79%;
         } */
-        .left {
-            display: flex;
-        }
+            .left {
+                display: flex;
+            }
 
-        .moblogo {
-            display: none;
-        }
+            .moblogo {
+                display: none;
+            }
 
-        .logins {
-            text-align: center;
-            margin-right: 35%;
-            padding: 15px;
-        }
+            .logins {
+                text-align: center;
+                margin-right: 35%;
+                padding: 15px;
+            }
 
-        .searchbox {
-            width: 95%;
-            margin-right: 5%;
-            margin-left: 0%;
-        }
+            .searchbox {
+                width: 95%;
+                margin-right: 5%;
+                margin-left: 0%;
+            }
 
-        .moblists {
-            display: inline-block;
-            text-align: center;
-            width: 100%;
-        }
-        /* .pic{
+            .moblists {
+                display: inline-block;
+                text-align: center;
+                width: 100%;
+            }
+
+            /* .pic{
         height:auto;
     } */
-    
-    /* .mobtext{
+
+            /* .mobtext{
         display:none;
     }
     .destext{
@@ -212,153 +221,57 @@
         margin-left: 5%;
         margin-right: 5%;
     } */
-    }
-	</style>
+        }
+    </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-xl ">
-        <!-- <a href="#" class="navbar-brand">Academind</a> -->
-        <div class=" flex-row-reverse left ">
+    <main class="my-form">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header" style="background-color:#292b2c">
+                            <h4 style="font-style:bold;color:goldenrod;">Login</h4>
+                        </div>
+                        <div class="card-body">
+                            <form name="my-form" action="BuyerLogin.php" method="post">
 
-            <div class="p-2">
-                <div class="icon2">
-                    <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green ;margin-top:2px;">&#61562;</i></a>
-                    <span id="icon" style="color:green"> 5 </span>
+                                <div class="form-group row">
+                                    <label for="phone_number" class="col-md-4 col-form-label text-md-right  "><b><i class="fas fa-phone-alt mr-2"></i>Phone Number</b></label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="phone_number" class="form-control border border-dark" name="phonenumber" placeholder="Phone Number" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="p1" class="col-md-4 col-form-label text-md-right"><b><i class="fas fa-lock mr-2"></i>Password</b></label>
+                                    <div class="col-md-6">
+                                        <input id="p1" class="form-control border border-dark" type="password" name="password" placeholder="Password" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn " style="background-color:#292b2c;color:goldenrod" name="login" value="Login">
+                                        Login
+                                    </button>
+                                </div>
+                                <br>
+                                <div class="col-md-6 offset-md-4">
+                                    <label id="forgotPassword"><a id='link' href="BuyerForgotPassword.php"><b style="color:black"> Forgot your password ?</b></a></label>
+                                    <br>
+                                    <label id="account"><a id='link' href="BuyerRegistration.php"><b style="color:black">Create New Account</b></a></label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;margin-top:2px; visibility:hidden;'></i></div>
-            <a class="float-left" href="#">
-                <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
-            </a>
-        </div>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;margin-right:-9%;font-size:28px;"></i></span>
-        </button>
-        <a class="float-left" href="#">
-            <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            <div class="input-group mb-1 ml-2 searchbox">
-                <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fas fa-search" style="font-size:20px;color:green; "></i></div>
-                </div>
-                <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
-            </div>
-            <div class="text-success  logins ">Login</div>
-            <div class="list-group moblists">
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
-                    Profile
-                </a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Transactions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">subscriptions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Farmers</a>
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
-            </div>
-        </div>
-
-
-
-
-        <div class=" flex-row-reverse right ">
-            <div class="p-2 cart">
-                <div class="icon2">
-                    <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green">&#61562;</i></a>
-                    <span id="icon" style="color:green"> 5 </span>
-                </div>
-            </div>
-            <div class="dropdown p-2 settings ">
-                <button class="btn  dropdown-toggle text-success" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Settings
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Transactions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Subscriptions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Farmers</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
-                </div>
-            </div>
-
-            <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
-            <div class="text-success  login">Login</div>
-        </div>
-
-    </nav>
-	<main class="my-form">
-		<div class="cotainer">
-			<div class="row justify-content-center">
-				<div class="col-md-8">
-					<div class="card">
-						<div class="card-header" style="background-color:#292b2c">
-							<h4 style="font-style:bold;color:goldenrod;">Login</h4>
-						</div>
-						<div class="card-body">
-							<form name="my-form" action="BuyerLogin.php" method="post">
-
-								<div class="form-group row">
-									<label for="phone_number" class="col-md-4 col-form-label text-md-right  "><b><i class="fas fa-phone-alt mr-2"></i>Phone Number</b></label>
-									<div class="col-md-6">
-										<input type="text" id="phone_number" class="form-control border border-dark" name="phonenumber" placeholder="Phone Number" required>
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label for="p1" class="col-md-4 col-form-label text-md-right"><b><i class="fas fa-lock mr-2"></i>Password</b></label>
-									<div class="col-md-6">
-										<input id="p1" class="form-control border border-dark" type="password" name="password" placeholder="Password" required>
-									</div>
-								</div>
-
-								<div class="col-md-6 offset-md-4">
-									<button type="submit" class="btn " style="background-color:#292b2c;color:goldenrod" name="login" value="Login">
-										Login
-									</button>
-								</div>
-								<br>
-								<div class="col-md-6 offset-md-4">
-									<label id="forgotPassword"><a id='link' href="BuyerForgotPassword.php"><b style="color:black"> Forgot your password ?</b></a></label>
-									<br>
-									<label id="account"><a id='link' href="BuyerRegistration.php"><b style="color:black">Create New Account</b></a></label>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	 <section id="footer" class="myfooter">
-        <div class="container">
-            <div class="row text-center text-xs-center text-sm-left text-md-left">
-                <div class="col aligncenter">
-                    <p>Payment Option</p>
-                    <img src="../Images/Website/paytm1.jpg" alt="paytm">
-                    <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                    <ul class="list-unstyled list-inline social text-center">
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                    </ul>
-                </div>
-                </hr>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-                    <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
-                    <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
-                </div>
-                </hr>
             </div>
         </div>
+    </main>
+
+
 </body>
 
 </html>
@@ -366,39 +279,39 @@
 
 <?php
 include("../Includes/db.php");
-session_start();
+
 if (isset($_POST['login'])) {
 
-	$phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
-	$password = mysqli_real_escape_string($con, $_POST['password']);
+    $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
 
-	$ciphering = "AES-128-CTR";
-	$iv_length = openssl_cipher_iv_length($ciphering);
-	$options = 0;
-	$encryption_iv = '2345678910111211';
-	$encryption_key = "DE";
+    $ciphering = "AES-128-CTR";
+    $iv_length = openssl_cipher_iv_length($ciphering);
+    $options = 0;
+    $encryption_iv = '2345678910111211';
+    $encryption_key = "DE";
 
-	$encryption = openssl_encrypt(
-		$password,
-		$ciphering,
-		$encryption_key,
-		$options,
-		$encryption_iv
-	);
+    $encryption = openssl_encrypt(
+        $password,
+        $ciphering,
+        $encryption_key,
+        $options,
+        $encryption_iv
+    );
 
-	$query = "select * from buyerregistration where buyer_phone = '$phonenumber' and buyer_password = '$encryption'";
-	$run_query = mysqli_query($con, $query);
-	$count_rows = mysqli_num_rows($run_query);
-	if ($count_rows == 0) {
-		echo "<script>alert('Please Enter Valid Details');</script>";
-		echo "<script>window.open('BuyerLogin.php','_self')</script>";
-	}
-	while ($row = mysqli_fetch_array($run_query)) {
-		$id = $row['buyer_id'];
-	}
+    $query = "select * from buyerregistration where buyer_phone = '$phonenumber' and buyer_password = '$encryption'";
+    $run_query = mysqli_query($con, $query);
+    $count_rows = mysqli_num_rows($run_query);
+    if ($count_rows == 0) {
+        echo "<script>alert('Please Enter Valid Details');</script>";
+        echo "<script>window.open('BuyerLogin.php','_self')</script>";
+    }
+    while ($row = mysqli_fetch_array($run_query)) {
+        $id = $row['buyer_id'];
+    }
 
-	$_SESSION['phonenumber'] = $phonenumber;
-	echo "<script>window.open('../BuyerPortal2/bhome.php','_self')</script>";
+    $_SESSION['phonenumber'] = $phonenumber;
+    echo "<script>window.open('../BuyerPortal2/bhome.php','_self')</script>";
 }
 
 ?>
