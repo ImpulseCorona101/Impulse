@@ -259,9 +259,6 @@
             </div>
         </div>
 
-
-
-
         <div class=" flex-row-reverse right ">
             <div class="p-2 cart">
                 <div class="icon2">
@@ -362,7 +359,6 @@
 </body>
 
 </html>
-
 
 <?php
 include("../Includes/db.php");
