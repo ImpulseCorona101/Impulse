@@ -276,7 +276,6 @@ session_start();
 
 </html>
 
-
 <?php
 include("../Includes/db.php");
 
