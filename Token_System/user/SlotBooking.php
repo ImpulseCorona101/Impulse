@@ -213,8 +213,11 @@
                                              $startTime = $rows['startTime'];
                                              $endTime = $rows['endTime'];
                                              $id = $rows['id'];
-                                             $interval = $rows['Slot-Interval'];
-                                             $customers = $rows['Slot-User'];
+                                             
+                                             // $interval = $rows['Slot-Interval'];
+                                             // $customers = $rows['Slot-User'];
+                                             $interval=45;
+                                             $customers=5;
 
 
                                              $starttimehour = substr($startTime, 0, 2);
