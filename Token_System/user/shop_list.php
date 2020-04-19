@@ -278,7 +278,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="../../index.php">Impulse</a>
 
 
@@ -300,7 +300,7 @@
                     <a class="nav-link" href="#">About Application</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
                 </li>
                 <li class="nav-item">
 
@@ -321,12 +321,12 @@
             <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="../../User_Pages/profile.html">Profile</a>
-                <a href="../../User_Pages/SIGN_IN.html">Logout</a>
+                <a href="user_signin">Logout</a>
                 <div class="hide">
                     <a href="../../index.php">Home</a>
                     <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
                     <a href="../../AgroCraft/index.html">Agrocraft</a>
-                    <a href="#about">Contact Us</a>
+                    <a href="Contact.html">Contact Us</a>
                     <div>
 
                     </div>
