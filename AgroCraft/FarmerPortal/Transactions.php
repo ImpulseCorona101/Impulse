@@ -806,36 +806,36 @@
           } */
 
           body {
-            margin: 0;
-            padding: 0px;
-            font-family: sans-serif;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .table td,
-        .table th {
-            padding: 12px 15px;
-            border: 0px solid #ddd;
-            text-align: center;
-            font-size: 16px;
-        }
-        
-        .table th {
-            background-color: #292b2c;
-            color: goldenrod;
-        }
-        
-        .table tbody tr:nth-child(even) {
-            background-color: #f5f5f5;
-        }
+               margin: 0;
+               padding: 0px;
+               font-family: sans-serif;
+          }
+
+          * {
+               box-sizing: border-box;
+          }
+
+          .table {
+               width: 100%;
+               border-collapse: collapse;
+          }
+
+          .table td,
+          .table th {
+               padding: 12px 15px;
+               border: 0px solid #ddd;
+               text-align: center;
+               font-size: 16px;
+          }
+
+          .table th {
+               background-color: #292b2c;
+               color: goldenrod;
+          }
+
+          .table tbody tr:nth-child(even) {
+               background-color: #f5f5f5;
+          }
 
           /* For medium devices (e.g. tablets) */
           /* @media (min-width: 420px) {
@@ -877,34 +877,39 @@
                }
 
                .table thead {
-                display: none;
-            }
-            .table,
-            .table tbody,
-            .table tr,
-            .table td {
-                display: block;
-                width: 100%;
-            }
-            .table tr {
-                margin-bottom: 15px;
-            }
-            .table td {
-                text-align: right;
-                padding-left: 50%;
-                text-align: right;
-                position: relative;
-            }
-            .table td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 0;
-                width: 50%;
-                padding-left: 15px;
-                font-size: 15px;
-                font-weight: bold;
-                text-align: left;
-            }
+                    display: none;
+               }
+
+               .table,
+               .table tbody,
+               .table tr,
+               .table td {
+                    display: block;
+                    width: 100%;
+               }
+
+               .table tr {
+                    margin-bottom: 15px;
+               }
+
+               .table td {
+                    text-align: right;
+                    padding-left: 50%;
+                    text-align: right;
+                    position: relative;
+               }
+
+               .table td::before {
+                    content: attr(data-label);
+                    position: absolute;
+                    left: 0;
+                    width: 50%;
+                    padding-left: 15px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-align: left;
+               }
+
                .left {
                     display: flex;
                }
@@ -985,7 +990,7 @@
                          if (isset($_SESSION['phonenumber'])) {
 
                               echo "<a href='FarmerProfile.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
-                              echo "<a href=Orders.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
+                              echo "<a href=Transactions.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
                               echo "<a href='logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
                          } else {
                               echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '>Login</div></a>";
@@ -1018,7 +1023,7 @@
                               <?php
                               if (isset($_SESSION['phonenumber'])) {
                                    echo "<a href='FarmerProfile.php' class='dropdown-item' style='padding-right:-20px;'>Profile</a>";
-                                   echo "<a href='Orders.php' class='dropdown-item' style='padding-right:-20px;'>Orders</a>";
+                                   echo "<a href='Transactions.php' class='dropdown-item' style='padding-right:-20px;'>Orders</a>";
                                    echo "<a href='logout.php' class='dropdown-item' style='padding-right:-20px;'>Logout</a>";
                               } else {
                                    echo "<a href='../auth/FarmerLogin.php'> <div class='dropdown-item' style='padding-right:-20px;'>Login</div></a>";
@@ -1052,66 +1057,81 @@
 
                <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>TRANSACTION HISTORY</b></label></div>
                <br>
-
-               <!-- <table class="table">
-                    <thead align="center" class=tableyhead>
-                         <th class=thy>Date</th>
-                         <th class=thy>Name</th>
-                         <th class=thy>Phone Number</th>
-                         <th class=thy>Address</th>
-                         <th class=thy>Quantity</th> -->
-                         <!-- <th class=thy>Phone Number</th> -->
-                         <!-- 
-                    </thead>
-                    <tr align="center">
-                         <th>12-1-2000</th>
-                         <th>melissa</th>
-                         <th>1234567890</th>
-                         <th>sajgdkagdd</th>
-                         <th>500</th>
-                         <th>200</th>
-                    </tr>
-               </table> -->
           </div>
-<div class="container">
 
-          <table class="table">
-    <thead>
-        <th>Date</th>
-        <th>Name</th>
-        <th>Phone Number</th>
-        <th>Address</th>
-        <th>Quantity</th><th >Price</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td data-label="Date">12-1-2000</td>
-            <td data-label="Name">melissa</td>
-            <td data-label="Phone Number">1234567890</td>
-            <td data-label="Address">sajgdkagdd%</td>
-            <td data-label="Quantity">200</td>
-            <td data-label="Price">500</td>
-        </tr>
 
-        <tr>
-            <td data-label="Date">12-1-2000</td>
-            <td data-label="Name">melissa</td>
-            <td data-label="Phone Number">1234567890</td>
-            <td data-label="Address">sajgdkagdd%</td>
-            <td data-label="Quantity">200</td>
-            <td data-label="Price">500</td>
-        </tr>
-        <tr>
-            <td data-label="Date">12-1-2000</td>
-            <td data-label="Name">melissa</td>
-            <td data-label="Phone Number">1234567890</td>
-            <td data-label="Address">sajgdkagdd%</td>
-            <td data-label="Quantity">200</td>
-            <td data-label="Price">500</td>
-        </tr>
-    </tbody>
-</table>
- </div>         <br> <br>
+          <div class="container">
+
+               <table class="table">
+                    <thead>
+                         <th>Product Name</th>
+                         <th>Name</th>
+                         <th>Phone Number</th>
+                         <th>Delivery Address</th>
+                         <th>Quantity</th>
+                         <th>Amount</th>
+                    </thead>
+
+
+                    <tbody>
+                         <?php
+
+                         global $con;
+                         if (isset($_SESSION['phonenumber'])) {
+                              $sess_phone_number = $_SESSION['phonenumber'];
+                              $sel_price = "select * from orders where phonenumber = '$sess_phone_number'";
+                              $run_price = mysqli_query($con, $sel_price);
+                              $i = 0;
+
+                              while ($p_price = mysqli_fetch_array($run_price)) {
+                                   $product_id = $p_price['product_id'];
+                                   $qty = $p_price['qty'];
+                                   $total = $p_price['total'];
+                                   $address = $p_price['address'];
+                                   $phone = $p_price['buyer_phonenumber'];
+
+
+                                   $pro_price = "select * from products where product_id='$product_id'";
+                                   $run_pro_price = mysqli_query($con, $pro_price);
+                                   while ($pp_price = mysqli_fetch_array($run_pro_price)) {
+                                        $product_title = $pp_price['product_title'];
+
+
+                                        $query_name = "select * from buyerregistration where buyer_phone = $phone";
+                                        $run_query_name = mysqli_query($con, $query_name);
+                                        while ($names = mysqli_fetch_array($run_query_name)) {
+                                             $buyer_name = $names['buyer_name'];
+
+
+                         ?>
+                                             <tr>
+                                                  <td data-label="Product Name"><?php echo $product_title; ?></td>
+                                                  <td data-label="Name"><?php echo $buyer_name; ?></td>
+                                                  <td data-label="Phone Number"><?php echo $phone; ?></td>
+                                                  <td data-label="Address"><?php echo $address; ?></td>
+                                                  <td data-label="Quantity"><?php echo $qty; ?></td>
+                                                  <td data-label="Price"><?php echo $total; ?></td>
+                                             </tr>
+
+
+                    </tbody>
+<?php
+                                        }
+                                   }
+                                   $i++;
+                              }
+                         } else {
+                              echo "<h1 align = center>Please Login First!</h1><br><br><hr>";
+                         } ?>
+               </table>
+          </div> <br> <br>
+
+
+
+
+
+
+
           <section id="footer" class="myfooter">
                <div class="container">
                     <div class="row text-center text-xs-center text-sm-left text-md-left">

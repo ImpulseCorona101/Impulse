@@ -35,7 +35,7 @@
                     <a class="nav-link" href="#">About Application</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
                 </li>
                 <li class="nav-item">
 
@@ -53,15 +53,15 @@
             <div class="text  login" style="color: white;">Login</div>
         </div>
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+            <button onclick="myFunctio()" class="dropbtn fas fa-bars"></button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="../../User_Pages/profile.html">Profile</a>
-                <a href="../../User_Pages/SIGN_IN.html">Logout</a>
+                <a href="user_signin">Logout</a>
                 <div class="hide">
                     <a href="../../index.php">Home</a>
                     <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
                     <a href="../../AgroCraft/index.html">Agrocraft</a>
-                    <a href="#about">Contact Us</a>
+                    <a href="Contact.html">Contact Us</a>
                     <div>
 
                     </div>
@@ -138,6 +138,9 @@
     </form></div>
 
     <style>
+      .hide{
+        display: none;
+      }
       .btn{
         width: 80px;
       }
@@ -200,7 +203,7 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: green;}
+.dropdown a:hover {background-color: #2a5cff;}
 
 .show {display: block;}
 
@@ -316,7 +319,9 @@ form > .button:hover {
           .btn{
             margin-top: 10px;
           }
-
+          .hide{
+            display: block;
+          }
           
         }
          @media only screen and (min-device-width:300px) and (max-device-width:370px) {
@@ -349,6 +354,9 @@ form > .button:hover {
           }
           .btn{
             margin-top: 10px;
+          }
+          .hide{
+            display: block;
           }
 
 

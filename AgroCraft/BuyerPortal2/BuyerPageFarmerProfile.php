@@ -438,7 +438,7 @@ include("../Functions/functions.php");
                                     </span>
                                     <span>
                                         <h4 style='color:goldenrod;' class='text-center ''>Report Query <br></h4>
-                                        <a href='#' class='btn btn-warning border-secondary  chat' style='color:black;padding:2px;'><b>Report</b><img src='report.jpg' style='width: 28px; margin-bottom:  10px;' class='ml-1 mb-1'></a>
+                                        <a href='#' class='btn btn-warning btn-btn-lg border-secondary  chat' style='color:black;padding:2px;'><b>Report </b></a>
                                     </span>
                                 </div>
                             </div>

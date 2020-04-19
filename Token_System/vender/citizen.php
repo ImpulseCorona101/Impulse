@@ -187,25 +187,61 @@
         }
     </style>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Impulse</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="../../index.php">Impulse</a>
+
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span
-                            class=" sr-only">(current)</span></a>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Application</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
                 </li>
+                <li class="nav-item">
+
+                </li>
+
             </ul>
+            <div class="p-2">
+                <div class="">
+                    <a> <i class="fa fa-user" style="font-size:30px; color:white ;margin-top:2px;"></i></a>
+                    <span id="" style="color:green"></span>
+                </div>
+
+
+            </div>
+            <div class="text  login" style="color: white;">Login</div>
         </div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../../User_Pages/profile.html">Profile</a>
+                <a href="user_signin">Logout</a>
+                <div class="hide">
+                    <a href="../../index.php">Home</a>
+                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                    <a href="../../AgroCraft/index.html">Agrocraft</a>
+                    <a href="Contact.html">Contact Us</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </nav>
     <div class="edit1">
     <div class="container edit">
@@ -217,6 +253,7 @@
             </b>
         </div>
         <div class="row">
+            
             <div class=" col-12 col-sm-6 col-lg-6  col-md-6 col-xl-6">
                 <div class="input-group mt-5 s">
                     <div class="input-group-prepend ">
@@ -245,7 +282,15 @@
                     </div>
                     <input type="phonenumber" class="form-control inp mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Time" value="12:00 - 12:00">
 
-                </div
+                </div>
+                <div class="input-group mt-5  s">
+                    <div class="input-group-prepend mb-5 ">
+                        <span class="input-group-text  text pl-3 pr-3" id="inputGroup-sizing-default"><i class="fas fa-qrcode mr-2"></i> Unique Id </span>
+                    </div>
+                    <input type="phonenumber" class="form-control inp mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Id" value="5488440">
+
+                </div>
+                
                 
                 
                
@@ -257,11 +302,7 @@
         </div>
 
     </div>
-    <div class="barcode">
-        <span class="input-group-text text mb-4 " id="inputGroup-sizing-default" style="font-size: 15px;"><i class="fas fa-qrcode mr-2"></i>Barcode</span>
-        <br>
-        <img src="barcode.png">
-    </div>
+
 </div>
 </body>
 

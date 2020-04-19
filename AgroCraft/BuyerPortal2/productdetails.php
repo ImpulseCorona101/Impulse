@@ -442,6 +442,8 @@ include("../Functions/functions.php");
                 $name = $rows['farmer_name'];
                 $phone = $rows['farmer_phone'];
                 $address = $rows['farmer_address'];
+                $state = $rows['farmer_state'];
+                $district = $rows['farmer_district'];
 
 
                 echo "
@@ -479,7 +481,7 @@ include("../Functions/functions.php");
                                     <div class='text-center'>
                                         <div class='input-group mb-3 wholequantity'>
                                             <div class='input-group-prepend quantity'>
-                                                <span class='input-group-text bg-warning border-secondary quantitylabel' style='color:black' id='inputGroup-sizing-default' ><b>Quantity</b><img src='bag2.png' class='ml-1 mb-1'></span>
+                                                <span class='input-group-text bg-warning border-secondary quantitylabel' style='color:black' id='inputGroup-sizing-default' ><b>Quantity </b><i class='fas fa-shopping-bag'></i></span>
                                             </div>
                                             <input type='number' name='qty' placeholder=1 class='form-control quantitynumber' aria-label='Default' aria-describedby='inputGroup-sizing-default'>
                                         </div>
@@ -494,6 +496,10 @@ include("../Functions/functions.php");
                                 <div class='row text-center ml-4 mt-3'>
                                     <i class='fa fa-truck fa-2x'></i>
                                     <h3 style='padding-left:9px;'>$product_delivery</h3>
+                                </div>
+                                  <div class='row text-center ml-4 mt-3'>
+                                   <i class='fas fa-map-marker-alt fa-1x'></i>
+                                    <h5 style='padding-left:9px;'>$district , $state </h5>
                                 </div>
 
                             </div>

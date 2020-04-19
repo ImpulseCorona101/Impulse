@@ -1,16 +1,16 @@
 <?php
-     include("../Functions/functions.php");
-     ?> 
+include("../Functions/functions.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AgroCraft</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>AgroCraft</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -19,9 +19,8 @@
      <script src="../portal_files/jquery.min.js.download"></script>
      <script src="../portal_files/popper.min.js.download"></script>
      <script src="../portal_files/bootstrap.min.js.download"></script>
-    <style>
-        
-        * {
+     <style>
+          * {
                margin: 0;
                box-sizing: border-box;
           }
@@ -207,7 +206,7 @@
           .paytm {
                float: left;
           }
-   
+
           .morefooter {
                height: 100px;
                width: 100%;
@@ -509,7 +508,7 @@
                margin-right: 150px;
           }
 
-          
+
 
           .aligncenter {
                text-align: center;
@@ -646,9 +645,9 @@
                margin-left: 35%;
           }
 
-          .blackgoldie{
+          .blackgoldie {
                background-color: #292b2c;
-               
+
           }
 
           /* For medium devices (e.g. tablets) */
@@ -690,7 +689,7 @@
                     background-color: #ff5500;
                }
 
-           
+
                .left {
                     display: flex;
                }
@@ -704,11 +703,13 @@
                     margin-right: 35%;
                     padding: 15px;
                }
-               .desc{
-                    margin-top:15px;
-                    height : 100px;
+
+               .desc {
+                    margin-top: 15px;
+                    height: 100px;
 
                }
+
                .searchbox {
                     width: 95%;
                     margin-right: 5%;
@@ -723,108 +724,108 @@
 
 
           }
-    </style>
+     </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-xl ">
-               <!-- <a href="#" class="navbar-brand">Academind</a> -->
-               <div class=" flex-row-reverse left ">
+     <nav class="navbar navbar-expand-xl ">
+          <!-- <a href="#" class="navbar-brand">Academind</a> -->
+          <div class=" flex-row-reverse left ">
 
-                    <div class="p-2">
-                         <!-- <div class="icon2">
+               <div class="p-2">
+                    <!-- <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style=" color:green ;font-size:20px;margin-top:-20px;margin-bottom:20px;">&#61562;</i></a> -->
-                         <!-- <span id="icon" style="color:green"> 5 </span>
+                    <!-- <span id="icon" style="color:green"> 5 </span>
                 </div>  -->
-                    </div>
-                    <!-- <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;'></i></div> -->
-                    <a class="float-left" href="#">
-                         <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
-                    </a>
                </div>
-               <button class="navbar-toggler" data-toggle="collapse" style="margin-left:-20px;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:20px; "></i></span>
-               </button>
-               <a class="float-left" href="farmerHomepage.php">
-                    <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
+               <!-- <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;'></i></div> -->
+               <a class="float-left" href="#">
+                    <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
                </a>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          </div>
+          <button class="navbar-toggler" data-toggle="collapse" style="margin-left:-20px;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;font-size:20px; "></i></span>
+          </button>
+          <a class="float-left" href="farmerHomepage.php">
+               <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 
 
-                    <div class="proicon">
+               <div class="proicon">
 
-                         <?php
-                         if (!isset($_SESSION['phonenumber'])) {
-                              echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '></div></a>";
-                         }
-                         ?>
-                    </div>
-
-                    <div class="list-group moblists">
-
-                         <?php
-                         if (isset($_SESSION['phonenumber'])) {
-
-                              echo "<a href='FarmerProfile.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
-                              echo "<a href='Orders.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
-                              echo "<a href='logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
-                         } else {
-                              echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '>Login</div></a>";
-                         }
-                         ?>
-                         <div class='loginz' style="text-align:center;">
-                              <?php getFarmerUsername(); ?>
-                         </div>
-                    </div>
+                    <?php
+                    if (!isset($_SESSION['phonenumber'])) {
+                         echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '></div></a>";
+                    }
+                    ?>
                </div>
 
+               <div class="list-group moblists">
+
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+
+                         echo "<a href='FarmerProfile.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
+                         echo "<a href='Orders.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Orders</a>";
+                         echo "<a href='logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
+                    } else {
+                         echo "<a href='../auth/FarmerLogin.php'> <div class='text-success  logins '>Login</div></a>";
+                    }
+                    ?>
+                    <div class='loginz' style="text-align:center;">
+                         <?php getFarmerUsername(); ?>
+                    </div>
+               </div>
+          </div>
 
 
 
-               <div class=" flex-row-reverse right ">
-                    <div class="p-2 cart">
-                         <!-- <div class="icon2">
+
+          <div class=" flex-row-reverse right ">
+               <div class="p-2 cart">
+                    <!-- <div class="icon2">
                     <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green;margin-top:-20px;">&#61562;</i></a>
                     <span id="icon" style="color:green"> 5 </span>
                 </div> -->
-                         <div class='loginz'>
-                              <?php getFarmerUsername(); ?>
-                         </div>
-                    </div>
-                    <div class="dropdown p-2 settings ">
-                         <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Settings
-                         </button>
-                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <?php
-                              if (isset($_SESSION['phonenumber'])) {
-                                   echo "<a href='FarmerProfile.php' class='dropdown-item' style='padding-right:-20px;'>Profile</a>";
-                                   echo "<a href='Orders.php' class='dropdown-item' style='padding-right:-20px;'>Orders</a>";
-                                   echo "<a href='logout.php' class='dropdown-item' style='padding-right:-20px;'>Logout</a>";
-                              } else {
-                                   echo "<a href='../auth/FarmerLogin.php'> <div class='dropdown-item' style='padding-right:-20px;'>Login</div></a>";
-                              }
-                              ?>
-                         </div>
+                    <div class='loginz'>
+                         <?php getFarmerUsername(); ?>
                     </div>
                </div>
-          </nav>
-          <br>
+               <div class="dropdown p-2 settings ">
+                    <button class="btn  dropdown-toggle text-success" style="margin-top:-20px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Settings
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                         <?php
+                         if (isset($_SESSION['phonenumber'])) {
+                              echo "<a href='FarmerProfile.php' class='dropdown-item' style='padding-right:-20px;'>Profile</a>";
+                              echo "<a href='Orders.php' class='dropdown-item' style='padding-right:-20px;'>Orders</a>";
+                              echo "<a href='logout.php' class='dropdown-item' style='padding-right:-20px;'>Logout</a>";
+                         } else {
+                              echo "<a href='../auth/FarmerLogin.php'> <div class='dropdown-item' style='padding-right:-20px;'>Login</div></a>";
+                         }
+                         ?>
+                    </div>
+               </div>
+          </div>
+     </nav>
+     <br>
 
 
      <?php
-            include("../Includes/db.php");
-            $sess_phone_number = $_SESSION['phonenumber'];
-            // getFarmerProductDetails();
-            global $con;
-        if (isset($_GET['id'])) {
-            $prod_id = $_GET['id'];
-            $query = "select * from products where product_id=" . $prod_id;
-            $run_query = mysqli_query($con, $query);
-            $resultCheck = mysqli_num_rows($run_query);
-            if ($resultCheck > 0) {
-                while ($rows = mysqli_fetch_array($run_query)) {
+     include("../Includes/db.php");
+     $sess_phone_number = $_SESSION['phonenumber'];
+     // getFarmerProductDetails();
+     global $con;
+     if (isset($_GET['id'])) {
+          $prod_id = $_GET['id'];
+          $query = "select * from products where product_id=" . $prod_id;
+          $run_query = mysqli_query($con, $query);
+          $resultCheck = mysqli_num_rows($run_query);
+          if ($resultCheck > 0) {
+               while ($rows = mysqli_fetch_array($run_query)) {
                     $product_title = $rows['product_title'];
                     $product_image = $rows['product_image'];
                     $product_type = $rows['product_type'];
@@ -834,7 +835,7 @@
                     $product_base_price = $rows['product_price'];
                     $product_delivery = $rows['product_delivery'];
                     $product_cat = $rows['product_cat'];
-                    
+
                     // echo "<div class='row'>
                     //         <div class='col col-md-6'>
                     //             <img src='../Admin/product_images/$product_image' class='rounded mx-auto d-block bord' style='float:left;' height='250px' width='300px' >
@@ -849,19 +850,18 @@
                     //             . " product Delivery  :  " . $product_delivery."<br>"
                     //             . " product category  :  " . $product_cat ."<br>".
                     //         "</div> </div>";
-                    if($product_stock == 0){
+                    if ($product_stock == 0) {
                          $str = "Not In Stock";
-                    }
-                    else{
+                    } else {
                          $str = "In Stock";
                     }
-                    if($product_delivery=="no"){
+                    if ($product_delivery == "no") {
                          $del = "Not Applicable";
-                    }else{
+                    } else {
                          $del = "Yes,Applicable";
                     }
 
-                    $space="....";
+                    $space = "....";
                     echo "<div class='container'>
                                    <div class='row'>
                                         <div class='col-md-6' style='padding:7px; margin-top:15px;'>
@@ -879,7 +879,7 @@
                                                        <h1 style='color:goldenrod;padding:10px;'>$product_title</h1>
                                                   </div>
                                              </div>
-                                             <h3  style='color:white;padding:7px;'>Rs. ".$product_price.".00 per Kg</h3>
+                                             <h3  style='color:white;padding:7px;'>Rs. " . $product_price . ".00 per Kg</h3>
                                              <hr/>
                                              <div class='row'>
                                                   <div class='col-md-12 text-center'>
@@ -888,18 +888,18 @@
                                              </div>
                                              <div class='row'>
                                                   <div class='col-md-12 text-center'>
-                                                       <h3 style='color:white;padding:7px;'><span class='monospaced'>product stock  : ".$product_stock." Kgs"."</span><h3>
+                                                       <h3 style='color:white;padding:7px;'><span class='monospaced'>product stock  : " . $product_stock . " Kgs" . "</span><h3>
                                                   </div>
                                              </div>
                                              <div class='row' style='padding:7px;'>
                                                   <div class='row text-center ml-4 mt-3' >
-                                                       <i class='fa fa-truck fa-2x' aria-hidden='true' style='color:goldenrod;'></i>
-                                                       <h3 style='color:white;'>Product Delivery : ".$del."<h3>
+                                                       <i class='fa fa-truck fa-2x' aria-hidden='true' style='color:goldenrod;'> </i>
+                                                       <h3 style='color:white;'>   Product Delivery : " . $del . "<h3>
                                                   </div>
                                              </div>
 
                                              <div class='row' style='padding:7px; margin-bottom:15px;' >
-                                                  <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 aligncenter'> <a href='#' class='btn btn-warning border-secondary' style='color:black'><b>Edit Product</b></a></div>
+                                                  <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 aligncenter'> <a href='EditProduct.php?id=$prod_id' class='btn btn-warning border-secondary' style='color:black'><b>Edit Product</b></a></div>
                                                   <div class='col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 aligncenter'> <a href='Transactions.php' class='btn btn-warning border-secondary' style='color:black'><b>My Transaction</b></a></div>
                                              </div>
                                         </div>         
@@ -914,51 +914,51 @@
                                         </div>
                                         <div class='row'>
                                                   <div class='col-md-12'>
-                                                       <h5><span class='monospaced'>".$space.$product_description."</span><h5>
+                                                       <h5><span class='monospaced'>" . $space . $product_description . "</span><h5>
                                                   </div>
                                              </div>
                                         </div>
                                    </div>
                               </div>";
-                }
-            }
-        } else {
-            echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
-        }
-            ?> 
+               }
+          }
+     } else {
+          echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
+     }
+     ?>
 
-   
 
-  <br><br>
+
+     <br><br>
      <section id="footer" class="myfooter">
-               <div class="container">
-                    <div class="row text-center text-xs-center text-sm-left text-md-left">
-                         <div class="col aligncenter">
-                              <br>
-                              <h5>Payment Option</h5>
-                              <img src="../Images/Website/paytm1.jpg" alt="paytm">
-                              <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
-                         </div>
+          <div class="container">
+               <div class="row text-center text-xs-center text-sm-left text-md-left">
+                    <div class="col aligncenter">
+                         <br>
+                         <h5>Payment Option</h5>
+                         <img src="../Images/Website/paytm1.jpg" alt="paytm">
+                         <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
                     </div>
-                    <div class="row">
-                         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                              <ul class="list-unstyled list-inline social text-center">
-                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                                   <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                                   <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                              </ul>
-                         </div>
+               </div>
+               <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                         <ul class="list-unstyled list-inline social text-center">
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                              <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                         </ul>
+                    </div>
 
+               </div>
+               <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+                         <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
+                         <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
                     </div>
-                    <div class="row">
-                         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-                              <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
-                              <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
-                         </div>
-                         </hr>
-                    </div>
+                    </hr>
+               </div>
           </div>
      </section>
 

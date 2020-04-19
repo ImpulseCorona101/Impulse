@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2020 at 01:12 PM
+-- Generation Time: Apr 19, 2020 at 09:11 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -72,8 +72,12 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`product_id`, `phonenumber`, `qty`, `subtotal`) VALUES
-(30, 1234567890, 1, 65),
-(19, 1234567890, 1, 56);
+(17, 1234567890, 2, 60),
+(25, 1234567890, 3, 240),
+(29, 8169193101, 1, 50),
+(0, 1234567890, 1, 101),
+(18, 1234567890, 1, 2),
+(1, 1234567890, 1, 12);
 
 -- --------------------------------------------------------
 
@@ -281,12 +285,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `product_id`, `qty`, `address`, `delivery`, `phonenumber`, `total`, `payment`) VALUES
-(1, 17, 2, '69 India Earth', 'Courier', 7666610976, 60, 'cod'),
-(31, 25, 1, ' Raj Uday 234', 'Courier', 1234567890, 80, 'paytm'),
-(32, 29, 2, ' Raj Uday 234', 'Courier', 1234567890, 100, 'paytm'),
-(33, 27, 1, ' Raj Uday 234', 'Farmer', 1234567890, 200, 'paytm'),
-(34, 17, 1, ' Raj Uday 234', 'Courier', 1234567890, 30, 'paytm'),
-(35, 23, 2, 'Bhat Mansion', 'Farmer', 7666610976, 112, 'cod');
+(36, 25, 3, ' Raj Uday 234', 'Farmer', 1234567890, 300, 'paytm');
 
 -- --------------------------------------------------------
 
@@ -314,22 +313,23 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `farmer_fk`, `product_title`, `product_cat`, `product_type`, `product_expiry`, `product_image`, `product_stock`, `product_price`, `product_desc`, `product_keywords`, `product_delivery`) VALUES
-(1, 1, 'Ramlal Potato', '2', 'Potato', '', 'Potato.jpg', 1000, 12, 'Best Quality product guarented 100 percent', 'potato', 'yes'),
-(3, 1, 'Ramlal Tomato', '2', 'Tomato', '', 'Tomato.jpg', 500, 5, 'Best Quality toamato assured', 'tomato , best quality tomato , Ramlal Tomato', 'no'),
-(17, 3, 'Shivneri Bananas', '3', 'Bananas', '', 'Bananas.jpg', 250, 30, 'Best Quality Bananas', 'banana, shivneri ,', 'yes'),
-(18, 3, 'Ram Rice', '1', 'Rice', '', 'Rice.jpg', 1500, 2, 'waqd', 'best rice', 'yes'),
-(19, 1, 'Ansh Carrot', '2', 'Carrot', '', 'Carrot.jpg', 1250, 56, 'Big fat juicy best quality carrots assured', 'carrot,best carrot', 'yes'),
-(21, 1, 'Abhi Maize', '1', 'Maize', '', 'Maize.jpg', 750, 99, 'Seeds Import from australia , grown with love', 'Maize,best Maize', 'yes'),
-(22, 3, 'Calista Coconut', '1', 'Coconut', '', 'Coconut.jpg', 450, 12, 'Better than others', 'Coconut,best Coconut', 'no'),
-(23, 1, 'Arpit Grapes', '3', 'Grapes', '', 'Green Grapes.jpg', 4560, 56, 'Best Grapes you will ever find', 'grapes,green grapes,best grapes', 'yes'),
-(24, 1, 'Arpit Apples', '3', 'Apple', '', 'Apple.jpg', 1500, 101, 'Best Apples grown in Kashmir and handled with love and care', 'apples,apple,best apple', 'no'),
-(25, 1, 'Ramlal Wheat', '1', 'Wheat', '', 'Wheat.jpg', 2000, 80, 'Thin , Fragrant wheat grains grown with love', 'wheat,best quality wheat,best wheat', 'no'),
-(27, 3, 'Arpit Alphonso Mango', '3', 'Mango', '', 'Mango.jpg', 2000, 200, 'Grown with love in Ratnagiri', 'mango,alponso mango,best mango', 'yes'),
-(28, 1, 'Ansh Custard Apple', '3', 'Custard Apple', '', 'custartapple.cms', 500, 45, 'Custard Apple so tasty ,to die for', 'Custard Apple,custart apple, apple, best custard apple', 'yes'),
-(29, 3, 'Omkar Cabbage', '2', 'Cabbage', '', 'Cabbage.jpg', 1500, 50, 'Best Quality Cabbage', 'cabbage, best Cabbage', 'yes'),
-(30, 1, 'Ansh Onion', '2', 'Onion', '', 'Onion.jpg', 1500, 65, 'Grown with love', 'Onion,best onion', 'no'),
-(31, 1, 'Abhi Strawberry', '3', 'Strawberry', '', 'strawberry.jpg', 100, 25, 'Best Strawberrys all over India ', 'Strawberry,best strawberry', 'yes'),
-(32, 1, 'Abhi Orange', '3', 'Orange', '', 'orange.jpg', 1500, 10, 'Best Oranges grown with love in Nagpur', 'Orange,best Orange', 'yes');
+(0, 1, 'AnshRice', '1', 'Rice', '2020-04-15', 'Rice.jpg', 1500, 101, 'Best Rice in Town', 'rice,best rice', 'yes'),
+(1, 1, 'Ramlal Potato', '2', 'Potato', '2020-04-15', 'Potato.jpg', 1000, 12, 'Best Quality product guarented 100 percent', 'potato', 'yes'),
+(3, 1, 'Ramlal Tomato', '2', 'Tomato', '2020-04-15', 'Tomato.jpg', 500, 5, 'Best Quality toamato assured', 'tomato , best quality tomato , Ramlal Tomato', 'no'),
+(17, 3, 'Shivneri Bananas', '3', 'Bananas', '2020-04-15', 'Bananas.jpg', 250, 30, 'Best Quality Bananas', 'banana, shivneri ,', 'yes'),
+(18, 3, 'Ram Rice', '1', 'Rice', '2020-04-15', 'Rice.jpg', 1500, 2, 'waqd', 'best rice', 'yes'),
+(19, 1, 'Ansh Carrot', '2', 'Carrot', '2020-04-15', 'Carrot.jpg', 1250, 56, 'Big fat juicy best quality carrots assured', 'carrot,best carrot', 'yes'),
+(21, 1, 'Abhi Maize', '1', 'Maize', '2020-04-15', 'Maize.jpg', 750, 99, 'Seeds Import from australia , grown with love', 'Maize,best Maize', 'yes'),
+(22, 3, 'Calista Coconut', '1', 'Coconut', '2020-04-15', 'Coconut.jpg', 450, 12, 'Better than others', 'Coconut,best Coconut', 'no'),
+(23, 1, 'Arpit Grapes', '3', 'Grapes', '2020-04-15', 'Green Grapes.jpg', 4560, 56, 'Best Grapes you will ever find', 'grapes,green grapes,best grapes', 'yes'),
+(24, 1, 'Arpit Apples', '3', 'Apple', '2020-04-15', 'Apple.jpg', 1500, 101, 'Best Apples grown in Kashmir and handled with love and care', 'apples,apple,best apple', 'no'),
+(25, 1, 'Ramlal Wheat', '1', 'Wheat', '2020-04-15', 'Wheat.jpg', 2000, 80, 'Thin , Fragrant wheat grains grown with love', 'wheat,best quality wheat,best wheat', 'no'),
+(27, 3, 'Arpit Alphonso Mango', '3', 'Mango', '2020-04-15', 'Mango.jpg', 2000, 200, 'Grown with love in Ratnagiri', 'mango,alponso mango,best mango', 'yes'),
+(28, 1, 'Ansh Custard Apple', '3', 'Custard Apple', '2020-04-15', 'custartapple.cms', 500, 45, 'Custard Apple so tasty ,to die for', 'Custard Apple,custart apple, apple, best custard apple', 'yes'),
+(29, 3, 'Omkar Cabbage', '2', 'Cabbage', '2020-04-15', 'Cabbage.jpg', 1500, 50, 'Best Quality Cabbage', 'cabbage, best Cabbage', 'yes'),
+(30, 1, 'Ansh Onion', '2', 'Onion', '2020-04-15', 'Onion.jpg', 1500, 65, 'Grown with love', 'Onion,best onion', 'no'),
+(31, 1, 'Abhi Strawberry', '3', 'Strawberry', '2020-04-15', 'strawberry.jpg', 100, 25, 'Best Strawberrys all over India ', 'Strawberry,best strawberry', 'yes'),
+(32, 1, 'Abhi Orange', '3', 'Orange', '2020-04-15', 'orange.jpg', 1500, 10, 'Best Oranges grown with love in Nagpur', 'Orange,best Orange', 'yes');
 
 -- --------------------------------------------------------
 
@@ -347,17 +347,19 @@ CREATE TABLE `shopkeeper` (
   `shopAddress` varchar(50) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `startTime` varchar(8) NOT NULL,
-  `endTime` varchar(8) NOT NULL
+  `endTime` varchar(8) NOT NULL,
+  `Slot-Interval` int(11) NOT NULL,
+  `Slot-User` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `shopkeeper`
 --
 
-INSERT INTO `shopkeeper` (`id`, `name`, `email`, `pincode`, `password`, `shopName`, `shopAddress`, `phone`, `startTime`, `endTime`) VALUES
-(1, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'xyz', 'xyz', '8828071232', '10:30', '12:30'),
-(3, 'int main 123', 'intmain1221@gmail.co', '421201', 'yw==', 'hopes', 'no hopes', '101', '10:30', '11:30'),
-(4, 'kerela', 'es@dd.com', '421200', 'yw==', '1', 'm', '8369674856', '10:00', '12:30');
+INSERT INTO `shopkeeper` (`id`, `name`, `email`, `pincode`, `password`, `shopName`, `shopAddress`, `phone`, `startTime`, `endTime`, `Slot-Interval`, `Slot-User`) VALUES
+(1, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'xyz', 'xyz', '8828071232', '10:30', '12:30', 0, 0),
+(3, 'int main 123', 'intmain1221@gmail.co', '421201', 'yw==', 'hopes', 'no hopes', '101', '10:30', '11:30', 0, 0),
+(4, 'kerela', 'es@dd.com', '421200', 'yw==', '1', 'm', '8369674856', '10:00', '12:30', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -475,7 +477,7 @@ ALTER TABLE `farmerregistration`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `shopkeeper`

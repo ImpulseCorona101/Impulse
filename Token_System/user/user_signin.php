@@ -214,7 +214,7 @@
                     <div class="text1" style="font-size: 25px;"><b>Are you a ?</b></div>
                 </div>
                 <div class="contains d-flex justify-content-around mb-3">
-                    
+                
                     <div class="form-check-inline ">
                        <label class="form-check-label" for="radio2">
                                 <input type="radio" class="form-check-input" id="radio2" name="occupation" value="visitor"><b>Visitor</b>
@@ -243,7 +243,7 @@
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
 
                     <div class="text1">Forgot password ? </div>
-                    <div class="text2"> <a href="user_signup.php">New User ? </a></div>
+                    <div class="text2"> New User ? </div>
 
                 </div>
 
@@ -309,7 +309,7 @@ if (isset($_POST['login'])) {
         }
         else{
             echo "<script>console.log('session');</script>";
-            echo "<script>window.open('home.php','_self')</script>";
+            echo "<script>window.open('../../index.php','_self')</script>";
         }
         while ($row = mysqli_fetch_array($run_query)) {
             $id = $row['id'];
@@ -328,7 +328,7 @@ if (isset($_POST['login'])) {
         }
         else{
             echo "<script>console.log('session');</script>";
-            echo "<script>window.open('home.php','_self')</script>";
+            echo "<script>window.open('../../index.php','_self')</script>";
         }
         while ($row = mysqli_fetch_array($run_query)) {
             $id = $row['id'];
