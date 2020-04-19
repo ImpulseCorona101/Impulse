@@ -1,5 +1,5 @@
 <?php 
-$start_time = "10:30";
+$start_time = "10:00";
 $end_time = "12:30";
 $interval = 45; 
 
@@ -43,7 +43,8 @@ for($j = 0; $j < count($interval_list_point) ; $j++){
 
 //for last remaining time slot ...if time slot remains
 if((int)substr($last, 3) < (int)$endtimemin){
-    $last_time = substr($last, 0, 2).":".strval((int)$endtimemin - (int)substr($last, 3));
+    $remain = (int)$endtimemin - (int)substr($last, 3);
+    $last_time = substr($last, 0, 2).":".strval((int)substr($last, 3) + $remain);
     array_push($interval_list,$last_time);
 }
 
