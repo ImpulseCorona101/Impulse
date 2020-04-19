@@ -56,4 +56,7 @@ for($k = 0; $k < count($interval_list)-1 ; $k++){
     echo "<br>";
     echo $m;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a6767c6cbd4e58492a340bb6eb307c298c7d8021
