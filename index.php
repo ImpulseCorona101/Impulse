@@ -384,55 +384,6 @@ toggle between hiding and showing the dropdown content */
 
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<<<<<<< HEAD
-        <a class="navbar-brand" href="#">Impulse</a>
-        
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-               <li class="nav-item ">
-                    <a class="nav-link" href="index.php"> <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="Token_System/user/shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Application</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Token_System/user/Contact.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-
-                </li>
-            </ul>
-        </div>
-         </div>
-           
-        </div>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="Token_System/user/profile.html">Profile</a>
-                <a href="Token_System/user/user_signin.php">Login</a>
-                <div class="hide">
-                    <a href="../../index.php">Home</a>
-                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
-                    <a href="../../AgroCraft/index.html">Agrocraft</a>
-                    <a href="Contact.html">Contact Us</a>
-                    <div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-=======
           <a class="navbar-brand" href="../../index.php">Impulse</a>
 
 
@@ -500,7 +451,6 @@ toggle between hiding and showing the dropdown content */
                </div>
           </div>
 
->>>>>>> ac76625dbafba18956afa52a404b2e1de60fdb81
      </nav>
 
 
