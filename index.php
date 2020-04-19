@@ -10,67 +10,68 @@ session_start();
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <a href="https://icons8.com/icon/83325/roman-soldier"></a>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <a href="https://icons8.com/icon/83325/roman-soldier"></a>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
      <title>Impulse - Homepage</title>
 
      <style>
-           .hide{
-        display: none;
-    }
-    
-    .dropbtn {
-            background-color: #343a40;
-            color: white;
-            padding: 8px;
-            font-size: 18px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            margin-left: 50px;
-            margin-right: 30px;
-        }
+          .hide {
+               display: none;
+          }
 
-        .dropbtn:hover,
-        .dropbtn:focus {
-            background-color: #2a5cff;
-        }
+          .dropbtn {
+               background-color: #343a40;
+               color: white;
+               padding: 8px;
+               font-size: 18px;
+               border: none;
+               border-radius: 10px;
+               cursor: pointer;
+               margin-left: 50px;
+               margin-right: 30px;
+          }
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+          .dropbtn:hover,
+          .dropbtn:focus {
+               background-color: #2a5cff;
+          }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right:20px;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            overflow: auto;
-            border-radius: 10px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
+          .dropdown {
+               position: relative;
+               display: inline-block;
+          }
 
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
+          .dropdown-content {
+               display: none;
+               position: absolute;
+               right: 20px;
+               background-color: #f1f1f1;
+               min-width: 160px;
+               overflow: auto;
+               border-radius: 10px;
+               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+               z-index: 1;
+          }
 
-        .dropdown a:hover {
-            background-color: #2a5cff;
-        }
+          .dropdown-content a {
+               color: black;
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+          }
 
-        .show {
-            display: block;
-        }
+          .dropdown a:hover {
+               background-color: #2a5cff;
+          }
+
+          .show {
+               display: block;
+          }
+
           .form-actions {
                margin: 0;
                background-color: transparent;
@@ -384,7 +385,11 @@ toggle between hiding and showing the dropdown content */
 
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<<<<<<< HEAD
           <a class="navbar-brand" href="../../index.php">Impulse</a>
+=======
+          <a class="navbar-brand" href="#">Impulse</a>
+>>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
 
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -396,13 +401,13 @@ toggle between hiding and showing the dropdown content */
                          <a class="nav-link" href="Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
-                         <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+                         <a class="nav-link" href="Token_System/user/shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
                          <a class="nav-link" href="AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link" href="Token_System/user/About.html">About Application</a>
+                         <a class="nav-link" href="#">About Application</a>
                     </li>
                     <li class="nav-item">
                          <a class="nav-link" href="Token_System/user/Contact.html">Contact Us</a>
@@ -410,47 +415,70 @@ toggle between hiding and showing the dropdown content */
                     <li class="nav-item">
 
                     </li>
-
                </ul>
-               <div class="p-2">
-                    <div class="">
-                         <a> <i class="fa fa-user" style="font-size:30px; color:white ;margin-top:2px;"></i></a>
-                         <span id="" style="color:green"></span>
-                    </div>
+          </div>
+          </div>
+          <?php
+          $con = mysqli_connect("localhost", "root", "", "impulse");
 
+          if (mysqli_connect_errno()) {
+               echo "Failed to connect to MySql " . mysqli_connect_error();
+          }
+          $name = "";
+          if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
+               $phone = $_SESSION['phonenumber'];
+               $name_query = "select * from shopkeeper where phone=$phone ";
+               $run = mysqli_query($con, $name_query);
 
-               </div>
-               <?php
-               if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
-
-                    echo "<div class='text login' style='color: white;'>Shopkeeper</div>";
-               } else if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "visitor")) {
-
-                    echo "<div class='text login' style='color: white;'>visitor</div>";
-               } else {
-
-                    echo "<a href='Token_System/user/user_signin.php' ><div class='text login' style='color: white;'>Login</div></a>";
+               while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
                }
-               ?>
+               echo "<div class='text login' style='color: white;'>Hello  $name</div>";
+          } else if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "visitor")) {
+               $phone = $_SESSION['phonenumber'];
+               $name_query = "select * from consumer where phone=$phone ";
+               $run = mysqli_query($con, $name_query);
+               while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+               }
+               echo "<div class='text login' style='color: white;'>>Hello  $name</div>";
+          } else {
+
+               echo "<a href='Token_System/user/user_signin.php' ><div class='text login' style='color: white;'>Login</div></a>";
+          }
+          ?>
+
 
           </div>
           <div class="dropdown">
                <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
                <div id="myDropdown" class="dropdown-content">
-                    <a href="../../User_Pages/profile.html">Profile</a>
-                    <a href="Token_System/user/logout.php">Logout</a>
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo " <a href='Token_System/user/profile.php'>Profile</a>";
+
+                         echo "<a href='Token_System/user/logout.php'>Logout</a>";
+                    } else {
+
+                         echo "<a href='Token_System/user/user_signin.php'>Login</a>";
+                    }
+                    ?>
+
                     <div class="hide">
-                         <a href="index.php">Home</a>
-                         <a href="Coronavirus/CurrentStats.html">Covid-19 Status</a>
-                         <a href="AgroCraft/index.html">Agrocraft</a>
-                         <a href="Token_System/user/Contact.html">Contact Us</a>
+                         <a href="../../index.php">Home</a>
+                         <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                         <a href="../../AgroCraft/index.html">Agrocraft</a>
+                         <a href="Contact.html">Contact Us</a>
                          <div>
 
                          </div>
                     </div>
                </div>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
      </nav>
 
 
@@ -549,9 +577,8 @@ toggle between hiding and showing the dropdown content */
                </h5>
                <br>
                <a href="Token_System/user/shop_list.php" class="btn btn-primary btn-lg">Book Now</a>
-                
-          <div class="card-footer text-muted">
-               A step against Coronavirus Pandemic
+               <<<<<<< HEAD </div>=======>>>>>>> 3c59bd5e24cfdb6795bd4a94c0bdcbd1af373d38 <div class="card-footer text-muted">
+                    A step against Coronavirus Pandemic
           </div>
      </div>
 
@@ -584,22 +611,22 @@ toggle between hiding and showing the dropdown content */
      <script src="Javascript/Homepage.js"></script>
      <script type="text/javascript">
           function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+               document.getElementById("myDropdown").classList.toggle("show");
+          }
 
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
+               if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                         var openDropdown = dropdowns[i];
+                         if (openDropdown.classList.contains('show')) {
+                              openDropdown.classList.remove('show');
+                         }
                     }
-                }
-            }
-        }
+               }
+          }
      </script>
 </body>
 
