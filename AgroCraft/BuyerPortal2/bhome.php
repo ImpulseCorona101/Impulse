@@ -460,7 +460,7 @@ include("../Functions/functions.php");
                 </div>
             </div>
             <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;margin-top:2px;'></i></div>
-            <a class="float-left" href="#">
+            <a class="float-left" href="bhome.php">
                 <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
             </a>
         </div>
@@ -487,9 +487,9 @@ include("../Functions/functions.php");
 
                 <?php
                 if (isset($_SESSION['phonenumber'])) {
-                    echo "<a href='productsdetails.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
+                    echo "<a href='BuyerProfile.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Profile</a>";
                     echo "<a href= 'Transaction.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Transactions</a>";
-                    echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Save For Later</a>";
+                    echo "<a href='saveforlater.php' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Save For Later</a>";
                     echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Subscriptions</a>";
                     echo "<a href='#' class='list-group-item list-group-item-action' style='background-color:#292b2c;text-align:center;color:goldenrod'>Farmers</a>";
                     echo "<a href='../Includes/logout.php' class='list-group-item list-group-item-action ' style='background-color:#292b2c;text-align:center;color:goldenrod'>Logout</a>";
@@ -518,9 +518,9 @@ include("../Functions/functions.php");
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <?php
                     if (isset($_SESSION['phonenumber'])) {
-                        echo "<a href='productsdetails.php' class='dropdown-item  ' style='padding-right:-20px;'>Profile</a>";
+                        echo "<a href='BuyerProfile.php' class='dropdown-item  ' style='padding-right:-20px;'>Profile</a>";
                         echo "<a href='Transaction.php' class='dropdown-item ' style='padding-right:-20px;'>Transactions</a>";
-                        echo "<a href='#' class='dropdown-item'  style='padding-right:-20px;'>Subscriptions</a>";
+                        echo "<a href='' class='dropdown-item'  style='padding-right:-20px;'>Subscriptions</a>";
                         echo "<a href='#' class='dropdown-item' style='padding-right:-20px;'>Save For Later</a>";
                         echo "<a href='#' class='dropdown-item' style='padding-right:-20px;' >Farmers</a>";
                         echo "<a href='../Includes/logout.php' class='dropdown-item ' style='padding-right:-20px;'>Logout</a>";
