@@ -614,8 +614,8 @@ toggle between hiding and showing the dropdown content */
                                              $startTime = $rows['startTime'];
                                              $endTime = $rows['endTime'];
                                              $id = $rows['id'];
-                                             $interval = $rows['Slot-Interval'];
-                                             $customers = $rows['Slot-User'];
+                                             $interval = $rows['slotInterval'];
+                                             $customers = $rows['slotUser'];
 
 
 
