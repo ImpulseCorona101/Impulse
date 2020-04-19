@@ -385,11 +385,7 @@ toggle between hiding and showing the dropdown content */
 
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<<<<<<< HEAD
-          <a class="navbar-brand" href="../../index.php">Impulse</a>
-=======
           <a class="navbar-brand" href="#">Impulse</a>
->>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
 
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -475,10 +471,6 @@ toggle between hiding and showing the dropdown content */
                     </div>
                </div>
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
      </nav>
 
 

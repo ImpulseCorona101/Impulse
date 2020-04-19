@@ -286,10 +286,6 @@ session_start();
 <?php
 
 include("../Includes/db.php");
-<<<<<<< HEAD
-=======
-
->>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
 if (isset($_POST['login'])) {
     $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
