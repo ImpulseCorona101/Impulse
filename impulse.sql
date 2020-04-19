@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2020 at 09:11 AM
+-- Generation Time: Apr 19, 2020 at 05:48 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -72,12 +72,7 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`product_id`, `phonenumber`, `qty`, `subtotal`) VALUES
-(17, 1234567890, 2, 60),
-(25, 1234567890, 3, 240),
-(29, 8169193101, 1, 50),
-(0, 1234567890, 1, 101),
-(18, 1234567890, 1, 2),
-(1, 1234567890, 1, 12);
+(32, 8169193101, 2, 20);
 
 -- --------------------------------------------------------
 
@@ -121,7 +116,8 @@ CREATE TABLE `consumer` (
 
 INSERT INTO `consumer` (`id`, `name`, `email`, `pincode`, `password`, `address`, `phone`) VALUES
 (5, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'm', '8828071232'),
-(6, 'hello world', 'hello@world.com', '421202', 'yw==', 'world', '9999999999');
+(6, 'hello world', 'hello@world.com', '421202', 'yw==', 'world', '9999999999'),
+(7, 'Abhishek Gupta', 'abhig0209@gmail.com', '400705', 'm8bf5+Y=', 'Test', '1234567890');
 
 -- --------------------------------------------------------
 
@@ -277,15 +273,18 @@ CREATE TABLE `orders` (
   `delivery` varchar(10) NOT NULL,
   `phonenumber` bigint(10) NOT NULL,
   `total` int(10) NOT NULL,
-  `payment` varchar(10) NOT NULL
+  `payment` varchar(10) NOT NULL,
+  `buyer_phonenumber` bigint(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `product_id`, `qty`, `address`, `delivery`, `phonenumber`, `total`, `payment`) VALUES
-(36, 25, 3, ' Raj Uday 234', 'Farmer', 1234567890, 300, 'paytm');
+INSERT INTO `orders` (`order_id`, `product_id`, `qty`, `address`, `delivery`, `phonenumber`, `total`, `payment`, `buyer_phonenumber`) VALUES
+(55, 23, 1, ' Raj Uday 234', 'Buyer', 8169193101, 56, 'cod', 1234567890),
+(56, 28, 1, ' Raj Uday 234', 'Buyer', 8169193101, 45, 'cod', 1234567890),
+(57, 31, 1, 'I am Hungry', 'Buyer', 8169193101, 25, 'cod', 1234567890);
 
 -- --------------------------------------------------------
 
@@ -348,18 +347,19 @@ CREATE TABLE `shopkeeper` (
   `phone` varchar(10) NOT NULL,
   `startTime` varchar(8) NOT NULL,
   `endTime` varchar(8) NOT NULL,
-  `Slot-Interval` int(11) NOT NULL,
-  `Slot-User` int(11) NOT NULL
+  `slotInterval` int(11) NOT NULL,
+  `slotUser` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `shopkeeper`
 --
 
-INSERT INTO `shopkeeper` (`id`, `name`, `email`, `pincode`, `password`, `shopName`, `shopAddress`, `phone`, `startTime`, `endTime`, `Slot-Interval`, `Slot-User`) VALUES
-(1, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'xyz', 'xyz', '8828071232', '10:30', '12:30', 0, 0),
-(3, 'int main 123', 'intmain1221@gmail.co', '421201', 'yw==', 'hopes', 'no hopes', '101', '10:30', '11:30', 0, 0),
-(4, 'kerela', 'es@dd.com', '421200', 'yw==', '1', 'm', '8369674856', '10:00', '12:30', 0, 0);
+INSERT INTO `shopkeeper` (`id`, `name`, `email`, `pincode`, `password`, `shopName`, `shopAddress`, `phone`, `startTime`, `endTime`, `slotInterval`, `slotUser`) VALUES
+(1, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'xyz', 'xyz', '8828071232', '10:30', '12:30', 30, 5),
+(3, 'int main 123', 'intmain1221@gmail.co', '421201', 'yw==', 'hopes', 'no hopes', '101', '10:30', '11:30', 30, 7),
+(4, 'kerela', 'es@dd.com', '421200', 'yw==', '1', 'm', '8369674856', '10:00', '12:30', 60, 5),
+(5, 'Abhishek Gupta', 'abhig0209@gmail.com', '400705', 'm8bf5+Y=', 'Ganesh Grocery', 'Rose Villa Lane', '1234567890', '12:00', '22:00', 30, 5);
 
 -- --------------------------------------------------------
 
@@ -370,10 +370,19 @@ INSERT INTO `shopkeeper` (`id`, `name`, `email`, `pincode`, `password`, `shopNam
 CREATE TABLE `slot` (
   `slot_id` int(255) NOT NULL,
   `shop_id` int(255) NOT NULL,
-  `slot_st_time` varchar(6) NOT NULL,
-  `slot_end_time` varchar(6) NOT NULL,
-  `vacancy` int(255) NOT NULL
+  `slot` varchar(10) NOT NULL,
+  `vacancy` int(255) NOT NULL,
+  `date` varchar(12) NOT NULL,
+  `phonenumber` bigint(10) NOT NULL,
+  `passcode` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `slot`
+--
+
+INSERT INTO `slot` (`slot_id`, `shop_id`, `slot`, `vacancy`, `date`, `phonenumber`, `passcode`) VALUES
+(34, 1, '10:30', 5, '28/04/2020', 1234567890, 55661);
 
 --
 -- Indexes for dumped tables
@@ -437,7 +446,7 @@ ALTER TABLE `shopkeeper`
 --
 ALTER TABLE `slot`
   ADD PRIMARY KEY (`slot_id`),
-  ADD UNIQUE KEY `shop_fid` (`shop_id`);
+  ADD UNIQUE KEY `passcode` (`passcode`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -459,7 +468,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `consumer`
 --
 ALTER TABLE `consumer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `doctor`
@@ -477,19 +486,19 @@ ALTER TABLE `farmerregistration`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `shopkeeper`
 --
 ALTER TABLE `shopkeeper`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `slot`
 --
 ALTER TABLE `slot`
-  MODIFY `slot_id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `slot_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- Constraints for dumped tables

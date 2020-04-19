@@ -710,6 +710,7 @@ toggle between hiding and showing the dropdown content */
 if (isset($_POST['submit'])) {
      $date = $_POST['date'];
      $time = $_POST['time'];
+     $phone = $_SESSION['phonenumber'];
      // echo "Date " . $date;
      // echo "<br>";
      // echo "Time : " . $time;
@@ -728,20 +729,23 @@ if (isset($_POST['submit'])) {
                $vacancy = $vacancy - 1;
                $update_query = "update slot set vacancy=$vacancy where date= '$date' and slot='$time' ";
                $run_update = mysqli_query($con, $update_query);
-
-               $add_slot = "insert into slot (shop_id,slot,vacancy,date,phonenumber,passcode) values ('$id','$time','$vacancy','$date','41151',$passcode)";
+               $add_slot = "insert into slot (shop_id,slot,vacancy,date,phonenumber,passcode) values ('$id','$time','$vacancy','$date','$phone',$passcode)";
                $run = mysqli_query($con, $add_slot);
+               if ($run) {
+                    echo "<script>window.open('success.php','_self');</script>";
+               }
           } else {
                echo "<script>alert('The Slot is already full ! , Please Choose Another one')</script>";
           }
      } else {
           $passcode = rand(10000, 99999);
-          $add_slot = "insert into slot (shop_id,slot,vacancy,date,phonenumber,passcode) values ('$id','$time','$customers','$date','1234567890',$passcode)";
+          $add_slot = "insert into slot (shop_id,slot,vacancy,date,phonenumber,passcode) values ('$id','$time','$customers','$date','$phone',$passcode)";
           $run = mysqli_query($con, $add_slot);
           // echo $add_slot;
           if ($run) {
-               echo "<script>window.alert('Success');</script>";
+               echo "<script>window.open('success.php','_self');</script>";
           }
      }
 }
+
 ?>
