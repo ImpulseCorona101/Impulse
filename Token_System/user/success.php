@@ -87,6 +87,9 @@
     </div>
 </div>
 <style >
+    .hide{
+        display: none;
+    }
     .container{
         position: absolute;
         left: 300px;
@@ -151,7 +154,9 @@
         p{
             font-size: 2px;
         }
-        
+        .hide{
+            display: block;
+        }
     }
 </style>
 <script>

@@ -680,7 +680,8 @@ margin-top:2%;
                <div class="row   p-2">
                     <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12">
                          <div class="text-center">
-                              <h4>Select your region</h4>
+                              <h4 class="font-weight-bold
+                              " style="color: #FFD700 ">Select your region</h4>
                          </div>
                     </div>
                     <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 p-0 States">
@@ -695,7 +696,7 @@ margin-top:2%;
                               <a class="dropdown-item" href="#">Strawberry</a>
                          </div>
                     </div> -->
-                         <select id="states" name="stateInput" onchange="state()" tabindex="1">
+                         <select class="p-2 shadow-lg" id="states" name="stateInput" onchange="state()" tabindex="1" style="border-radius: 6px; margin-right:  200px; border-color:#FFD700 ">
                               <option value="0">Select State</option>
                               <option value="31">ANDAMAN & NICOBAR ISLANDS</option>
                               <option value="01">ANDHRA PRADESH</option>
@@ -748,12 +749,12 @@ margin-top:2%;
                               <a class="dropdown-item" href="#">Onion</a>
                          </div>
                     </div> -->
-                         <select name="districtInput" id="district">
+                         <select class="p-2 ml-5 shadow-lg" name="districtInput" id="district" style="border-radius: 6px; border-color: #FFD700 " >
                               <option>Select District</option>
                          </select>
 
                     </div>
-                    <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12 go"> <button class='btn btn-warning border-secondary ' name='go' type='submit' style='color:black ;font-weight:50px;'>Go !</button>
+                    <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12 go"> <button class='btn btn-border-secondary ml-5 ' name='go' type='submit' style='color:black ;font-weight:50px; background-color: black;color:#FFD700'>Filter</button>
                     </div>
                </div>
 

@@ -519,7 +519,7 @@ include("../Functions/functions.php");
                     <?php
                     if (isset($_SESSION['phonenumber'])) {
                         echo "<a href='productsdetails.php' class='dropdown-item  ' style='padding-right:-20px;'>Profile</a>";
-                        echo "<a href='#' class='dropdown-item ' style='padding-right:-20px;'>Transactions</a>";
+                        echo "<a href='Transaction.php' class='dropdown-item ' style='padding-right:-20px;'>Transactions</a>";
                         echo "<a href='#' class='dropdown-item'  style='padding-right:-20px;'>Subscriptions</a>";
                         echo "<a href='#' class='dropdown-item' style='padding-right:-20px;'>Save For Later</a>";
                         echo "<a href='#' class='dropdown-item' style='padding-right:-20px;' >Farmers</a>";
@@ -531,7 +531,7 @@ include("../Functions/functions.php");
                 </div>
             </div>
 
-            <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
+
             <div class="text-success  login">Login</div>
         </div>
 

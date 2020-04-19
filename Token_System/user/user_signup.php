@@ -241,8 +241,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Impulse</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -264,8 +263,7 @@
     <div class="row main  ">
 
         <div class="col-6 inner1">
-            <img src="../Images/Impulse.png" class="img-fluid logo ml-5 " alt="Responsive image"
-                style="width: 150px; height:100px;">
+            <img src="../Images/Impulse.png" class="img-fluid logo ml-5 " alt="Responsive image" style="width: 150px; height:100px;">
 
         </div>
         <div class="col inner">
@@ -296,11 +294,9 @@
             <form action="user_signup.php" method="post">
                 <div class="input-group mt-5 s">
                     <div class="input-group-prepend ">
-                        <span class="input-group-text text  " id="inputGroup-sizing-default" style="font-size: 15px;"><i
-                                class="fas fa-user mr-2"></i>Full name</span>
+                        <span class="input-group-text text  " id="inputGroup-sizing-default" style="font-size: 15px;"><i class="fas fa-user mr-2"></i>Full name</span>
                     </div>
-                    <input type="text" class="form-control inp " name="name" aria-label="Sizing example input "
-                        aria-describedby="inputGroup-sizing-default " placeholder="fullname">
+                    <input type="text" class="form-control inp " name="name" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="fullname">
                 </div>
 
                 <!-- <div class="input-group mt-5 s">
@@ -308,47 +304,38 @@
                         <span class="input-group-text text " id="inputGroup-sizing-default" style="font-size: 15px;"><i class="fas fa-user mr-2"></i>Username</span>
                     </div>
                     <input type="text " class="form-control inp " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Username">
-                </div> -->      
-                <br><br>          
+                </div> -->
+                <br><br>
                 <div class="input-group mt-1  s">
                     <div class="input-group-prepend mb-5 ">
-                        <span class="input-group-text pr-5 pl-5  text" id="inputGroup-sizing-default"><i
-                                class="far fa-envelope mr-2"></i>Email </span>
+                        <span class="input-group-text pr-5 pl-5  text" id="inputGroup-sizing-default"><i class="far fa-envelope mr-2"></i>Email </span>
                     </div>
-                    <input type="email" class="form-control inp mb-5 " name="email" aria-label="Sizing example input "
-                        aria-describedby="inputGroup-sizing-default " placeholder="Email ">
+                    <input type="email" class="form-control inp mb-5 " name="email" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Email ">
                 </div>
 
                 <div class="input-group mt-1  s">
                     <div class="input-group-prepend mb-5 ">
-                        <span class="input-group-text pr-4 pl-4 text" id="inputGroup-sizing-default" style="width: 100%"><i
-                                class="fas fa-map-pin mr-2"></i>Pincode</span>
+                        <span class="input-group-text pr-4 pl-4 text" id="inputGroup-sizing-default" style="width: 100%"><i class="fas fa-map-pin mr-2"></i>Pincode</span>
                     </div>
-                    <input type="text" class="form-control inp mb-5 " name="pincode" aria-label="Sizing example input "
-                        aria-describedby="inputGroup-sizing-default " placeholder="Pincode">
+                    <input type="text" class="form-control inp mb-5 " name="pincode" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Pincode">
 
                 </div>
                 <div class="input-group mt-1  s">
                     <div class="input-group-prepend mb-5 ">
-                        <span class="input-group-text pr-4 pl-4 text" id="inputGroup-sizing-default" style="width: 100%"><i
-                                class="fas fa-lock mr-2"></i>Password</span>
+                        <span class="input-group-text pr-4 pl-4 text" id="inputGroup-sizing-default" style="width: 100%"><i class="fas fa-lock mr-2"></i>Password</span>
                     </div>
-                    <input type="password" class="form-control inp mb-5 " name="password" aria-label="Sizing example input "
-                        aria-describedby="inputGroup-sizing-default " placeholder="Password">
+                    <input type="password" class="form-control inp mb-5 " name="password" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Password">
 
                 </div>
                 <div class="input-group mt-1  s">
                     <div class="input-group-prepend mb-3 ">
-                        <span class="input-group-text  text" id="inputGroup-sizing-default" style="width: 100%"><i
-                                class="fas fa-lock mr-2"></i>Confirm Password</span>
+                        <span class="input-group-text  text" id="inputGroup-sizing-default" style="width: 100%"><i class="fas fa-lock mr-2"></i>Confirm Password</span>
                     </div>
-                    <input type="password" class="form-control inp mb-1 " name="confirmpassword" aria-label="Sizing example input "
-                        aria-describedby="inputGroup-sizing-default " placeholder="Confirm Password">
+                    <input type="password" class="form-control inp mb-1 " name="confirmpassword" aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Confirm Password">
 
                 </div>
 
-                <div
-                    class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3 ">
+                <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3 ">
 
                     <div class="text1" style="font-size: 25px;"><b>Are you a ?</b></div>
 
@@ -364,22 +351,19 @@
                     </div> -->
                     <div class="form-check-inline ">
                         <label class="form-check-label" for="radio2">
-                            <input type="radio" class="form-check-input" id="radio2" name="occupation" value="visitor"
-                                onclick="myfunction(this.value)"><b>Visitor</b>
+                            <input type="radio" class="form-check-input" id="radio2" name="occupation" value="visitor" onclick="myfunction(this.value)"><b>Visitor</b>
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label" for="radio3">
-                            <input type="radio" class="form-check-input" id="radio3" name="occupation" value="Shopkeeper"
-                                onclick="myfunction(this.value)"><b>Shopkeeper</b>
+                            <input type="radio" class="form-check-input" id="radio3" name="occupation" value="Shopkeeper" onclick="myfunction(this.value)"><b>Shopkeeper</b>
                         </label>
                     </div>
                 </div>
                 <div class="box" id="boxid">
 
                 </div>
-                <div
-                    class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 mt-5 ">
+                <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 mt-5 ">
 
                     <div class="text1" style="font-size: 20px;"><b>Already Registered ? <a href="user_signin.php">Sign
                                 In</a></b> </div>
@@ -387,8 +371,7 @@
 
                 </div>
 
-                <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3"
-                    style="margin-top: -5%;">
+                <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3" style="margin-top: -5%;">
                     <button type="submit" name="register" class="btn btn-dark btn-lg " style=" color: gold;">Sign up</button>
 
                 </div>
@@ -509,7 +492,7 @@
 </script>
 
 </html>
-<?php 
+<?php
 include("../Includes/db.php");
 
 $ciphering = "AES-128-CTR";
@@ -534,6 +517,11 @@ if (isset($_POST['register'])) {
     );
 
     $radio_val = $_POST["occupation"];
+<<<<<<< HEAD
+    if ($radio_val == "Shopkeeper") {
+        $SlotInterval = mysqli_real_escape_string($con, $_POST['optradio']);
+        $SlotUser = mysqli_real_escape_string($con, $_POST['SlotUser']);
+=======
     if($radio_val == "doctor"){
         $clinic_name = mysqli_real_escape_string($con, $_POST['clinicName']);
         $clinic_address = mysqli_real_escape_string($con, $_POST['clinicAddress']);
@@ -557,6 +545,7 @@ if (isset($_POST['register'])) {
         }
     }
     else if($radio_val=="Shopkeeper"){
+>>>>>>> 352a332c81b33f58845df4bea9fd49098cc20a45
         $shop_name = mysqli_real_escape_string($con, $_POST['shopName']);
         $shop_address = mysqli_real_escape_string($con, $_POST['shopAddress']);
         $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
@@ -578,22 +567,25 @@ if (isset($_POST['register'])) {
 
         if (strcmp($password, $confirmpassword) == 0) {
             $query = "insert into shopkeeper(name,email,
+<<<<<<< HEAD
+                    pincode,password,shopName,shopAddress,phone,startTime,endTime,Slot-Interval,Slot-User) 
+                    values ('$name','$email','$pincode','$encryption','$shop_name',
+                    '$shop_address','$phonenumber','$start_time1','$end_time1','$SlotInterval',$SlotUser
+=======
                     pincode,password,shopName,shopAddress,phone,startTime,endTime,slotInterval,slotUser) 
                     values ('$name','$email','$pincode','$encryption','$shop_name',
                     '$shop_address','$phonenumber','$start_time1','$end_time1','$slot_interval','$slot_user'
+>>>>>>> 352a332c81b33f58845df4bea9fd49098cc20a45
                     )";
             $run_register_query = mysqli_query($con, $query);
             echo "<script>alert('SucessFully Registered');</script>";
             echo "<script>window.open('user_signin.php','_self')</script>";
-        }
-        else if (strcmp($password, $confirmpassword) != 0) {
+        } else if (strcmp($password, $confirmpassword) != 0) {
             echo "<script>
                     alert('Password and Confirm Password Should be same');
                 </script>";
         }
-
-    }
-    else if($radio_val=="visitor"){
+    } else if ($radio_val == "visitor") {
         $visitor_address = mysqli_real_escape_string($con, $_POST['address']);
         $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
         if (strcmp($password, $confirmpassword) == 0) {
@@ -605,15 +597,13 @@ if (isset($_POST['register'])) {
             $run_register_query = mysqli_query($con, $query);
             echo "<script>alert('SucessFully Registered');</script>";
             echo "<script>window.open('user_signin.php','_self')</script>";
-        }
-        else if (strcmp($password, $confirmpassword) != 0) {
+        } else if (strcmp($password, $confirmpassword) != 0) {
             echo "<script>
                     alert('Password and Confirm Password Should be same');
                 </script>";
         }
-    }
-    else{
+    } else {
         echo "nothing happened";
-        }
     }
+}
 ?>
