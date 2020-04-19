@@ -770,44 +770,6 @@ margin-top:2%;
 
      ?>
 
-
-
-
-
-
-     <!-- <div class="container ">
-          <div class="float-left bg-danger">
-               <h4>Please select your region</h4>
-               <br>
-          </div>
-          <div class="float-right bg-warning">
-               <div class="dropdown">
-                    <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                         <b> States</b>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                         <a class="dropdown-item" href="#">Orange</a>
-                         <a class="dropdown-item" href="#">Watermellon</a>
-                         <a class="dropdown-item" href="#">Strawberry</a>
-                    </div>
-               </div>
-               <div class="dropdown">
-                    <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         <b>Districts</b>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                         <a class="dropdown-item" href="#">Patato</a>
-                         <a class="dropdown-item" href="#">Carrot</a>
-                         <a class="dropdown-item" href="#">Onion</a>
-                    </div>
-               </div>
-               <button class='btn btn-warning border-secondary mr-1 ' name='cart' type='submit' style='color:black ;font-weight:50px;'>Add to cart<img src='carticons.png' height='20px'></button>
-
-          </div>
-
-     </div> -->
-
      <div class="container ">
           <br>
           <div class="row">
@@ -902,7 +864,7 @@ margin-top:2%;
                                              $subtotal = $product_price * $qty;
                                              $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
                                              $run_insert_pro = mysqli_query($con, $insert_pro);
-                                             echo "<h1>Hello</h1>";
+
                                              echo "<script>window.location.reload(true)</script>";
                                         }
                                    } else {

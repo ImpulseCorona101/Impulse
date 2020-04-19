@@ -4,7 +4,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>SLot Booking</title>
+     <title>Slot Booking</title>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -190,10 +190,6 @@
                                    <label class="control-label form-weight-bold " for="date">Enter Your Date</label>
                                    <input class="form-control" id="date" name="date" placeholder="DD/MM/YYY" type="text" />
                               </div>
-
-                              <!-- <div class="col-12 pt-5">
-                                   <p class="mb-4 pb-2">Design Tools</p>
-                              </div> -->
                               <div class="col-12 pb-5">
                                    <br>
                                    <h3>Select Your Slot</h3>
@@ -288,5 +284,8 @@ if (isset($_POST['submit'])) {
      echo "Date " . $date;
      echo "<br>";
      echo "Time : " . $time;
+
+     $add_slot = "";
+     $run = mysqli_query($con, $add_slot);
 }
 ?>
