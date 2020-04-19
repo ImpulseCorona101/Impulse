@@ -222,31 +222,67 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Impulse</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="../../index.php">Impulse</a>
+
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span
-                            class=" sr-only">(current)</span></a>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Application</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
                 </li>
+                <li class="nav-item">
+
+                </li>
+
             </ul>
+            <div class="p-2">
+                <div class="">
+                    <a> <i class="fa fa-user" style="font-size:30px; color:white ;margin-top:2px;"></i></a>
+                    <span id="" style="color:green"></span>
+                </div>
+
+
+            </div>
+            <div class="text  login" style="color: white;">Login</div>
         </div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../../User_Pages/profile.html">Profile</a>
+                <a href="user_signin">Logout</a>
+                <div class="hide">
+                    <a href="../../index.php">Home</a>
+                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                    <a href="../../AgroCraft/index.html">Agrocraft</a>
+                    <a href="Contact.html">Contact Us</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </nav>
     <br>
     <div class="row main  ">
 
         <div class="col-6 inner1">
-            <img src="Impulse.png" class="img-fluid logo  " alt="Responsive image" style="width: 150px; height:100px;">
+            <img src="../../Images/Impulse.png" class="img-fluid logo  " alt="Responsive image" style="width: 150px; height:100px;">
 
         </div>
         <div class="col inner">

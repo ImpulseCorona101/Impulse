@@ -195,7 +195,7 @@
             </ul>
         </div>
     </nav>
-    <img src="Impulse.png" class="mx-auto d-block imag" />
+    <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
     <div class="text-center">
         <h1><b>Impulse</b></h1>
     </div>
