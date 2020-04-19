@@ -202,10 +202,9 @@
                                    }
 
 
-                                   $search_query = 421200;
-                                   // echo $search_query;
+                                   $pincode = 421202;
 
-                                   $get_shop = "select * from shopkeeper where pincode = $search_query";
+                                   $get_shop = "select * from shopkeeper where pincode = $pincode";
                                    $run_shop = mysqli_query($con, $get_shop);
                                    $count = mysqli_num_rows($run_shop);
                                    if ($count > 0) {
@@ -213,6 +212,10 @@
 
                                              $startTime = $rows['startTime'];
                                              $endTime = $rows['endTime'];
+                                             $id = $rows['id'];
+                                             $interval = $rows['Slot-Interval'];
+                                             $customers = $rows['Slot-User'];
+
 
                                              $starttimehour = substr($startTime, 0, 2);
                                              $starttimemin = substr($startTime, 3);
@@ -227,15 +230,13 @@
 
 
                                                   $endtimehour1 = (int) $starttimehour;
-                                                  $endtimemin1 = (int) $starttimemin + 30;
+                                                  $endtimemin1 = (int) $starttimemin + (int) $interval;
                                                   if ($endtimemin1 == 60) {
                                                        $endtimemin1 = 00;
 
                                                        $endtimehour1 = $endtimehour1 + 1;
                                                   }
-                                                  if ($endtimemin1 == 0) {
-                                                       $endtimemin1 = 00;
-                                                  }
+
 
                                                   $a = strval($starttimehour) . ":" . strval($starttimemin) . "-" . strval($endtimehour1) . ":" . strval($endtimemin1);
 
@@ -246,7 +247,7 @@
                                              ";
 
 
-                                                  $starttimemin = (int) $starttimemin + 30;
+                                                  $starttimemin = (int) $starttimemin + (int) $interval;
                                                   $endtimehour1 = (int) $endtimehour;
                                                   $i = $i + 1;
 
@@ -284,8 +285,9 @@ if (isset($_POST['submit'])) {
      echo "Date " . $date;
      echo "<br>";
      echo "Time : " . $time;
+     echo "<br>" . $interval;
 
-     $add_slot = "";
+     $add_slot = "insert into slot (shop_id,slot,vacancy) values ('$id','$time','$customers')";
      $run = mysqli_query($con, $add_slot);
 }
 ?>
