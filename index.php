@@ -569,7 +569,7 @@ toggle between hiding and showing the dropdown content */
                </h5>
                <br>
                <a href="Token_System/user/shop_list.php" class="btn btn-primary btn-lg">Book Now</a>
-               <<<<<<< HEAD </div>=======>>>>>>> 3c59bd5e24cfdb6795bd4a94c0bdcbd1af373d38 <div class="card-footer text-muted">
+               </div><div class="card-footer text-muted">
                     A step against Coronavirus Pandemic
           </div>
      </div>

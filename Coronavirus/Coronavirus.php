@@ -117,54 +117,94 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Impulse</a>
-        
+          <a class="navbar-brand" href="#">Impulse</a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-               <li class="nav-item ">
-                    <a class="nav-link" href="../index.php"> Home <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="../Token_System/user/shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Application</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../Token_System/user/Contact.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
 
-                </li>
-            </ul>
-        </div>
-         </div>
-           
-        </div>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="../Token_System/user/profile.html">Profile</a>
-                <a href="../Token_System/user/user_signin.php">Logout</a>
-                <div class="hide">
-                    <a href="../index.php">Home</a>
-                    <a href="CurrentStats.html">Covid-19 Status</a>
-                    <a href="../AgroCraft/index.html">Agrocraft</a>
-                    <a href="../Token_System/user/Contact.html">Contact Us</a>
-                    <div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                         <a class="nav-link" href="index.php"> <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                         <a class="nav-link" href="Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                         <a class="nav-link" href="Token_System/user/shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                         <a class="nav-link" href="AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="#">About Application</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="Token_System/user/Contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
 
+                    </li>
+               </ul>
+          </div>
+          </div>
+          <?php
+          $con = mysqli_connect("localhost", "root", "", "impulse");
+
+          if (mysqli_connect_errno()) {
+               echo "Failed to connect to MySql " . mysqli_connect_error();
+          }
+          $name = "";
+          if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
+               $phone = $_SESSION['phonenumber'];
+               $name_query = "select * from shopkeeper where phone=$phone ";
+               $run = mysqli_query($con, $name_query);
+
+               while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+               }
+               echo "<div class='text login' style='color: white;'>Hello  $name</div>";
+          } else if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "visitor")) {
+               $phone = $_SESSION['phonenumber'];
+               $name_query = "select * from consumer where phone=$phone ";
+               $run = mysqli_query($con, $name_query);
+               while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+               }
+               echo "<div class='text login' style='color: white;'>>Hello  $name</div>";
+          } else {
+
+               echo "<a href='Token_System/user/user_signin.php' ><div class='text login' style='color: white;'>Login</div></a>";
+          }
+          ?>
+
+
+          </div>
+          <div class="dropdown">
+               <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+               <div id="myDropdown" class="dropdown-content">
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo " <a href='Token_System/user/profile.php'>Profile</a>";
+
+                         echo "<a href='Token_System/user/logout.php'>Logout</a>";
+                    } else {
+
+                         echo "<a href='Token_System/user/user_signin.php'>Login</a>";
+                    }
+                    ?>
+
+                    <div class="hide">
+                         <a href="../../index.php">Home</a>
+                         <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                         <a href="../../AgroCraft/index.html">Agrocraft</a>
+                         <a href="Contact.html">Contact Us</a>
+                         <div>
+
+                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+               </div>
+          </div>
+     </nav>
+
     <br>
     <div class=" row ">
         <div class="col-8 ">
