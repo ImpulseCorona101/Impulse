@@ -510,62 +510,62 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Impulse</a>
+        <a class="navbar-brand" href="../../index.php">Impulse</a>
 
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item ">
-          <a class="nav-link" href="{{ url_for('Homepage') }}">Home <span class=" sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="{{ url_for('Homepage') }}">Covid-19 Status <span class=" sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="{{ url_for('Homepage') }}"> Slot Booking <span class=" sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="{{ url_for('Homepage') }}">AgroCraft <span class=" sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('About') }}">About Application</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('Contact') }}">Contact Us</a>
-        </li>
-        <li class="nav-item">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Application</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
 
-        </li>
+                </li>
 
-      </ul>
-      <div class="p-2">
-        <div class="">
-          <a> <i class="fa fa-user" style="font-size:30px; color:white ;margin-top:2px;"></i></a>
-          <span id="" style="color:green"></span>
+            </ul>
+            <div class="p-2">
+                <div class="">
+                    <a> <i class="fa fa-user" style="font-size:30px; color:white ;margin-top:2px;"></i></a>
+                    <span id="" style="color:green"></span>
+                </div>
+
+
+            </div>
+            <div class="text  login" style="color: white;">Login</div>
+        </div>
+        <div class="dropdown">
+            <button onclick="myFunctio()" class="dropbtn fas fa-bars"></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../../User_Pages/profile.html">Profile</a>
+                <a href="user_signin">Logout</a>
+                <div class="hide">
+                    <a href="../../index.php">Home</a>
+                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                    <a href="../../AgroCraft/index.html">Agrocraft</a>
+                    <a href="Contact.html">Contact Us</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
         </div>
 
-
-      </div>
-      <div class="text  login" style="color: white;">Login</div>
-    </div>
-    <div class="dropdown">
-      <button onclick="myFunctio()" class="dropbtn fas fa-bars"></button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#home">Profile</a>
-        <a href="#about">Logout</a>
-        <div class="hide">
-          <a href="#about">Home</a>
-          <a href="#about">Covid-19 Status</a>
-          <a href="#about">Agrocraft</a>
-          <a href="#about">Contact Us</a>
-        </div>
-
-      </div>
-    </div>
-    </div>
-    </div>
-
-  </nav>
+    </nav>
   <br>
   <div class="container ">
     <div class="row">
@@ -710,7 +710,7 @@
         }
 
 
-        $search_query = 421200;
+        $search_query = 400702;
         // echo $search_query;
 
         $get_shop = "select * from shopkeeper where pincode = $search_query";
@@ -769,6 +769,7 @@
             }
           }
         }
+        /*
         $con = mysqli_connect("localhost", "root", "", "impulse");
 
         if (mysqli_connect_errno()) {
@@ -781,7 +782,7 @@
           $query = "insert into slot(date) values ('$date')";
           $run_register_query = mysqli_query($con, $query);
           echo "<script>alert('SucessFully Registered');</script>";
-        }
+        }*/
 
 
         ?>

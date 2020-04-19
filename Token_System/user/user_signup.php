@@ -465,6 +465,21 @@
                         <span class="input-group-text p-2  text" id="inputGroup-sizing-default"><i class="fas fa-hourglass-end mr-2"></i>End Time</span>
                     </div>
                     <input type="text" onfocus="(this.type='time')" name="endTime1" onfocusout="(this.type='text')" class="form-control inp timeinput mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="End Time ">
+                </div>
+                <div class="input-group mt-1  s">
+                    <div class="input-group-prepend mb-5 ">
+                        <span class="input-group-text p-2  text" id="inputGroup-sizing-default"><i class="fas fa-stopwatch mr-2"></i>Time Interval</span>
+                        </div>
+                        <label class="radio-inline ml-3"><input type="radio" name="optradio" checked>30 Mins</label>
+                           <label class="radio-inline ml-3"><input type="radio" name="optradio">45 Mins</label>
+                           <label class="radio-inline ml-3"><input type="radio" name="optradio">60 Mins</label>
+                       
+                <div class="input-group mt-1  s">
+                    <div class="input-group-prepend mb-5 ">
+                        <span class="input-group-text p-2  text" id="inputGroup-sizing-default"><i class="fas fa-user-friends mr-2"></i>No. Of User Per Slot</span>
+                    </div>
+                    <input type="text"  onfocusout="(this.type='text')" class="form-control inp timeinput mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="User Per Slot " name="SlotUser">
+
                 </div>`
             console.log(values)
         } else {
@@ -503,7 +518,7 @@ if (isset($_POST['register'])) {
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $confirmpassword = mysqli_real_escape_string($con, $_POST['confirmpassword']);
     $pincode = mysqli_real_escape_string($con, $_POST['pincode']);
-
+     
     $encryption = openssl_encrypt(
         $password,
         $ciphering,
@@ -514,6 +529,8 @@ if (isset($_POST['register'])) {
 
     $radio_val = $_POST["occupation"];
      if($radio_val=="Shopkeeper"){
+        $SlotInterval = mysqli_real_escape_string($con, $_POST['optradio']);
+      $SlotUser = mysqli_real_escape_string($con, $_POST['SlotUser']);
         $shop_name = mysqli_real_escape_string($con, $_POST['shopName']);
         $shop_address = mysqli_real_escape_string($con, $_POST['shopAddress']);
         $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
@@ -521,9 +538,9 @@ if (isset($_POST['register'])) {
         $end_time1 = mysqli_real_escape_string($con, $_POST['endTime1']);
         if (strcmp($password, $confirmpassword) == 0) {
             $query = "insert into shopkeeper(name,email,
-                    pincode,password,shopName,shopAddress,phone,startTime,endTime) 
+                    pincode,password,shopName,shopAddress,phone,startTime,endTime,Slot-Interval,Slot-User) 
                     values ('$name','$email','$pincode','$encryption','$shop_name',
-                    '$shop_address','$phonenumber','$start_time1','$end_time1'
+                    '$shop_address','$phonenumber','$start_time1','$end_time1','$SlotInterval',$SlotUser
                     )";
             $run_register_query = mysqli_query($con, $query);
             echo "<script>alert('SucessFully Registered');</script>";
