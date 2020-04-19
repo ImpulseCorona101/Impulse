@@ -175,11 +175,36 @@
     <!-- <img src="Guadian.png" >
      -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Impulse</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Application</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <img src="Impulse.png" class="mx-auto d-block imag" />
+>>>>>>> f6e01824e5575ffb2ca7a5930ed13913c9527b27
 =======
 
 >>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
     <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
+>>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
     <div class="text-center">
         <h1><b>Impulse</b></h1>
     </div>
@@ -228,12 +253,18 @@
                     <a href="Email_ForgotPassword.html">
 <<<<<<< HEAD
                     <div class="text1">Forgot password ? </div>
+<<<<<<< HEAD
                 </a>
 
                     <a href="user_signup.php">
                     <div class="text2"> New User ? </div>
                 </a>
 
+=======
+                    <div class="text2">
+                        <a href="user_signup.php">New User ? </a>
+                    </div>
+>>>>>>> f6e01824e5575ffb2ca7a5930ed13913c9527b27
 =======
                         <div class="text1">Forgot password ? </div>
                         <div class="text2">
@@ -255,7 +286,6 @@
 <?php
 
 include("../Includes/db.php");
-
 if (isset($_POST['login'])) {
     $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
