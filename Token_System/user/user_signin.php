@@ -187,32 +187,8 @@ session_start();
     <!-- <br> -->
     <!-- <img src="Guadian.png" >
      -->
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Impulse</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Application</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <img src="Impulse.png" class="mx-auto d-block imag" />
-=======
 
     <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
->>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
     <div class="text-center">
         <h1><b>Impulse</b></h1>
     </div>
@@ -260,17 +236,10 @@ session_start();
                 </div>
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
                     <a href="Email_ForgotPassword.html">
-<<<<<<< HEAD
-                    <div class="text1">Forgot password ? </div>
-                    <div class="text2">
-                        <a href="user_signup.php">New User ? </a>
-                    </div>
-=======
                         <div class="text1">Forgot password ? </div>
                         <div class="text2">
                             <a href="user_signup.php">New User ? </a>
                         </div>
->>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
                 </div>
 
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3" style="margin-top: -5%;">
