@@ -207,61 +207,84 @@
                                    $get_shop = "select * from shopkeeper where pincode = $pincode";
                                    $run_shop = mysqli_query($con, $get_shop);
                                    $count = mysqli_num_rows($run_shop);
+                                   $p = 1;
                                    if ($count > 0) {
                                         while ($rows = mysqli_fetch_array($run_shop)) {
 
                                              $startTime = $rows['startTime'];
                                              $endTime = $rows['endTime'];
                                              $id = $rows['id'];
-                                             
-                                             // $interval = $rows['Slot-Interval'];
-                                             // $customers = $rows['Slot-User'];
-                                             $interval=45;
-                                             $customers=5;
+                                             $interval = $rows['Slot-Interval'];
+                                             $customers = $rows['Slot-User'];
 
 
-                                             $starttimehour = substr($startTime, 0, 2);
-                                             $starttimemin = substr($startTime, 3);
 
-                                             $endtimehour = substr($endTime, 0, 2);
-                                             $endtimemin = substr($endTime, 3);
-
-                                             $TempEndTime = $endTime;
-                                             $TempStartTime = $startTime;
-                                             $i = 1;
-                                             while ((int) $starttimehour <= (int) $endtimehour && (int) $starttimemin <= (int) $endtimemin) {
+                                             $start_time = $startTime;
+                                             $end_time = $endTime;
 
 
-                                                  $endtimehour1 = (int) $starttimehour;
-                                                  $endtimemin1 = (int) $starttimemin + (int) $interval;
-                                                  if ($endtimemin1 == 60) {
-                                                       $endtimemin1 = 00;
+                                             //splitting start time hours and minute
+                                             $starttimehour = substr($start_time, 0, 2);
+                                             $starttimemin = substr($start_time, 3);
 
-                                                       $endtimehour1 = $endtimehour1 + 1;
-                                                  }
+                                             //splitting end time hours and minute
+                                             $endtimehour = substr($end_time, 0, 2);
+                                             $endtimemin = substr($end_time, 3);
 
+                                             //making minute to point value 
+                                             $start_time_end_point = (int) $starttimemin / 60;
+                                             $end_time_end_point = (int) $endtimemin / 60;
 
-                                                  $a = strval($starttimehour) . ":" . strval($starttimemin) . "-" . strval($endtimehour1) . ":" . strval($endtimemin1);
+                                             //concatenating minute point value with hour value
+                                             $start_time_pt = (float) $starttimehour + $start_time_end_point;
+                                             $end_time_pt = (float) $endtimehour + $end_time_end_point;
 
+                                             //converting minute interval to point wise interval for eg 30 mins to 0.5
+                                             $interval_pt = $interval / 60;
+
+                                             //initialize 
+                                             $count = 0;
+                                             $temp = $start_time_pt;
+                                             $interval_list_point = array();
+
+                                             while ($temp <= $end_time_pt) {
+                                                  array_push($interval_list_point, $temp);
+                                                  $temp = $temp + $interval_pt;
+                                                  $count = $count + 1;
+                                             }
+
+                                             //making intervals timings in hr min
+                                             $interval_list = array();
+                                             for ($j = 0; $j < count($interval_list_point); $j++) {
+                                                  $l = strval((int) ($interval_list_point[$j])) . ":" . strval((int) (abs($interval_list_point[$j] - (int) ($interval_list_point[$j])) * 60));
+                                                  $last = $l;
+                                                  array_push($interval_list, $l);
+                                             }
+
+                                             //for last remaining time slot ...if time slot remains
+                                             if ((int) substr($last, 3) < (int) $endtimemin) {
+                                                  $remain = (int) $endtimemin - (int) substr($last, 3);
+                                                  $last_time = substr($last, 0, 2) . ":" . strval((int) substr($last, 3) + $remain);
+                                                  array_push($interval_list, $last_time);
+                                             }
+
+                                             //making time intervals
+                                             $final_intervals = array();
+                                             for ($k = 0; $k < count($interval_list) - 1; $k++) {
+                                                  $m = strval($interval_list[$k]) . " - " . strval($interval_list[$k + 1]);
+                                                  array_push($final_intervals, $m);
+                                                  // echo "<br>";
+                                                  // echo $m;
 
                                                   echo "
-                                                       <input class='checkbox-tools' type='radio' name='time' id='tool-$i' checked value=$a>
-                                                       <label class='for-checkbox-tools' for='tool-$i'>$a</label>
+                                                       <input class='checkbox-tools' type='radio' name='time' id='tool-$p' checked value=$m>
+                                                       <label class='for-checkbox-tools' for='tool-$p'>$m</label>
                                              ";
-
-
-                                                  $starttimemin = (int) $starttimemin + (int) $interval;
-                                                  $endtimehour1 = (int) $endtimehour;
-                                                  $i = $i + 1;
-
-                                                  if ($starttimemin == 60) {
-                                                       $starttimemin = 00;
-
-                                                       $starttimehour = $starttimehour + 1;
-                                                  }
+                                                  $p++;
                                              }
                                         }
                                    }
+
 
                                    ?>
 
@@ -290,7 +313,33 @@ if (isset($_POST['submit'])) {
      echo "Time : " . $time;
      echo "<br>" . $interval;
 
-     $add_slot = "insert into slot (shop_id,slot,vacancy) values ('$id','$time','$customers')";
-     $run = mysqli_query($con, $add_slot);
+
+     $check = "select * from slot where date='$date' and slot='$time'";
+     $run_check = mysqli_query($con, $check);
+     $count = mysqli_num_rows($run_check);
+     if ($count > 0) {
+          while ($rows = mysqli_fetch_array($run_check)) {
+               $vacancy = $rows['vacancy'];
+          }
+          $passcode = rand(10000, 99999);
+          if ($vacancy != 0) {
+               $vacancy = $vacancy - 1;
+               $update_query = "update slot set vacancy=$vacancy where date= '$date' and slot='$time' ";
+               $run_update = mysqli_query($con, $update_query);
+
+               $add_slot = "insert into slot (shop_id,slot,vacancy,date,phonenumber,passcode) values ('$id','$time','$vacancy','$date','41151',$passcode)";
+               $run = mysqli_query($con, $add_slot);
+          } else {
+               echo "<script>alert('The Slot is already full ! , Please Choose Another one')</script>";
+          }
+     } else {
+          $passcode = rand(10000, 99999);
+          $add_slot = "insert into slot (shop_id,slot,vacancy,date,phonenumber,passcode) values ('$id','$time','$customers','$date','1234567890',$passcode)";
+          $run = mysqli_query($con, $add_slot);
+          echo $add_slot;
+          if ($run) {
+               echo "<script>window.alert('Success');</script>";
+          }
+     }
 }
 ?>

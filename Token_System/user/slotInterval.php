@@ -56,5 +56,3 @@ for($k = 0; $k < count($interval_list)-1 ; $k++){
     echo "<br>";
     echo $m;
 }
-
-
