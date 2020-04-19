@@ -517,11 +517,6 @@ if (isset($_POST['register'])) {
     );
 
     $radio_val = $_POST["occupation"];
-
-    if ($radio_val == "Shopkeeper") {
-        $SlotInterval = mysqli_real_escape_string($con, $_POST['optradio']);
-        $SlotUser = mysqli_real_escape_string($con, $_POST['SlotUser']);
-
     if($radio_val == "doctor"){
         $clinic_name = mysqli_real_escape_string($con, $_POST['clinicName']);
         $clinic_address = mysqli_real_escape_string($con, $_POST['clinicAddress']);
@@ -545,24 +540,19 @@ if (isset($_POST['register'])) {
         }
     }
     else if($radio_val=="Shopkeeper"){
-<<<<<<< HEAD
-
-=======
->>>>>>> 9221653b622f118eb63d6972e365c7dbbd9e2b40
->>>>>>> ac76625dbafba18956afa52a404b2e1de60fdb81
         $shop_name = mysqli_real_escape_string($con, $_POST['shopName']);
         $shop_address = mysqli_real_escape_string($con, $_POST['shopAddress']);
         $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
         $start_time1 = mysqli_real_escape_string($con, $_POST['startTime1']);
         $end_time1 = mysqli_real_escape_string($con, $_POST['endTime1']);
         $slots_intv = $_POST["optradio"];
-        if ($slots_intv == "30") {
+        if($slots_intv == "30"){
             $slot_interval = "30";
-        } else if ($slots_intv == "45") {
+        }else if($slots_intv == "45"){
             $slot_interval = "45";
-        } else if ($slots_intv == "60") {
+        }else if($slots_intv == "60"){
             $slot_interval = "60";
-        } else {
+        }else{
             $slot_interval = "30";
         }
 
@@ -571,19 +561,9 @@ if (isset($_POST['register'])) {
 
         if (strcmp($password, $confirmpassword) == 0) {
             $query = "insert into shopkeeper(name,email,
-
-                    pincode,password,shopName,shopAddress,phone,startTime,endTime,Slot-Interval,Slot-User) 
-                    values ('$name','$email','$pincode','$encryption','$shop_name',
-                    '$shop_address','$phonenumber','$start_time1','$end_time1','$SlotInterval',$SlotUser
-
                     pincode,password,shopName,shopAddress,phone,startTime,endTime,slotInterval,slotUser) 
                     values ('$name','$email','$pincode','$encryption','$shop_name',
                     '$shop_address','$phonenumber','$start_time1','$end_time1','$slot_interval','$slot_user'
-<<<<<<< HEAD
-
-=======
->>>>>>> 9221653b622f118eb63d6972e365c7dbbd9e2b40
->>>>>>> ac76625dbafba18956afa52a404b2e1de60fdb81
                     )";
             $run_register_query = mysqli_query($con, $query);
             echo "<script>alert('SucessFully Registered');</script>";

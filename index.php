@@ -598,9 +598,8 @@ toggle between hiding and showing the dropdown content */
                <h5 class="card-text ">Book your slot according to your on will and time,which helps in maintaining social distancing and prevent overcrowding.
                </h5>
                <br>
-               <a href="Token_System/user/user_confirm.php" class="btn btn-primary btn-lg">Book Now</a>
-                <a href="Token_System/vender/vendor_confirm.php" class="btn btn-primary ml-5 btn-lg">View Slot</a>
-          </div>
+               <a href="Token_System/user/shop_list.php" class="btn btn-primary btn-lg">Book Now</a>
+                
           <div class="card-footer text-muted">
                A step against Coronavirus Pandemic
           </div>
