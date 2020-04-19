@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,55 +20,56 @@
     body {
         background-color: white;
     }
-    
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    
+
     .x {
         height: 70vh;
         margin-top: 10vh;
         margin-bottom: 10vh;
         width: 70%;
     }
-    
+
     .inp::placeholder {
         display: none;
         visibility: hidden;
     }
+
     /* .s {
         width: auto;
     }
      */
-    
+
     .x {
         background-color: ghostwhite;
         height: 80%;
         width: 25%;
     }
-    
+
     .text {
         background-color: black;
         color: gold;
     }
-    
+
     h2,
     h1 {
         color: black;
     }
-    
+
     .imag {
         height: 120px;
     }
-    
+
     .s {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
     }
-    
+
     .fp {
         margin-left: 0%;
         margin-top: -10%;
@@ -73,7 +77,7 @@
         color: black;
         font-size: 20px;
     }
-    
+
     .nu {
         /* margin-right: 0%;
         margin-left: 25%; */
@@ -83,7 +87,7 @@
         color: black;
         font-size: 20px;
     }
-    
+
     .guard {
         width: 100%;
         text-align: center;
@@ -93,29 +97,29 @@
         margin: 10px 0 20px;
         font-family: serif;
     }
-    
+
     .guard span {
         background: ghostwhite;
         padding: 0 10px;
     }
-    
+
     .lastbtn {
         color: goldenrod;
     }
-    
+
     .text {
         min-width: 150px !important;
         display: inline-block !important
     }
-    
+
     .text1 {
         font-size: 15px;
     }
-    
+
     .text2 {
         font-size: 15px;
     }
-    
+
     @media only screen and (min-device-width:320px) and (max-device-width:480px) {
         .x {
             padding: 0;
@@ -123,6 +127,7 @@
             margin-left: 10%;
             margin-right: 10%;
         }
+
         /* .imag {
             display: none;
             visibility: hidden;
@@ -132,35 +137,43 @@
             margin-left: 0;
             margin-right: 0;
         }
+
         .inp::placeholder {
             visibility: visible;
         }
+
         .input-group-prepend {
             display: none;
         }
+
         .fp {
             margin-left: 0%;
             margin-top: -30%;
             text-align: center;
             /* font-size: 20px; */
         }
+
         .nu {
             margin-right: 0%;
             margin-left: 0%;
             margin-top: -15%;
             text-align: center;
         }
+
         .text1 {
             text-align: center;
             font-size: 20px;
         }
+
         .text2 {
             text-align: center;
             font-size: 20px;
         }
+
         .button1 {
             margin-top: 10%;
         }
+
         .inp1 {
             text-align: center;
         }
@@ -174,8 +187,32 @@
     <!-- <br> -->
     <!-- <img src="Guadian.png" >
      -->
+<<<<<<< HEAD
     
     <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
+=======
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Impulse</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Application</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <img src="Impulse.png" class="mx-auto d-block imag" />
+>>>>>>> ac76625dbafba18956afa52a404b2e1de60fdb81
     <div class="text-center">
         <h1><b>Impulse</b></h1>
     </div>
@@ -184,8 +221,9 @@
         <div class="text-center">
             <br>
 
-            <b><h1 class="guard"><span><b>Sign in</b></span>
-            </h1>
+            <b>
+                <h1 class="guard"><span><b>Sign in</b></span>
+                </h1>
             </b>
         </div>
         <div class="form">
@@ -194,15 +232,15 @@
                     <div class="text1" style="font-size: 25px;"><b>Are you a ?</b></div>
                 </div>
                 <div class="contains d-flex justify-content-around mb-3">
-                
+
                     <div class="form-check-inline ">
-                       <label class="form-check-label" for="radio2">
-                                <input type="radio" class="form-check-input" id="radio2" name="occupation" value="visitor"><b>Visitor</b>
-                            </label>
+                        <label class="form-check-label" for="radio2">
+                            <input type="radio" class="form-check-input" id="radio2" name="occupation" value="visitor" required><b>Citizen/Customer</b>
+                        </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label" for="radio3">
-                            <input type="radio" class="form-check-input" id="radio3" name="occupation" value="Shopkeeper"><b>Shopkeeper</b>
+                            <input type="radio" class="form-check-input" id="radio3" name="occupation" value="Shopkeeper" required><b>Shopkeeper</b>
                         </label>
                     </div>
                 </div>
@@ -223,12 +261,18 @@
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
                     <a href="Email_ForgotPassword.html">
                     <div class="text1">Forgot password ? </div>
+<<<<<<< HEAD
                 </a>
 
                     <a href="user_signup.php">
                     <div class="text2"> New User ? </div>
                 </a>
 
+=======
+                    <div class="text2">
+                        <a href="user_signup.php">New User ? </a>
+                    </div>
+>>>>>>> ac76625dbafba18956afa52a404b2e1de60fdb81
                 </div>
 
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3" style="margin-top: -5%;">
@@ -244,36 +288,35 @@
 <?php
 
 include("../Includes/db.php");
-
+session_start();
 if (isset($_POST['login'])) {
-	$phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
-	$password = mysqli_real_escape_string($con, $_POST['password']);
+    $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
     $radio_val = $_POST['occupation'];
-
+    $_SESSION['occupation'] =    $radio_val;
     //hashing of password
-	$ciphering = "AES-128-CTR";
-	$iv_length = openssl_cipher_iv_length($ciphering);
-	$options = 0;
-	$encryption_iv = '2345678910111211';
-	$encryption_key = "DE";
-	$encryption = openssl_encrypt(
-		$password,
-		$ciphering,
-		$encryption_key,
-		$options,
-		$encryption_iv
-	);
-    
+    $ciphering = "AES-128-CTR";
+    $iv_length = openssl_cipher_iv_length($ciphering);
+    $options = 0;
+    $encryption_iv = '2345678910111211';
+    $encryption_key = "DE";
+    $encryption = openssl_encrypt(
+        $password,
+        $ciphering,
+        $encryption_key,
+        $options,
+        $encryption_iv
+    );
+
     //searching in doctor table
-    if($radio_val == "doctor"){
+    if ($radio_val == "doctor") {
         $query = "select * from doctor where phone = '$phonenumber' and password = '$encryption'";
         $run_query = mysqli_query($con, $query);
         $count_rows = mysqli_num_rows($run_query);
         if ($count_rows == 0) {
             echo "<script>alert('Please Enter Valid Details');</script>";
             echo "<script>window.open('user_signin.php','_self')</script>";
-        }
-        else{
+        } else {
             echo "<script>console.log('session');</script>";
             echo "<script>window.open('home.php','_self')</script>";
         }
@@ -283,15 +326,14 @@ if (isset($_POST['login'])) {
         $_SESSION['phonenumber'] = $phonenumber;
     }
     //searching in shopkeeper table
-    else if($radio_val == "Shopkeeper"){
+    else if ($radio_val == "Shopkeeper") {
         $query = "select * from shopkeeper where phone = '$phonenumber' and password = '$encryption'";
         $run_query = mysqli_query($con, $query);
         $count_rows = mysqli_num_rows($run_query);
         if ($count_rows == 0) {
             echo "<script>alert('Please Enter Valid Details');</script>";
             echo "<script>window.open('user_signin.php','_self')</script>";
-        }
-        else{
+        } else {
             echo "<script>console.log('session');</script>";
             echo "<script>window.open('../../index.php','_self')</script>";
         }
@@ -300,26 +342,24 @@ if (isset($_POST['login'])) {
         }
         // $_SESSION['phonenumber'] = $phonenumber;
     }
-    
+
     //searching in consumer table
-    else if($radio_val == "visitor"){
+    else if ($radio_val == "visitor") {
         $query = "select * from consumer where phone = '$phonenumber' and password = '$encryption'";
         $run_query = mysqli_query($con, $query);
         $count_rows = mysqli_num_rows($run_query);
         if ($count_rows == 0) {
             echo "<script>alert('Please Enter Valid Details');</script>";
             echo "<script>window.open('user_signin.php','_self')</script>";
-        }
-        else{
+        } else {
             echo "<script>console.log('session');</script>";
+            $_SESSION['phonenumber'] = $phonenumber;
             echo "<script>window.open('../../index.php','_self')</script>";
         }
         while ($row = mysqli_fetch_array($run_query)) {
             $id = $row['id'];
         }
-    }
-
-    else{
+    } else {
         echo "nothing happened";
     }
 }
