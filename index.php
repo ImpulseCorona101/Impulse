@@ -420,23 +420,24 @@ toggle between hiding and showing the dropdown content */
           if (mysqli_connect_errno()) {
                echo "Failed to connect to MySql " . mysqli_connect_error();
           }
+          $name = "";
           if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
                $phone = $_SESSION['phonenumber'];
                $name_query = "select * from shopkeeper where phone=$phone ";
                $run = mysqli_query($con, $name_query);
-               $name = "";
+
                while ($row = mysqli_fetch_array($run)) {
                     $name = $row['name'];
                }
-               echo "<div class='text login' style='color: white;'>Hello , $name</div>";
+               echo "<div class='text login' style='color: white;'>Hello  $name</div>";
           } else if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "visitor")) {
                $phone = $_SESSION['phonenumber'];
                $name_query = "select * from consumer where phone=$phone ";
                $run = mysqli_query($con, $name_query);
                while ($row = mysqli_fetch_array($run)) {
-                    $visitor_name = $row['name'];
+                    $name = $row['name'];
                }
-               echo "<div class='text login' style='color: white;'>>Hello , $visitor_name</div>";
+               echo "<div class='text login' style='color: white;'>>Hello  $name</div>";
           } else {
 
                echo "<a href='Token_System/user/user_signin.php' ><div class='text login' style='color: white;'>Login</div></a>";
@@ -448,8 +449,17 @@ toggle between hiding and showing the dropdown content */
           <div class="dropdown">
                <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
                <div id="myDropdown" class="dropdown-content">
-                    <a href="Token_System/user/profile.html">Profile</a>
-                    <a href="Token_System/user/user_signin.php">Login</a>
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo " <a href='Token_System/user/profile.php'>Profile</a>";
+
+                         echo "<a href='Token_System/user/logout.php'>Logout</a>";
+                    } else {
+
+                         echo "<a href='Token_System/user/user_signin.php'>Login</a>";
+                    }
+                    ?>
+
                     <div class="hide">
                          <a href="../../index.php">Home</a>
                          <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
@@ -559,14 +569,8 @@ toggle between hiding and showing the dropdown content */
                </h5>
                <br>
                <a href="Token_System/user/shop_list.php" class="btn btn-primary btn-lg">Book Now</a>
-<<<<<<< HEAD
-
-          </div>
-=======
-                
->>>>>>> 3c59bd5e24cfdb6795bd4a94c0bdcbd1af373d38
-          <div class="card-footer text-muted">
-               A step against Coronavirus Pandemic
+               <<<<<<< HEAD </div>=======>>>>>>> 3c59bd5e24cfdb6795bd4a94c0bdcbd1af373d38 <div class="card-footer text-muted">
+                    A step against Coronavirus Pandemic
           </div>
      </div>
 
