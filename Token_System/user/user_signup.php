@@ -375,7 +375,7 @@
                 <div
                     class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 mt-5 ">
 
-                    <div class="text1" style="font-size: 20px;"><b>Already Registered ? <a href="SIGN_IN.html">Sign
+                    <div class="text1" style="font-size: 20px;"><b>Already Registered ? <a href="user_signin.php">Sign
                                 In</a></b> </div>
 
 
@@ -538,9 +538,15 @@ if (isset($_POST['register'])) {
         $end_time1 = mysqli_real_escape_string($con, $_POST['endTime1']);
         if (strcmp($password, $confirmpassword) == 0) {
             $query = "insert into shopkeeper(name,email,
+<<<<<<< HEAD
+                    pincode,password,shopName,shopAddress,phone,startTime,endTime) 
+                    values ('$name','$email','$pincode','$password','$shop_name',
+                    '$shop_address','$phonenumber','$start_time1','$end_time1'
+=======
                     pincode,password,shopName,shopAddress,phone,startTime,endTime,Slot-Interval,Slot-User) 
                     values ('$name','$email','$pincode','$encryption','$shop_name',
                     '$shop_address','$phonenumber','$start_time1','$end_time1','$SlotInterval',$SlotUser
+>>>>>>> d221878dfc9679062cf7076c62893ed849219ecc
                     )";
             $run_register_query = mysqli_query($con, $query);
             echo "<script>alert('SucessFully Registered');</script>";
@@ -559,7 +565,7 @@ if (isset($_POST['register'])) {
         if (strcmp($password, $confirmpassword) == 0) {
             $query = "insert into consumer(name,email,
                     pincode,password,address,phone) 
-                    values ('$name','$email','$pincode','$encryption',
+                    values ('$name','$email','$pincode','$password',
                     '$visitor_address','$phonenumber'
                     )";
             $run_register_query = mysqli_query($con, $query);
