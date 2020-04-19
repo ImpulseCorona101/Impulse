@@ -239,31 +239,16 @@
 
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Impulse</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Application</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
     <br>
     <div class="row main  ">
 
         <div class="col-6 inner1">
+<<<<<<< HEAD
             <img src="Impulse.png" class="img-fluid logo ml-5 " alt="Responsive image" style="width: 150px; height:100px;">
+=======
+            <img src="../../Images/Impulse.png" class="img-fluid logo ml-5 " alt="Responsive image" style="width: 150px; height:100px;">
+>>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
 
         </div>
         <div class="col inner">
@@ -517,7 +502,7 @@ if (isset($_POST['register'])) {
     );
 
     $radio_val = $_POST["occupation"];
-    if($radio_val == "doctor"){
+    if ($radio_val == "doctor") {
         $clinic_name = mysqli_real_escape_string($con, $_POST['clinicName']);
         $clinic_address = mysqli_real_escape_string($con, $_POST['clinicAddress']);
         $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
@@ -532,27 +517,25 @@ if (isset($_POST['register'])) {
             $run_register_query = mysqli_query($con, $query);
             echo "<script>alert('SucessFully Registered');</script>";
             echo "<script>window.open('user_signin.php','_self')</script>";
-        }
-        else if (strcmp($password, $confirmpassword) != 0) {
+        } else if (strcmp($password, $confirmpassword) != 0) {
             echo "<script>
                     alert('Password and Confirm Password Should be same');
                 </script>";
         }
-    }
-    else if($radio_val=="Shopkeeper"){
+    } else if ($radio_val == "Shopkeeper") {
         $shop_name = mysqli_real_escape_string($con, $_POST['shopName']);
         $shop_address = mysqli_real_escape_string($con, $_POST['shopAddress']);
         $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
         $start_time1 = mysqli_real_escape_string($con, $_POST['startTime1']);
         $end_time1 = mysqli_real_escape_string($con, $_POST['endTime1']);
         $slots_intv = $_POST["optradio"];
-        if($slots_intv == "30"){
+        if ($slots_intv == "30") {
             $slot_interval = "30";
-        }else if($slots_intv == "45"){
+        } else if ($slots_intv == "45") {
             $slot_interval = "45";
-        }else if($slots_intv == "60"){
+        } else if ($slots_intv == "60") {
             $slot_interval = "60";
-        }else{
+        } else {
             $slot_interval = "30";
         }
 

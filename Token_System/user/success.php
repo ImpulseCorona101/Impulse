@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <style>
+        .form-actions {
+            margin: 0;
+            background-color: transparent;
+            text-align: center;
+        }
+    </style>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="../../index.php">Impulse</a>
 
@@ -50,51 +59,87 @@
 
 
             </div>
-            <div class="text  login" style="color: white;">Login</div>
+            <?php
+            $con = mysqli_connect("localhost", "root", "", "impulse");
+
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySql " . mysqli_connect_error();
+            }
+            $name = null;
+            if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
+                $phone = $_SESSION['phonenumber'];
+                $name_query = "select * from shopkeeper where phone=$phone ";
+                $run = mysqli_query($con, $name_query);
+                while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+                }
+                echo "<div class='text login' style='color: white;'>Hello  $name</div>";
+            } else if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "visitor")) {
+                $phone = $_SESSION['phonenumber'];
+                $name_query = "select * from consumer where phone=$phone ";
+                $run = mysqli_query($con, $name_query);
+                while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+                }
+                echo "<div class='text login' style='color: white;'>>Hello $name</div>";
+            } else {
+
+                echo "<a href='user_signin.php' ><div class='text login' style='color: white;'>Login</div></a>";
+            }
+            ?>
+
         </div>
+
+
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="../../User_Pages/profile.html">Profile</a>
-                <a href="user_signin">Logout</a>
-                <div class="hide">
-                    <a href="../../index.php">Home</a>
-                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
-                    <a href="../../AgroCraft/index.html">Agrocraft</a>
-                    <a href="Contact.html">Contact Us</a>
-                    <div>
+                <?php
+                if (isset($_SESSION['phonenumber'])) {
+                    echo " <a href='Token_System/user/profile.html'>Profile</a>";
 
-                    </div>
-                </div>
+                    echo "<a href='Token_System/user/logout.php'>Logout</a>";
+                } else {
+
+                    echo "<a href='Token_System/user/user_signin.php'>Login</a>";
+                }
+                ?>
+
             </div>
+        </div>
+        </div>
         </div>
 
     </nav>
     <br>
     <br>
 
-    <div class="container mr-5">
-    <div class="row text-center">
-        <div class="col-sm-6 col-sm-offset-5">
-        <br><br> <h2 style="color:#0fad00">Thank You!</h2>
-        
-        <h3></h3>
-        <p style="font-size:20px;color:#5C5C5C;">We have sent you an email  with your QrCode <br> Please go to your above profile to check</p>
-        <a href="../../User_Pages/profile.html" class="btn btn-success">     Go To Profile      </a>
-    <br><br>
+    <br>
+    <div class="card">
+        <h4 class="card-header text-success text-center font-weight-bold">Success</h4>
+        <div class="card-body">
+            <h4 class="card-title text-success text-center font-weight-bold">Slot Successfully Booked</h4>
+            <h5 class="card-text text-center">Please Visit the shop in the booked time <br> You can view your passcode in profile.</h5>
+            <br>
+            <div class="form-actions">
+                <a href="profile.php" class="btn btn-success btn-lg ">Go To Profile</a>
+            </div>
         </div>
-        
     </div>
-</div>
-<style >
-    .hide{
-        display: none;
-    }
-    .container{
-        position: absolute;
-        left: 300px;
-    }
-    .dropbtn {
+
+    <br><br><br>
+
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .container {
+            position: absolute;
+            left: 300px;
+        }
+
+        .dropbtn {
             background-color: #343a40;
             color: white;
             padding: 8px;
@@ -119,7 +164,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            right:20px;
+            right: 20px;
             background-color: #f1f1f1;
             min-width: 160px;
             overflow: auto;
@@ -142,24 +187,26 @@
         .show {
             display: block;
         }
-    @media only screen and (min-device-width:320px) and (max-device-width:480px){
-        .container{
-            position: relative;
-            left:   10px;
-            
 
+        @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+            .container {
+                position: relative;
+                left: 10px;
+
+
+            }
+
+
+            p {
+                font-size: 2px;
+            }
+
+            .hide {
+                display: block;
+            }
         }
-        
-        
-        p{
-            font-size: 2px;
-        }
-        .hide{
-            display: block;
-        }
-    }
-</style>
-<script>
+    </style>
+    <script>
         /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
         function myFunction() {
@@ -181,4 +228,5 @@ toggle between hiding and showing the dropdown content */
         }
     </script>
 </body>
+
 </html>

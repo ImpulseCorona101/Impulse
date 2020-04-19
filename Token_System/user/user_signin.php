@@ -174,7 +174,11 @@
     <!-- <br> -->
     <!-- <img src="Guadian.png" >
      -->
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
     <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
     <div class="text-center">
         <h1><b>Impulse</b></h1>
@@ -222,6 +226,7 @@
                 </div>
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
                     <a href="Email_ForgotPassword.html">
+<<<<<<< HEAD
                     <div class="text1">Forgot password ? </div>
                 </a>
 
@@ -229,6 +234,12 @@
                     <div class="text2"> New User ? </div>
                 </a>
 
+=======
+                        <div class="text1">Forgot password ? </div>
+                        <div class="text2">
+                            <a href="user_signup.php">New User ? </a>
+                        </div>
+>>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
                 </div>
 
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3" style="margin-top: -5%;">
