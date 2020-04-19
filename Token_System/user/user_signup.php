@@ -517,11 +517,6 @@ if (isset($_POST['register'])) {
     );
 
     $radio_val = $_POST["occupation"];
-<<<<<<< HEAD
-    if ($radio_val == "Shopkeeper") {
-        $SlotInterval = mysqli_real_escape_string($con, $_POST['optradio']);
-        $SlotUser = mysqli_real_escape_string($con, $_POST['SlotUser']);
-=======
     if($radio_val == "doctor"){
         $clinic_name = mysqli_real_escape_string($con, $_POST['clinicName']);
         $clinic_address = mysqli_real_escape_string($con, $_POST['clinicAddress']);
@@ -545,7 +540,6 @@ if (isset($_POST['register'])) {
         }
     }
     else if($radio_val=="Shopkeeper"){
->>>>>>> 352a332c81b33f58845df4bea9fd49098cc20a45
         $shop_name = mysqli_real_escape_string($con, $_POST['shopName']);
         $shop_address = mysqli_real_escape_string($con, $_POST['shopAddress']);
         $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
@@ -567,15 +561,9 @@ if (isset($_POST['register'])) {
 
         if (strcmp($password, $confirmpassword) == 0) {
             $query = "insert into shopkeeper(name,email,
-<<<<<<< HEAD
-                    pincode,password,shopName,shopAddress,phone,startTime,endTime,Slot-Interval,Slot-User) 
-                    values ('$name','$email','$pincode','$encryption','$shop_name',
-                    '$shop_address','$phonenumber','$start_time1','$end_time1','$SlotInterval',$SlotUser
-=======
                     pincode,password,shopName,shopAddress,phone,startTime,endTime,slotInterval,slotUser) 
                     values ('$name','$email','$pincode','$encryption','$shop_name',
                     '$shop_address','$phonenumber','$start_time1','$end_time1','$slot_interval','$slot_user'
->>>>>>> 352a332c81b33f58845df4bea9fd49098cc20a45
                     )";
             $run_register_query = mysqli_query($con, $query);
             echo "<script>alert('SucessFully Registered');</script>";

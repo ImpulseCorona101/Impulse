@@ -397,7 +397,6 @@ if (isset($_POST['login'])) {
 		$id = $row['buyer_id'];
 	}
 
-
 	$_SESSION['phonenumber'] = $phonenumber;
 	echo "<script>window.open('../BuyerPortal2/bhome.php','_self')</script>";
 }

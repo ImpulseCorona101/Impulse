@@ -260,7 +260,7 @@
 <?php
 
 include("../Includes/db.php");
-
+session_start();
 if (isset($_POST['login'])) {
 	$phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
 	$password = mysqli_real_escape_string($con, $_POST['password']);
@@ -328,6 +328,7 @@ if (isset($_POST['login'])) {
         }
         else{
             echo "<script>console.log('session');</script>";
+            $_SESSION['phonenumber'] = $phonenumber;
             echo "<script>window.open('../../index.php','_self')</script>";
         }
         while ($row = mysqli_fetch_array($run_query)) {
