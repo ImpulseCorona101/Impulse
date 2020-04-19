@@ -690,8 +690,8 @@ margin-top:2%;
                <div class="row  mt-4 p-2">
                     <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 districts">
                          
-                         <div class="text-center mr-5">
-                              <h4>Select your State</h4>
+                         <div class="text-center mr-5 ">
+                              <h4 class="font-weight-bold mt-2"  style="color: #FFD700; border-radius: 2px;">Select your State</h4>
                          </div>
                     </div>
                     <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 p-0 States">
@@ -706,7 +706,7 @@ margin-top:2%;
                               <a class="dropdown-item" href="#">Strawberry</a>
                          </div>
                     </div> -->
-                         <select class="shadow-lg mr-5" id="states" name="stateInput" onchange="state()" tabindex="1" style="padding: 6px ;border:1px solid blue;  border-radius:4px;margin-left:10px;
+                         <select class="shadow-lg mr-5" id="states" name="stateInput" onchange="state()" tabindex="1" style="padding: 10px ;border:1px solid blue;  border-radius:4px;margin-left:10px;
                          ">
                               <option value="0">Select State</option>
                               <option value="31">ANDAMAN & NICOBAR ISLANDS</option>
@@ -749,7 +749,7 @@ margin-top:2%;
 
                          </select>
                     </div>
-                    <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 districts">
+                    
                          <!-- <div class="dropdown">
                          <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <b>Districts</b>
@@ -761,17 +761,15 @@ margin-top:2%;
                          </div>
                     </div> -->
 
-                         <div class="text-center">
-                              <h4>Select your District</h4>
-                         </div>
-                    </div>
-                         <select class="shadow-lg" style="padding: 2px ;border:1px solid blue; margin-left: 150px ; border-radius:4px;
+                         
+                    
+                         <select class="shadow-lg" style="width: 150px; border:1px solid blue;  border-radius:4px ;margin-left:50px;
                          " name="districtInput" id="district">
                               <option>Select District</option>
                          </select>
 
                     
-                    <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12 go"> <button class='btn btn-outline-success border-success ' name='go' type='submit' style='color:black ;font-weight:50px;'>Go !</button>
+                    <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12 go"> <button class='btn  border-success ' name='go' type='submit' style='color:#FFD700 ;background-color: black; padding:10px;  font-weight:50px;border-radius: 10px;'>Filter</button>
                     </div>
                </div>
             </div>
