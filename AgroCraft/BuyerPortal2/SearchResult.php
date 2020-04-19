@@ -140,11 +140,13 @@ margin-top:-10px;
      /* margin-left: -70%; */
           /* margin-left:-240%;
 margin-top:2%;
-} */       .myfooter{
-          position: absolute;
-          width: 1536px;
-          bottom:0px;
-     }
+} */
+          .myfooter {
+               position: absolute;
+               width: 1536px;
+               bottom: 0px;
+          }
+
           .aligncenter {
                text-align: center;
           }
@@ -307,7 +309,7 @@ margin-top:2%;
           }
 
           @media only screen and (min-device-width:320px) and (max-device-width:480px) {
-               
+
                .States {
                     margin-right: 0%;
                     margin-left: 0%;
@@ -423,7 +425,7 @@ margin-top:2%;
                     background: white;
                     padding: 0 10px;
                }
-               
+
           }
 
 
@@ -528,9 +530,6 @@ margin-top:2%;
                 max-width: 100%;
             }
         } */
-        
-
-        }
      </style>
      <!-- <script>
         var a;
@@ -686,16 +685,16 @@ margin-top:2%;
 
      <form action="" method="post">
           <div class="Responsive">
-          <div class="container mt-5" style="position: absolute; left: 300px; ">
-               <div class="row  mt-4 p-2">
-                    <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 districts">
-                         
-                         <div class="text-center mr-5 ">
-                              <h4 class="font-weight-bold mt-2"  style="color: #FFD700; border-radius: 2px;">Select your State</h4>
+               <div class="container mt-5" style="position: absolute; left: 300px; ">
+                    <div class="row  mt-4 p-2">
+                         <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 districts">
+
+                              <div class="text-center mr-5 ">
+                                   <h4 class="font-weight-bold mt-2" style="color: #FFD700; border-radius: 2px;">Select your State</h4>
+                              </div>
                          </div>
-                    </div>
-                    <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 p-0 States">
-                         <!-- <div class="dropdown text-right p-0 ">
+                         <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 p-0 States">
+                              <!-- <div class="dropdown text-right p-0 ">
                          <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                               <b> States</b>
@@ -706,76 +705,63 @@ margin-top:2%;
                               <a class="dropdown-item" href="#">Strawberry</a>
                          </div>
                     </div> -->
-                         <select class="shadow-lg mr-5" id="states" name="stateInput" onchange="state()" tabindex="1" style="padding: 10px ;border:1px solid blue;  border-radius:4px;margin-left:10px;
+                              <select class="shadow-lg mr-5" id="states" name="stateInput" onchange="state()" tabindex="1" style="padding: 10px ;border:1px solid blue;  border-radius:4px;margin-left:10px;
                          ">
-                              <option value="0">Select State</option>
-                              <option value="31">ANDAMAN & NICOBAR ISLANDS</option>
-                              <option value="01">ANDHRA PRADESH</option>
-                              <option value="32">ARUNACHAL PRADESH</option>
-                              <option value="02">ASSAM</option>
-                              <option value="03">BIHAR</option>
-                              <option value="33">CHANDIGARH</option>
-                              <option value="23">CHHATTISGARH</option>
-                              <option value="34">DADRA AND NAGAR HAVELI</option>
-                              <option value="36">DAMAN AND DIU</option>
-                              <option value="35">DELHI</option>
-                              <option value="42">GOA</option>
-                              <option value="04">GUJARAT</option>
-                              <option value="05">HARYANA</option>
-                              <option value="06">HIMACHAL PRADESH</option>
-                              <option value="07">JAMMU AND KASHMIR</option>
-                              <option value="24">JHARKAND</option>
-                              <option value="08">KARNATAKA</option>
-                              <option value="09">KERALA</option>
-                              <option value="37">LAKSHADWEEP</option>
-                              <option value="10">MADHYA PRADESH</option>
-                              <option value="11">MAHARASHTRA</option>
-                              <option value="12">MANIPUR</option>
-                              <option value="13">MEGHALAYA</option>
-                              <option value="38">MIZORAM</option>
-                              <option value="14">NAGALAND</option>
-                              <option value="15">ODISHA</option>
-                              <option value="39">PUDUCHERRY</option>
-                              <option value="16">PUNJAB</option>
-                              <option value="17">RAJASTHAN</option>
-                              <option value="22">SIKKIM</option>
-                              <option value="18">TAMIL NADU</option>
-                              <option value="26">TELANGANA</option>
-                              <option value="19">TRIPURA</option>
-                              <option value="20">UTTAR PRADESH</option>
-                              <option value="25">UTTARAKHAND</option>
-                              <option value="40">UTTARANCHAL</option>
-                              <option value="21">WEST BENGAL</option>
+                                   <option value="0">Select State</option>
+                                   <option value="31">ANDAMAN & NICOBAR ISLANDS</option>
+                                   <option value="01">ANDHRA PRADESH</option>
+                                   <option value="32">ARUNACHAL PRADESH</option>
+                                   <option value="02">ASSAM</option>
+                                   <option value="03">BIHAR</option>
+                                   <option value="33">CHANDIGARH</option>
+                                   <option value="23">CHHATTISGARH</option>
+                                   <option value="34">DADRA AND NAGAR HAVELI</option>
+                                   <option value="36">DAMAN AND DIU</option>
+                                   <option value="35">DELHI</option>
+                                   <option value="42">GOA</option>
+                                   <option value="04">GUJARAT</option>
+                                   <option value="05">HARYANA</option>
+                                   <option value="06">HIMACHAL PRADESH</option>
+                                   <option value="07">JAMMU AND KASHMIR</option>
+                                   <option value="24">JHARKAND</option>
+                                   <option value="08">KARNATAKA</option>
+                                   <option value="09">KERALA</option>
+                                   <option value="37">LAKSHADWEEP</option>
+                                   <option value="10">MADHYA PRADESH</option>
+                                   <option value="11">MAHARASHTRA</option>
+                                   <option value="12">MANIPUR</option>
+                                   <option value="13">MEGHALAYA</option>
+                                   <option value="38">MIZORAM</option>
+                                   <option value="14">NAGALAND</option>
+                                   <option value="15">ODISHA</option>
+                                   <option value="39">PUDUCHERRY</option>
+                                   <option value="16">PUNJAB</option>
+                                   <option value="17">RAJASTHAN</option>
+                                   <option value="22">SIKKIM</option>
+                                   <option value="18">TAMIL NADU</option>
+                                   <option value="26">TELANGANA</option>
+                                   <option value="19">TRIPURA</option>
+                                   <option value="20">UTTAR PRADESH</option>
+                                   <option value="25">UTTARAKHAND</option>
+                                   <option value="40">UTTARANCHAL</option>
+                                   <option value="21">WEST BENGAL</option>
 
-                         </select>
-                    </div>
-                    
-                         <!-- <div class="dropdown">
-                         <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <b>Districts</b>
-                         </button>
-                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Patato</a>
-                              <a class="dropdown-item" href="#">Carrot</a>
-                              <a class="dropdown-item" href="#">Onion</a>
+                              </select>
                          </div>
-                    </div> -->
 
-                         
-                    
-                         <select class="shadow-lg" style="width: 150px; border:1px solid blue;  border-radius:4px ;margin-left:50px;
-                         " name="districtInput" id="district">
+
+                         <select class="shadow-lg" style="width: 150px; border:1px solid blue;  border-radius:4px ;margin-left:50px;" name="districtInput" id="district">
                               <option>Select District</option>
                          </select>
 
-                    
-                    <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12 go"> <button class='btn  border-success ' name='go' type='submit' style='color:#FFD700 ;background-color: black; padding:10px;  font-weight:50px;border-radius: 10px;'>Filter</button>
+
+                         <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12 go"> <button class='btn  border-success ' name='go' type='submit' style='color:#FFD700 ;background-color: black; padding:10px;  font-weight:50px;border-radius: 10px;'>Filter</button>
+                         </div>
                     </div>
                </div>
-            </div>
           </div>
           </div>
-     </div>
+          </div>
      </form>
      <?php
      if (isset($_POST['go'])) {
