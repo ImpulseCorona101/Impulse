@@ -5,9 +5,68 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <a href="https://icons8.com/icon/83325/roman-soldier"></a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
      <title>Impulse - Homepage</title>
 
      <style>
+           .hide{
+        display: none;
+    }
+    
+    .dropbtn {
+            background-color: #343a40;
+            color: white;
+            padding: 8px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 50px;
+            margin-right: 30px;
+        }
+
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2a5cff;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right:20px;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #2a5cff;
+        }
+
+        .show {
+            display: block;
+        }
           .form-actions {
                margin: 0;
                background-color: transparent;
@@ -32,24 +91,53 @@
 
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Impulse</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-          </button>
+        <a class="navbar-brand" href="#">Impulse</a>
+        
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                         <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="#">About Application</a>
-                    </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-               </ul>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item ">
+                    <a class="nav-link" href="index.php"> <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="Token_System/user/shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Application</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Token_System/user/Contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+
+                </li>
+            </ul>
+        </div>
+         </div>
+           
+        </div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="Token_System/user/profile.html">Profile</a>
+                <a href="Token_System/user/user_signin.php">Login</a>
+                <div class="hide">
+                    <a href="../../index.php">Home</a>
+                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                    <a href="../../AgroCraft/index.html">Agrocraft</a>
+                    <a href="Contact.html">Contact Us</a>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
      </nav>
      <br>
      <div class="row">
@@ -130,14 +218,15 @@
 
      <div class="card text-center">
           <div class="card-header">
-               Slot Booking for Grocery shops and Clinics
+               Slot Booking for Grocery Store
           </div>
           <div class="card-body">
                <h1 class="card-title">Book Your Slot And Be Safe</h1>
-               <h5 class="card-text ">Book your slot according to your on will and time,which helps in maintaining social distancing and prevent overcrowding
+               <h5 class="card-text ">Book your slot according to your on will and time,which helps in maintaining social distancing and prevent overcrowding.
                </h5>
                <br>
-               <a href="Token_System/user/shop_list.php" class="btn btn-primary btn-lg">Book Now</a>
+               <a href="Token_System/user/user_confirm.php" class="btn btn-primary btn-lg">Book Now</a>
+                <a href="Token_System/vender/vendor_confirm.php" class="btn btn-primary ml-5 btn-lg">View Slot</a>
           </div>
           <div class="card-footer text-muted">
                A step against Coronavirus Pandemic
@@ -171,6 +260,25 @@
      <script src="https://code.jquery.com/jquery-3.5.0.min.js" crossorigin="anonymous"></script>
 
      <script src="Javascript/Homepage.js"></script>
+     <script type="text/javascript">
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+     </script>
 </body>
 
 </html>
