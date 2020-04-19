@@ -104,6 +104,7 @@ include("../Functions/functions.php");
      </script>
      <script>
           var a;
+          9
 
           function display() {
                if (a == 0) {
@@ -120,13 +121,26 @@ include("../Functions/functions.php");
           }
      </script>
      <style>
+          /* .please{
+margin-left:-7%;
+margin-top:-10px;
+          }
+          .states{
+               margin-right:-15%;
+               color:white;
+          }
           .myfooter {
                background-color: #292b2c;
-
+               color:white;
                color: goldenrod;
                margin-top: 15px;
           }
-
+.submitbtn{
+     color:white;
+     /* margin-left: -70%; */
+          /* margin-left:-240%;
+margin-top:2%;
+} */
           .aligncenter {
                text-align: center;
           }
@@ -274,7 +288,33 @@ include("../Functions/functions.php");
           /* .settings{
     margin-left:10px;
 } */
+.States{
+     margin-right:-1%;margin-left:10%
+}
+.districts{
+     margin-right:-15%;
+}
+.go{
+     margin-right:-50%;
+     margin-left:5%;
+}
           @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+               .States{
+     margin-right:0%;margin-left:0%;
+     margin-top:5%;
+}
+.districts{
+     margin-right:0%;
+     margin-top:5%;
+}
+.go{
+     margin-right:0%;
+     margin-left:40%;
+     margin-right:30%;
+     margin-top:10%;
+}
+              
+              
                .guard {
                     width: 100%;
                     text-align: center;
@@ -629,26 +669,57 @@ include("../Functions/functions.php");
 
 
 
+     <div class="container">
+          <div class="row   p-2">
+               <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                    <div class="text-center">
+                         <h4>Select your region</h4>
+                    </div>
+               </div>
+               <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 p-0 States" >
+                    <div class="dropdown text-right p-0 ">
+                         <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
+                              <b> States</b>
+                         </button>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Orange</a>
+                              <a class="dropdown-item" href="#">Watermellon</a>
+                              <a class="dropdown-item" href="#">Strawberry</a>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-6 col-xl-3 col-lg-3 col-md-6 col-sm-6 districts">
+                    <div class="dropdown">
+                         <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <b>Districts</b>
+                         </button>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Patato</a>
+                              <a class="dropdown-item" href="#">Carrot</a>
+                              <a class="dropdown-item" href="#">Onion</a>
+                         </div>
+                    </div>
 
-
-     <div class="text-center destext">
-          <h2> Select Your Region</h2>
-     </div>
-     <div class="container mobtext">
-          <div class="text-center">
-               <br>
-
-               <b>
-                    <h1 class="guard"><span><b>Please Select Your Region</b></span>
-                    </h1>
-               </b>
+               </div>
+               <div class="col-12 col-xl-3 col-lg-3 col-md-12 col-sm-12 go" > <button class='btn btn-warning border-secondary ' name='cart' type='submit' style='color:black ;font-weight:50px;'>Go !</button>
+               </div>
           </div>
-     </div>
-     <br>
-     <div class="d-flex justify-content-center bg-white mb-3">
 
-          <div class="p-2 states ">
+     </div>
+     </div>
+
+
+
+
+
+
+     <!-- <div class="container ">
+          <div class="float-left bg-danger">
+               <h4>Please select your region</h4>
+               <br>
+          </div>
+          <div class="float-right bg-warning">
                <div class="dropdown">
                     <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
@@ -660,8 +731,6 @@ include("../Functions/functions.php");
                          <a class="dropdown-item" href="#">Strawberry</a>
                     </div>
                </div>
-          </div>
-          <div class="p-2 districts">
                <div class="dropdown">
                     <button class="btn btn-green mybtn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                          <b>Districts</b>
@@ -672,15 +741,13 @@ include("../Functions/functions.php");
                          <a class="dropdown-item" href="#">Onion</a>
                     </div>
                </div>
+               <button class='btn btn-warning border-secondary mr-1 ' name='cart' type='submit' style='color:black ;font-weight:50px;'>Add to cart<img src='carticons.png' height='20px'></button>
+
           </div>
-     </div>
 
+     </div> -->
 
-
-
-
-
-     <div class="container">
+     <div class="container ">
           <br>
           <div class="row">
 
