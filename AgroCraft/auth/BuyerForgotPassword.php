@@ -260,75 +260,7 @@
 
 <body>
 
-<nav class="navbar navbar-expand-xl ">
-        <!-- <a href="#" class="navbar-brand">Academind</a> -->
-        <div class=" flex-row-reverse left ">
 
-            <div class="p-2">
-                <div class="icon2">
-                    <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green ;margin-top:2px;">&#61562;</i></a>
-                    <span id="icon" style="color:green"> 5 </span>
-                </div>
-            </div>
-            <div class="p-2 ml-5"><i class='far fa-user-circle' style='font-size:30px; color: green;margin-top:2px; visibility:hidden;'></i></div>
-            <a class="float-left" href="#">
-                <img src="agro.png" class="float-left mr-5 ml-0 " alt="Logo" style="height:50px;">
-            </a>
-        </div>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fas fa-bars p-1 " style="color:green;margin-right:-9%;font-size:28px;"></i></span>
-        </button>
-        <a class="float-left" href="#">
-            <img src="agro.png" class="float-left mr-2 moblogo" alt="Logo" style="height:50px;">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            <div class="input-group mb-1 ml-2 searchbox">
-                <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fas fa-search" style="font-size:20px;color:green; "></i></div>
-                </div>
-                <input type="text" class="form-control " id="inlineFormInputGroup" placeholder="Search for fruits,vegetables or crops ">
-            </div>
-            <div class="text-success  logins ">Login</div>
-            <div class="list-group moblists">
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">
-                    Profile
-                </a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Transactions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">subscriptions</a>
-                <a href="#" class="list-group-item list-group-item-action" style="background-color:#292b2c;text-align:center;color:goldenrod">Farmers</a>
-                <a href="#" class="list-group-item list-group-item-action " style="background-color:#292b2c;text-align:center;color:goldenrod">Logout</a>
-            </div>
-        </div>
-
-
-
-
-        <div class=" flex-row-reverse right ">
-            <div class="p-2 cart">
-                <div class="icon2">
-                    <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:green">&#61562;</i></a>
-                    <span id="icon" style="color:green"> 5 </span>
-                </div>
-            </div>
-            <div class="dropdown p-2 settings ">
-                <button class="btn  dropdown-toggle text-success" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Settings
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item  " style="padding-right:-20px;">Profile</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Transactions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Subscriptions</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Farmers</a>
-                    <a class="dropdown-item " style="padding-right:-20px;" href="#">Logout</a>
-                </div>
-            </div>
-
-            <!-- <div class="p-2 profile"><i class='far fa-user-circle' style='font-size:30px; '></i></div> -->
-            <div class="text-success  login">Login</div>
-        </div>
-
-    </nav>
     <div class="box">
         <form action="BuyerForgotPassword.php" method="post">
             <h3>FORGOT PASSWORD</h3>
@@ -344,35 +276,7 @@
             <input type="submit" name="register" value="Update Password">
         </form>
     </div>
-    <section id="footer" class="myfooter">
-        <div class="container">
-            <div class="row text-center text-xs-center text-sm-left text-md-left">
-                <div class="col aligncenter">
-                    <p>Payment Option</p>
-                    <img src="../Images/Website/paytm1.jpg" alt="paytm">
-                    <img src="../Images/Website/cod.jpg" alt="paytm" style="height:37px">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                    <ul class="list-unstyled list-inline social text-center">
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                    </ul>
-                </div>
-                </hr>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
-                    <p><u><a href="https://www.agrocraft.com/">AgroCraft Corporation</a></u> is a Multitrading Company for farmers ang traders</p>
-                    <p class="h6">Copy All right Reversed.<a class="text-green ml-2" href="https://www.google.com" target="_blank">Agrotech</a></p>
-                </div>
-                </hr>
-            </div>
-        </div>
+    
 </body>
 
 </html>

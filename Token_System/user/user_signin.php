@@ -174,38 +174,10 @@
     <!-- <br> -->
     <!-- <img src="Guadian.png" >
      -->
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+   
     
-=======
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Impulse</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Application</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <img src="Impulse.png" class="mx-auto d-block imag" />
->>>>>>> f6e01824e5575ffb2ca7a5930ed13913c9527b27
-=======
->>>>>>> 5dd76040d4d384c682251d916ad372f8f878496c
-
->>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
     <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
     <div class="text-center">
         <h1><b>Impulse</b></h1>
@@ -242,39 +214,24 @@
                         <span class="input-group-text text " id="inputGroup-sizing-default" style="font-size: 15px;"><i class="fas fa-phone-alt mr-2"></i>Phone number</span>
                     </div>
                     <input type="text" name="phonenumber" class="form-control inp " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="
-                    Phonenumber">
+                    Phonenumber" required>
                 </div>
                 <div class="input-group mt-5  s">
                     <div class="input-group-prepend mb-5 ">
                         <span class="input-group-text  text" id="inputGroup-sizing-default"><i class="fas fa-lock mr-2"></i>Password</span>
                     </div>
-                    <input type="password" name="password" class="form-control inp inp1 mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Password">
+                    <input type="password" name="password" class="form-control inp inp1 mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Password" required>
 
                 </div>
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
                     <a href="Email_ForgotPassword.html">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                    <div class="text1">Forgot password ? </div>
-<<<<<<< HEAD
-                </a>
 
-                    <a href="user_signup.php">
-                    <div class="text2"> New User ? </div>
-                </a>
-
-=======
-                    <div class="text2">
-                        <a href="user_signup.php">New User ? </a>
-                    </div>
->>>>>>> f6e01824e5575ffb2ca7a5930ed13913c9527b27
-=======
->>>>>>> 5dd76040d4d384c682251d916ad372f8f878496c
                         <div class="text1">Forgot password ? </div>
-                        <div class="text2">
-                            <a href="user_signup.php">New User ? </a>
-                        </div>
+                    </a>
+                    <a href="user_signup.php">
+
+                    <div class="text1">New User ? </div>
+                         </a>
                 </div>
 
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3" style="margin-top: -5%;">
