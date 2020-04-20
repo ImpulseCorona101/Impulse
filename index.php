@@ -547,7 +547,7 @@ toggle between hiding and showing the dropdown content */
           </div>
 
           <br>
-          <a href="Coronavirus/CurrentStats.html"><button type="submit" class="btn btn-primary btn-lg col-4 ml-5 p-2" type="submit">Current
+          <a href="Coronavirus/CurrentStats.php"><button type="submit" class="btn btn-primary btn-lg col-4 ml-5 p-2" type="submit">Current
                     Status</button></a>
 
           <a href="Coronavirus/Coronavirus.php"><button type="submit" class="btn btn-primary btn-lg float-right col-4 mr-5 p-2" type="submit">COVID-19
@@ -566,8 +566,9 @@ toggle between hiding and showing the dropdown content */
                </h5>
                <br>
                <a href="Token_System/user/shop_list.php" class="btn btn-primary btn-lg">Book Now</a>
-               </div><div class="card-footer text-muted">
-                    A step against Coronavirus Pandemic
+          </div>
+          <div class="card-footer text-muted">
+               A step against Coronavirus Pandemic
           </div>
      </div>
 

@@ -1,3 +1,2 @@
 <?php 
-        $con = mysqli_connect("localhost","root","","impulse");
-?>
+        $con = mysqli_connect("localhost","root","","impulse101");

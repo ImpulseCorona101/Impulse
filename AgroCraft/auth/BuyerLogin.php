@@ -24,33 +24,26 @@ session_start();
     <style>
         @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
-<<<<<<< HEAD
         color: goldenrod;
         margin-top: 15px;
-    }
-	#a {
-    text-align: center;
-    font-size: 25px;
-    border-style: solid;
-    /*margin-border-top: 8%;*/
-    margin-top: 10%;
-    margin-left: 28%;
-    margin-right: 20%;
-    margin-bottom: 18%;
-    max-width: 40%;
-    min-width: 20%;
-}
-    .aligncenter {
-        text-align: center;
-    }
-=======
-        .myfooter {
-            background-color: #292b2c;
-
-            color: goldenrod;
-            margin-top: 15px;
         }
->>>>>>> 4d60467dfe95e66dc3637f27d9ea04885d6c46f2
+
+        #a {
+            text-align: center;
+            font-size: 25px;
+            border-style: solid;
+            /*margin-border-top: 8%;*/
+            margin-top: 10%;
+            margin-left: 28%;
+            margin-right: 20%;
+            margin-bottom: 18%;
+            max-width: 40%;
+            min-width: 20%;
+        }
+
+        .aligncenter {
+            text-align: center;
+        }
 
         .aligncenter {
             text-align: center;
@@ -248,61 +241,15 @@ session_start();
 
 <body>
 
-<<<<<<< HEAD
-	<main class="my-form">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-8">
-					<div class="card">
-						<div class="card-header border border-dark" style="background-color:#292b2c">
-							<h4 style="font-style:bold;color:goldenrod;text-align:left">Login</h4>
-						</div>
-						<div class="card-body border border-dark">
-							<form name="my-form" action="BuyerLogin.php" method="post">
-
-								<div class="form-group row">
-									<label for="phone_number" class="col-md-4 col-form-label text-md-right  "><b><i class="fas fa-phone-alt mr-2"></i>Phone Number</b></label>
-									<div class="col-md-6">
-										<input type="text" id="phone_number" class="form-control border border-dark" name="phonenumber" placeholder="Phone Number" required>
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label for="p1" class="col-md-4 col-form-label text-md-right"><b><i class="fas fa-lock mr-2"></i>Password</b></label>
-									<div class="col-md-6">
-										<input id="p1" class="form-control border border-dark" type="password" name="password" placeholder="Password" required>
-									</div>
-								</div>
-
-								<div class="col-md-6 offset-md-4">
-									<button type="submit" class="btn " style="background-color:#292b2c;color:goldenrod" name="login" value="Login">
-										Login
-									</button>
-								</div>
-								<br>
-								<div class="col-md-6 offset-md-4">
-									<label id="forgotPassword"><a id='link' href="BuyerForgotPassword.php"><b style="color:black"> Forgot your password ?</b></a></label>
-									<br>
-									<label id="account"><a id='link' href="BuyerRegistration.php"><b style="color:black">Create New Account</b></a></label>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	
-=======
     <main class="my-form">
-        <div class="cotainer">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header" style="background-color:#292b2c">
-                            <h4 style="font-style:bold;color:goldenrod;">Login</h4>
+                        <div class="card-header border border-dark" style="background-color:#292b2c">
+                            <h4 style="font-style:bold;color:goldenrod;text-align:left">Login</h4>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body border border-dark">
                             <form name="my-form" action="BuyerLogin.php" method="post">
 
                                 <div class="form-group row">
@@ -338,8 +285,6 @@ session_start();
         </div>
     </main>
 
-
->>>>>>> 4d60467dfe95e66dc3637f27d9ea04885d6c46f2
 </body>
 
 </html>

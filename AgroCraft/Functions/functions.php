@@ -304,7 +304,7 @@
         include("../Includes/db.php");
         global $con;
         $sess_phone_number = $_SESSION['phonenumber'];
-        $query = "select * from products where farmer_fk in (select farmer_id from farmerregistration where farmer_phone=$sess_phone_number) limit 5";
+        $query = "select * from products where farmer_fk in (select farmer_id from farmerregistration where farmer_phone=$sess_phone_number) ";
         $run_query = mysqli_query($con, $query);
         $count = 0;
         if ($run_query) {

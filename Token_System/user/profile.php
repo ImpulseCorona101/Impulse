@@ -207,7 +207,7 @@ session_start();
                     <a class="nav-link" href="../../User_Pages/About.php">About Application</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Contact.html">Contact Us</a>
+                    <a class="nav-link" href="Contact.php">Contact Us</a>
                 </li>
                 <li class="nav-item">
 
@@ -215,7 +215,7 @@ session_start();
             </ul>
         </div>
         <?php
-       include("../Includes/db.php");
+        include("../Includes/db.php");
         $name = null;
         if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
             $phone = $_SESSION['phonenumber'];
@@ -298,8 +298,8 @@ session_start();
         <div class="text-center">
             <br>
             <div class="col">
-            <img src="Impulse.png" class="img-fluid" alt="Responsive image" style="width: 150px; height:100px;">
-        </div>
+                <img src="Impulse.png" class="img-fluid" alt="Responsive image" style="width: 150px; height:100px;">
+            </div>
             <b>
                 <h1 class="guard"><span><b><i class="fas fa-pencil-alt mr-3"></i>Edit Your Profile </b></span>
                 </h1>
@@ -397,140 +397,142 @@ session_start();
         include("../Includes/db.php");
         $query = "select * from slot where phonenumber = $phone ";
         $run_query = mysqli_query($con, $query);
-        while ($row = mysqli_fetch_array($run_query)) {
-            $shop_id = $row['shop_id'];
-            $slot = $row['slot'];
-            $date = $row['date'];
-            $passcode = $row['passcode'];
+        if ($run_query) {
+            while ($row = mysqli_fetch_array($run_query)) {
+                $shop_id = $row['shop_id'];
+                $slot = $row['slot'];
+                $date = $row['date'];
+                $passcode = $row['passcode'];
 
-            $name_query = "select * from shopkeeper where id=$shop_id";
-            $run_name_query = mysqli_query($con, $name_query);
-            while ($row_name = mysqli_fetch_array($run_name_query)) {
-                $shop_name = $row_name['name'];
+                $name_query = "select * from shopkeeper where id=$shop_id";
+                $run_name_query = mysqli_query($con, $name_query);
+                while ($row_name = mysqli_fetch_array($run_name_query)) {
+                    $shop_name = $row_name['name'];
+                } ?>
+
+                <div class="d-flex justify-content-around flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row rounded mx-auto d-block">
+                    <div class="card item1 border border-dark p-4">
+                        <img src="https://image.flaticon.com/icons/png/512/819/premium/819782.png" class="card-img-top rounded mx-auto d-block mybarcodeimage" alt="...">
+                        <div class="card-body Shop">
+                            <h4 class="card-title shopname"><?php echo $shop_name; ?></h4>
+
+                            <h5 class="card-title date"><?php echo $date; ?></h5>
+                            <h5 class="card-title time"><?php echo $slot; ?></h5>
+                            <h5 class="card-title Uniqueid">Unique Code : <?php echo $passcode; ?></h5>
+                            <a href="#" class="mybtn btn btn-primary mybtn mx-auto d-block">Get Directions</a><br><br><br>
+                        </div><br><br><br>
+                    </div>
+                    <br><br><br>
+            <?php
             }
-
-
-        ?>
-
-            <div class="d-flex justify-content-around flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row rounded mx-auto d-block">
-                <div class="card item1 border border-dark p-4">
-                    <img src="https://image.flaticon.com/icons/png/512/819/premium/819782.png" class="card-img-top rounded mx-auto d-block mybarcodeimage" alt="...">
-                    <div class="card-body Shop">
-                        <h4 class="card-title shopname"><?php echo $shop_name; ?></h4>
-
-                        <h5 class="card-title date"><?php echo $date; ?></h5>
-                        <h5 class="card-title time"><?php echo $slot; ?></h5>
-                        <h5 class="card-title Uniqueid">Unique Code : <?php echo $passcode; ?></h5>
-                        <a href="#" class="mybtn btn btn-primary mybtn mx-auto d-block">Get Directions</a><br><br><br>
-                    </div><br><br><br>
+        } else {
+            echo "<h1>No Slots Booked</h1>";
+        } ?>
                 </div>
-                <br><br><br>
-            <?php } ?>
-            </div>
 
-            <br>
+                <br>
 
 
 
-            <script>
-                var number = Math.floor(Math.random() * 100000) + 1;
-                console.log(number);
+                <script>
+                    var number = Math.floor(Math.random() * 100000) + 1;
+                    console.log(number);
 
-                const Uniqueid = document.querySelector(".Uniqueid");
-                Uniqueid.textContent = "Unique Code :" + number;
+                    const Uniqueid = document.querySelector(".Uniqueid");
+                    Uniqueid.textContent = "Unique Code :" + number;
 
-                function myFunction() {
-                    document.getElementById("myDropdown").classList.toggle("show");
-                }
+                    function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                    }
 
-                // Close the dropdown if the user clicks outside of it
-                window.onclick = function(event) {
-                    if (!event.target.matches('.dropbtn')) {
-                        var dropdowns = document.getElementsByClassName("dropdown-content");
-                        var i;
-                        for (i = 0; i < dropdowns.length; i++) {
-                            var openDropdown = dropdowns[i];
-                            if (openDropdown.classList.contains('show')) {
-                                openDropdown.classList.remove('show');
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function(event) {
+                        if (!event.target.matches('.dropbtn')) {
+                            var dropdowns = document.getElementsByClassName("dropdown-content");
+                            var i;
+                            for (i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains('show')) {
+                                    openDropdown.classList.remove('show');
+                                }
                             }
                         }
                     }
-                }
-            </script>
-            <style>
-                .hide {
-                    display: none;
-                }
-
-                .dropbtn {
-                    background-color: #343a40;
-                    color: white;
-                    padding: 8px;
-                    font-size: 18px;
-                    border: none;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    margin-left: 50px;
-                    margin-right: 30px;
-                }
-
-                .dropbtn:hover,
-                .dropbtn:focus {
-                    background-color: #2a5cff;
-                }
-
-                .dropdown {
-                    position: relative;
-                    display: inline-block;
-                }
-
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    right: 20px;
-                    background-color: #f1f1f1;
-                    min-width: 160px;
-                    overflow: auto;
-                    border-radius: 10px;
-                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                    z-index: 1;
-                }
-
-                .dropdown-content a {
-                    color: black;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                }
-
-                .dropdown a:hover {
-                    background-color: #2a5cff;
-                }
-
-                .show {
-                    display: block;
-                }
-
-                @media only screen and (min-device-width:320px) and (max-device-width:480px) {
-                    .container {
-                        position: relative;
-                        left: 10px;
-
-
-                    }
-
-
-                    p {
-                        font-size: 2px;
-                    }
-
+                </script>
+                <style>
                     .hide {
+                        display: none;
+                    }
+
+                    .dropbtn {
+                        background-color: #343a40;
+                        color: white;
+                        padding: 8px;
+                        font-size: 18px;
+                        border: none;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        margin-left: 50px;
+                        margin-right: 30px;
+                    }
+
+                    .dropbtn:hover,
+                    .dropbtn:focus {
+                        background-color: #2a5cff;
+                    }
+
+                    .dropdown {
+                        position: relative;
+                        display: inline-block;
+                    }
+
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        right: 20px;
+                        background-color: #f1f1f1;
+                        min-width: 160px;
+                        overflow: auto;
+                        border-radius: 10px;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                    }
+
+                    .dropdown-content a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
                         display: block;
                     }
-                }
-            </style>
-            <br><br><br>
-            <br><br><br>
+
+                    .dropdown a:hover {
+                        background-color: #2a5cff;
+                    }
+
+                    .show {
+                        display: block;
+                    }
+
+                    @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+                        .container {
+                            position: relative;
+                            left: 10px;
+
+
+                        }
+
+
+                        p {
+                            font-size: 2px;
+                        }
+
+                        .hide {
+                            display: block;
+                        }
+                    }
+                </style>
+                <br><br><br>
+                <br><br><br>
 </body>
 
 </html>

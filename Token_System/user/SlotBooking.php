@@ -169,7 +169,6 @@ session_start();
                background-color: transparent;
                text-align: center;
           }
-         
      </style>
 
 
@@ -319,7 +318,8 @@ session_start();
                .navbar {
                     width: 100%;
                }
-               .hide{
+
+               .hide {
                     display: block;
                }
 
@@ -378,7 +378,7 @@ session_start();
 
                }
 
-               
+
           }
      </style>
      <script>
@@ -494,18 +494,18 @@ toggle between hiding and showing the dropdown content */
                          echo "<a href='user_signin.php'>Login</a>";
                     }
                     ?>
-                     <div class="hide">
-                       <a href="../../index.php">Home</a>
-                       <a href="../../Coronavirus/CurrentStats.php">Covid-19 Status</a>
-                       <a href="shop_list.php">Book Your Slot</a>
-                       <a href="../../AgroCraft/index.html">Agrocraft</a>
-                       <a href="../../User_Pages/About.php">About Application</a>
-                       <a href="Contact.html">Contact Us</a>
-                       <div>
+                    <div class="hide">
+                         <a href="../../index.php">Home</a>
+                         <a href="../../Coronavirus/CurrentStats.php">Covid-19 Status</a>
+                         <a href="shop_list.php">Book Your Slot</a>
+                         <a href="../../AgroCraft/index.html">Agrocraft</a>
+                         <a href="../../User_Pages/About.php">About Application</a>
+                         <a href="Contact.html">Contact Us</a>
+                         <div>
 
+                         </div>
+                    </div>
                </div>
-          </div>
-          </div>
 
      </nav>
      <script type="text/javascript">
@@ -528,9 +528,6 @@ toggle between hiding and showing the dropdown content */
           }
      </script>
      <style type="text/css">
-          
-
-          
           .hide {
                display: none;
           }
@@ -607,7 +604,7 @@ toggle between hiding and showing the dropdown content */
                                    echo "<br>";
                                    include("../Includes/db.php");
 
-                                  
+
 
 
                                    $pincode = $_GET['pincode'];
@@ -705,6 +702,7 @@ toggle between hiding and showing the dropdown content */
           <div class="form-group form-actions">
                <button class="btn btn-primary btn-lg " name="submit" type="submit">Submit</button>
           </div>
+          <br><br><br>
      </form>
 
 

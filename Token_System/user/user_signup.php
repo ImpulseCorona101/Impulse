@@ -244,11 +244,7 @@
     <div class="row main  ">
 
         <div class="col-6 inner1">
-<<<<<<< HEAD
             <img src="../../Images/Impulse.png" class="img-fluid logo ml-5 " alt="Responsive image" style="width: 150px; height:100px;">
-=======
-            <img src="Impulse.png" class="img-fluid logo ml-5 " alt="Responsive image" style="width: 150px; height:100px;">
->>>>>>> 8c98f6aeb7d46739a1df6768c2cac609e901c969
 
         </div>
         <div class="col inner">
