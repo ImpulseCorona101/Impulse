@@ -17,6 +17,58 @@
         html {
             scroll-behavior: smooth;
         }
+         .hide{
+        display: none;
+    }
+    
+    .dropbtn {
+            background-color: #343a40;
+            color: white;
+            padding: 8px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 50px;
+            margin-right: 30px;
+        }
+
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2a5cff;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right:20px;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #2a5cff;
+        }
+
+        .show {
+            display: block;
+        }
 
         @media only screen and (min-device-width:320px) and (max-device-width:480px) {
             .ele {
@@ -56,31 +108,103 @@
             .e {
                 margin-left: 2%;
             }
+            .hide{
+            	display: block;
+            }
         }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">COVID-19 Detector</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+          <a class="navbar-brand" href="#">Impulse</a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Application</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                         <a class="nav-link" href="index.php"> <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                         <a class="nav-link" href="Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                         <a class="nav-link" href="Token_System/user/shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                         <a class="nav-link" href="AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="#">About Application</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" href="Token_System/user/Contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+
+                    </li>
+               </ul>
+          </div>
+          </div>
+          <?php
+          $con = mysqli_connect("localhost", "root", "", "impulse");
+
+          if (mysqli_connect_errno()) {
+               echo "Failed to connect to MySql " . mysqli_connect_error();
+          }
+          $name = "";
+          if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
+               $phone = $_SESSION['phonenumber'];
+               $name_query = "select * from shopkeeper where phone=$phone ";
+               $run = mysqli_query($con, $name_query);
+
+               while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+               }
+               echo "<div class='text login' style='color: white;'>Hello  $name</div>";
+          } else if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "visitor")) {
+               $phone = $_SESSION['phonenumber'];
+               $name_query = "select * from consumer where phone=$phone ";
+               $run = mysqli_query($con, $name_query);
+               while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+               }
+               echo "<div class='text login' style='color: white;'>>Hello  $name</div>";
+          } else {
+
+               echo "<a href='Token_System/user/user_signin.php' ><div class='text login' style='color: white;'>Login</div></a>";
+          }
+          ?>
+
+
+          </div>
+          <div class="dropdown">
+               <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
+               <div id="myDropdown" class="dropdown-content">
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo " <a href='Token_System/user/profile.php'>Profile</a>";
+
+                         echo "<a href='Token_System/user/logout.php'>Logout</a>";
+                    } else {
+
+                         echo "<a href='Token_System/user/user_signin.php'>Login</a>";
+                    }
+                    ?>
+
+                    <div class="hide">
+                         <a href="../../index.php">Home</a>
+                         <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
+                         <a href="../../AgroCraft/index.html">Agrocraft</a>
+                         <a href="Contact.html">Contact Us</a>
+                         <div>
+
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </nav>
+
     <br>
     <div class=" row ">
         <div class="col-8 ">
@@ -271,6 +395,26 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous ">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous ">
+    </script>
+    <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
     </script>
 </body>
 

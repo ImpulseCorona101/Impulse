@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -94,7 +99,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            right:20px;
+            right: 20px;
             background-color: #f1f1f1;
             min-width: 160px;
             overflow: auto;
@@ -278,14 +283,14 @@
 
 <body>
 
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="../../index.php">Impulse</a>
 
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="../../index.php"> <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../index.php">Home <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
@@ -297,7 +302,7 @@
                     <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Application</a>
+                    <a class="nav-link" href="About.html">About Application</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Contact.html">Contact Us</a>
@@ -315,23 +320,59 @@
 
 
             </div>
-            <div class="text  login" style="color: white;">Login</div>
+
+
+
+            <?php
+            $con = mysqli_connect("localhost", "root", "", "impulse");
+
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySql " . mysqli_connect_error();
+            }
+            $name = null;
+            if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
+                $phone = $_SESSION['phonenumber'];
+                $name_query = "select * from shopkeeper where phone=$phone ";
+                $run = mysqli_query($con, $name_query);
+                while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+                }
+                echo "<div class='text login' style='color: white;'>Hello  $name</div>";
+            } else if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "visitor")) {
+                $phone = $_SESSION['phonenumber'];
+                $name_query = "select * from consumer where phone=$phone ";
+                $run = mysqli_query($con, $name_query);
+                while ($row = mysqli_fetch_array($run)) {
+                    $name = $row['name'];
+                }
+                echo "<div class='text login' style='color: white;'>>Hello $name</div>";
+            } else {
+
+                echo "<a href='user_signin.php' ><div class='text login' style='color: white;'>Login</div></a>";
+            }
+            ?>
+
+
+
         </div>
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="../../User_Pages/profile.html">Profile</a>
-                <a href="user_signin">Logout</a>
-                <div class="hide">
-                    <a href="../../index.php">Home</a>
-                    <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
-                    <a href="../../AgroCraft/index.html">Agrocraft</a>
-                    <a href="Contact.html">Contact Us</a>
-                    <div>
+                <?php
+                if (isset($_SESSION['phonenumber'])) {
+                    echo " <a href='Token_System/user/profile.php'>Profile</a>";
 
-                    </div>
-                </div>
+                    echo "<a href='Token_System/user/logout.php'>Logout</a>";
+                } else {
+
+                    echo "<a href='Token_System/user/user_signin.php'>Login</a>";
+                }
+                ?>
+
+
             </div>
+        </div>
+        </div>
         </div>
 
     </nav>
@@ -348,36 +389,9 @@
         <div class="mob">
             <div class="parent position-relative bg-white">
                 <div class="text-left ">
-
-
                     <?php
                     getshops();
                     ?>
-                    <!-- <div class="container-sm p-4 border border-top shadow-sm ">
-                        <a href="booking.html">
-=======
-                    <div class="container-sm p-4 border border-top shadow-sm ">
-                        <a href="booking.php">
->>>>>>> 4393f28273eba583a1a27c7029d8233eede9a499
-                            <h4 class="font-weight-bold">Shop Name</h4>
-                        </a>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div> -->
-
-
-                    <!-- <div class="container-sm p-4 border border-top shadow-sm  ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div>
-                    <div class="container-sm p-4 border border-top shadow-sm    ">
-                        <h4 class="font-weight-bold">Shop Name</h4>
-                        <h5>Address</h5>
-                        <h6>Phone Number</h6>
-                    </div> -->
-
-
                 </div>
             </div>
         </div>
@@ -431,32 +445,37 @@ toggle between hiding and showing the dropdown content */
 
 function getshops()
 {
-    $con = mysqli_connect("localhost", "root", "", "impulse");
 
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySql " . mysqli_connect_error();
-    }
-
+    global $con;
     if (isset($_POST['searchquery'])) {
-        $search_query = $_POST['searchquery'];
-        // echo $search_query;
+        if (isset($_SESSION['phonenumber'])) {
+            $search_query = $_POST['searchquery'];
+            // echo $search_query;
 
-        $get_shop = "select * from shopkeeper where pincode = $search_query";
-        $run_shop = mysqli_query($con, $get_shop);
-        $count = mysqli_num_rows($run_shop);
-        if ($count > 0) {
-            while ($rows = mysqli_fetch_array($run_shop)) {
-                $name = $rows['name'];
-                $shopAddress = $rows['shopAddress'];
-                $phone = $rows['phone'];
-                echo " <div class='container-sm p-4 border border-top shadow-sm '>
-                        <a href='booking.php'>
+            $get_shop = "select * from shopkeeper where pincode = $search_query";
+            $run_shop = mysqli_query($con, $get_shop);
+            $count = mysqli_num_rows($run_shop);
+            if ($count > 0) {
+                while ($rows = mysqli_fetch_array($run_shop)) {
+                    $name = $rows['name'];
+                    $shopAddress = $rows['shopAddress'];
+                    $phone = $rows['phone'];
+                    $pincode = $rows['pincode'];
+
+                    echo " <div class='container-sm p-4 border border-top shadow-sm '>
+                        <a href='SlotBooking.php?pincode=$pincode'>
                             <h4 class='font-weight-bold'>$name</h4>
                         </a>
                         <h5>$shopAddress</h5>
                         <h6>$phone</h6>
                     </div> ";
+                }
+            } else {
+                echo "<br>";
+                echo "<h1>Sorry, No Shops Available</h1>";
             }
+        } else {
+            echo "<script>alert('Please Login First')</script>";
         }
     }
 }

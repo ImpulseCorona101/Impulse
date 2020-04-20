@@ -174,6 +174,12 @@
     <!-- <br> -->
     <!-- <img src="Guadian.png" >
      -->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+=======
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Impulse</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -183,8 +189,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span
-                            class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Application</a>
@@ -196,6 +201,12 @@
         </div>
     </nav>
     <img src="Impulse.png" class="mx-auto d-block imag" />
+>>>>>>> f6e01824e5575ffb2ca7a5930ed13913c9527b27
+=======
+>>>>>>> 5dd76040d4d384c682251d916ad372f8f878496c
+
+>>>>>>> 52bbfed861fc3f58a28cf2fd7a02d5fda7e19c4c
+    <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
     <div class="text-center">
         <h1><b>Impulse</b></h1>
     </div>
@@ -241,10 +252,29 @@
 
                 </div>
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
-
+                    <a href="Email_ForgotPassword.html">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     <div class="text1">Forgot password ? </div>
-                    <div class="text2"> New User ? </div>
+<<<<<<< HEAD
+                </a>
 
+                    <a href="user_signup.php">
+                    <div class="text2"> New User ? </div>
+                </a>
+
+=======
+                    <div class="text2">
+                        <a href="user_signup.php">New User ? </a>
+                    </div>
+>>>>>>> f6e01824e5575ffb2ca7a5930ed13913c9527b27
+=======
+>>>>>>> 5dd76040d4d384c682251d916ad372f8f878496c
+                        <div class="text1">Forgot password ? </div>
+                        <div class="text2">
+                            <a href="user_signup.php">New User ? </a>
+                        </div>
                 </div>
 
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3" style="margin-top: -5%;">
@@ -260,25 +290,24 @@
 <?php
 
 include("../Includes/db.php");
-
 if (isset($_POST['login'])) {
-	$phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
-	$password = mysqli_real_escape_string($con, $_POST['password']);
+    $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
     $radio_val = $_POST['occupation'];
 
     //hashing of password
-	$ciphering = "AES-128-CTR";
-	$iv_length = openssl_cipher_iv_length($ciphering);
-	$options = 0;
-	$encryption_iv = '2345678910111211';
-	$encryption_key = "DE";
-	$encryption = openssl_encrypt(
-		$password,
-		$ciphering,
-		$encryption_key,
-		$options,
-		$encryption_iv
-	);
+    $ciphering = "AES-128-CTR";
+    $iv_length = openssl_cipher_iv_length($ciphering);
+    $options = 0;
+    $encryption_iv = '2345678910111211';
+    $encryption_key = "DE";
+    $encryption = openssl_encrypt(
+        $password,
+        $ciphering,
+        $encryption_key,
+        $options,
+        $encryption_iv
+    );
     
     //searching in doctor table
     if($radio_val == "doctor"){
