@@ -1,21 +1,21 @@
-<?php
-include("../Includes/db.php");
-session_start();
-$sessphonenumber = $_SESSION['phonenumber'];
-$sql = "select * from farmerregistration where farmer_phone = '$sessphonenumber' ";
-$run_query = mysqli_query($con, $sql);
-while ($row = mysqli_fetch_array($run_query)) {
-    $name = $row['farmer_name'];
-    $phone = $row['farmer_phone'];
-    $address = $row['farmer_address'];
-    $pan = $row['farmer_pan'];
-    $bank = $row['farmer_bank'];
-    $state = $row['farmer_state'];
-    $district = $row['farmer_district'];
-}
+<!-- <?php
+// include("../Includes/db.php");
+// session_start();
+// $sessphonenumber = $_SESSION['phonenumber'];
+// $sql = "select * from farmerregistration where farmer_phone = '$sessphonenumber' ";
+// $run_query = mysqli_query($con, $sql);
+// while ($row = mysqli_fetch_array($run_query)) {
+//     $name = $row['farmer_name'];
+//     $phone = $row['farmer_phone'];
+//     $address = $row['farmer_address'];
+//     $pan = $row['farmer_pan'];
+//     $bank = $row['farmer_bank'];
+//     $state = $row['farmer_state'];
+//     $district = $row['farmer_district'];
+// }
 
 
-?>
+?> -->
 
 
 
@@ -71,11 +71,11 @@ while ($row = mysqli_fetch_array($run_query)) {
         body {
             /* background-image: url(Images/Website/FarmerLogin.jpg); */
             /* background: black; */
-            background-size: cover;
+            /* background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             background-color: white;
-            background-image: url(../Images/Website/forgotpassword.jpg);
+            background-image: url(../Images/Website/forgotpassword.jpg); */
             border: chartreuse;
         }
 
@@ -162,7 +162,10 @@ while ($row = mysqli_fetch_array($run_query)) {
                 </tr>
                 <tr align="center">
                     <td><label><b>Name :</b></label></td>
-                    <td><textarea rows="2" column="10" disabled> <?php echo $name ?> </textarea><br></td>
+                    <td>
+                        <!-- <textarea rows="2" column="10" disabled> <?php echo $name ?> </textarea> -->
+                        <input type="text" readonly class="form-control-plaintext border border-dark" id="staticEmail" value="<?php echo $name?>">
+                    <br></td>
                 </tr>
                 <tr align="center">
                     <td><label><b>Phone Number :</b></label></td>

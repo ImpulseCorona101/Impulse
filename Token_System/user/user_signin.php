@@ -187,6 +187,7 @@ session_start();
     <!-- <br> -->
     <!-- <img src="Guadian.png" >
      -->
+<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Impulse</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -208,6 +209,13 @@ session_start();
         </div>
     </nav>
     <img src="Impulse.png" class="mx-auto d-block imag" />
+=======
+
+   
+    
+
+    <img src="../../Images/Impulse.png" class="mx-auto d-block imag" />
+>>>>>>> 8c98f6aeb7d46739a1df6768c2cac609e901c969
     <div class="text-center">
         <h1><b>Impulse</b></h1>
     </div>
@@ -244,21 +252,31 @@ session_start();
                         <span class="input-group-text text " id="inputGroup-sizing-default" style="font-size: 15px;"><i class="fas fa-phone-alt mr-2"></i>Phone number</span>
                     </div>
                     <input type="text" name="phonenumber" class="form-control inp " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="
-                    Phonenumber">
+                    Phonenumber" required>
                 </div>
                 <div class="input-group mt-5  s">
                     <div class="input-group-prepend mb-5 ">
                         <span class="input-group-text  text" id="inputGroup-sizing-default"><i class="fas fa-lock mr-2"></i>Password</span>
                     </div>
-                    <input type="password" name="password" class="form-control inp inp1 mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Password">
+                    <input type="password" name="password" class="form-control inp inp1 mb-5 " aria-label="Sizing example input " aria-describedby="inputGroup-sizing-default " placeholder="Password" required>
 
                 </div>
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-5 " style="margin-top: -5%;">
                     <a href="Email_ForgotPassword.html">
+<<<<<<< HEAD
                         <div class="text1">Forgot password ? </div>
                         <div class="text2">
                             <a href="user_signup.php">New User ? </a>
                         </div>
+=======
+
+                        <div class="text1">Forgot password ? </div>
+                    </a>
+                    <a href="user_signup.php">
+
+                    <div class="text1">New User ? </div>
+                         </a>
+>>>>>>> 8c98f6aeb7d46739a1df6768c2cac609e901c969
                 </div>
 
                 <div class="d-flex justify-content-around flex-sm-column flex-md-column flex-lg-row flex-xl-row flex-column mb-3" style="margin-top: -5%;">

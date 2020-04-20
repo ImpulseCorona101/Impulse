@@ -195,7 +195,7 @@ session_start();
                     <a class="nav-link" href="../../index.php">Home <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                    <a class="nav-link" href="../../Coronavirus/CurrentStats.php">Covid-19 Status <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
@@ -204,7 +204,7 @@ session_start();
                     <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Application</a>
+                    <a class="nav-link" href="../../User_Pages/About.php">About Application</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Contact.html">Contact Us</a>
@@ -215,11 +215,7 @@ session_start();
             </ul>
         </div>
         <?php
-        $con = mysqli_connect("localhost", "root", "", "impulse");
-
-        if (mysqli_connect_errno()) {
-            echo "Failed to connect to MySql " . mysqli_connect_error();
-        }
+       include("../Includes/db.php");
         $name = null;
         if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
             $phone = $_SESSION['phonenumber'];
@@ -266,6 +262,7 @@ session_start();
     </nav>
 
     <?php
+    include("../Includes/db.php");
 
     if ($_SESSION['phonenumber']) {
         $phone = $_SESSION['phonenumber'];
@@ -300,7 +297,9 @@ session_start();
     <div class="container edit">
         <div class="text-center">
             <br>
-
+            <div class="col">
+            <img src="Impulse.png" class="img-fluid" alt="Responsive image" style="width: 150px; height:100px;">
+        </div>
             <b>
                 <h1 class="guard"><span><b><i class="fas fa-pencil-alt mr-3"></i>Edit Your Profile </b></span>
                 </h1>
@@ -395,7 +394,7 @@ session_start();
 
 
         <?php
-
+        include("../Includes/db.php");
         $query = "select * from slot where phonenumber = $phone ";
         $run_query = mysqli_query($con, $query);
         while ($row = mysqli_fetch_array($run_query)) {

@@ -394,7 +394,7 @@ toggle between hiding and showing the dropdown content */
                          <a class="nav-link" href="index.php"> <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
-                         <a class="nav-link" href="Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                         <a class="nav-link" href="Coronavirus/CurrentStats.php">Covid-19 Status <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
                          <a class="nav-link" href="Token_System/user/shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
@@ -403,10 +403,10 @@ toggle between hiding and showing the dropdown content */
                          <a class="nav-link" href="AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link" href="#">About Application</a>
+                         <a class="nav-link" href="User_Pages/About.php">About Application</a>
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link" href="Token_System/user/Contact.html">Contact Us</a>
+                         <a class="nav-link" href="Token_System/user/Contact.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
 
@@ -415,11 +415,7 @@ toggle between hiding and showing the dropdown content */
           </div>
           </div>
           <?php
-          $con = mysqli_connect("localhost", "root", "", "impulse");
-
-          if (mysqli_connect_errno()) {
-               echo "Failed to connect to MySql " . mysqli_connect_error();
-          }
+          include("Token_System/Includes/db.php");
           $name = "";
           if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
                $phone = $_SESSION['phonenumber'];
@@ -453,7 +449,7 @@ toggle between hiding and showing the dropdown content */
                     if (isset($_SESSION['phonenumber'])) {
                          echo " <a href='Token_System/user/profile.php'>Profile</a>";
 
-                         echo "<a href='Token_System/user/logout.php'>Logout</a>";
+                         echo "<a href='Token_System/user/user_signin.php'>Logout</a>";
                     } else {
 
                          echo "<a href='Token_System/user/user_signin.php'>Login</a>";
@@ -461,10 +457,11 @@ toggle between hiding and showing the dropdown content */
                     ?>
 
                     <div class="hide">
-                         <a href="../../index.php">Home</a>
-                         <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
-                         <a href="../../AgroCraft/index.html">Agrocraft</a>
-                         <a href="Contact.html">Contact Us</a>
+                         <a href="Token_System/user/shop_list.php">Book Your Slot</a>
+                         <a href="Coronavirus/CurrentStats.php">Covid-19 Status</a>
+                         <a href="AgroCraft/index.html">Agrocraft</a>
+                         <a href="User_Pages/About.php">About Application</a>
+                         <a href="Token_System/user/Contact.php">Contact Us</a>
                          <div>
 
                          </div>

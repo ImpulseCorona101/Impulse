@@ -169,6 +169,7 @@ session_start();
                background-color: transparent;
                text-align: center;
           }
+         
      </style>
 
 
@@ -318,6 +319,9 @@ session_start();
                .navbar {
                     width: 100%;
                }
+               .hide{
+                    display: block;
+               }
 
                h3 {
                     right: 50px;
@@ -374,9 +378,7 @@ session_start();
 
                }
 
-               .hide {
-                    display: block;
-               }
+               
           }
      </style>
      <script>
@@ -418,7 +420,7 @@ toggle between hiding and showing the dropdown content */
 
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="../../index.php">Impulse</a>
+          <a class="navbar-brand" href="">Impulse</a>
 
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -427,7 +429,7 @@ toggle between hiding and showing the dropdown content */
                          <a class="nav-link" href="../../index.php">Home <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
-                         <a class="nav-link" href="../../Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                         <a class="nav-link" href="../../Coronavirus/CurrentStats.php">Covid-19 Status <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
                          <a class="nav-link" href="shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
@@ -436,7 +438,7 @@ toggle between hiding and showing the dropdown content */
                          <a class="nav-link" href="../../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link" href="#">About Application</a>
+                         <a class="nav-link" href="../../User_Pages/About.php">About Application</a>
                     </li>
                     <li class="nav-item">
                          <a class="nav-link" href="Contact.html">Contact Us</a>
@@ -455,11 +457,7 @@ toggle between hiding and showing the dropdown content */
 
                </div>
                <?php
-               $con = mysqli_connect("localhost", "root", "", "impulse");
-
-               if (mysqli_connect_errno()) {
-                    echo "Failed to connect to MySql " . mysqli_connect_error();
-               }
+               include("../Includes/db.php");
                $name = null;
                if (isset($_SESSION['phonenumber']) && (isset($_SESSION['occupation']) == "Shopkeeper")) {
                     $phone = $_SESSION['phonenumber'];
@@ -488,14 +486,22 @@ toggle between hiding and showing the dropdown content */
                <div id="myDropdown" class="dropdown-content">
                     <?php
                     if (isset($_SESSION['phonenumber'])) {
-                         echo " <a href='Token_System/user/profile.php'>Profile</a>";
+                         echo " <a href='profile.php'>Profile</a>";
 
-                         echo "<a href='Token_System/user/logout.php'>Logout</a>";
+                         echo "<a href='user_signin.php'>Logout</a>";
                     } else {
 
-                         echo "<a href='Token_System/user/user_signin.php'>Login</a>";
+                         echo "<a href='user_signin.php'>Login</a>";
                     }
                     ?>
+                     <div class="hide">
+                       <a href="../../index.php">Home</a>
+                       <a href="../../Coronavirus/CurrentStats.php">Covid-19 Status</a>
+                       <a href="shop_list.php">Book Your Slot</a>
+                       <a href="../../AgroCraft/index.html">Agrocraft</a>
+                       <a href="../../User_Pages/About.php">About Application</a>
+                       <a href="Contact.html">Contact Us</a>
+                       <div>
 
                </div>
           </div>
@@ -522,7 +528,10 @@ toggle between hiding and showing the dropdown content */
           }
      </script>
      <style type="text/css">
-          <style>.hide {
+          
+
+          
+          .hide {
                display: none;
           }
 
@@ -575,6 +584,7 @@ toggle between hiding and showing the dropdown content */
                display: block;
           }
      </style>
+
      <form method="post">
           <div class="section over-hide z-bigger">
                <input class="checkbox" type="checkbox" name="general" id="general">
@@ -585,7 +595,7 @@ toggle between hiding and showing the dropdown content */
                          <div class="row justify-content-center pb-5">
 
                               <div class="form-group">
-                                   <label class=" text-center  form-weight-bold p-3" style="font-size: 24px;" for="date">Enter Your Date</label>
+                                   <label class=" text-center  form-weight-bold p-3" style="font-size: 24px;" for="date" autocomplete="off" required>Enter Your Date</label>
                                    <input class="form-control" id="date" name="date" placeholder="DD/MM/YYY" type="text" />
                               </div>
                               <div class="col-12 pb-5">
@@ -595,11 +605,9 @@ toggle between hiding and showing the dropdown content */
 
                                    <?php
                                    echo "<br>";
-                                   $con = mysqli_connect("localhost", "root", "", "impulse");
+                                   include("../Includes/db.php");
 
-                                   if (mysqli_connect_errno()) {
-                                        echo "Failed to connect to MySql " . mysqli_connect_error();
-                                   }
+                                  
 
 
                                    $pincode = $_GET['pincode'];
@@ -707,6 +715,7 @@ toggle between hiding and showing the dropdown content */
 </html>
 
 <?php
+include("../Includes/db.php");
 if (isset($_POST['submit'])) {
      $date = $_POST['date'];
      $time = $_POST['time'];

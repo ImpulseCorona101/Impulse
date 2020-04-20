@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2020 at 05:48 PM
+-- Generation Time: Apr 19, 2020 at 07:21 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -117,7 +117,8 @@ CREATE TABLE `consumer` (
 INSERT INTO `consumer` (`id`, `name`, `email`, `pincode`, `password`, `address`, `phone`) VALUES
 (5, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'm', '8828071232'),
 (6, 'hello world', 'hello@world.com', '421202', 'yw==', 'world', '9999999999'),
-(7, 'Abhishek Gupta', 'abhig0209@gmail.com', '400705', 'm8bf5+Y=', 'Test', '1234567890');
+(7, 'Abhishek Gupta', 'abhig0209@gmail.com', '400705', 'm8bf5+Y=', 'Test', '1234567890'),
+(8, 'int main', 'intmain@g.com', '400705', 'yw==', '704,Raj Uday CHS , Sec-1\r\nSanpada', '7715802258');
 
 -- --------------------------------------------------------
 
@@ -357,9 +358,10 @@ CREATE TABLE `shopkeeper` (
 
 INSERT INTO `shopkeeper` (`id`, `name`, `email`, `pincode`, `password`, `shopName`, `shopAddress`, `phone`, `startTime`, `endTime`, `slotInterval`, `slotUser`) VALUES
 (1, 'bhabalomkar421', 'bhabalomkar421@gmail', '421202', 'yw==', 'xyz', 'xyz', '8828071232', '10:30', '12:30', 30, 5),
-(3, 'int main 123', 'intmain1221@gmail.co', '421201', 'yw==', 'hopes', 'no hopes', '101', '10:30', '11:30', 30, 7),
+(3, 'int main 123', 'intmain1221@gmail.co', '400705', 'yw==', 'hopes', 'no hopes', '101', '10:30', '11:30', 30, 7),
 (4, 'kerela', 'es@dd.com', '421200', 'yw==', '1', 'm', '8369674856', '10:00', '12:30', 60, 5),
-(5, 'Abhishek Gupta', 'abhig0209@gmail.com', '400705', 'm8bf5+Y=', 'Ganesh Grocery', 'Rose Villa Lane', '1234567890', '12:00', '22:00', 30, 5);
+(5, 'Abhishek Gupta', 'abhig0209@gmail.com', '400705', 'm8bf5+Y=', 'Ganesh Grocery', 'Rose Villa Lane', '1234567890', '12:00', '22:00', 30, 5),
+(6, 'omkar bhabal', 'intmain1221@gmail.co', '400705', 'yw==', 'om medical', 'navapada', '9223152967', '10:30', '17:00', 30, 5);
 
 -- --------------------------------------------------------
 
@@ -382,7 +384,7 @@ CREATE TABLE `slot` (
 --
 
 INSERT INTO `slot` (`slot_id`, `shop_id`, `slot`, `vacancy`, `date`, `phonenumber`, `passcode`) VALUES
-(34, 1, '10:30', 5, '28/04/2020', 1234567890, 55661);
+(37, 6, '12:0', 5, '05/05/2020', 1234567890, 82047);
 
 --
 -- Indexes for dumped tables
@@ -468,7 +470,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `consumer`
 --
 ALTER TABLE `consumer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `doctor`
@@ -492,13 +494,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `shopkeeper`
 --
 ALTER TABLE `shopkeeper`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `slot`
 --
 ALTER TABLE `slot`
-  MODIFY `slot_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `slot_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- Constraints for dumped tables

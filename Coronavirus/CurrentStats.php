@@ -28,19 +28,19 @@
                        <a class="nav-link" href="../index.php"> Home <span class=" sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item ">
-                       <a class="nav-link" href="Coronavirus/CurrentStats.html">Covid-19 Status <span class=" sr-only">(current)</span></a>
+                       <a class="nav-link" href="CurrentStats.php">Covid-19 Status <span class=" sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item ">
-                       <a class="nav-link" href="Token_System/user/shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
+                       <a class="nav-link" href="../Token_System/user/shop_list.php"> Slot Booking <span class=" sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item ">
-                       <a class="nav-link" href="AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
+                       <a class="nav-link" href="../AgroCraft/index.html">AgroCraft <span class=" sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                       <a class="nav-link" href="#">About Application</a>
+                       <a class="nav-link" href="../User_Pages/About.php">About Application</a>
                   </li>
                   <li class="nav-item">
-                       <a class="nav-link" href="Token_System/user/Contact.html">Contact Us</a>
+                       <a class="nav-link" href="../Token_System/user/Contact.php">Contact Us</a>
                   </li>
                   <li class="nav-item">
 
@@ -79,7 +79,8 @@
         <div class="dropdown">
              <button onclick="myFunction()" class="dropbtn fas fa-bars"></button>
              <div id="myDropdown" class="dropdown-content">
-                  <?
+                  <?php
+
                   if (isset($_SESSION['phonenumber'])) {
                        echo " <a href='../Token_System/user/profile.php'>Profile</a>";
 
@@ -91,10 +92,14 @@
                   ?>
 
                   <div class="hide">
-                       <a href="../../index.php">Home</a>
-                       <a href="../../Coronavirus/CurrentStats.html">Covid-19 Status</a>
-                       <a href="../../AgroCraft/index.html">Agrocraft</a>
-                       <a href="Contact.html">Contact Us</a>
+                       <a href="../index.php">Home</a>
+                       <a href="CurrentStats.php">Covid-19 Status</a>
+                       <a href="../Token_System/user/shop_list.php">Book Your Slot</a>
+                       <a href="../AgroCraft/index.html">Agrocraft</a>
+                       <a href="../User_Pages/About.php">About Application</a>
+                       <a href="../Token_System/user/Contact.php">Contact Us</a>
+                       
+                       
                        <div>
 
                        </div>
