@@ -5,10 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+=======
+>>>>>>> 2c2c44858dde2adc4af2ef631a7da7f452b76e70
     <title>Impulse - About</title>
 
     <style>
@@ -27,6 +30,7 @@
         .mobileContent {
             display: none;
         }
+<<<<<<< HEAD
         .dropbtn {
             background-color: #343a40;
             color: white;
@@ -78,6 +82,9 @@
         .hide{
             display:none;
         }
+=======
+
+>>>>>>> 2c2c44858dde2adc4af2ef631a7da7f452b76e70
         @media only screen and (min-device-width:200px) and (max-device-width:770px) {
             .mobileContent {
                 display: inline;
@@ -90,16 +97,20 @@
             .newbtn {
                 margin-top: 10%;
             }
+<<<<<<< HEAD
             .hide{
                 display:block;
 
             }
             
+=======
+>>>>>>> 2c2c44858dde2adc4af2ef631a7da7f452b76e70
         }
     </style>
 </head>
 
 <body>
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="../index.php">Impulse</a>
 
@@ -218,6 +229,8 @@ toggle between hiding and showing the dropdown content */
             }
         }
     </script>
+=======
+>>>>>>> 2c2c44858dde2adc4af2ef631a7da7f452b76e70
 
     <br>
     <div class="row">
@@ -225,7 +238,11 @@ toggle between hiding and showing the dropdown content */
             <h1 class="text-right mt-3 font-weight-bolder">Impulse</h1>
         </div>
         <div class="col">
+<<<<<<< HEAD
             <img src="../Images/Impulse.png" class="img-fluid" alt="Responsive image" style="width: 150px; height:100px;">
+=======
+            <img src="/static/Impulse.png" class="img-fluid" alt="Responsive image" style="width: 150px; height:100px;">
+>>>>>>> 2c2c44858dde2adc4af2ef631a7da7f452b76e70
         </div>
     </div>
     <!-- <div class="text-center">
@@ -263,7 +280,11 @@ toggle between hiding and showing the dropdown content */
                     customers can book a slot (Date and Time) in which he wishes to arrive at the shop or clinic.Each
                     Particular slot can only be booked by certain number of peoples (Ensuring social distancing) .</p>
                 <div class="form-actions">
+<<<<<<< HEAD
                     <a href="../Token_System/user/shop_list.php" class="btn btn-primary mx-5 btn-lg">Book Now</a>
+=======
+                    <a href="{{ url_for('CurrentStatus') }}" class="btn btn-primary mx-5 btn-lg">Book Now</a>
+>>>>>>> 2c2c44858dde2adc4af2ef631a7da7f452b76e70
 
                 </div>
             </div>
@@ -281,7 +302,11 @@ for farmers to sell their products at better rate , and buyers (vendors,organiza
 touch with these local farmers to fulfill society needs .Keeping in mind the digital divide , Farmers can
 upload their products via SMS and CALL (customer care)</p>
         <div class="form-actions">
+<<<<<<< HEAD
             <a href="../AgroCraft/index.html" class="btn btn-primary mx-5 btn-lg">Start Buying</a>
+=======
+            <a href="{{ url_for('CurrentStatus') }}" class="btn btn-primary mx-5 btn-lg">Start Buying</a>
+>>>>>>> 2c2c44858dde2adc4af2ef631a7da7f452b76e70
 
         </div>
     </div>
@@ -296,8 +321,13 @@ upload their products via SMS and CALL (customer care)</p>
                 <h5 class="card-title text-center">Prediction And Current Stats</h5>
                 <p class="card-text">This Section Predicts whether an individual is been infected with Coronavirus or not , Additional to that it also shows the current stats state wise.</p>
                 <div class="form-actions">
+<<<<<<< HEAD
                     <a href="../Coronavirus/CurrentStats.php" class="btn btn-primary mx-5 btn-lg">Current Status</a>
                     <a href="../Coronavirus/Coronavirus.php" class="btn btn-primary btn-lg mx-5 newbtn ">Detect
+=======
+                    <a href="{{ url_for('CurrentStatus') }}" class="btn btn-primary mx-5 btn-lg">Current Status</a>
+                    <a href=" {{ url_for('Coronavirus') }}" class="btn btn-primary btn-lg mx-5 newbtn ">Detect
+>>>>>>> 2c2c44858dde2adc4af2ef631a7da7f452b76e70
                         COVID-19</a>
                 </div>
             </div>
@@ -306,7 +336,11 @@ upload their products via SMS and CALL (customer care)</p>
     </div>
     <br><br>
     <div class="form-actions">
+<<<<<<< HEAD
         <a href="../index.php"><button type="submit" class="btn btn-primary btn-lg mx-auto" type="submit">Go Back To Home
+=======
+        <a href="{{ url_for('Homepage') }}"><button type="submit" class="btn btn-primary btn-lg mx-auto" type="submit">Go Back To Home
+>>>>>>> 2c2c44858dde2adc4af2ef631a7da7f452b76e70
             </button></a>
     </div>
 
