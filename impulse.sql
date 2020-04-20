@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2020 at 07:21 PM
+-- Generation Time: Apr 20, 2020 at 03:35 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `impulse`
+-- Database: `impulse101`
 --
 
 -- --------------------------------------------------------
@@ -285,7 +285,8 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`order_id`, `product_id`, `qty`, `address`, `delivery`, `phonenumber`, `total`, `payment`, `buyer_phonenumber`) VALUES
 (55, 23, 1, ' Raj Uday 234', 'Buyer', 8169193101, 56, 'cod', 1234567890),
 (56, 28, 1, ' Raj Uday 234', 'Buyer', 8169193101, 45, 'cod', 1234567890),
-(57, 31, 1, 'I am Hungry', 'Buyer', 8169193101, 25, 'cod', 1234567890);
+(57, 31, 1, 'I am Hungry', 'Buyer', 8169193101, 25, 'cod', 1234567890),
+(58, 3, 2, ' Raj Uday 234', 'Farmer', 8169193101, 10, 'paytm', 1234567890);
 
 -- --------------------------------------------------------
 
@@ -313,7 +314,6 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `farmer_fk`, `product_title`, `product_cat`, `product_type`, `product_expiry`, `product_image`, `product_stock`, `product_price`, `product_desc`, `product_keywords`, `product_delivery`) VALUES
-(0, 1, 'AnshRice', '1', 'Rice', '2020-04-15', 'Rice.jpg', 1500, 101, 'Best Rice in Town', 'rice,best rice', 'yes'),
 (1, 1, 'Ramlal Potato', '2', 'Potato', '2020-04-15', 'Potato.jpg', 1000, 12, 'Best Quality product guarented 100 percent', 'potato', 'yes'),
 (3, 1, 'Ramlal Tomato', '2', 'Tomato', '2020-04-15', 'Tomato.jpg', 500, 5, 'Best Quality toamato assured', 'tomato , best quality tomato , Ramlal Tomato', 'no'),
 (17, 3, 'Shivneri Bananas', '3', 'Bananas', '2020-04-15', 'Bananas.jpg', 250, 30, 'Best Quality Bananas', 'banana, shivneri ,', 'yes'),
@@ -384,7 +384,8 @@ CREATE TABLE `slot` (
 --
 
 INSERT INTO `slot` (`slot_id`, `shop_id`, `slot`, `vacancy`, `date`, `phonenumber`, `passcode`) VALUES
-(37, 6, '12:0', 5, '05/05/2020', 1234567890, 82047);
+(37, 6, '12:0', 5, '05/05/2020', 1234567890, 82047),
+(38, 6, '12:0', 5, '13/07/2020', 1234567890, 95127);
 
 --
 -- Indexes for dumped tables
@@ -448,7 +449,8 @@ ALTER TABLE `shopkeeper`
 --
 ALTER TABLE `slot`
   ADD PRIMARY KEY (`slot_id`),
-  ADD UNIQUE KEY `passcode` (`passcode`);
+  ADD UNIQUE KEY `passcode` (`passcode`),
+  ADD KEY `slot_ibfk_1` (`shop_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -488,7 +490,13 @@ ALTER TABLE `farmerregistration`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `product_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `shopkeeper`
@@ -500,7 +508,7 @@ ALTER TABLE `shopkeeper`
 -- AUTO_INCREMENT for table `slot`
 --
 ALTER TABLE `slot`
-  MODIFY `slot_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `slot_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- Constraints for dumped tables
